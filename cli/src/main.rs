@@ -80,8 +80,17 @@ pub async fn main() {
 
     let mut channels = HashSet::new();
 
-    channels.insert("UCtMVHI3AJD4Qk4hcbZnI9ZQ"); // SOG
+    channels.insert("UCtMVHI3AJD4Qk4hcbZnI9ZQ"); // SomeOrdinaryGamers
     channels.insert("UC-lHJZR3Gqxm24_Vd_AJ5Yw"); // PewDiePie
+    channels.insert("UCqNH56x9g4QYVpzmWTzqVYg"); // Dynamo Gaming
+    channels.insert("UCam8T03EOFBsNdR0thrFHdQ"); // VEGETTA777
+    channels.insert("UCaHEdZtk6k7SVP-umnzifmQ"); // TheDonato
+    channels.insert("UC5c9VlYTSvBSCaoMu_GI6gQ"); // Total Gaming
+    channels.insert("UChXi_PlJkRMPYFQBOJ3MpxA"); // Gyan Gaming
+    channels.insert("UCSJ4gkVC6NrvII8umztf0Ow"); // Lofi Girl
+    channels.insert("UC2wKfjlioOCLP4xQMOWNcgg"); // Typical Gamer
+    channels.insert("UCw7FkXsC00lH2v2yB5LQoYA"); // jackfrags
+    channels.insert("UCsjTQnlZcSB6fSiP7ht_0OQ"); // Hacks Busters    
 
     for channel_id in channels {
         let message = StreamFinderMessages::AddChannel(channel_id.to_string());
