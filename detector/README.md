@@ -27,6 +27,7 @@ Suspicion triggers:
 * Average message length - greatly depends on the language used, and the streamer themself, but usually messages from regular users are quite short, while spammers can send very big messages in an attempt to make the chat unusable for other viewers.
 * Average delay between messages - if spammers use a macro to spam, they can send messages in a very quick succession, and even break YouTube's slow mode, as it is (at least used to be) implemented client side
 * Too many similar messages
+* Getting blocked by moderators/channel owner
 
 ## Existing bugs/errors
 
