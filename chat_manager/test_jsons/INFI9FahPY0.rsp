@@ -1,0 +1,2469 @@
+{
+  "responseContext": {
+    "serviceTrackingParams": [
+      {
+        "service": "CSI",
+        "params": [
+          {
+            "key": "c",
+            "value": "WEB"
+          },
+          {
+            "key": "cver",
+            "value": "2.20210903.05.01"
+          },
+          {
+            "key": "yt_li",
+            "value": "0"
+          },
+          {
+            "key": "GetLiveChat_rid",
+            "value": "0xe191e1e8acf94224"
+          }
+        ]
+      },
+      {
+        "service": "GFEEDBACK",
+        "params": [
+          {
+            "key": "logged_in",
+            "value": "0"
+          },
+          {
+            "key": "e",
+            "value": "1714247,24076880,24083162,24080738,24083189,24064096,23984882,23968386,24050503,23986016,24049820,24091701,9466591,24097318,23996830,24005602,24082661,23918597,23983296,24056274,24002022,23884386,24094857,23857950,24096992,24037794,24083163,23934970,24007790,24055410,23998056,24036947,24087223,24094796,24088877,24087532,24004644,24091075,24083188,24001373,23804281,23946420,24007246,24094715,23966208,24085797,24028143,24077266,23882503,23944779,24094210,23748146,23974595,23990877,23853953,24096752,23744176,24002025,24058380"
+          }
+        ]
+      },
+      {
+        "service": "GUIDED_HELP",
+        "params": [
+          {
+            "key": "logged_in",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "service": "ECATCHER",
+        "params": [
+          {
+            "key": "client.version",
+            "value": "2.20210903"
+          },
+          {
+            "key": "client.name",
+            "value": "WEB"
+          }
+        ]
+      }
+    ],
+    "mainAppWebResponseContext": {
+      "loggedOut": true
+    },
+    "webResponseContextExtensionData": {
+      "hasDecorated": true
+    }
+  },
+  "trackingParams": "CAAQ0b4BIhMI5aGU1_Dn8gIVCKaPCh127Qkr",
+  "continuationContents": {
+    "liveChatContinuation": {
+      "continuations": [
+        {
+          "invalidationContinuationData": {
+            "invalidationId": {
+              "objectSource": 1056,
+              "objectId": "Y2hhdH5JTkZJOUZhaFBZMH41NDM2MTU1",
+              "topic": "chat~INFI9FahPY0~5436155",
+              "subscribeToGcmTopics": true,
+              "protoCreationTimestampMs": "1630846509761"
+            },
+            "timeoutMs": 10000,
+            "continuation": "0ofMyAOoARpYQ2lrcUp3b1lWVU5STUZWRVRGRkRhbGt3Y20xMWVFTkVSVE00UmtkbkVndEpUa1pKT1VaaGFGQlpNQm9UNnFqZHVRRU5DZ3RKVGtaSk9VWmhhRkJaTUNBQyi2lpmA7-fyAjAAQAJKFggAGAAgAFD1pJTX8OfyAlgDeACiAQBQ7vu4gO_n8gJYrNSv_v_h8gKCAQIIAYgBAJoBAggAoAH6hJfX8OfyAg%3D%3D",
+            "clickTrackingParams": "CAEQl98BIhMI5aGU1_Dn8gIVCKaPCh127Qkr"
+          }
+        }
+      ],
+      "actions": [
+        {
+          "clickTrackingParams": "CAEQl98BIhMI5aGU1_Dn8gIVCKaPCh127Qkr",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UCkszU2WH9gy1mb0dV-11UJg/8gF1Xp_zK8jk8gSDrI2wCw",
+                        "shortcuts": [
+                          ":elbowcough:"
+                        ],
+                        "searchTerms": [
+                          "elbowcough"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/kWObU3wBMdHS43q6-ib2KJ-iC5tWqe7QcEITaNApbXEZfrik9E57_ve_BEPHO86z4Xrv8ikMdW0=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/kWObU3wBMdHS43q6-ib2KJ-iC5tWqe7QcEITaNApbXEZfrik9E57_ve_BEPHO86z4Xrv8ikMdW0=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "elbowcough"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UCkszU2WH9gy1mb0dV-11UJg/8gF1Xp_zK8jk8gSDrI2wCw",
+                        "shortcuts": [
+                          ":elbowcough:"
+                        ],
+                        "searchTerms": [
+                          "elbowcough"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/kWObU3wBMdHS43q6-ib2KJ-iC5tWqe7QcEITaNApbXEZfrik9E57_ve_BEPHO86z4Xrv8ikMdW0=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/kWObU3wBMdHS43q6-ib2KJ-iC5tWqe7QcEITaNApbXEZfrik9E57_ve_BEPHO86z4Xrv8ikMdW0=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "elbowcough"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "w4rsy"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/cbZI7UWe-Ky5qsuG8Pmc8a8gmnwoe-tJW5La940WocBNxXjI6lf9l4T2f5qUmAEGXXvbCNCAGQ=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/cbZI7UWe-Ky5qsuG8Pmc8a8gmnwoe-tJW5La940WocBNxXjI6lf9l4T2f5qUmAEGXXvbCNCAGQ=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMI5aGU1_Dn8gIVCKaPCh127Qkr",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2tjS1JRb2FRMHhFVWpsZlltWTFYMGxEUmxKUlRYSlJXV1JJU1VWTlEyY1NKME5NZWxKMVgweG1OVjlKUTBaYWFGbFpRVzlrUkRVd1JWUm5NVFl6TURnME1qQXhOalk1T0JvcEtpY0tHRlZEVVRCVlJFeFJRMnBaTUhKdGRYaERSRVV6T0VaSFp4SUxTVTVHU1RsR1lXaFFXVEFnQWlnQk1ob0tHRlZEUkRJelprTTRhbkZ2VGtWclFXcEdZWEF3UVhRNFFRJTNEJTNE"
+                  }
+                },
+                "id": "CkUKGkNMRFI5X2JmNV9JQ0ZSUU1yUVlkSElFTUNnEidDTHpSdV9MZjVfSUNGWmhZWUFvZEQ1MEVUZzE2MzA4NDIwMTY2OTg%3D",
+                "timestampUsec": "1630842012952814",
+                "authorExternalChannelId": "UCD23fC8jqoNEkAjFap0At8A",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CLzRu_Lf5_ICFZhYYAodD50ETg1630842016698"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI5aGU1_Dn8gIVCKaPCh127Qkr",
+          "markChatItemAsDeletedAction": {
+            "deletedStateMessage": {
+              "runs": [
+                {
+                  "text": "[message deleted]"
+                }
+              ]
+            },
+            "targetItemId": "CjkKGkNNaUtzN25sNV9JQ0ZRTVRyUVlkaDl3SmJ3EhtDUHZOeks3bDVfSUNGU0pVaFFvZGV2UUQwUTA%3D"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI5aGU1_Dn8gIVCKaPCh127Qkr",
+          "markChatItemsByAuthorAsDeletedAction": {
+            "deletedStateMessage": {
+              "runs": [
+                {
+                  "text": "[message deleted]"
+                }
+              ]
+            },
+            "externalChannelId": "UC0vSynSTtdaeld26YzahJSQ"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI5aGU1_Dn8gIVCKaPCh127Qkr",
+          "markChatItemsByAuthorAsDeletedAction": {
+            "deletedStateMessage": {
+              "runs": [
+                {
+                  "text": "[message deleted]"
+                }
+              ]
+            },
+            "externalChannelId": "UC0vSynSTtdaeld26YzahJSQ"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI5aGU1_Dn8gIVCKaPCh127Qkr",
+          "addChatItemAction": {
+            "item": {
+              "liveChatMembershipItemRenderer": {
+                "id": "ChwKGkNLQ1ZsSUR2NV9JQ0ZZa1hyUVlkdDlzRmZn",
+                "timestampUsec": "1630846058908470",
+                "authorExternalChannelId": "UCXm2DSG2Iti7KjhQD6lxXCQ",
+                "headerSubtext": {
+                  "runs": [
+                    {
+                      "text": "Welcome to "
+                    },
+                    {
+                      "text": "うどん"
+                    },
+                    {
+                      "text": "!"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "190日ぷーたろー"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQe7s47ooJVwb_iZ6ZT7tODdiEXuyIei4pbI3o_qw=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQe7s47ooJVwb_iZ6ZT7tODdiEXuyIei4pbI3o_qw=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/f7m1D0c5Lrx12zjjz10WBk_WHvD7A78zf59Nx0tPC96p17oBeFRRrTYk_-SpuiYtWclQGh9Q=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/f7m1D0c5Lrx12zjjz10WBk_WHvD7A78zf59Nx0tPC96p17oBeFRRrTYk_-SpuiYtWclQGh9Q=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (6 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (6 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CBAQ4P0GIhMI5aGU1_Dn8gIVCKaPCh127Qkr",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2g0S0hBb2FRMHREVm14SlJIWTFYMGxEUmxscldISlJXV1IwT1hOR1ptY2FLU29uQ2hoVlExRXdWVVJNVVVOcVdUQnliWFY0UTBSRk16aEdSMmNTQzBsT1JrazVSbUZvVUZrd0lBSW9BVElhQ2hoVlExaHRNa1JUUnpKSmRHazNTMnBvVVVRMmJIaFlRMUUlM0Q="
+                  }
+                },
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                },
+                "trackingParams": "CBAQ4P0GIhMI5aGU1_Dn8gIVCKaPCh127Qkr"
+              }
+            }
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI5aGU1_Dn8gIVCKaPCh127Qkr",
+          "addChatItemAction": {
+            "item": {
+              "liveChatViewerEngagementMessageRenderer": {
+                "id": "CjEKL0NPTU1VTklUWV9HVUlERUxJTkVTX1ZFTTIwMjEvMDkvMDUtMDU6NTU6MDkuNzYx",
+                "timestampUsec": "1630846509761124",
+                "icon": {
+                  "iconType": "YOUTUBE_ROUND"
+                },
+                "message": {
+                  "runs": [
+                    {
+                      "text": "Welcome to live chat! Remember to guard your privacy and abide by our community guidelines."
+                    }
+                  ]
+                },
+                "actionButton": {
+                  "buttonRenderer": {
+                    "style": "STYLE_BLUE_TEXT",
+                    "size": "SIZE_DEFAULT",
+                    "isDisabled": false,
+                    "text": {
+                      "simpleText": "Learn more"
+                    },
+                    "navigationEndpoint": {
+                      "clickTrackingParams": "CA8Q8FsiEwjloZTX8OfyAhUIpo8KHXbtCSs=",
+                      "commandMetadata": {
+                        "webCommandMetadata": {
+                          "url": "//support.google.com/youtube/answer/2853856?hl=en#safe",
+                          "webPageType": "WEB_PAGE_TYPE_UNKNOWN",
+                          "rootVe": 83769
+                        }
+                      },
+                      "urlEndpoint": {
+                        "url": "//support.google.com/youtube/answer/2853856?hl=en#safe",
+                        "target": "TARGET_NEW_WINDOW"
+                      }
+                    },
+                    "trackingParams": "CA8Q8FsiEwjloZTX8OfyAhUIpo8KHXbtCSs=",
+                    "accessibilityData": {
+                      "accessibilityData": {
+                        "label": "Learn more"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "actionPanel": {
+        "liveChatMessageInputRenderer": {
+          "inputField": {
+            "liveChatTextInputFieldRenderer": {
+              "placeholder": {
+                "runs": [
+                  {
+                    "text": "Say something..."
+                  }
+                ]
+              },
+              "maxCharacterLimit": 200,
+              "emojiCharacterCount": 10
+            }
+          },
+          "sendButton": {
+            "buttonRenderer": {
+              "style": "STYLE_DEFAULT",
+              "size": "SIZE_DEFAULT",
+              "isDisabled": false,
+              "icon": {
+                "iconType": "SEND"
+              },
+              "accessibility": {
+                "label": "Send"
+              },
+              "trackingParams": "CA4Q8FsiEwjloZTX8OfyAhUIpo8KHXbtCSs=",
+              "accessibilityData": {
+                "accessibilityData": {
+                  "label": "Send"
+                }
+              }
+            }
+          },
+          "pickers": [
+            {
+              "emojiPickerRenderer": {
+                "id": "emoji",
+                "categories": [
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "people",
+                      "title": {
+                        "simpleText": "People"
+                      },
+                      "emojiIds": [
+                        "😀",
+                        "😃",
+                        "😄",
+                        "😁",
+                        "😆",
+                        "😅",
+                        "🤣",
+                        "😂",
+                        "🙂",
+                        "🙃",
+                        "😉",
+                        "😊",
+                        "😇",
+                        "🥰",
+                        "😍",
+                        "🤩",
+                        "😘",
+                        "😗",
+                        "☺",
+                        "😚",
+                        "😙",
+                        "🥲",
+                        "😋",
+                        "😛",
+                        "😜",
+                        "🤪",
+                        "😝",
+                        "🤑",
+                        "🤗",
+                        "🤭",
+                        "🤫",
+                        "🤔",
+                        "🤐",
+                        "🤨",
+                        "😐",
+                        "😑",
+                        "😶",
+                        "😶\u200d🌫",
+                        "😏",
+                        "😒",
+                        "🙄",
+                        "😬",
+                        "😮\u200d💨",
+                        "🤥",
+                        "😌",
+                        "😔",
+                        "😪",
+                        "🤤",
+                        "😴",
+                        "😷",
+                        "🤒",
+                        "🤕",
+                        "🤢",
+                        "🤮",
+                        "🤧",
+                        "🥵",
+                        "🥶",
+                        "🥴",
+                        "😵",
+                        "😵\u200d💫",
+                        "🤯",
+                        "🤠",
+                        "🥳",
+                        "🥸",
+                        "😎",
+                        "🤓",
+                        "🧐",
+                        "😕",
+                        "😟",
+                        "🙁",
+                        "☹",
+                        "😮",
+                        "😯",
+                        "😲",
+                        "😳",
+                        "🥺",
+                        "😦",
+                        "😧",
+                        "😨",
+                        "😰",
+                        "😥",
+                        "😢",
+                        "😭",
+                        "😱",
+                        "😖",
+                        "😣",
+                        "😞",
+                        "😓",
+                        "😩",
+                        "😫",
+                        "🥱",
+                        "😤",
+                        "😡",
+                        "😠",
+                        "🤬",
+                        "😈",
+                        "👿",
+                        "💀",
+                        "☠",
+                        "💩",
+                        "🤡",
+                        "👹",
+                        "👺",
+                        "👻",
+                        "👽",
+                        "👾",
+                        "🤖",
+                        "😺",
+                        "😸",
+                        "😹",
+                        "😻",
+                        "😼",
+                        "😽",
+                        "🙀",
+                        "😿",
+                        "😾",
+                        "🙈",
+                        "🙉",
+                        "🙊",
+                        "💋",
+                        "💌",
+                        "💘",
+                        "💝",
+                        "💖",
+                        "💗",
+                        "💓",
+                        "💞",
+                        "💕",
+                        "💟",
+                        "❣",
+                        "💔",
+                        "❤\u200d🔥",
+                        "❤\u200d🩹",
+                        "❤",
+                        "🧡",
+                        "💛",
+                        "💚",
+                        "💙",
+                        "💜",
+                        "🤎",
+                        "🖤",
+                        "🤍",
+                        "💯",
+                        "💢",
+                        "💥",
+                        "💫",
+                        "💦",
+                        "💨",
+                        "🕳",
+                        "💣",
+                        "💬",
+                        "👁\u200d🗨",
+                        "🗨",
+                        "🗯",
+                        "💭",
+                        "💤",
+                        "👋",
+                        "🤚",
+                        "🖐",
+                        "✋",
+                        "🖖",
+                        "👌",
+                        "🤌",
+                        "🤏",
+                        "✌",
+                        "🤞",
+                        "🤟",
+                        "🤘",
+                        "🤙",
+                        "👈",
+                        "👉",
+                        "👆",
+                        "🖕",
+                        "👇",
+                        "☝",
+                        "👍",
+                        "👎",
+                        "✊",
+                        "👊",
+                        "🤛",
+                        "🤜",
+                        "👏",
+                        "🙌",
+                        "👐",
+                        "🤲",
+                        "🤝",
+                        "🙏",
+                        "✍",
+                        "💅",
+                        "🤳",
+                        "💪",
+                        "🦾",
+                        "🦿",
+                        "🦵",
+                        "🦶",
+                        "👂",
+                        "🦻",
+                        "👃",
+                        "🧠",
+                        "🫀",
+                        "🫁",
+                        "🦷",
+                        "🦴",
+                        "👀",
+                        "👁",
+                        "👅",
+                        "👄",
+                        "👶",
+                        "🧒",
+                        "👦",
+                        "👧",
+                        "🧑",
+                        "👱",
+                        "👨",
+                        "🧔",
+                        "🧔\u200d♂",
+                        "🧔\u200d♀",
+                        "👩",
+                        "👱\u200d♀",
+                        "👱\u200d♂",
+                        "🧓",
+                        "👴",
+                        "👵",
+                        "🙍",
+                        "🙍\u200d♂",
+                        "🙍\u200d♀",
+                        "🙎",
+                        "🙎\u200d♂",
+                        "🙎\u200d♀",
+                        "🙅",
+                        "🙅\u200d♂",
+                        "🙅\u200d♀",
+                        "🙆",
+                        "🙆\u200d♂",
+                        "🙆\u200d♀",
+                        "💁",
+                        "💁\u200d♂",
+                        "💁\u200d♀",
+                        "🙋",
+                        "🙋\u200d♂",
+                        "🙋\u200d♀",
+                        "🧏",
+                        "🧏\u200d♂",
+                        "🧏\u200d♀",
+                        "🙇",
+                        "🙇\u200d♂",
+                        "🙇\u200d♀",
+                        "🤦",
+                        "🤦\u200d♂",
+                        "🤦\u200d♀",
+                        "🤷",
+                        "🤷\u200d♂",
+                        "🤷\u200d♀",
+                        "🧑\u200d⚕",
+                        "👨\u200d⚕",
+                        "👩\u200d⚕",
+                        "🧑\u200d🎓",
+                        "👨\u200d🎓",
+                        "👩\u200d🎓",
+                        "🧑\u200d🏫",
+                        "👨\u200d🏫",
+                        "👩\u200d🏫",
+                        "🧑\u200d⚖",
+                        "👨\u200d⚖",
+                        "👩\u200d⚖",
+                        "🧑\u200d🌾",
+                        "👨\u200d🌾",
+                        "👩\u200d🌾",
+                        "🧑\u200d🍳",
+                        "👨\u200d🍳",
+                        "👩\u200d🍳",
+                        "🧑\u200d🔧",
+                        "👨\u200d🔧",
+                        "👩\u200d🔧",
+                        "🧑\u200d🏭",
+                        "👨\u200d🏭",
+                        "👩\u200d🏭",
+                        "🧑\u200d💼",
+                        "👨\u200d💼",
+                        "👩\u200d💼",
+                        "🧑\u200d🔬",
+                        "👨\u200d🔬",
+                        "👩\u200d🔬",
+                        "🧑\u200d💻",
+                        "👨\u200d💻",
+                        "👩\u200d💻",
+                        "🧑\u200d🎤",
+                        "👨\u200d🎤",
+                        "👩\u200d🎤",
+                        "🧑\u200d🎨",
+                        "👨\u200d🎨",
+                        "👩\u200d🎨",
+                        "🧑\u200d✈",
+                        "👨\u200d✈",
+                        "👩\u200d✈",
+                        "🧑\u200d🚀",
+                        "👨\u200d🚀",
+                        "👩\u200d🚀",
+                        "🧑\u200d🚒",
+                        "👨\u200d🚒",
+                        "👩\u200d🚒",
+                        "👮",
+                        "👮\u200d♂",
+                        "👮\u200d♀",
+                        "🕵",
+                        "🕵\u200d♂",
+                        "🕵\u200d♀",
+                        "💂",
+                        "💂\u200d♂",
+                        "💂\u200d♀",
+                        "🥷",
+                        "👷",
+                        "👷\u200d♂",
+                        "👷\u200d♀",
+                        "🤴",
+                        "👸",
+                        "👳",
+                        "👳\u200d♂",
+                        "👳\u200d♀",
+                        "👲",
+                        "🧕",
+                        "🤵",
+                        "🤵\u200d♂",
+                        "🤵\u200d♀",
+                        "👰",
+                        "👰\u200d♂",
+                        "👰\u200d♀",
+                        "🤰",
+                        "🤱",
+                        "👩\u200d🍼",
+                        "👨\u200d🍼",
+                        "🧑\u200d🍼",
+                        "👼",
+                        "🎅",
+                        "🤶",
+                        "🧑\u200d🎄",
+                        "🦸",
+                        "🦸\u200d♂",
+                        "🦸\u200d♀",
+                        "🦹",
+                        "🦹\u200d♂",
+                        "🦹\u200d♀",
+                        "🧙",
+                        "🧙\u200d♂",
+                        "🧙\u200d♀",
+                        "🧚",
+                        "🧚\u200d♂",
+                        "🧚\u200d♀",
+                        "🧛",
+                        "🧛\u200d♂",
+                        "🧛\u200d♀",
+                        "🧜",
+                        "🧜\u200d♂",
+                        "🧜\u200d♀",
+                        "🧝",
+                        "🧝\u200d♂",
+                        "🧝\u200d♀",
+                        "🧞",
+                        "🧞\u200d♂",
+                        "🧞\u200d♀",
+                        "🧟",
+                        "🧟\u200d♂",
+                        "🧟\u200d♀",
+                        "💆",
+                        "💆\u200d♂",
+                        "💆\u200d♀",
+                        "💇",
+                        "💇\u200d♂",
+                        "💇\u200d♀",
+                        "🚶",
+                        "🚶\u200d♂",
+                        "🚶\u200d♀",
+                        "🧍",
+                        "🧍\u200d♂",
+                        "🧍\u200d♀",
+                        "🧎",
+                        "🧎\u200d♂",
+                        "🧎\u200d♀",
+                        "🧑\u200d🦯",
+                        "👨\u200d🦯",
+                        "👩\u200d🦯",
+                        "🧑\u200d🦼",
+                        "👨\u200d🦼",
+                        "👩\u200d🦼",
+                        "🧑\u200d🦽",
+                        "👨\u200d🦽",
+                        "👩\u200d🦽",
+                        "🏃",
+                        "🏃\u200d♂",
+                        "🏃\u200d♀",
+                        "💃",
+                        "🕺",
+                        "🕴",
+                        "👯",
+                        "👯\u200d♂",
+                        "👯\u200d♀",
+                        "🧖",
+                        "🧖\u200d♂",
+                        "🧖\u200d♀",
+                        "🧗",
+                        "🧗\u200d♂",
+                        "🧗\u200d♀",
+                        "🤺",
+                        "🏇",
+                        "⛷",
+                        "🏂",
+                        "🏌",
+                        "🏌\u200d♂",
+                        "🏌\u200d♀",
+                        "🏄",
+                        "🏄\u200d♂",
+                        "🏄\u200d♀",
+                        "🚣",
+                        "🚣\u200d♂",
+                        "🚣\u200d♀",
+                        "🏊",
+                        "🏊\u200d♂",
+                        "🏊\u200d♀",
+                        "⛹",
+                        "⛹\u200d♂",
+                        "⛹\u200d♀",
+                        "🏋",
+                        "🏋\u200d♂",
+                        "🏋\u200d♀",
+                        "🚴",
+                        "🚴\u200d♂",
+                        "🚴\u200d♀",
+                        "🚵",
+                        "🚵\u200d♂",
+                        "🚵\u200d♀",
+                        "🤸",
+                        "🤸\u200d♂",
+                        "🤸\u200d♀",
+                        "🤼",
+                        "🤼\u200d♂",
+                        "🤼\u200d♀",
+                        "🤽",
+                        "🤽\u200d♂",
+                        "🤽\u200d♀",
+                        "🤾",
+                        "🤾\u200d♂",
+                        "🤾\u200d♀",
+                        "🤹",
+                        "🤹\u200d♂",
+                        "🤹\u200d♀",
+                        "🧘",
+                        "🧘\u200d♂",
+                        "🧘\u200d♀",
+                        "🛀",
+                        "🛌",
+                        "🧑\u200d🤝\u200d🧑",
+                        "👭",
+                        "👫",
+                        "👬",
+                        "💏",
+                        "👩\u200d❤\u200d💋\u200d👨",
+                        "👨\u200d❤\u200d💋\u200d👨",
+                        "👩\u200d❤\u200d💋\u200d👩",
+                        "💑",
+                        "👩\u200d❤\u200d👨",
+                        "👨\u200d❤\u200d👨",
+                        "👩\u200d❤\u200d👩",
+                        "👪",
+                        "👨\u200d👩\u200d👦",
+                        "👨\u200d👩\u200d👧",
+                        "👨\u200d👩\u200d👧\u200d👦",
+                        "👨\u200d👩\u200d👦\u200d👦",
+                        "👨\u200d👩\u200d👧\u200d👧",
+                        "👨\u200d👨\u200d👦",
+                        "👨\u200d👨\u200d👧",
+                        "👨\u200d👨\u200d👧\u200d👦",
+                        "👨\u200d👨\u200d👦\u200d👦",
+                        "👨\u200d👨\u200d👧\u200d👧",
+                        "👩\u200d👩\u200d👦",
+                        "👩\u200d👩\u200d👧",
+                        "👩\u200d👩\u200d👧\u200d👦",
+                        "👩\u200d👩\u200d👦\u200d👦",
+                        "👩\u200d👩\u200d👧\u200d👧",
+                        "👨\u200d👦",
+                        "👨\u200d👦\u200d👦",
+                        "👨\u200d👧",
+                        "👨\u200d👧\u200d👦",
+                        "👨\u200d👧\u200d👧",
+                        "👩\u200d👦",
+                        "👩\u200d👦\u200d👦",
+                        "👩\u200d👧",
+                        "👩\u200d👧\u200d👦",
+                        "👩\u200d👧\u200d👧",
+                        "🗣",
+                        "👤",
+                        "👥",
+                        "🫂",
+                        "👣"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwjloZTX8OfyAhUIpo8KHXbtCSs="
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "nature",
+                      "title": {
+                        "simpleText": "Nature"
+                      },
+                      "emojiIds": [
+                        "🐵",
+                        "🐒",
+                        "🦍",
+                        "🦧",
+                        "🐶",
+                        "🐕",
+                        "🦮",
+                        "🐕\u200d🦺",
+                        "🐩",
+                        "🐺",
+                        "🦊",
+                        "🦝",
+                        "🐱",
+                        "🐈",
+                        "🐈\u200d⬛",
+                        "🦁",
+                        "🐯",
+                        "🐅",
+                        "🐆",
+                        "🐴",
+                        "🐎",
+                        "🦄",
+                        "🦓",
+                        "🦌",
+                        "🦬",
+                        "🐮",
+                        "🐂",
+                        "🐃",
+                        "🐄",
+                        "🐷",
+                        "🐖",
+                        "🐗",
+                        "🐽",
+                        "🐏",
+                        "🐑",
+                        "🐐",
+                        "🐪",
+                        "🐫",
+                        "🦙",
+                        "🦒",
+                        "🐘",
+                        "🦣",
+                        "🦏",
+                        "🦛",
+                        "🐭",
+                        "🐁",
+                        "🐀",
+                        "🐹",
+                        "🐰",
+                        "🐇",
+                        "🐿",
+                        "🦫",
+                        "🦔",
+                        "🦇",
+                        "🐻",
+                        "🐻\u200d❄",
+                        "🐨",
+                        "🐼",
+                        "🦥",
+                        "🦦",
+                        "🦨",
+                        "🦘",
+                        "🦡",
+                        "🐾",
+                        "🦃",
+                        "🐔",
+                        "🐓",
+                        "🐣",
+                        "🐤",
+                        "🐥",
+                        "🐦",
+                        "🐧",
+                        "🕊",
+                        "🦅",
+                        "🦆",
+                        "🦢",
+                        "🦉",
+                        "🦤",
+                        "🪶",
+                        "🦩",
+                        "🦚",
+                        "🦜",
+                        "🐸",
+                        "🐊",
+                        "🐢",
+                        "🦎",
+                        "🐍",
+                        "🐲",
+                        "🐉",
+                        "🦕",
+                        "🦖",
+                        "🐳",
+                        "🐋",
+                        "🐬",
+                        "🦭",
+                        "🐟",
+                        "🐠",
+                        "🐡",
+                        "🦈",
+                        "🐙",
+                        "🐚",
+                        "🐌",
+                        "🦋",
+                        "🐛",
+                        "🐜",
+                        "🐝",
+                        "🪲",
+                        "🐞",
+                        "🦗",
+                        "🪳",
+                        "🕷",
+                        "🕸",
+                        "🦂",
+                        "🦟",
+                        "🪰",
+                        "🪱",
+                        "🦠",
+                        "💐",
+                        "🌸",
+                        "💮",
+                        "🏵",
+                        "🌹",
+                        "🥀",
+                        "🌺",
+                        "🌻",
+                        "🌼",
+                        "🌷",
+                        "🌱",
+                        "🪴",
+                        "🌲",
+                        "🌳",
+                        "🌴",
+                        "🌵",
+                        "🌾",
+                        "🌿",
+                        "☘",
+                        "🍀",
+                        "🍁",
+                        "🍂",
+                        "🍃"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwjloZTX8OfyAhUIpo8KHXbtCSs="
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "food",
+                      "title": {
+                        "simpleText": "Food"
+                      },
+                      "emojiIds": [
+                        "🍇",
+                        "🍈",
+                        "🍉",
+                        "🍊",
+                        "🍋",
+                        "🍌",
+                        "🍍",
+                        "🥭",
+                        "🍎",
+                        "🍏",
+                        "🍐",
+                        "🍑",
+                        "🍒",
+                        "🍓",
+                        "🫐",
+                        "🥝",
+                        "🍅",
+                        "🫒",
+                        "🥥",
+                        "🥑",
+                        "🍆",
+                        "🥔",
+                        "🥕",
+                        "🌽",
+                        "🌶",
+                        "🫑",
+                        "🥒",
+                        "🥬",
+                        "🥦",
+                        "🧄",
+                        "🧅",
+                        "🍄",
+                        "🥜",
+                        "🌰",
+                        "🍞",
+                        "🥐",
+                        "🥖",
+                        "🫓",
+                        "🥨",
+                        "🥯",
+                        "🥞",
+                        "🧇",
+                        "🧀",
+                        "🍖",
+                        "🍗",
+                        "🥩",
+                        "🥓",
+                        "🍔",
+                        "🍟",
+                        "🍕",
+                        "🌭",
+                        "🥪",
+                        "🌮",
+                        "🌯",
+                        "🫔",
+                        "🥙",
+                        "🧆",
+                        "🥚",
+                        "🍳",
+                        "🥘",
+                        "🍲",
+                        "🫕",
+                        "🥣",
+                        "🥗",
+                        "🍿",
+                        "🧈",
+                        "🧂",
+                        "🥫",
+                        "🍱",
+                        "🍘",
+                        "🍙",
+                        "🍚",
+                        "🍛",
+                        "🍜",
+                        "🍝",
+                        "🍠",
+                        "🍢",
+                        "🍣",
+                        "🍤",
+                        "🍥",
+                        "🥮",
+                        "🍡",
+                        "🥟",
+                        "🥠",
+                        "🥡",
+                        "🦀",
+                        "🦞",
+                        "🦐",
+                        "🦑",
+                        "🦪",
+                        "🍦",
+                        "🍧",
+                        "🍨",
+                        "🍩",
+                        "🍪",
+                        "🎂",
+                        "🍰",
+                        "🧁",
+                        "🥧",
+                        "🍫",
+                        "🍬",
+                        "🍭",
+                        "🍮",
+                        "🍯",
+                        "🍼",
+                        "🥛",
+                        "☕",
+                        "🫖",
+                        "🍵",
+                        "🍶",
+                        "🍾",
+                        "🍷",
+                        "🍸",
+                        "🍹",
+                        "🍺",
+                        "🍻",
+                        "🥂",
+                        "🥃",
+                        "🥤",
+                        "🧋",
+                        "🧃",
+                        "🧉",
+                        "🧊",
+                        "🥢",
+                        "🍽",
+                        "🍴",
+                        "🥄",
+                        "🔪",
+                        "🏺"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwjloZTX8OfyAhUIpo8KHXbtCSs="
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "travel",
+                      "title": {
+                        "simpleText": "Travel"
+                      },
+                      "emojiIds": [
+                        "🌍",
+                        "🌎",
+                        "🌏",
+                        "🌐",
+                        "🗺",
+                        "🗾",
+                        "🧭",
+                        "🏔",
+                        "⛰",
+                        "🌋",
+                        "🗻",
+                        "🏕",
+                        "🏖",
+                        "🏜",
+                        "🏝",
+                        "🏞",
+                        "🏟",
+                        "🏛",
+                        "🏗",
+                        "🧱",
+                        "🪨",
+                        "🪵",
+                        "🛖",
+                        "🏘",
+                        "🏚",
+                        "🏠",
+                        "🏡",
+                        "🏢",
+                        "🏣",
+                        "🏤",
+                        "🏥",
+                        "🏦",
+                        "🏨",
+                        "🏩",
+                        "🏪",
+                        "🏫",
+                        "🏬",
+                        "🏭",
+                        "🏯",
+                        "🏰",
+                        "💒",
+                        "🗼",
+                        "🗽",
+                        "⛪",
+                        "🕌",
+                        "🛕",
+                        "🕍",
+                        "⛩",
+                        "🕋",
+                        "⛲",
+                        "⛺",
+                        "🌁",
+                        "🌃",
+                        "🏙",
+                        "🌄",
+                        "🌅",
+                        "🌆",
+                        "🌇",
+                        "🌉",
+                        "♨",
+                        "🎠",
+                        "🎡",
+                        "🎢",
+                        "💈",
+                        "🎪",
+                        "🚂",
+                        "🚃",
+                        "🚄",
+                        "🚅",
+                        "🚆",
+                        "🚇",
+                        "🚈",
+                        "🚉",
+                        "🚊",
+                        "🚝",
+                        "🚞",
+                        "🚋",
+                        "🚌",
+                        "🚍",
+                        "🚎",
+                        "🚐",
+                        "🚑",
+                        "🚒",
+                        "🚓",
+                        "🚔",
+                        "🚕",
+                        "🚖",
+                        "🚗",
+                        "🚘",
+                        "🚙",
+                        "🛻",
+                        "🚚",
+                        "🚛",
+                        "🚜",
+                        "🏎",
+                        "🏍",
+                        "🛵",
+                        "🦽",
+                        "🦼",
+                        "🛺",
+                        "🚲",
+                        "🛴",
+                        "🛹",
+                        "🛼",
+                        "🚏",
+                        "🛣",
+                        "🛤",
+                        "🛢",
+                        "⛽",
+                        "🚨",
+                        "🚥",
+                        "🚦",
+                        "🛑",
+                        "🚧",
+                        "⚓",
+                        "⛵",
+                        "🛶",
+                        "🚤",
+                        "🛳",
+                        "⛴",
+                        "🛥",
+                        "🚢",
+                        "✈",
+                        "🛩",
+                        "🛫",
+                        "🛬",
+                        "🪂",
+                        "💺",
+                        "🚁",
+                        "🚟",
+                        "🚠",
+                        "🚡",
+                        "🛰",
+                        "🚀",
+                        "🛸",
+                        "🛎",
+                        "🧳",
+                        "⌛",
+                        "⏳",
+                        "⌚",
+                        "⏰",
+                        "⏱",
+                        "⏲",
+                        "🕰",
+                        "🕛",
+                        "🕧",
+                        "🕐",
+                        "🕜",
+                        "🕑",
+                        "🕝",
+                        "🕒",
+                        "🕞",
+                        "🕓",
+                        "🕟",
+                        "🕔",
+                        "🕠",
+                        "🕕",
+                        "🕡",
+                        "🕖",
+                        "🕢",
+                        "🕗",
+                        "🕣",
+                        "🕘",
+                        "🕤",
+                        "🕙",
+                        "🕥",
+                        "🕚",
+                        "🕦",
+                        "🌑",
+                        "🌒",
+                        "🌓",
+                        "🌔",
+                        "🌕",
+                        "🌖",
+                        "🌗",
+                        "🌘",
+                        "🌙",
+                        "🌚",
+                        "🌛",
+                        "🌜",
+                        "🌡",
+                        "☀",
+                        "🌝",
+                        "🌞",
+                        "🪐",
+                        "⭐",
+                        "🌟",
+                        "🌠",
+                        "🌌",
+                        "☁",
+                        "⛅",
+                        "⛈",
+                        "🌤",
+                        "🌥",
+                        "🌦",
+                        "🌧",
+                        "🌨",
+                        "🌩",
+                        "🌪",
+                        "🌫",
+                        "🌬",
+                        "🌀",
+                        "🌈",
+                        "🌂",
+                        "☂",
+                        "☔",
+                        "⛱",
+                        "⚡",
+                        "❄",
+                        "☃",
+                        "⛄",
+                        "☄",
+                        "🔥",
+                        "💧",
+                        "🌊"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwjloZTX8OfyAhUIpo8KHXbtCSs="
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "activities",
+                      "title": {
+                        "simpleText": "Activities"
+                      },
+                      "emojiIds": [
+                        "🎃",
+                        "🎄",
+                        "🎆",
+                        "🎇",
+                        "🧨",
+                        "✨",
+                        "🎈",
+                        "🎉",
+                        "🎊",
+                        "🎋",
+                        "🎍",
+                        "🎎",
+                        "🎏",
+                        "🎐",
+                        "🎑",
+                        "🧧",
+                        "🎀",
+                        "🎁",
+                        "🎗",
+                        "🎟",
+                        "🎫",
+                        "🎖",
+                        "🏆",
+                        "🏅",
+                        "🥇",
+                        "🥈",
+                        "🥉",
+                        "⚽",
+                        "⚾",
+                        "🥎",
+                        "🏀",
+                        "🏐",
+                        "🏈",
+                        "🏉",
+                        "🎾",
+                        "🥏",
+                        "🎳",
+                        "🏏",
+                        "🏑",
+                        "🏒",
+                        "🥍",
+                        "🏓",
+                        "🏸",
+                        "🥊",
+                        "🥋",
+                        "🥅",
+                        "⛳",
+                        "⛸",
+                        "🎣",
+                        "🤿",
+                        "🎽",
+                        "🎿",
+                        "🛷",
+                        "🥌",
+                        "🎯",
+                        "🪀",
+                        "🪁",
+                        "🎱",
+                        "🔮",
+                        "🪄",
+                        "🧿",
+                        "🎮",
+                        "🕹",
+                        "🎰",
+                        "🎲",
+                        "🧩",
+                        "🧸",
+                        "🪅",
+                        "🪆",
+                        "♠",
+                        "♥",
+                        "♦",
+                        "♣",
+                        "♟",
+                        "🃏",
+                        "🀄",
+                        "🎴",
+                        "🎭",
+                        "🖼",
+                        "🎨",
+                        "🧵",
+                        "🪡",
+                        "🧶",
+                        "🪢"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwjloZTX8OfyAhUIpo8KHXbtCSs="
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "objects",
+                      "title": {
+                        "simpleText": "Objects"
+                      },
+                      "emojiIds": [
+                        "👓",
+                        "🕶",
+                        "🥽",
+                        "🥼",
+                        "🦺",
+                        "👔",
+                        "👕",
+                        "👖",
+                        "🧣",
+                        "🧤",
+                        "🧥",
+                        "🧦",
+                        "👗",
+                        "👘",
+                        "🥻",
+                        "🩱",
+                        "🩲",
+                        "🩳",
+                        "👙",
+                        "👚",
+                        "👛",
+                        "👜",
+                        "👝",
+                        "🛍",
+                        "🎒",
+                        "🩴",
+                        "👞",
+                        "👟",
+                        "🥾",
+                        "🥿",
+                        "👠",
+                        "👡",
+                        "🩰",
+                        "👢",
+                        "👑",
+                        "👒",
+                        "🎩",
+                        "🎓",
+                        "🧢",
+                        "🪖",
+                        "⛑",
+                        "📿",
+                        "💄",
+                        "💍",
+                        "💎",
+                        "🔇",
+                        "🔈",
+                        "🔉",
+                        "🔊",
+                        "📢",
+                        "📣",
+                        "📯",
+                        "🔔",
+                        "🔕",
+                        "🎼",
+                        "🎵",
+                        "🎶",
+                        "🎙",
+                        "🎚",
+                        "🎛",
+                        "🎤",
+                        "🎧",
+                        "📻",
+                        "🎷",
+                        "🪗",
+                        "🎸",
+                        "🎹",
+                        "🎺",
+                        "🎻",
+                        "🪕",
+                        "🥁",
+                        "🪘",
+                        "📱",
+                        "📲",
+                        "☎",
+                        "📞",
+                        "📟",
+                        "📠",
+                        "🔋",
+                        "🔌",
+                        "💻",
+                        "🖥",
+                        "🖨",
+                        "⌨",
+                        "🖱",
+                        "🖲",
+                        "💽",
+                        "💾",
+                        "💿",
+                        "📀",
+                        "🧮",
+                        "🎥",
+                        "🎞",
+                        "📽",
+                        "🎬",
+                        "📺",
+                        "📷",
+                        "📸",
+                        "📹",
+                        "📼",
+                        "🔍",
+                        "🔎",
+                        "🕯",
+                        "💡",
+                        "🔦",
+                        "🏮",
+                        "🪔",
+                        "📔",
+                        "📕",
+                        "📖",
+                        "📗",
+                        "📘",
+                        "📙",
+                        "📚",
+                        "📓",
+                        "📒",
+                        "📃",
+                        "📜",
+                        "📄",
+                        "📰",
+                        "🗞",
+                        "📑",
+                        "🔖",
+                        "🏷",
+                        "💰",
+                        "🪙",
+                        "💴",
+                        "💵",
+                        "💶",
+                        "💷",
+                        "💸",
+                        "💳",
+                        "🧾",
+                        "💹",
+                        "✉",
+                        "📧",
+                        "📨",
+                        "📩",
+                        "📤",
+                        "📥",
+                        "📦",
+                        "📫",
+                        "📪",
+                        "📬",
+                        "📭",
+                        "📮",
+                        "🗳",
+                        "✏",
+                        "✒",
+                        "🖋",
+                        "🖊",
+                        "🖌",
+                        "🖍",
+                        "📝",
+                        "💼",
+                        "📁",
+                        "📂",
+                        "🗂",
+                        "📅",
+                        "📆",
+                        "🗒",
+                        "🗓",
+                        "📇",
+                        "📈",
+                        "📉",
+                        "📊",
+                        "📋",
+                        "📌",
+                        "📍",
+                        "📎",
+                        "🖇",
+                        "📏",
+                        "📐",
+                        "✂",
+                        "🗃",
+                        "🗄",
+                        "🗑",
+                        "🔒",
+                        "🔓",
+                        "🔏",
+                        "🔐",
+                        "🔑",
+                        "🗝",
+                        "🔨",
+                        "🪓",
+                        "⛏",
+                        "⚒",
+                        "🛠",
+                        "🗡",
+                        "⚔",
+                        "🔫",
+                        "🪃",
+                        "🏹",
+                        "🛡",
+                        "🪚",
+                        "🔧",
+                        "🪛",
+                        "🔩",
+                        "⚙",
+                        "🗜",
+                        "⚖",
+                        "🦯",
+                        "🔗",
+                        "⛓",
+                        "🪝",
+                        "🧰",
+                        "🧲",
+                        "🪜",
+                        "⚗",
+                        "🧪",
+                        "🧫",
+                        "🧬",
+                        "🔬",
+                        "🔭",
+                        "📡",
+                        "💉",
+                        "🩸",
+                        "💊",
+                        "🩹",
+                        "🩺",
+                        "🚪",
+                        "🛗",
+                        "🪞",
+                        "🪟",
+                        "🛏",
+                        "🛋",
+                        "🪑",
+                        "🚽",
+                        "🪠",
+                        "🚿",
+                        "🛁",
+                        "🪤",
+                        "🪒",
+                        "🧴",
+                        "🧷",
+                        "🧹",
+                        "🧺",
+                        "🧻",
+                        "🪣",
+                        "🧼",
+                        "🪥",
+                        "🧽",
+                        "🧯",
+                        "🛒",
+                        "🚬",
+                        "⚰",
+                        "🪦",
+                        "⚱",
+                        "🗿",
+                        "🪧"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwjloZTX8OfyAhUIpo8KHXbtCSs="
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "symbols",
+                      "title": {
+                        "simpleText": "Symbols"
+                      },
+                      "emojiIds": [
+                        "🏧",
+                        "🚮",
+                        "🚰",
+                        "♿",
+                        "🚹",
+                        "🚺",
+                        "🚻",
+                        "🚼",
+                        "🚾",
+                        "🛂",
+                        "🛃",
+                        "🛄",
+                        "🛅",
+                        "⚠",
+                        "🚸",
+                        "⛔",
+                        "🚫",
+                        "🚳",
+                        "🚭",
+                        "🚯",
+                        "🚱",
+                        "🚷",
+                        "📵",
+                        "🔞",
+                        "☢",
+                        "☣",
+                        "⬆",
+                        "↗",
+                        "➡",
+                        "↘",
+                        "⬇",
+                        "↙",
+                        "⬅",
+                        "↖",
+                        "↕",
+                        "↔",
+                        "↩",
+                        "↪",
+                        "⤴",
+                        "⤵",
+                        "🔃",
+                        "🔄",
+                        "🔙",
+                        "🔚",
+                        "🔛",
+                        "🔜",
+                        "🔝",
+                        "🛐",
+                        "⚛",
+                        "🕉",
+                        "✡",
+                        "☸",
+                        "☯",
+                        "✝",
+                        "☦",
+                        "☪",
+                        "☮",
+                        "🕎",
+                        "🔯",
+                        "♈",
+                        "♉",
+                        "♊",
+                        "♋",
+                        "♌",
+                        "♍",
+                        "♎",
+                        "♏",
+                        "♐",
+                        "♑",
+                        "♒",
+                        "♓",
+                        "⛎",
+                        "🔀",
+                        "🔁",
+                        "🔂",
+                        "▶",
+                        "⏩",
+                        "⏭",
+                        "⏯",
+                        "◀",
+                        "⏪",
+                        "⏮",
+                        "🔼",
+                        "⏫",
+                        "🔽",
+                        "⏬",
+                        "⏸",
+                        "⏹",
+                        "⏺",
+                        "⏏",
+                        "🎦",
+                        "🔅",
+                        "🔆",
+                        "📶",
+                        "📳",
+                        "📴",
+                        "♀",
+                        "♂",
+                        "⚧",
+                        "✖",
+                        "➕",
+                        "➖",
+                        "➗",
+                        "♾",
+                        "‼",
+                        "⁉",
+                        "❓",
+                        "❔",
+                        "❕",
+                        "❗",
+                        "〰",
+                        "💱",
+                        "💲",
+                        "⚕",
+                        "♻",
+                        "⚜",
+                        "🔱",
+                        "📛",
+                        "🔰",
+                        "⭕",
+                        "✅",
+                        "☑",
+                        "✔",
+                        "❌",
+                        "❎",
+                        "➰",
+                        "➿",
+                        "〽",
+                        "✳",
+                        "✴",
+                        "❇",
+                        "©",
+                        "®",
+                        "™",
+                        "🔴",
+                        "🟠",
+                        "🟡",
+                        "🟢",
+                        "🔵",
+                        "🟣",
+                        "🟤",
+                        "⚫",
+                        "⚪",
+                        "🟥",
+                        "🟧",
+                        "🟨",
+                        "🟩",
+                        "🟦",
+                        "🟪",
+                        "🟫",
+                        "⬛",
+                        "⬜",
+                        "◼",
+                        "◻",
+                        "◾",
+                        "◽",
+                        "▪",
+                        "▫",
+                        "🔶",
+                        "🔷",
+                        "🔸",
+                        "🔹",
+                        "🔺",
+                        "🔻",
+                        "💠",
+                        "🔘",
+                        "🔳",
+                        "🔲",
+                        "🏁",
+                        "🚩",
+                        "🎌",
+                        "🏴",
+                        "🏳",
+                        "🏳\u200d🌈",
+                        "🏳\u200d⚧",
+                        "🏴\u200d☠"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwjloZTX8OfyAhUIpo8KHXbtCSs="
+                    }
+                  }
+                ],
+                "categoryButtons": [
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "people",
+                      "icon": {
+                        "iconType": "EMOJI_PEOPLE"
+                      },
+                      "tooltip": "People",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "People"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "nature",
+                      "icon": {
+                        "iconType": "EMOJI_NATURE"
+                      },
+                      "tooltip": "Nature",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Nature"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "food",
+                      "icon": {
+                        "iconType": "EMOJI_FOOD"
+                      },
+                      "tooltip": "Food",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Food"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "travel",
+                      "icon": {
+                        "iconType": "EMOJI_TRAVEL"
+                      },
+                      "tooltip": "Travel",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Travel"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "activities",
+                      "icon": {
+                        "iconType": "EMOJI_ACTIVITIES"
+                      },
+                      "tooltip": "Activities",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Activities"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "objects",
+                      "icon": {
+                        "iconType": "EMOJI_OBJECTS"
+                      },
+                      "tooltip": "Objects",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Objects"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "symbols",
+                      "icon": {
+                        "iconType": "EMOJI_SYMBOLS"
+                      },
+                      "tooltip": "Symbols",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Symbols"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "searchPlaceholderText": {
+                  "runs": [
+                    {
+                      "text": "Search emoji"
+                    }
+                  ]
+                },
+                "searchNoResultsText": {
+                  "runs": [
+                    {
+                      "text": "No emoji found"
+                    }
+                  ]
+                },
+                "pickSkinToneText": {
+                  "runs": [
+                    {
+                      "text": "Pick emoji skin tone"
+                    }
+                  ]
+                },
+                "trackingParams": "CA0QsrQCGAYiEwjloZTX8OfyAhUIpo8KHXbtCSs=",
+                "clearSearchLabel": "Clear search",
+                "skinToneGenericLabel": "Generic skin tone",
+                "skinToneLightLabel": "Light skin tone",
+                "skinToneMediumLightLabel": "Medium light skin tone",
+                "skinToneMediumLabel": "Medium skin tone",
+                "skinToneMediumDarkLabel": "Medium dark skin tone",
+                "skinToneDarkLabel": "Dark skin tone"
+              }
+            }
+          ],
+          "pickerButtons": [
+            {
+              "liveChatIconToggleButtonRenderer": {
+                "targetId": "emoji",
+                "icon": {
+                  "iconType": "EMOJI"
+                },
+                "tooltip": "Custom emojis",
+                "accessibility": {
+                  "accessibilityData": {
+                    "label": "Custom emojis"
+                  }
+                },
+                "toggledIcon": {
+                  "iconType": "KEYBOARD"
+                },
+                "trackingParams": "CAwQtIkEGAciEwjloZTX8OfyAhUIpo8KHXbtCSs="
+              }
+            }
+          ],
+          "interactionMessage": {
+            "messageRenderer": {
+              "trackingParams": "CAoQljsiEwjloZTX8OfyAhUIpo8KHXbtCSs=",
+              "button": {
+                "buttonRenderer": {
+                  "style": "STYLE_DARK",
+                  "size": "SIZE_DEFAULT",
+                  "isDisabled": false,
+                  "text": {
+                    "simpleText": "Sign in to chat"
+                  },
+                  "navigationEndpoint": {
+                    "clickTrackingParams": "CAsQ8FsiEwjloZTX8OfyAhUIpo8KHXbtCSs=",
+                    "commandMetadata": {
+                      "webCommandMetadata": {
+                        "url": "https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fwatch%253Fv%253DINFI9FahPY0&hl=en",
+                        "webPageType": "WEB_PAGE_TYPE_UNKNOWN",
+                        "rootVe": 83769
+                      }
+                    },
+                    "signInEndpoint": {
+                      "nextEndpoint": {
+                        "clickTrackingParams": "CAsQ8FsiEwjloZTX8OfyAhUIpo8KHXbtCSs=",
+                        "commandMetadata": {
+                          "webCommandMetadata": {
+                            "url": "/watch?v=INFI9FahPY0",
+                            "webPageType": "WEB_PAGE_TYPE_WATCH",
+                            "rootVe": 3832
+                          }
+                        },
+                        "watchEndpoint": {
+                          "videoId": "INFI9FahPY0"
+                        }
+                      }
+                    }
+                  },
+                  "accessibility": {
+                    "label": "Sign in to chat"
+                  },
+                  "trackingParams": "CAsQ8FsiEwjloZTX8OfyAhUIpo8KHXbtCSs=",
+                  "accessibilityData": {
+                    "accessibilityData": {
+                      "label": "Sign in to chat"
+                    }
+                  }
+                }
+              },
+              "subtext": {
+                "messageSubtextRenderer": {
+                  "text": {
+                    "simpleText": "All messages you send will appear publicly"
+                  }
+                }
+              }
+            }
+          },
+          "targetId": "live-chat-message-input"
+        }
+      },
+      "itemList": {
+        "liveChatItemListRenderer": {
+          "maxItemsToDisplay": 250,
+          "moreCommentsBelowButton": {
+            "buttonRenderer": {
+              "style": "STYLE_PRIMARY",
+              "icon": {
+                "iconType": "DOWN_ARROW"
+              },
+              "trackingParams": "CAkQ8FsiEwjloZTX8OfyAhUIpo8KHXbtCSs=",
+              "accessibilityData": {
+                "accessibilityData": {
+                  "label": "More comments below"
+                }
+              }
+            }
+          },
+          "enablePauseChatKeyboardShortcuts": false
+        }
+      },
+      "header": {
+        "liveChatHeaderRenderer": {
+          "overflowMenu": {
+            "menuRenderer": {
+              "items": [
+                {
+                  "menuServiceItemRenderer": {
+                    "text": {
+                      "runs": [
+                        {
+                          "text": "Participants"
+                        }
+                      ]
+                    },
+                    "icon": {
+                      "iconType": "PERSON"
+                    },
+                    "serviceEndpoint": {
+                      "clickTrackingParams": "CAEQl98BIhMI5aGU1_Dn8gIVCKaPCh127Qkr",
+                      "showLiveChatParticipantsEndpoint": {
+                        "hack": true
+                      }
+                    },
+                    "trackingParams": "CAEQl98BIhMI5aGU1_Dn8gIVCKaPCh127Qkr"
+                  }
+                },
+                {
+                  "menuServiceItemRenderer": {
+                    "text": {
+                      "runs": [
+                        {
+                          "text": "Toggle timestamps"
+                        }
+                      ]
+                    },
+                    "icon": {
+                      "iconType": "ACCESS_TIME"
+                    },
+                    "serviceEndpoint": {
+                      "clickTrackingParams": "CAEQl98BIhMI5aGU1_Dn8gIVCKaPCh127Qkr",
+                      "toggleLiveChatTimestampsEndpoint": {
+                        "hack": true
+                      }
+                    },
+                    "trackingParams": "CAEQl98BIhMI5aGU1_Dn8gIVCKaPCh127Qkr"
+                  }
+                },
+                {
+                  "menuNavigationItemRenderer": {
+                    "text": {
+                      "runs": [
+                        {
+                          "text": "Send feedback"
+                        }
+                      ]
+                    },
+                    "icon": {
+                      "iconType": "FEEDBACK"
+                    },
+                    "navigationEndpoint": {
+                      "clickTrackingParams": "CAEQl98BIhMI5aGU1_Dn8gIVCKaPCh127Qkr",
+                      "commandMetadata": {
+                        "webCommandMetadata": {
+                          "ignoreNavigation": true
+                        }
+                      },
+                      "userFeedbackEndpoint": {
+                        "hack": true,
+                        "bucketIdentifier": "live_chat"
+                      }
+                    },
+                    "trackingParams": "CAEQl98BIhMI5aGU1_Dn8gIVCKaPCh127Qkr"
+                  }
+                }
+              ],
+              "trackingParams": "CAEQl98BIhMI5aGU1_Dn8gIVCKaPCh127Qkr",
+              "accessibility": {
+                "accessibilityData": {
+                  "label": "More options"
+                }
+              }
+            }
+          },
+          "collapseButton": {
+            "buttonRenderer": {
+              "style": "STYLE_DEFAULT",
+              "size": "SIZE_DEFAULT",
+              "isDisabled": false,
+              "accessibility": {
+                "label": "Expand or collapse chat"
+              },
+              "trackingParams": "CAgQ8FsiEwjloZTX8OfyAhUIpo8KHXbtCSs="
+            }
+          },
+          "viewSelector": {
+            "sortFilterSubMenuRenderer": {
+              "subMenuItems": [
+                {
+                  "title": "Top chat",
+                  "selected": false,
+                  "continuation": {
+                    "reloadContinuationData": {
+                      "continuation": "0ofMyAN5GlhDaWtxSndvWVZVTlJNRlZFVEZGRGFsa3djbTExZUVORVJUTTRSa2RuRWd0SlRrWkpPVVpoYUZCWk1Cb1Q2cWpkdVFFTkNndEpUa1pKT1VaaGFGQlpNQ0FDMAFKFggAGAAgAFD1pJTX8OfyAlgDeACiAQCCAQIIBA%3D%3D",
+                      "clickTrackingParams": "CAcQxqYCIhMI5aGU1_Dn8gIVCKaPCh127Qkr"
+                    }
+                  },
+                  "accessibility": {
+                    "accessibilityData": {
+                      "label": "Top chat"
+                    }
+                  },
+                  "subtitle": "Some messages, such as potential spam, may not be visible",
+                  "trackingParams": "CAYQ48AHIhMI5aGU1_Dn8gIVCKaPCh127Qkr"
+                },
+                {
+                  "title": "Live chat",
+                  "selected": true,
+                  "continuation": {
+                    "reloadContinuationData": {
+                      "continuation": "0ofMyAN5GlhDaWtxSndvWVZVTlJNRlZFVEZGRGFsa3djbTExZUVORVJUTTRSa2RuRWd0SlRrWkpPVVpoYUZCWk1Cb1Q2cWpkdVFFTkNndEpUa1pKT1VaaGFGQlpNQ0FDMAFKFggAGAAgAFD1pJTX8OfyAlgDeACiAQCCAQIIAQ%3D%3D",
+                      "clickTrackingParams": "CAUQxqYCIhMI5aGU1_Dn8gIVCKaPCh127Qkr"
+                    }
+                  },
+                  "accessibility": {
+                    "accessibilityData": {
+                      "label": "Live chat"
+                    }
+                  },
+                  "subtitle": "All messages are visible",
+                  "trackingParams": "CAQQ48AHIhMI5aGU1_Dn8gIVCKaPCh127Qkr"
+                }
+              ],
+              "accessibility": {
+                "accessibilityData": {
+                  "label": "Live Chat mode selection"
+                }
+              },
+              "trackingParams": "CAMQgdoEIhMI5aGU1_Dn8gIVCKaPCh127Qkr"
+            }
+          }
+        }
+      },
+      "ticker": {
+        "liveChatTickerRenderer": {
+          "sentinel": true
+        }
+      },
+      "trackingParams": "CAEQl98BIhMI5aGU1_Dn8gIVCKaPCh127Qkr",
+      "participantsList": {
+        "liveChatParticipantsListRenderer": {
+          "title": {
+            "runs": [
+              {
+                "text": "Participants"
+              }
+            ]
+          },
+          "backButton": {
+            "buttonRenderer": {
+              "icon": {
+                "iconType": "BACK"
+              },
+              "trackingParams": "CAIQ8FsiEwjloZTX8OfyAhUIpo8KHXbtCSs=",
+              "accessibilityData": {
+                "accessibilityData": {
+                  "label": "Back"
+                }
+              }
+            }
+          },
+          "participants": [
+            {
+              "liveChatParticipantRenderer": {
+                "authorName": {
+                  "simpleText": "Matsuri Channel 夏色まつり"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQCXDfJbZoEZ-gtUiF4nSaGU8-qiq--BSTd92Sw=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQCXDfJbZoEZ-gtUiF4nSaGU8-qiq--BSTd92Sw=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "icon": {
+                        "iconType": "VERIFIED"
+                      },
+                      "tooltip": "Verified",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Verified"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "icon": {
+                        "iconType": "OWNER"
+                      },
+                      "tooltip": "Owner",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Owner"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "clientMessages": {
+        "reconnectMessage": {
+          "runs": [
+            {
+              "text": "Chat disconnected. Please wait while we try to reconnect you."
+            }
+          ]
+        },
+        "unableToReconnectMessage": {
+          "runs": [
+            {
+              "text": "Unable to connect to chat. Please try again later."
+            }
+          ]
+        },
+        "fatalError": {
+          "runs": [
+            {
+              "text": "Unable to connect to chat. Please try again later."
+            }
+          ]
+        },
+        "reconnectedMessage": {
+          "runs": [
+            {
+              "text": "Successfully connected."
+            }
+          ]
+        },
+        "genericError": {
+          "runs": [
+            {
+              "text": "Error, try again."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4920 @@
+{
+  "responseContext": {
+    "serviceTrackingParams": [
+      {
+        "service": "CSI",
+        "params": [
+          {
+            "key": "c",
+            "value": "WEB"
+          },
+          {
+            "key": "cver",
+            "value": "2.20210903.05.01"
+          },
+          {
+            "key": "yt_li",
+            "value": "0"
+          },
+          {
+            "key": "GetLiveChat_rid",
+            "value": "0x7a5d0d429f50be78"
+          }
+        ]
+      },
+      {
+        "service": "GFEEDBACK",
+        "params": [
+          {
+            "key": "logged_in",
+            "value": "0"
+          },
+          {
+            "key": "e",
+            "value": "23974595,24046869,23744176,23998056,24045475,24058380,23858057,24002022,24007790,23934970,24067673,23804281,23857950,24083163,23996830,24097668,24098640,24083189,24028143,24080738,24091701,24077128,23966208,9405995,24082662,24087533,1714242,24095681,24002025,24095990,24037794,24077266,24065680,24083162,24056274,23884386,23990876,24047616,23983296,24076555,23882502,23944779,24049820,23968386,24050503,24083448,23946420,24001373,24091075,24078279,23918597,23986025,24007246,24036948,24045476,24083188,24087223,24088877,24004644"
+          }
+        ]
+      },
+      {
+        "service": "GUIDED_HELP",
+        "params": [
+          {
+            "key": "logged_in",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "service": "ECATCHER",
+        "params": [
+          {
+            "key": "client.version",
+            "value": "2.20210903"
+          },
+          {
+            "key": "client.name",
+            "value": "WEB"
+          }
+        ]
+      }
+    ],
+    "mainAppWebResponseContext": {
+      "loggedOut": true
+    },
+    "webResponseContextExtensionData": {
+      "hasDecorated": true
+    }
+  },
+  "trackingParams": "CAAQ0b4BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+  "continuationContents": {
+    "liveChatContinuation": {
+      "continuations": [
+        {
+          "invalidationContinuationData": {
+            "invalidationId": {
+              "objectSource": 1056,
+              "objectId": "Y2hhdH43QWRabk9oTDFBa341NDM2MTU1",
+              "topic": "chat~7AdZnOhL1Ak~5436155",
+              "subscribeToGcmTopics": true,
+              "protoCreationTimestampMs": "1630846509555"
+            },
+            "timeoutMs": 10000,
+            "continuation": "0ofMyAOoARpYQ2lrcUp3b1lWVU13VkZobFgweFpXalJ6WTJGWE1saE5lV2sxWDJ0M0VnczNRV1JhYms5b1RERkJheG9UNnFqZHVRRU5DZ3MzUVdSYWJrOW9UREZCYXlBQyjzqIe77OfyAjAAQAJKFggAGAAgAFCfh4jX8OfyAlgDeACiAQBQrouzu-zn8gJYy6DAq9_n8gKCAQIIAYgBAJoBAggAoAHJv4rX8OfyAg%3D%3D",
+            "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS"
+          }
+        }
+      ],
+      "actions": [
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "Nikv「アール」"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/MJ6pdltWiWx7x7VGAWfs-dzXjACR0FIXXtsdo-ZgPftKfe-DD-qPgNHULYBcx4PKKhn4Ttg-4g=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/MJ6pdltWiWx7x7VGAWfs-dzXjACR0FIXXtsdo-ZgPftKfe-DD-qPgNHULYBcx4PKKhn4Ttg-4g=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMGxZUlcxTGRtWTFYMGxEUmxWSlIzSlJXV1J5ZVVGUE1HY1NHME5NU0ZnNE5tcG1OVjlKUTBaWllqWlBRVmxrUW14dlFuTjNNQm9wS2ljS0dGVkRNRlJZWlY5TVdWbzBjMk5oVnpKWVRYbHBOVjlyZHhJTE4wRmtXbTVQYUV3eFFXc2dBaWdCTWhvS0dGVkROM2hEYjFkc1ZEY3RWMnhZVjNWVFEwbEZkMmROVVElM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNJWEVtS3ZmNV9JQ0ZVSUdyUVlkcnlBTzBnEhtDTEhYODZqZjVfSUNGWWI2T0FZZEJsb0JzdzA%3D",
+                "timestampUsec": "1630841854108228",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/ZOqSawuI38WY1GrNy6CaMbizvRyuM9hQrpc33oXRXT03Wq0vrNVOoYftBXZIISdHcXrjH3as=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/ZOqSawuI38WY1GrNy6CaMbizvRyuM9hQrpc33oXRXT03Wq0vrNVOoYftBXZIISdHcXrjH3as=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (6 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (6 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UC7xCoWlT7-WlXWuSCIEwgMQ",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CLHX86jf5_ICFYb6OAYdBloBsw0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "Yesss. More!"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "Vee"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSK2nzvRDQr5l0RwpT2hDo3fBeY5e9FExPpc7ei_w=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSK2nzvRDQr5l0RwpT2hDo3fBeY5e9FExPpc7ei_w=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2tjS1JRb2FRMDgyTm5SMFltWTFYMGxEUmxGblluSlJXV1JyVFRSSFgyY1NKME5OWlRkbmRFeG1OVjlKUTBaUmFsRlhRVzlrZFdkTlRYUlJNVFl6TURnME1UazBORGM0TlJvcEtpY0tHRlZETUZSWVpWOU1XVm8wYzJOaFZ6SllUWGxwTlY5cmR4SUxOMEZrV201UGFFd3hRV3NnQWlnQk1ob0tHRlZEUm1kV1JrVjVjbUo0VWpGSU9IYzViRmhJT1hodmR3JTNEJTNE"
+                  }
+                },
+                "id": "CkUKGkNPNjZ0dGJmNV9JQ0ZRZ2JyUVlka000R19nEidDTWU3Z3RMZjVfSUNGUWpRV0FvZHVnTU10UTE2MzA4NDE5NDQ3ODU%3D",
+                "timestampUsec": "1630841944776103",
+                "authorExternalChannelId": "UCFgVFEyrbxR1H8w9lXH9xow",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CMe7gtLf5_ICFQjQWAodugMMtQ1630841944785"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "Wow this song！！"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "のんたんラブレスワールド"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQwgonx6Nvv5EfKe0tTUYJh-QFfGE4tilEBzTkt=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQwgonx6Nvv5EfKe0tTUYJh-QFfGE4tilEBzTkt=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2tjS1JRb2FRMGxpTjJwaFJHYzFYMGxEUmxGblluSlJXV1JyVFRSSFgyY1NKME5QVEVscU5YcG5OVjlKUTBaUk1WaHFkMjlrTldsclEwUjNNVFl6TURnME1qQTVPREExTWhvcEtpY0tHRlZETUZSWVpWOU1XVm8wYzJOaFZ6SllUWGxwTlY5cmR4SUxOMEZrV201UGFFd3hRV3NnQWlnQk1ob0tHRlZEVkhad1JuWnNjRmhaZUU0eWRrZzBXR1kwZG5CVFp3JTNEJTNE"
+                  }
+                },
+                "id": "CkUKGkNJYjdqYURnNV9JQ0ZRZ2JyUVlka000R19nEidDT0xJajV6ZzVfSUNGUTFYandvZDVpa0NEdzE2MzA4NDIwOTgwNTI%3D",
+                "timestampUsec": "1630842099301800",
+                "authorExternalChannelId": "UCTvpFvlpXYxN2vH4Xf4vpSg",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "COLIj5zg5_ICFQ1Xjwod5ikCDw1630842098052"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYK7tHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_clap:",
+                          ":clap:"
+                        ],
+                        "searchTerms": [
+                          "_clap",
+                          "clap"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/SNys7PkM0EhTxd8BJRrp5XXOrkeYmSr4I91gNnrjDqv-_xIqzQmGezlZFPhBzTuYGOx8szHr-g=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/SNys7PkM0EhTxd8BJRrp5XXOrkeYmSr4I91gNnrjDqv-_xIqzQmGezlZFPhBzTuYGOx8szHr-g=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "clap"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/Sco0YJu_K5fE-QPjwYiYAg",
+                        "shortcuts": [
+                          ":_suki:",
+                          ":suki:"
+                        ],
+                        "searchTerms": [
+                          "_suki",
+                          "suki"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/RNKY4lxrN1t1qCWJb4D4gFUnkB2xs-bZZCaGBvfaBpgtZkzX9fnhOXxOfI_TNbeMWn-mprjxpA=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/RNKY4lxrN1t1qCWJb4D4gFUnkB2xs-bZZCaGBvfaBpgtZkzX9fnhOXxOfI_TNbeMWn-mprjxpA=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "suki"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "ヂョンユージェJerry Chung"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQVBanQadSVlU71tPFcEIBuL3ZGQAKaJN-NKha2gg=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQVBanQadSVlU71tPFcEIBuL3ZGQAKaJN-NKha2gg=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2p3S09nb2FRMUJUUW5wTFptZzFYMGxEUmxOak1uSlJXV1JuTnpoRFduY1NIRU5QVkVaNllWUm9OVjlKUTBaWWNqVlBRVmxrTWpnd1JtRkJMVEFhS1NvbkNoaFZRekJVV0dWZlRGbGFOSE5qWVZjeVdFMTVhVFZmYTNjU0N6ZEJaRnB1VDJoTU1VRnJJQUlvQVRJYUNoaFZRekJQVUZsWE4xUlhiRE00VGtWWVoxWllWVmRyYjFFJTNE"
+                  }
+                },
+                "id": "CjoKGkNQU0J6S2ZoNV9JQ0ZTYzJyUVlkZzc4Q1p3EhxDT1RGemFUaDVfSUNGWHI1T0FZZDI4MEZhQS0w",
+                "timestampUsec": "1630842383434027",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/hvtAri9HSszkJCJvAA5_DdiwqIBbb-0g21y2Wwoz2MCAnBai1Erj9ROrOeOPjVoP7LMgM8WM=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/hvtAri9HSszkJCJvAA5_DdiwqIBbb-0g21y2Wwoz2MCAnBai1Erj9ROrOeOPjVoP7LMgM8WM=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (2 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (2 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UC0OPYW7TWl38NEXgVXUWkoQ",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "COTFzaTh5_ICFXr5OAYd280FaA-0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "Patcharachol"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLRn5uV8r52RqvLnnv2ys2vreR_nRyx7W0U6lMrn=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLRn5uV8r52RqvLnnv2ys2vreR_nRyx7W0U6lMrn=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2p3S09nb2FRMDV5TFRoTlJHZzFYMGxEUmxWSlIzSlJXV1J5ZVVGUE1HY1NIRU5LVTAxNllqZG9OVjlKUTBaVkxVUlpkMWxrVFZwM1FtRkJMVEFhS1NvbkNoaFZRekJVV0dWZlRGbGFOSE5qWVZjeVdFMTVhVFZmYTNjU0N6ZEJaRnB1VDJoTU1VRnJJQUlvQVRJYUNoaFZRMjVhVW5aNldVeDZkekpVVGxkWGVVbEJjbkYzWVhjJTNE"
+                  }
+                },
+                "id": "CjoKGkNOci04TURoNV9JQ0ZVSUdyUVlkcnlBTzBnEhxDSlNNemI3aDVfSUNGVS1EWXdZZE1ad0JhQS0w",
+                "timestampUsec": "1630842436468615",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/hvtAri9HSszkJCJvAA5_DdiwqIBbb-0g21y2Wwoz2MCAnBai1Erj9ROrOeOPjVoP7LMgM8WM=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/hvtAri9HSszkJCJvAA5_DdiwqIBbb-0g21y2Wwoz2MCAnBai1Erj9ROrOeOPjVoP7LMgM8WM=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (2 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (2 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCnZRvzYLzw2TNWWyIArqwaw",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CJSMzb7h5_ICFU-DYwYdMZwBaA-0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "BakeMon"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLRWIHZbspupTkjMKEH4c8ynMpUzaN8a3lwfwYLslg=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLRWIHZbspupTkjMKEH4c8ynMpUzaN8a3lwfwYLslg=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMGwxYkRWbGJtZzFYMGxEUmxaclMzSlJXV1J0YkZGSlEyY1NHME5LV0RWNlpVaG9OVjlKUTBaVlptZFBRVmxrUVRCQlMzcG5NQm9wS2ljS0dGVkRNRlJZWlY5TVdWbzBjMk5oVnpKWVRYbHBOVjlyZHhJTE4wRmtXbTVQYUV3eFFXc2dBaWdCTWhvS0dGVkRkbWhSYm10dU9UQm1MV0pVVGxsRVUzTkJabVZuVVElM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNJdWw1ZW5oNV9JQ0ZWa0tyUVlkbWxRSUNnEhtDSlg1emVIaDVfSUNGVWZnT0FZZEEwQUt6ZzA%3D",
+                "timestampUsec": "1630842522260159",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/ZOqSawuI38WY1GrNy6CaMbizvRyuM9hQrpc33oXRXT03Wq0vrNVOoYftBXZIISdHcXrjH3as=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/ZOqSawuI38WY1GrNy6CaMbizvRyuM9hQrpc33oXRXT03Wq0vrNVOoYftBXZIISdHcXrjH3as=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (6 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (6 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCvhQnkn90f-bTNYDSsAfegQ",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CJX5zeHh5_ICFUfgOAYdA0AKzg0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "孫煒智"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQ3OD_W74W-GQspAwbW26UMJkzOiQoe70XQgA=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQ3OD_W74W-GQspAwbW26UMJkzOiQoe70XQgA=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMHRxUVhWeFltazFYMGxEUm1OVlRuSlJXV1JtV2xWSlltY1NHME5RZFdnNFMwUnBOVjlKUTBaalQyZDNaMjlrUmpSalQwbEJNQm9wS2ljS0dGVkRNRlJZWlY5TVdWbzBjMk5oVnpKWVRYbHBOVjlyZHhJTE4wRmtXbTVQYUV3eFFXc2dBaWdCTWhvS0dGVkRabUpyZVZVNFpWODJUbWREVFRKcE1YWk1jMVZEZHclM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNLakF1cWJpNV9JQ0ZjVU5yUVlkZlpVSWJnEhtDUHVoOEtEaTVfSUNGY09nd2dvZEY0Y09JQTA%3D",
+                "timestampUsec": "1630842649485392",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/hvtAri9HSszkJCJvAA5_DdiwqIBbb-0g21y2Wwoz2MCAnBai1Erj9ROrOeOPjVoP7LMgM8WM=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/hvtAri9HSszkJCJvAA5_DdiwqIBbb-0g21y2Wwoz2MCAnBai1Erj9ROrOeOPjVoP7LMgM8WM=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (2 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (2 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCfbkyU8e_6NgCM2i1vLsUCw",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CPuh8KDi5_ICFcOgwgodF4cOIA0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "西門シモン"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/0EJ-sxM0_5UVIe2gje-46jHDz6r8b0cFVizoZZRhE37aK0E_W5_dufs26FakGfSDdTQOD1or5Q=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/0EJ-sxM0_5UVIe2gje-46jHDz6r8b0cFVizoZZRhE37aK0E_W5_dufs26FakGfSDdTQOD1or5Q=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMUJmVFRkTldHbzFYMGxEUmxGblluSlJXV1JyVFRSSFgyY1NHME5NVDFVd1MxQnFOVjlKUTBaU1NHZFhRVzlrUzE4MFNIcG5NQm9wS2ljS0dGVkRNRlJZWlY5TVdWbzBjMk5oVnpKWVRYbHBOVjlyZHhJTE4wRmtXbTVQYUV3eFFXc2dBaWdCTWhvS0dGVkRla3c0TUhZeFQyeG1XbmgxY2xab1RUbFpjM1U1UVElM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNQX003TVhqNV9JQ0ZRZ2JyUVlka000R19nEhtDTE9VMEtQajVfSUNGUkhnV0FvZEtfNEh6ZzA%3D",
+                "timestampUsec": "1630842983753399",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/hvtAri9HSszkJCJvAA5_DdiwqIBbb-0g21y2Wwoz2MCAnBai1Erj9ROrOeOPjVoP7LMgM8WM=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/hvtAri9HSszkJCJvAA5_DdiwqIBbb-0g21y2Wwoz2MCAnBai1Erj9ROrOeOPjVoP7LMgM8WM=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (2 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (2 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCzL80v1OlfZxurVhM9Ysu9A",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CLOU0KPj5_ICFRHgWAodK_4Hzg0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "ドキドキワクワク待機"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "パイク"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQEgljjMETGfnLMOw_TfeD0mdiiSCbgjWMgW6m6=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQEgljjMETGfnLMOw_TfeD0mdiiSCbgjWMgW6m6=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2p3S09nb2FRMHBtVEcxUVltbzFYMGxEUm1OVlRuSlJXV1JtV2xWSlltY1NIRU5LYVhRMmRUZHFOVjlKUTBaVlNrSm9VVzlrY3pCQlRFeEJMVEFhS1NvbkNoaFZRekJVV0dWZlRGbGFOSE5qWVZjeVdFMTVhVFZmYTNjU0N6ZEJaRnB1VDJoTU1VRnJJQUlvQVRJYUNoaFZRMjh5WmpKdGFIbFdSMmxCZEhCdE5FaFVSREE1YkZFJTNE"
+                  }
+                },
+                "id": "CjoKGkNKZkxtUGJqNV9JQ0ZjVU5yUVlkZlpVSWJnEhxDSml0NnU3ajVfSUNGVUpCaFFvZHMwQUxMQS0w",
+                "timestampUsec": "1630843085137343",
+                "authorExternalChannelId": "UCo2f2mhyVGiAtpm4HTD09lQ",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CJit6u7j5_ICFUJBhQods0ALLA-0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "☕",
+                        "shortcuts": [
+                          ":hot_beverage:",
+                          ":coffee:"
+                        ],
+                        "searchTerms": [
+                          "hot",
+                          "beverage",
+                          "coffee"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://www.youtube.com/s/gaming/emoji/7ff574f2/emoji_u2615.svg"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "☕",
+                        "shortcuts": [
+                          ":hot_beverage:",
+                          ":coffee:"
+                        ],
+                        "searchTerms": [
+                          "hot",
+                          "beverage",
+                          "coffee"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://www.youtube.com/s/gaming/emoji/7ff574f2/emoji_u2615.svg"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "☕",
+                        "shortcuts": [
+                          ":hot_beverage:",
+                          ":coffee:"
+                        ],
+                        "searchTerms": [
+                          "hot",
+                          "beverage",
+                          "coffee"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://www.youtube.com/s/gaming/emoji/7ff574f2/emoji_u2615.svg"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "Paper_Bag"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/x0LndvYXDtbhOhy8DmJPYj8lpUDMoEB1fkfL5S5lqWrpcUGAd5zpfa2E2OoH0YV_8Lg_K37PfA=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/x0LndvYXDtbhOhy8DmJPYj8lpUDMoEB1fkfL5S5lqWrpcUGAd5zpfa2E2OoH0YV_8Lg_K37PfA=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2tjS1JRb2FRMUJ0ZUhwbVgybzFYMGxEUmxvMFYzSlJXV1JhVVd0S2JXY1NKME5PY1Y5M1VFeHFOVjlKUTBaU1RXMTBkMEZrWW5jMFIxaEJNVFl6TURnME16RXdNelk0TUJvcEtpY0tHRlZETUZSWVpWOU1XVm8wYzJOaFZ6SllUWGxwTlY5cmR4SUxOMEZrV201UGFFd3hRV3NnQWlnQk1ob0tHRlZEWlhOdVpWOHlTa1pRUlRCcFgwaEVlR001WVV3MmR3JTNEJTNE"
+                  }
+                },
+                "id": "CkUKGkNQbXh6Zl9qNV9JQ0ZaNFdyUVlkWlFrSm1nEidDTnFfd1BMajVfSUNGUk1tdHdBZGJ3NEdYQTE2MzA4NDMxMDM2ODA%3D",
+                "timestampUsec": "1630843104876848",
+                "authorExternalChannelId": "UCesne_2JFPE0i_HDxc9aL6w",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CNq_wPLj5_ICFRMmtwAdbw4GXA1630843103680"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "待機"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "Gao-! GAO"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLRuw0sjnZJ1quQeRuCv2nmQMMIyE8_COOkK66tg=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLRuw0sjnZJ1quQeRuCv2nmQMMIyE8_COOkK66tg=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMDVEZVdodlltczFYMGxEUmxsM1ZITjNRV1IyYVZsRGRXY1NHME5MZW1Oc1dWUnJOVjlKUTBaYVJVVm9RVzlrV0RWelRpMW5NQm9wS2ljS0dGVkRNRlJZWlY5TVdWbzBjMk5oVnpKWVRYbHBOVjlyZHhJTE4wRmtXbTVQYUV3eFFXc2dBaWdCTWhvS0dGVkRRbTgyV1ZjNVpsRndhekoyYmsxemVWcHBZVGRmWnclM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNOQ3lob2JrNV9JQ0ZZd1Rzd0FkdmlZQ3VnEhtDS3pjbFlUazVfSUNGWkVFaEFvZFg1c04tZzA%3D",
+                "timestampUsec": "1630843118393744",
+                "authorExternalChannelId": "UCBo6YW9fQpk2vnMsyZia7_g",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CKzclYTk5_ICFZEEhAodX5sN-g0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "あ、明日だった"
+                    },
+                    {
+                      "text": "w"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "パイク"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQEgljjMETGfnLMOw_TfeD0mdiiSCbgjWMgW6m6=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQEgljjMETGfnLMOw_TfeD0mdiiSCbgjWMgW6m6=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2p3S09nb2FRMDl0T0hCS1JHczFYMGxEUmxscldISlJXV1IwT1hOR1ptY1NIRU5LYVhRMmRUZHFOVjlKUTBaVlNrSm9VVzlrY3pCQlRFeEJMVEVhS1NvbkNoaFZRekJVV0dWZlRGbGFOSE5qWVZjeVdFMTVhVFZmYTNjU0N6ZEJaRnB1VDJoTU1VRnJJQUlvQVRJYUNoaFZRMjh5WmpKdGFIbFdSMmxCZEhCdE5FaFVSREE1YkZFJTNE"
+                  }
+                },
+                "id": "CjoKGkNPbThwSkRrNV9JQ0ZZa1hyUVlkdDlzRmZnEhxDSml0NnU3ajVfSUNGVUpCaFFvZHMwQUxMQS0x",
+                "timestampUsec": "1630843139858141",
+                "authorExternalChannelId": "UCo2f2mhyVGiAtpm4HTD09lQ",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CJit6u7j5_ICFUJBhQods0ALLA-1"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "明日か"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "てる"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQQup1_zxD6pJFPSKhs4iB8ApeNLhtKycAU6ydP=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQQup1_zxD6pJFPSKhs4iB8ApeNLhtKycAU6ydP=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2tjS1JRb2FRMDFQZWpSTVptczFYMGxEUmxGblluSlJXV1JyVFRSSFgyY1NKME5PWW1KeU4xaHJOVjlKUTBaWGNqWlBRVmxrYUcxblR6QjNNVFl6TURnME16VXhPVFkzT0JvcEtpY0tHRlZETUZSWVpWOU1XVm8wYzJOaFZ6SllUWGxwTlY5cmR4SUxOMEZrV201UGFFd3hRV3NnQWlnQk1ob0tHRlZEUlc5dGF6ZEljM2sxVUdOeWJIQnNSVXRoTTNoMFFRJTNEJTNE"
+                  }
+                },
+                "id": "CkUKGkNNT3o0TGZrNV9JQ0ZRZ2JyUVlka000R19nEidDTmJicjdYazVfSUNGV3I2T0FZZGhtZ08wdzE2MzA4NDM1MTk2Nzg%3D",
+                "timestampUsec": "1630843222628846",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/ZOqSawuI38WY1GrNy6CaMbizvRyuM9hQrpc33oXRXT03Wq0vrNVOoYftBXZIISdHcXrjH3as=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/ZOqSawuI38WY1GrNy6CaMbizvRyuM9hQrpc33oXRXT03Wq0vrNVOoYftBXZIISdHcXrjH3as=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (6 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (6 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCEomk7Hsy5PcrlplEKa3xtA",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CNbbr7Xk5_ICFWr6OAYdhmgO0w1630843519678"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatMembershipItemRenderer": {
+                "id": "ChwKGkNOT3M3TW5rNV9JQ0ZSUU1yUVlkSElFTUNn",
+                "timestampUsec": "1630843260654262",
+                "authorExternalChannelId": "UC1Fh_nM-Vj5wRdjShsMBDfQ",
+                "headerSubtext": {
+                  "runs": [
+                    {
+                      "text": "Welcome to "
+                    },
+                    {
+                      "text": "開拓者組合"
+                    },
+                    {
+                      "text": "!"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "Mini rune3"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLT76M9UVYVtEPWJulAIIl67927t2Ylo07QWAg=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLT76M9UVYVtEPWJulAIIl67927t2Ylo07QWAg=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/BCl-xvHBo-dsaCJApyB9l87ZFlZBlQxTLSfSZzmljSPUoZXVaK3Tl_YizQfj6GbA2VvY9yMvbdQ=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/BCl-xvHBo-dsaCJApyB9l87ZFlZBlQxTLSfSZzmljSPUoZXVaK3Tl_YizQfj6GbA2VvY9yMvbdQ=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "New member",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "New member"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CBEQ4P0GIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2g0S0hBb2FRMDVQY3pkTmJtczFYMGxEUmxKUlRYSlJXV1JJU1VWTlEyY2FLU29uQ2hoVlF6QlVXR1ZmVEZsYU5ITmpZVmN5V0UxNWFUVmZhM2NTQ3pkQlpGcHVUMmhNTVVGcklBSW9BVElhQ2hoVlF6RkdhRjl1VFMxV2FqVjNVbVJxVTJoelRVSkVabEUlM0Q="
+                  }
+                },
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                },
+                "trackingParams": "CBEQ4P0GIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS"
+              }
+            }
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "Takaイシダ"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSqj4cra3z21eB8gCYk7Vap2w1dkz3cLUL8gOVn=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSqj4cra3z21eB8gCYk7Vap2w1dkz3cLUL8gOVn=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2tjS1JRb2FRMHhNYm1waVdHMDFYMGxEUm1WVmNuSlJXV1JUVEd0R2RsRVNKME5KZVhveWNreHROVjlKUTBaaVJFcFVRVWxrZUhCWlMxUjNNVFl6TURnME16YzFOVFkyTVJvcEtpY0tHRlZETUZSWVpWOU1XVm8wYzJOaFZ6SllUWGxwTlY5cmR4SUxOMEZrV201UGFFd3hRV3NnQWlnQk1ob0tHRlZEZVVwb1JGRlNiRkpCUkd0Zk5uaFZibGhuVVVnMVFRJTNEJTNE"
+                  }
+                },
+                "id": "CkUKGkNMTG5qYlhtNV9JQ0ZlVXJyUVlkU0xrRnZREidDSXl6MnJMbTVfSUNGYkRKVEFJZHhwWUtUdzE2MzA4NDM3NTU2NjE%3D",
+                "timestampUsec": "1630843753952209",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/ZOqSawuI38WY1GrNy6CaMbizvRyuM9hQrpc33oXRXT03Wq0vrNVOoYftBXZIISdHcXrjH3as=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/ZOqSawuI38WY1GrNy6CaMbizvRyuM9hQrpc33oXRXT03Wq0vrNVOoYftBXZIISdHcXrjH3as=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (6 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (6 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCyJhDQRlRADk_6xUnXgQH5A",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CIyz2rLm5_ICFbDJTAIdxpYKTw1630843755661"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "zxc6601"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQDkN3GMZ7fR7jKQPAVcHRSk7XbumeHnFg3YQ=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQDkN3GMZ7fR7jKQPAVcHRSk7XbumeHnFg3YQ=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMUJ4YWpOZmVtMDFYMGxEUmxOSlF6VjNiMlJVTVZGSVgyY1NHME5MTW5Sc1VHNXROVjlKUTBaYVZqQlpRVzlrZGxSM1RtcDNNQm9wS2ljS0dGVkRNRlJZWlY5TVdWbzBjMk5oVnpKWVRYbHBOVjlyZHhJTE4wRmtXbTVQYUV3eFFXc2dBaWdCTWhvS0dGVkRPVzlxYVhkTVZrSnpjalZKU0daTlozVldObVZQVVElM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNQcWozX3ptNV9JQ0ZTSUM1d29kVDFRSF9nEhtDSzJ0bFBubTVfSUNGWlYwWUFvZHZUd05qdzA%3D",
+                "timestampUsec": "1630843904184883",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/hvtAri9HSszkJCJvAA5_DdiwqIBbb-0g21y2Wwoz2MCAnBai1Erj9ROrOeOPjVoP7LMgM8WM=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/hvtAri9HSszkJCJvAA5_DdiwqIBbb-0g21y2Wwoz2MCAnBai1Erj9ROrOeOPjVoP7LMgM8WM=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (2 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (2 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UC9ojiwLVBsr5IHfMguV6eOQ",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CK2tlPnm5_ICFZV0YAodvTwNjw0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "edtechy"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSA3QOnBM4dx79bhbbCjpPqjWCGVd8sK-x4JFuQ=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSA3QOnBM4dx79bhbbCjpPqjWCGVd8sK-x4JFuQ=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMUJEUkhod1dHODFYMGxEUmxscldISlJXV1IwT1hOR1ptY1NHME5KTmtjd1NreHZOVjlKUTBaVlVWWjBkMEZrZEU4NFNtOVJNQm9wS2ljS0dGVkRNRlJZWlY5TVdWbzBjMk5oVnpKWVRYbHBOVjlyZHhJTE4wRmtXbTVQYUV3eFFXc2dBaWdCTWhvS0dGVkRUbXRLTkVaVVFuTnJhVzU0VlY5Mlp6SmlkRkk0ZHclM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNQQ0R4cFhvNV9JQ0ZZa1hyUVlkdDlzRmZnEhtDSTZHMEpMbzVfSUNGVVFWdHdBZHRPOEpvUTA%3D",
+                "timestampUsec": "1630844224635469",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/ZOqSawuI38WY1GrNy6CaMbizvRyuM9hQrpc33oXRXT03Wq0vrNVOoYftBXZIISdHcXrjH3as=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/ZOqSawuI38WY1GrNy6CaMbizvRyuM9hQrpc33oXRXT03Wq0vrNVOoYftBXZIISdHcXrjH3as=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (6 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (6 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCNkJ4FTBskinxU_vg2btR8w",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CI6G0JLo5_ICFUQVtwAdtO8JoQ0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "markChatItemAsDeletedAction": {
+            "deletedStateMessage": {
+              "runs": [
+                {
+                  "text": "[message retracted]"
+                }
+              ]
+            },
+            "targetItemId": "CkUKGkNJekt0YVhuNV9JQ0ZlVXJyUVlkU0xrRnZREidDTURzNjVIbjVfSUNGVldOY0FvZExwTUpKZzE2MzA4NDM5ODkxNzc%3D"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatMembershipItemRenderer": {
+                "id": "ChwKGkNKM2szdFBvNV9JQ0ZUTWI1d29kVDNVSF93",
+                "timestampUsec": "1630844355167966",
+                "authorExternalChannelId": "UCTIDpDH4T114DgNVETg0IUQ",
+                "headerSubtext": {
+                  "runs": [
+                    {
+                      "text": "Welcome to "
+                    },
+                    {
+                      "text": "開拓者組合"
+                    },
+                    {
+                      "text": "!"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "Edward Lin"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQhmmZa7Lw8Kph2MVmVjfUtC84dJHeQB7K9tw=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQhmmZa7Lw8Kph2MVmVjfUtC84dJHeQB7K9tw=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/BCl-xvHBo-dsaCJApyB9l87ZFlZBlQxTLSfSZzmljSPUoZXVaK3Tl_YizQfj6GbA2VvY9yMvbdQ=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/BCl-xvHBo-dsaCJApyB9l87ZFlZBlQxTLSfSZzmljSPUoZXVaK3Tl_YizQfj6GbA2VvY9yMvbdQ=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "New member",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "New member"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CBAQ4P0GIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2g0S0hBb2FRMG96YXpOMFVHODFYMGxEUmxSTllqVjNiMlJVTTFWSVgzY2FLU29uQ2hoVlF6QlVXR1ZmVEZsYU5ITmpZVmN5V0UxNWFUVmZhM2NTQ3pkQlpGcHVUMmhNTVVGcklBSW9BVElhQ2hoVlExUkpSSEJFU0RSVU1URTBSR2RPVmtWVVp6QkpWVkUlM0Q="
+                  }
+                },
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                },
+                "trackingParams": "CBAQ4P0GIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS"
+              }
+            }
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "プトティラ"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQQBvxPnJBGA13nkVbt7_cTuW5TkQAs1KY7PnoU6w=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQQBvxPnJBGA13nkVbt7_cTuW5TkQAs1KY7PnoU6w=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMDQzTVd4bFluQTFYMGxEUm1OVlRuSlJXV1JtV2xWSlltY1NHME5QY2xkNkxVUndOVjlKUTBabE0wVlBRVmxrZFdaVlRuUkJNQm9wS2ljS0dGVkRNRlJZWlY5TVdWbzBjMk5oVnpKWVRYbHBOVjlyZHhJTE4wRmtXbTVQYUV3eFFXc2dBaWdCTWhvS0dGVkRTMG8xYlZSME5rWnBka3BzVm1NMVYwcHpaR0Z2VVElM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNONzFsZWJwNV9JQ0ZjVU5yUVlkZlpVSWJnEhtDT3JXei1EcDVfSUNGZTNFT0FZZHVmVU50QTA%3D",
+                "timestampUsec": "1630844662151975",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/ZOqSawuI38WY1GrNy6CaMbizvRyuM9hQrpc33oXRXT03Wq0vrNVOoYftBXZIISdHcXrjH3as=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/ZOqSawuI38WY1GrNy6CaMbizvRyuM9hQrpc33oXRXT03Wq0vrNVOoYftBXZIISdHcXrjH3as=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (6 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (6 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCKJ5mTt6FivJlVc5WJsdaoQ",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "COrWz-Dp5_ICFe3EOAYdufUNtA0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "もじゃ"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQivyUWxRsb5TJTFU6a15vKF0Yv2BUkFi89GYowcA=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQivyUWxRsb5TJTFU6a15vKF0Yv2BUkFi89GYowcA=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2tjS1JRb2FRMDVoVmpCT1JISTFYMGxEUmxWRlFYSlJXV1JYYm5OUVgyY1NKME5NWm1GZlRUTnlOVjlKUTBaUlkwdFhRVzlrTmsxdlRGQjNNVFl6TURnME5URTBPRGt5TnhvcEtpY0tHRlZETUZSWVpWOU1XVm8wYzJOaFZ6SllUWGxwTlY5cmR4SUxOMEZrV201UGFFd3hRV3NnQWlnQk1ob0tHRlZETVVsVVNWRkZNRkl4YVRacVRHNW5jekJOWldweFVRJTNEJTNE"
+                  }
+                },
+                "id": "CkUKGkNOYVYwTkRyNV9JQ0ZVRUFyUVlkV25zUF9nEidDTGZhX00zcjVfSUNGUWNLV0FvZDZNb0xQdzE2MzA4NDUxNDg5Mjc%3D",
+                "timestampUsec": "1630845153839894",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/ZOqSawuI38WY1GrNy6CaMbizvRyuM9hQrpc33oXRXT03Wq0vrNVOoYftBXZIISdHcXrjH3as=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/ZOqSawuI38WY1GrNy6CaMbizvRyuM9hQrpc33oXRXT03Wq0vrNVOoYftBXZIISdHcXrjH3as=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (6 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (6 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UC1ITIQE0R1i6jLngs0MejqQ",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CLfa_M3r5_ICFQcKWAod6MoLPw1630845148927"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UC0TXe_LYZ4scaW2XMyi5_kw/oakwYPrtHpfE-QOF3I6gDw",
+                        "shortcuts": [
+                          ":_AZrium:",
+                          ":AZrium:"
+                        ],
+                        "searchTerms": [
+                          "_AZrium",
+                          "AZrium"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/T_PJncDACJ87BmiZi3qzp3ujmg25MzT2zMfHif0JfTuJ2WnnrIubPBtaY5UqhfOlHnHZAW6PCq8=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "AZrium"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "Yoru Ch. くろいめ よる"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/hL3nSoMIPZC04wIOVP-RDFqQXcTHTOi2JHwLxo-GiFJMD238YivNlrpxzeff88HFDsoTAL5FQQ=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/hL3nSoMIPZC04wIOVP-RDFqQXcTHTOi2JHwLxo-GiFJMD238YivNlrpxzeff88HFDsoTAL5FQQ=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMDF4YjJnM2RuTTFYMGxEUmxSTllqVjNiMlJVTTFWSVgzY1NHME5KY2t0NVRHcHpOVjlKUTBaWVdHaFBRVmxrWm1oM1NIbG5NQm9wS2ljS0dGVkRNRlJZWlY5TVdWbzBjMk5oVnpKWVRYbHBOVjlyZHhJTE4wRmtXbTVQYUV3eFFXc2dBaWdCTWhvS0dGVkRWM0JETVdGZlJ5MXJRMHhMWW1SMVQyVTRiWFZDZHclM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNNcW9oN3ZzNV9JQ0ZUTWI1d29kVDNVSF93EhtDSXJLeUxqczVfSUNGWFhoT0FZZGZod0h5ZzA%3D",
+                "timestampUsec": "1630845377041523",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/hvtAri9HSszkJCJvAA5_DdiwqIBbb-0g21y2Wwoz2MCAnBai1Erj9ROrOeOPjVoP7LMgM8WM=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/hvtAri9HSszkJCJvAA5_DdiwqIBbb-0g21y2Wwoz2MCAnBai1Erj9ROrOeOPjVoP7LMgM8WM=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (2 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (2 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCWpC1a_G-kCLKbduOe8muBw",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CIrKyLjs5_ICFXXhOAYdfhwHyg0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+          "addChatItemAction": {
+            "item": {
+              "liveChatViewerEngagementMessageRenderer": {
+                "id": "CiUKI1BSRU1JRVJFX1ZFTTIwMjEvMDkvMDUtMDU6NTU6MDkuNTU1",
+                "timestampUsec": "1630846509555640",
+                "icon": {
+                  "iconType": "YOUTUBE_ROUND"
+                },
+                "message": {
+                  "runs": [
+                    {
+                      "text": "Upcoming Premiere! Watch and chat live with other viewers as this upload is shown for the very first time. Remember to guard your privacy and abide by our community guidelines."
+                    }
+                  ]
+                },
+                "actionButton": {
+                  "buttonRenderer": {
+                    "style": "STYLE_BLUE_TEXT",
+                    "size": "SIZE_DEFAULT",
+                    "isDisabled": false,
+                    "text": {
+                      "simpleText": "Learn more"
+                    },
+                    "navigationEndpoint": {
+                      "clickTrackingParams": "CA8Q8FsiEwiDhYjX8OfyAhVYxjgGHfJHAVI=",
+                      "commandMetadata": {
+                        "webCommandMetadata": {
+                          "url": "//support.google.com/youtube/answer/2853856?hl=en#safe",
+                          "webPageType": "WEB_PAGE_TYPE_UNKNOWN",
+                          "rootVe": 83769
+                        }
+                      },
+                      "urlEndpoint": {
+                        "url": "//support.google.com/youtube/answer/2853856?hl=en#safe",
+                        "target": "TARGET_NEW_WINDOW"
+                      }
+                    },
+                    "trackingParams": "CA8Q8FsiEwiDhYjX8OfyAhVYxjgGHfJHAVI=",
+                    "accessibilityData": {
+                      "accessibilityData": {
+                        "label": "Learn more"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "actionPanel": {
+        "liveChatMessageInputRenderer": {
+          "inputField": {
+            "liveChatTextInputFieldRenderer": {
+              "placeholder": {
+                "runs": [
+                  {
+                    "text": "Say something..."
+                  }
+                ]
+              },
+              "maxCharacterLimit": 200,
+              "emojiCharacterCount": 10
+            }
+          },
+          "sendButton": {
+            "buttonRenderer": {
+              "style": "STYLE_DEFAULT",
+              "size": "SIZE_DEFAULT",
+              "isDisabled": false,
+              "icon": {
+                "iconType": "SEND"
+              },
+              "accessibility": {
+                "label": "Send"
+              },
+              "trackingParams": "CA4Q8FsiEwiDhYjX8OfyAhVYxjgGHfJHAVI=",
+              "accessibilityData": {
+                "accessibilityData": {
+                  "label": "Send"
+                }
+              }
+            }
+          },
+          "pickers": [
+            {
+              "emojiPickerRenderer": {
+                "id": "emoji",
+                "categories": [
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "people",
+                      "title": {
+                        "simpleText": "People"
+                      },
+                      "emojiIds": [
+                        "😀",
+                        "😃",
+                        "😄",
+                        "😁",
+                        "😆",
+                        "😅",
+                        "🤣",
+                        "😂",
+                        "🙂",
+                        "🙃",
+                        "😉",
+                        "😊",
+                        "😇",
+                        "🥰",
+                        "😍",
+                        "🤩",
+                        "😘",
+                        "😗",
+                        "☺",
+                        "😚",
+                        "😙",
+                        "🥲",
+                        "😋",
+                        "😛",
+                        "😜",
+                        "🤪",
+                        "😝",
+                        "🤑",
+                        "🤗",
+                        "🤭",
+                        "🤫",
+                        "🤔",
+                        "🤐",
+                        "🤨",
+                        "😐",
+                        "😑",
+                        "😶",
+                        "😶\u200d🌫",
+                        "😏",
+                        "😒",
+                        "🙄",
+                        "😬",
+                        "😮\u200d💨",
+                        "🤥",
+                        "😌",
+                        "😔",
+                        "😪",
+                        "🤤",
+                        "😴",
+                        "😷",
+                        "🤒",
+                        "🤕",
+                        "🤢",
+                        "🤮",
+                        "🤧",
+                        "🥵",
+                        "🥶",
+                        "🥴",
+                        "😵",
+                        "😵\u200d💫",
+                        "🤯",
+                        "🤠",
+                        "🥳",
+                        "🥸",
+                        "😎",
+                        "🤓",
+                        "🧐",
+                        "😕",
+                        "😟",
+                        "🙁",
+                        "☹",
+                        "😮",
+                        "😯",
+                        "😲",
+                        "😳",
+                        "🥺",
+                        "😦",
+                        "😧",
+                        "😨",
+                        "😰",
+                        "😥",
+                        "😢",
+                        "😭",
+                        "😱",
+                        "😖",
+                        "😣",
+                        "😞",
+                        "😓",
+                        "😩",
+                        "😫",
+                        "🥱",
+                        "😤",
+                        "😡",
+                        "😠",
+                        "🤬",
+                        "😈",
+                        "👿",
+                        "💀",
+                        "☠",
+                        "💩",
+                        "🤡",
+                        "👹",
+                        "👺",
+                        "👻",
+                        "👽",
+                        "👾",
+                        "🤖",
+                        "😺",
+                        "😸",
+                        "😹",
+                        "😻",
+                        "😼",
+                        "😽",
+                        "🙀",
+                        "😿",
+                        "😾",
+                        "🙈",
+                        "🙉",
+                        "🙊",
+                        "💋",
+                        "💌",
+                        "💘",
+                        "💝",
+                        "💖",
+                        "💗",
+                        "💓",
+                        "💞",
+                        "💕",
+                        "💟",
+                        "❣",
+                        "💔",
+                        "❤\u200d🔥",
+                        "❤\u200d🩹",
+                        "❤",
+                        "🧡",
+                        "💛",
+                        "💚",
+                        "💙",
+                        "💜",
+                        "🤎",
+                        "🖤",
+                        "🤍",
+                        "💯",
+                        "💢",
+                        "💥",
+                        "💫",
+                        "💦",
+                        "💨",
+                        "🕳",
+                        "💣",
+                        "💬",
+                        "👁\u200d🗨",
+                        "🗨",
+                        "🗯",
+                        "💭",
+                        "💤",
+                        "👋",
+                        "🤚",
+                        "🖐",
+                        "✋",
+                        "🖖",
+                        "👌",
+                        "🤌",
+                        "🤏",
+                        "✌",
+                        "🤞",
+                        "🤟",
+                        "🤘",
+                        "🤙",
+                        "👈",
+                        "👉",
+                        "👆",
+                        "🖕",
+                        "👇",
+                        "☝",
+                        "👍",
+                        "👎",
+                        "✊",
+                        "👊",
+                        "🤛",
+                        "🤜",
+                        "👏",
+                        "🙌",
+                        "👐",
+                        "🤲",
+                        "🤝",
+                        "🙏",
+                        "✍",
+                        "💅",
+                        "🤳",
+                        "💪",
+                        "🦾",
+                        "🦿",
+                        "🦵",
+                        "🦶",
+                        "👂",
+                        "🦻",
+                        "👃",
+                        "🧠",
+                        "🫀",
+                        "🫁",
+                        "🦷",
+                        "🦴",
+                        "👀",
+                        "👁",
+                        "👅",
+                        "👄",
+                        "👶",
+                        "🧒",
+                        "👦",
+                        "👧",
+                        "🧑",
+                        "👱",
+                        "👨",
+                        "🧔",
+                        "🧔\u200d♂",
+                        "🧔\u200d♀",
+                        "👩",
+                        "👱\u200d♀",
+                        "👱\u200d♂",
+                        "🧓",
+                        "👴",
+                        "👵",
+                        "🙍",
+                        "🙍\u200d♂",
+                        "🙍\u200d♀",
+                        "🙎",
+                        "🙎\u200d♂",
+                        "🙎\u200d♀",
+                        "🙅",
+                        "🙅\u200d♂",
+                        "🙅\u200d♀",
+                        "🙆",
+                        "🙆\u200d♂",
+                        "🙆\u200d♀",
+                        "💁",
+                        "💁\u200d♂",
+                        "💁\u200d♀",
+                        "🙋",
+                        "🙋\u200d♂",
+                        "🙋\u200d♀",
+                        "🧏",
+                        "🧏\u200d♂",
+                        "🧏\u200d♀",
+                        "🙇",
+                        "🙇\u200d♂",
+                        "🙇\u200d♀",
+                        "🤦",
+                        "🤦\u200d♂",
+                        "🤦\u200d♀",
+                        "🤷",
+                        "🤷\u200d♂",
+                        "🤷\u200d♀",
+                        "🧑\u200d⚕",
+                        "👨\u200d⚕",
+                        "👩\u200d⚕",
+                        "🧑\u200d🎓",
+                        "👨\u200d🎓",
+                        "👩\u200d🎓",
+                        "🧑\u200d🏫",
+                        "👨\u200d🏫",
+                        "👩\u200d🏫",
+                        "🧑\u200d⚖",
+                        "👨\u200d⚖",
+                        "👩\u200d⚖",
+                        "🧑\u200d🌾",
+                        "👨\u200d🌾",
+                        "👩\u200d🌾",
+                        "🧑\u200d🍳",
+                        "👨\u200d🍳",
+                        "👩\u200d🍳",
+                        "🧑\u200d🔧",
+                        "👨\u200d🔧",
+                        "👩\u200d🔧",
+                        "🧑\u200d🏭",
+                        "👨\u200d🏭",
+                        "👩\u200d🏭",
+                        "🧑\u200d💼",
+                        "👨\u200d💼",
+                        "👩\u200d💼",
+                        "🧑\u200d🔬",
+                        "👨\u200d🔬",
+                        "👩\u200d🔬",
+                        "🧑\u200d💻",
+                        "👨\u200d💻",
+                        "👩\u200d💻",
+                        "🧑\u200d🎤",
+                        "👨\u200d🎤",
+                        "👩\u200d🎤",
+                        "🧑\u200d🎨",
+                        "👨\u200d🎨",
+                        "👩\u200d🎨",
+                        "🧑\u200d✈",
+                        "👨\u200d✈",
+                        "👩\u200d✈",
+                        "🧑\u200d🚀",
+                        "👨\u200d🚀",
+                        "👩\u200d🚀",
+                        "🧑\u200d🚒",
+                        "👨\u200d🚒",
+                        "👩\u200d🚒",
+                        "👮",
+                        "👮\u200d♂",
+                        "👮\u200d♀",
+                        "🕵",
+                        "🕵\u200d♂",
+                        "🕵\u200d♀",
+                        "💂",
+                        "💂\u200d♂",
+                        "💂\u200d♀",
+                        "🥷",
+                        "👷",
+                        "👷\u200d♂",
+                        "👷\u200d♀",
+                        "🤴",
+                        "👸",
+                        "👳",
+                        "👳\u200d♂",
+                        "👳\u200d♀",
+                        "👲",
+                        "🧕",
+                        "🤵",
+                        "🤵\u200d♂",
+                        "🤵\u200d♀",
+                        "👰",
+                        "👰\u200d♂",
+                        "👰\u200d♀",
+                        "🤰",
+                        "🤱",
+                        "👩\u200d🍼",
+                        "👨\u200d🍼",
+                        "🧑\u200d🍼",
+                        "👼",
+                        "🎅",
+                        "🤶",
+                        "🧑\u200d🎄",
+                        "🦸",
+                        "🦸\u200d♂",
+                        "🦸\u200d♀",
+                        "🦹",
+                        "🦹\u200d♂",
+                        "🦹\u200d♀",
+                        "🧙",
+                        "🧙\u200d♂",
+                        "🧙\u200d♀",
+                        "🧚",
+                        "🧚\u200d♂",
+                        "🧚\u200d♀",
+                        "🧛",
+                        "🧛\u200d♂",
+                        "🧛\u200d♀",
+                        "🧜",
+                        "🧜\u200d♂",
+                        "🧜\u200d♀",
+                        "🧝",
+                        "🧝\u200d♂",
+                        "🧝\u200d♀",
+                        "🧞",
+                        "🧞\u200d♂",
+                        "🧞\u200d♀",
+                        "🧟",
+                        "🧟\u200d♂",
+                        "🧟\u200d♀",
+                        "💆",
+                        "💆\u200d♂",
+                        "💆\u200d♀",
+                        "💇",
+                        "💇\u200d♂",
+                        "💇\u200d♀",
+                        "🚶",
+                        "🚶\u200d♂",
+                        "🚶\u200d♀",
+                        "🧍",
+                        "🧍\u200d♂",
+                        "🧍\u200d♀",
+                        "🧎",
+                        "🧎\u200d♂",
+                        "🧎\u200d♀",
+                        "🧑\u200d🦯",
+                        "👨\u200d🦯",
+                        "👩\u200d🦯",
+                        "🧑\u200d🦼",
+                        "👨\u200d🦼",
+                        "👩\u200d🦼",
+                        "🧑\u200d🦽",
+                        "👨\u200d🦽",
+                        "👩\u200d🦽",
+                        "🏃",
+                        "🏃\u200d♂",
+                        "🏃\u200d♀",
+                        "💃",
+                        "🕺",
+                        "🕴",
+                        "👯",
+                        "👯\u200d♂",
+                        "👯\u200d♀",
+                        "🧖",
+                        "🧖\u200d♂",
+                        "🧖\u200d♀",
+                        "🧗",
+                        "🧗\u200d♂",
+                        "🧗\u200d♀",
+                        "🤺",
+                        "🏇",
+                        "⛷",
+                        "🏂",
+                        "🏌",
+                        "🏌\u200d♂",
+                        "🏌\u200d♀",
+                        "🏄",
+                        "🏄\u200d♂",
+                        "🏄\u200d♀",
+                        "🚣",
+                        "🚣\u200d♂",
+                        "🚣\u200d♀",
+                        "🏊",
+                        "🏊\u200d♂",
+                        "🏊\u200d♀",
+                        "⛹",
+                        "⛹\u200d♂",
+                        "⛹\u200d♀",
+                        "🏋",
+                        "🏋\u200d♂",
+                        "🏋\u200d♀",
+                        "🚴",
+                        "🚴\u200d♂",
+                        "🚴\u200d♀",
+                        "🚵",
+                        "🚵\u200d♂",
+                        "🚵\u200d♀",
+                        "🤸",
+                        "🤸\u200d♂",
+                        "🤸\u200d♀",
+                        "🤼",
+                        "🤼\u200d♂",
+                        "🤼\u200d♀",
+                        "🤽",
+                        "🤽\u200d♂",
+                        "🤽\u200d♀",
+                        "🤾",
+                        "🤾\u200d♂",
+                        "🤾\u200d♀",
+                        "🤹",
+                        "🤹\u200d♂",
+                        "🤹\u200d♀",
+                        "🧘",
+                        "🧘\u200d♂",
+                        "🧘\u200d♀",
+                        "🛀",
+                        "🛌",
+                        "🧑\u200d🤝\u200d🧑",
+                        "👭",
+                        "👫",
+                        "👬",
+                        "💏",
+                        "👩\u200d❤\u200d💋\u200d👨",
+                        "👨\u200d❤\u200d💋\u200d👨",
+                        "👩\u200d❤\u200d💋\u200d👩",
+                        "💑",
+                        "👩\u200d❤\u200d👨",
+                        "👨\u200d❤\u200d👨",
+                        "👩\u200d❤\u200d👩",
+                        "👪",
+                        "👨\u200d👩\u200d👦",
+                        "👨\u200d👩\u200d👧",
+                        "👨\u200d👩\u200d👧\u200d👦",
+                        "👨\u200d👩\u200d👦\u200d👦",
+                        "👨\u200d👩\u200d👧\u200d👧",
+                        "👨\u200d👨\u200d👦",
+                        "👨\u200d👨\u200d👧",
+                        "👨\u200d👨\u200d👧\u200d👦",
+                        "👨\u200d👨\u200d👦\u200d👦",
+                        "👨\u200d👨\u200d👧\u200d👧",
+                        "👩\u200d👩\u200d👦",
+                        "👩\u200d👩\u200d👧",
+                        "👩\u200d👩\u200d👧\u200d👦",
+                        "👩\u200d👩\u200d👦\u200d👦",
+                        "👩\u200d👩\u200d👧\u200d👧",
+                        "👨\u200d👦",
+                        "👨\u200d👦\u200d👦",
+                        "👨\u200d👧",
+                        "👨\u200d👧\u200d👦",
+                        "👨\u200d👧\u200d👧",
+                        "👩\u200d👦",
+                        "👩\u200d👦\u200d👦",
+                        "👩\u200d👧",
+                        "👩\u200d👧\u200d👦",
+                        "👩\u200d👧\u200d👧",
+                        "🗣",
+                        "👤",
+                        "👥",
+                        "🫂",
+                        "👣"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwiDhYjX8OfyAhVYxjgGHfJHAVI="
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "nature",
+                      "title": {
+                        "simpleText": "Nature"
+                      },
+                      "emojiIds": [
+                        "🐵",
+                        "🐒",
+                        "🦍",
+                        "🦧",
+                        "🐶",
+                        "🐕",
+                        "🦮",
+                        "🐕\u200d🦺",
+                        "🐩",
+                        "🐺",
+                        "🦊",
+                        "🦝",
+                        "🐱",
+                        "🐈",
+                        "🐈\u200d⬛",
+                        "🦁",
+                        "🐯",
+                        "🐅",
+                        "🐆",
+                        "🐴",
+                        "🐎",
+                        "🦄",
+                        "🦓",
+                        "🦌",
+                        "🦬",
+                        "🐮",
+                        "🐂",
+                        "🐃",
+                        "🐄",
+                        "🐷",
+                        "🐖",
+                        "🐗",
+                        "🐽",
+                        "🐏",
+                        "🐑",
+                        "🐐",
+                        "🐪",
+                        "🐫",
+                        "🦙",
+                        "🦒",
+                        "🐘",
+                        "🦣",
+                        "🦏",
+                        "🦛",
+                        "🐭",
+                        "🐁",
+                        "🐀",
+                        "🐹",
+                        "🐰",
+                        "🐇",
+                        "🐿",
+                        "🦫",
+                        "🦔",
+                        "🦇",
+                        "🐻",
+                        "🐻\u200d❄",
+                        "🐨",
+                        "🐼",
+                        "🦥",
+                        "🦦",
+                        "🦨",
+                        "🦘",
+                        "🦡",
+                        "🐾",
+                        "🦃",
+                        "🐔",
+                        "🐓",
+                        "🐣",
+                        "🐤",
+                        "🐥",
+                        "🐦",
+                        "🐧",
+                        "🕊",
+                        "🦅",
+                        "🦆",
+                        "🦢",
+                        "🦉",
+                        "🦤",
+                        "🪶",
+                        "🦩",
+                        "🦚",
+                        "🦜",
+                        "🐸",
+                        "🐊",
+                        "🐢",
+                        "🦎",
+                        "🐍",
+                        "🐲",
+                        "🐉",
+                        "🦕",
+                        "🦖",
+                        "🐳",
+                        "🐋",
+                        "🐬",
+                        "🦭",
+                        "🐟",
+                        "🐠",
+                        "🐡",
+                        "🦈",
+                        "🐙",
+                        "🐚",
+                        "🐌",
+                        "🦋",
+                        "🐛",
+                        "🐜",
+                        "🐝",
+                        "🪲",
+                        "🐞",
+                        "🦗",
+                        "🪳",
+                        "🕷",
+                        "🕸",
+                        "🦂",
+                        "🦟",
+                        "🪰",
+                        "🪱",
+                        "🦠",
+                        "💐",
+                        "🌸",
+                        "💮",
+                        "🏵",
+                        "🌹",
+                        "🥀",
+                        "🌺",
+                        "🌻",
+                        "🌼",
+                        "🌷",
+                        "🌱",
+                        "🪴",
+                        "🌲",
+                        "🌳",
+                        "🌴",
+                        "🌵",
+                        "🌾",
+                        "🌿",
+                        "☘",
+                        "🍀",
+                        "🍁",
+                        "🍂",
+                        "🍃"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwiDhYjX8OfyAhVYxjgGHfJHAVI="
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "food",
+                      "title": {
+                        "simpleText": "Food"
+                      },
+                      "emojiIds": [
+                        "🍇",
+                        "🍈",
+                        "🍉",
+                        "🍊",
+                        "🍋",
+                        "🍌",
+                        "🍍",
+                        "🥭",
+                        "🍎",
+                        "🍏",
+                        "🍐",
+                        "🍑",
+                        "🍒",
+                        "🍓",
+                        "🫐",
+                        "🥝",
+                        "🍅",
+                        "🫒",
+                        "🥥",
+                        "🥑",
+                        "🍆",
+                        "🥔",
+                        "🥕",
+                        "🌽",
+                        "🌶",
+                        "🫑",
+                        "🥒",
+                        "🥬",
+                        "🥦",
+                        "🧄",
+                        "🧅",
+                        "🍄",
+                        "🥜",
+                        "🌰",
+                        "🍞",
+                        "🥐",
+                        "🥖",
+                        "🫓",
+                        "🥨",
+                        "🥯",
+                        "🥞",
+                        "🧇",
+                        "🧀",
+                        "🍖",
+                        "🍗",
+                        "🥩",
+                        "🥓",
+                        "🍔",
+                        "🍟",
+                        "🍕",
+                        "🌭",
+                        "🥪",
+                        "🌮",
+                        "🌯",
+                        "🫔",
+                        "🥙",
+                        "🧆",
+                        "🥚",
+                        "🍳",
+                        "🥘",
+                        "🍲",
+                        "🫕",
+                        "🥣",
+                        "🥗",
+                        "🍿",
+                        "🧈",
+                        "🧂",
+                        "🥫",
+                        "🍱",
+                        "🍘",
+                        "🍙",
+                        "🍚",
+                        "🍛",
+                        "🍜",
+                        "🍝",
+                        "🍠",
+                        "🍢",
+                        "🍣",
+                        "🍤",
+                        "🍥",
+                        "🥮",
+                        "🍡",
+                        "🥟",
+                        "🥠",
+                        "🥡",
+                        "🦀",
+                        "🦞",
+                        "🦐",
+                        "🦑",
+                        "🦪",
+                        "🍦",
+                        "🍧",
+                        "🍨",
+                        "🍩",
+                        "🍪",
+                        "🎂",
+                        "🍰",
+                        "🧁",
+                        "🥧",
+                        "🍫",
+                        "🍬",
+                        "🍭",
+                        "🍮",
+                        "🍯",
+                        "🍼",
+                        "🥛",
+                        "☕",
+                        "🫖",
+                        "🍵",
+                        "🍶",
+                        "🍾",
+                        "🍷",
+                        "🍸",
+                        "🍹",
+                        "🍺",
+                        "🍻",
+                        "🥂",
+                        "🥃",
+                        "🥤",
+                        "🧋",
+                        "🧃",
+                        "🧉",
+                        "🧊",
+                        "🥢",
+                        "🍽",
+                        "🍴",
+                        "🥄",
+                        "🔪",
+                        "🏺"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwiDhYjX8OfyAhVYxjgGHfJHAVI="
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "travel",
+                      "title": {
+                        "simpleText": "Travel"
+                      },
+                      "emojiIds": [
+                        "🌍",
+                        "🌎",
+                        "🌏",
+                        "🌐",
+                        "🗺",
+                        "🗾",
+                        "🧭",
+                        "🏔",
+                        "⛰",
+                        "🌋",
+                        "🗻",
+                        "🏕",
+                        "🏖",
+                        "🏜",
+                        "🏝",
+                        "🏞",
+                        "🏟",
+                        "🏛",
+                        "🏗",
+                        "🧱",
+                        "🪨",
+                        "🪵",
+                        "🛖",
+                        "🏘",
+                        "🏚",
+                        "🏠",
+                        "🏡",
+                        "🏢",
+                        "🏣",
+                        "🏤",
+                        "🏥",
+                        "🏦",
+                        "🏨",
+                        "🏩",
+                        "🏪",
+                        "🏫",
+                        "🏬",
+                        "🏭",
+                        "🏯",
+                        "🏰",
+                        "💒",
+                        "🗼",
+                        "🗽",
+                        "⛪",
+                        "🕌",
+                        "🛕",
+                        "🕍",
+                        "⛩",
+                        "🕋",
+                        "⛲",
+                        "⛺",
+                        "🌁",
+                        "🌃",
+                        "🏙",
+                        "🌄",
+                        "🌅",
+                        "🌆",
+                        "🌇",
+                        "🌉",
+                        "♨",
+                        "🎠",
+                        "🎡",
+                        "🎢",
+                        "💈",
+                        "🎪",
+                        "🚂",
+                        "🚃",
+                        "🚄",
+                        "🚅",
+                        "🚆",
+                        "🚇",
+                        "🚈",
+                        "🚉",
+                        "🚊",
+                        "🚝",
+                        "🚞",
+                        "🚋",
+                        "🚌",
+                        "🚍",
+                        "🚎",
+                        "🚐",
+                        "🚑",
+                        "🚒",
+                        "🚓",
+                        "🚔",
+                        "🚕",
+                        "🚖",
+                        "🚗",
+                        "🚘",
+                        "🚙",
+                        "🛻",
+                        "🚚",
+                        "🚛",
+                        "🚜",
+                        "🏎",
+                        "🏍",
+                        "🛵",
+                        "🦽",
+                        "🦼",
+                        "🛺",
+                        "🚲",
+                        "🛴",
+                        "🛹",
+                        "🛼",
+                        "🚏",
+                        "🛣",
+                        "🛤",
+                        "🛢",
+                        "⛽",
+                        "🚨",
+                        "🚥",
+                        "🚦",
+                        "🛑",
+                        "🚧",
+                        "⚓",
+                        "⛵",
+                        "🛶",
+                        "🚤",
+                        "🛳",
+                        "⛴",
+                        "🛥",
+                        "🚢",
+                        "✈",
+                        "🛩",
+                        "🛫",
+                        "🛬",
+                        "🪂",
+                        "💺",
+                        "🚁",
+                        "🚟",
+                        "🚠",
+                        "🚡",
+                        "🛰",
+                        "🚀",
+                        "🛸",
+                        "🛎",
+                        "🧳",
+                        "⌛",
+                        "⏳",
+                        "⌚",
+                        "⏰",
+                        "⏱",
+                        "⏲",
+                        "🕰",
+                        "🕛",
+                        "🕧",
+                        "🕐",
+                        "🕜",
+                        "🕑",
+                        "🕝",
+                        "🕒",
+                        "🕞",
+                        "🕓",
+                        "🕟",
+                        "🕔",
+                        "🕠",
+                        "🕕",
+                        "🕡",
+                        "🕖",
+                        "🕢",
+                        "🕗",
+                        "🕣",
+                        "🕘",
+                        "🕤",
+                        "🕙",
+                        "🕥",
+                        "🕚",
+                        "🕦",
+                        "🌑",
+                        "🌒",
+                        "🌓",
+                        "🌔",
+                        "🌕",
+                        "🌖",
+                        "🌗",
+                        "🌘",
+                        "🌙",
+                        "🌚",
+                        "🌛",
+                        "🌜",
+                        "🌡",
+                        "☀",
+                        "🌝",
+                        "🌞",
+                        "🪐",
+                        "⭐",
+                        "🌟",
+                        "🌠",
+                        "🌌",
+                        "☁",
+                        "⛅",
+                        "⛈",
+                        "🌤",
+                        "🌥",
+                        "🌦",
+                        "🌧",
+                        "🌨",
+                        "🌩",
+                        "🌪",
+                        "🌫",
+                        "🌬",
+                        "🌀",
+                        "🌈",
+                        "🌂",
+                        "☂",
+                        "☔",
+                        "⛱",
+                        "⚡",
+                        "❄",
+                        "☃",
+                        "⛄",
+                        "☄",
+                        "🔥",
+                        "💧",
+                        "🌊"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwiDhYjX8OfyAhVYxjgGHfJHAVI="
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "activities",
+                      "title": {
+                        "simpleText": "Activities"
+                      },
+                      "emojiIds": [
+                        "🎃",
+                        "🎄",
+                        "🎆",
+                        "🎇",
+                        "🧨",
+                        "✨",
+                        "🎈",
+                        "🎉",
+                        "🎊",
+                        "🎋",
+                        "🎍",
+                        "🎎",
+                        "🎏",
+                        "🎐",
+                        "🎑",
+                        "🧧",
+                        "🎀",
+                        "🎁",
+                        "🎗",
+                        "🎟",
+                        "🎫",
+                        "🎖",
+                        "🏆",
+                        "🏅",
+                        "🥇",
+                        "🥈",
+                        "🥉",
+                        "⚽",
+                        "⚾",
+                        "🥎",
+                        "🏀",
+                        "🏐",
+                        "🏈",
+                        "🏉",
+                        "🎾",
+                        "🥏",
+                        "🎳",
+                        "🏏",
+                        "🏑",
+                        "🏒",
+                        "🥍",
+                        "🏓",
+                        "🏸",
+                        "🥊",
+                        "🥋",
+                        "🥅",
+                        "⛳",
+                        "⛸",
+                        "🎣",
+                        "🤿",
+                        "🎽",
+                        "🎿",
+                        "🛷",
+                        "🥌",
+                        "🎯",
+                        "🪀",
+                        "🪁",
+                        "🎱",
+                        "🔮",
+                        "🪄",
+                        "🧿",
+                        "🎮",
+                        "🕹",
+                        "🎰",
+                        "🎲",
+                        "🧩",
+                        "🧸",
+                        "🪅",
+                        "🪆",
+                        "♠",
+                        "♥",
+                        "♦",
+                        "♣",
+                        "♟",
+                        "🃏",
+                        "🀄",
+                        "🎴",
+                        "🎭",
+                        "🖼",
+                        "🎨",
+                        "🧵",
+                        "🪡",
+                        "🧶",
+                        "🪢"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwiDhYjX8OfyAhVYxjgGHfJHAVI="
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "objects",
+                      "title": {
+                        "simpleText": "Objects"
+                      },
+                      "emojiIds": [
+                        "👓",
+                        "🕶",
+                        "🥽",
+                        "🥼",
+                        "🦺",
+                        "👔",
+                        "👕",
+                        "👖",
+                        "🧣",
+                        "🧤",
+                        "🧥",
+                        "🧦",
+                        "👗",
+                        "👘",
+                        "🥻",
+                        "🩱",
+                        "🩲",
+                        "🩳",
+                        "👙",
+                        "👚",
+                        "👛",
+                        "👜",
+                        "👝",
+                        "🛍",
+                        "🎒",
+                        "🩴",
+                        "👞",
+                        "👟",
+                        "🥾",
+                        "🥿",
+                        "👠",
+                        "👡",
+                        "🩰",
+                        "👢",
+                        "👑",
+                        "👒",
+                        "🎩",
+                        "🎓",
+                        "🧢",
+                        "🪖",
+                        "⛑",
+                        "📿",
+                        "💄",
+                        "💍",
+                        "💎",
+                        "🔇",
+                        "🔈",
+                        "🔉",
+                        "🔊",
+                        "📢",
+                        "📣",
+                        "📯",
+                        "🔔",
+                        "🔕",
+                        "🎼",
+                        "🎵",
+                        "🎶",
+                        "🎙",
+                        "🎚",
+                        "🎛",
+                        "🎤",
+                        "🎧",
+                        "📻",
+                        "🎷",
+                        "🪗",
+                        "🎸",
+                        "🎹",
+                        "🎺",
+                        "🎻",
+                        "🪕",
+                        "🥁",
+                        "🪘",
+                        "📱",
+                        "📲",
+                        "☎",
+                        "📞",
+                        "📟",
+                        "📠",
+                        "🔋",
+                        "🔌",
+                        "💻",
+                        "🖥",
+                        "🖨",
+                        "⌨",
+                        "🖱",
+                        "🖲",
+                        "💽",
+                        "💾",
+                        "💿",
+                        "📀",
+                        "🧮",
+                        "🎥",
+                        "🎞",
+                        "📽",
+                        "🎬",
+                        "📺",
+                        "📷",
+                        "📸",
+                        "📹",
+                        "📼",
+                        "🔍",
+                        "🔎",
+                        "🕯",
+                        "💡",
+                        "🔦",
+                        "🏮",
+                        "🪔",
+                        "📔",
+                        "📕",
+                        "📖",
+                        "📗",
+                        "📘",
+                        "📙",
+                        "📚",
+                        "📓",
+                        "📒",
+                        "📃",
+                        "📜",
+                        "📄",
+                        "📰",
+                        "🗞",
+                        "📑",
+                        "🔖",
+                        "🏷",
+                        "💰",
+                        "🪙",
+                        "💴",
+                        "💵",
+                        "💶",
+                        "💷",
+                        "💸",
+                        "💳",
+                        "🧾",
+                        "💹",
+                        "✉",
+                        "📧",
+                        "📨",
+                        "📩",
+                        "📤",
+                        "📥",
+                        "📦",
+                        "📫",
+                        "📪",
+                        "📬",
+                        "📭",
+                        "📮",
+                        "🗳",
+                        "✏",
+                        "✒",
+                        "🖋",
+                        "🖊",
+                        "🖌",
+                        "🖍",
+                        "📝",
+                        "💼",
+                        "📁",
+                        "📂",
+                        "🗂",
+                        "📅",
+                        "📆",
+                        "🗒",
+                        "🗓",
+                        "📇",
+                        "📈",
+                        "📉",
+                        "📊",
+                        "📋",
+                        "📌",
+                        "📍",
+                        "📎",
+                        "🖇",
+                        "📏",
+                        "📐",
+                        "✂",
+                        "🗃",
+                        "🗄",
+                        "🗑",
+                        "🔒",
+                        "🔓",
+                        "🔏",
+                        "🔐",
+                        "🔑",
+                        "🗝",
+                        "🔨",
+                        "🪓",
+                        "⛏",
+                        "⚒",
+                        "🛠",
+                        "🗡",
+                        "⚔",
+                        "🔫",
+                        "🪃",
+                        "🏹",
+                        "🛡",
+                        "🪚",
+                        "🔧",
+                        "🪛",
+                        "🔩",
+                        "⚙",
+                        "🗜",
+                        "⚖",
+                        "🦯",
+                        "🔗",
+                        "⛓",
+                        "🪝",
+                        "🧰",
+                        "🧲",
+                        "🪜",
+                        "⚗",
+                        "🧪",
+                        "🧫",
+                        "🧬",
+                        "🔬",
+                        "🔭",
+                        "📡",
+                        "💉",
+                        "🩸",
+                        "💊",
+                        "🩹",
+                        "🩺",
+                        "🚪",
+                        "🛗",
+                        "🪞",
+                        "🪟",
+                        "🛏",
+                        "🛋",
+                        "🪑",
+                        "🚽",
+                        "🪠",
+                        "🚿",
+                        "🛁",
+                        "🪤",
+                        "🪒",
+                        "🧴",
+                        "🧷",
+                        "🧹",
+                        "🧺",
+                        "🧻",
+                        "🪣",
+                        "🧼",
+                        "🪥",
+                        "🧽",
+                        "🧯",
+                        "🛒",
+                        "🚬",
+                        "⚰",
+                        "🪦",
+                        "⚱",
+                        "🗿",
+                        "🪧"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwiDhYjX8OfyAhVYxjgGHfJHAVI="
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "symbols",
+                      "title": {
+                        "simpleText": "Symbols"
+                      },
+                      "emojiIds": [
+                        "🏧",
+                        "🚮",
+                        "🚰",
+                        "♿",
+                        "🚹",
+                        "🚺",
+                        "🚻",
+                        "🚼",
+                        "🚾",
+                        "🛂",
+                        "🛃",
+                        "🛄",
+                        "🛅",
+                        "⚠",
+                        "🚸",
+                        "⛔",
+                        "🚫",
+                        "🚳",
+                        "🚭",
+                        "🚯",
+                        "🚱",
+                        "🚷",
+                        "📵",
+                        "🔞",
+                        "☢",
+                        "☣",
+                        "⬆",
+                        "↗",
+                        "➡",
+                        "↘",
+                        "⬇",
+                        "↙",
+                        "⬅",
+                        "↖",
+                        "↕",
+                        "↔",
+                        "↩",
+                        "↪",
+                        "⤴",
+                        "⤵",
+                        "🔃",
+                        "🔄",
+                        "🔙",
+                        "🔚",
+                        "🔛",
+                        "🔜",
+                        "🔝",
+                        "🛐",
+                        "⚛",
+                        "🕉",
+                        "✡",
+                        "☸",
+                        "☯",
+                        "✝",
+                        "☦",
+                        "☪",
+                        "☮",
+                        "🕎",
+                        "🔯",
+                        "♈",
+                        "♉",
+                        "♊",
+                        "♋",
+                        "♌",
+                        "♍",
+                        "♎",
+                        "♏",
+                        "♐",
+                        "♑",
+                        "♒",
+                        "♓",
+                        "⛎",
+                        "🔀",
+                        "🔁",
+                        "🔂",
+                        "▶",
+                        "⏩",
+                        "⏭",
+                        "⏯",
+                        "◀",
+                        "⏪",
+                        "⏮",
+                        "🔼",
+                        "⏫",
+                        "🔽",
+                        "⏬",
+                        "⏸",
+                        "⏹",
+                        "⏺",
+                        "⏏",
+                        "🎦",
+                        "🔅",
+                        "🔆",
+                        "📶",
+                        "📳",
+                        "📴",
+                        "♀",
+                        "♂",
+                        "⚧",
+                        "✖",
+                        "➕",
+                        "➖",
+                        "➗",
+                        "♾",
+                        "‼",
+                        "⁉",
+                        "❓",
+                        "❔",
+                        "❕",
+                        "❗",
+                        "〰",
+                        "💱",
+                        "💲",
+                        "⚕",
+                        "♻",
+                        "⚜",
+                        "🔱",
+                        "📛",
+                        "🔰",
+                        "⭕",
+                        "✅",
+                        "☑",
+                        "✔",
+                        "❌",
+                        "❎",
+                        "➰",
+                        "➿",
+                        "〽",
+                        "✳",
+                        "✴",
+                        "❇",
+                        "©",
+                        "®",
+                        "™",
+                        "🔴",
+                        "🟠",
+                        "🟡",
+                        "🟢",
+                        "🔵",
+                        "🟣",
+                        "🟤",
+                        "⚫",
+                        "⚪",
+                        "🟥",
+                        "🟧",
+                        "🟨",
+                        "🟩",
+                        "🟦",
+                        "🟪",
+                        "🟫",
+                        "⬛",
+                        "⬜",
+                        "◼",
+                        "◻",
+                        "◾",
+                        "◽",
+                        "▪",
+                        "▫",
+                        "🔶",
+                        "🔷",
+                        "🔸",
+                        "🔹",
+                        "🔺",
+                        "🔻",
+                        "💠",
+                        "🔘",
+                        "🔳",
+                        "🔲",
+                        "🏁",
+                        "🚩",
+                        "🎌",
+                        "🏴",
+                        "🏳",
+                        "🏳\u200d🌈",
+                        "🏳\u200d⚧",
+                        "🏴\u200d☠"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwiDhYjX8OfyAhVYxjgGHfJHAVI="
+                    }
+                  }
+                ],
+                "categoryButtons": [
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "people",
+                      "icon": {
+                        "iconType": "EMOJI_PEOPLE"
+                      },
+                      "tooltip": "People",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "People"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "nature",
+                      "icon": {
+                        "iconType": "EMOJI_NATURE"
+                      },
+                      "tooltip": "Nature",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Nature"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "food",
+                      "icon": {
+                        "iconType": "EMOJI_FOOD"
+                      },
+                      "tooltip": "Food",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Food"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "travel",
+                      "icon": {
+                        "iconType": "EMOJI_TRAVEL"
+                      },
+                      "tooltip": "Travel",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Travel"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "activities",
+                      "icon": {
+                        "iconType": "EMOJI_ACTIVITIES"
+                      },
+                      "tooltip": "Activities",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Activities"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "objects",
+                      "icon": {
+                        "iconType": "EMOJI_OBJECTS"
+                      },
+                      "tooltip": "Objects",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Objects"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "symbols",
+                      "icon": {
+                        "iconType": "EMOJI_SYMBOLS"
+                      },
+                      "tooltip": "Symbols",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Symbols"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "searchPlaceholderText": {
+                  "runs": [
+                    {
+                      "text": "Search emoji"
+                    }
+                  ]
+                },
+                "searchNoResultsText": {
+                  "runs": [
+                    {
+                      "text": "No emoji found"
+                    }
+                  ]
+                },
+                "pickSkinToneText": {
+                  "runs": [
+                    {
+                      "text": "Pick emoji skin tone"
+                    }
+                  ]
+                },
+                "trackingParams": "CA0QsrQCGAYiEwiDhYjX8OfyAhVYxjgGHfJHAVI=",
+                "clearSearchLabel": "Clear search",
+                "skinToneGenericLabel": "Generic skin tone",
+                "skinToneLightLabel": "Light skin tone",
+                "skinToneMediumLightLabel": "Medium light skin tone",
+                "skinToneMediumLabel": "Medium skin tone",
+                "skinToneMediumDarkLabel": "Medium dark skin tone",
+                "skinToneDarkLabel": "Dark skin tone"
+              }
+            }
+          ],
+          "pickerButtons": [
+            {
+              "liveChatIconToggleButtonRenderer": {
+                "targetId": "emoji",
+                "icon": {
+                  "iconType": "EMOJI"
+                },
+                "tooltip": "Custom emojis",
+                "accessibility": {
+                  "accessibilityData": {
+                    "label": "Custom emojis"
+                  }
+                },
+                "toggledIcon": {
+                  "iconType": "KEYBOARD"
+                },
+                "trackingParams": "CAwQtIkEGAciEwiDhYjX8OfyAhVYxjgGHfJHAVI="
+              }
+            }
+          ],
+          "interactionMessage": {
+            "messageRenderer": {
+              "trackingParams": "CAoQljsiEwiDhYjX8OfyAhVYxjgGHfJHAVI=",
+              "button": {
+                "buttonRenderer": {
+                  "style": "STYLE_DARK",
+                  "size": "SIZE_DEFAULT",
+                  "isDisabled": false,
+                  "text": {
+                    "simpleText": "Sign in to chat"
+                  },
+                  "navigationEndpoint": {
+                    "clickTrackingParams": "CAsQ8FsiEwiDhYjX8OfyAhVYxjgGHfJHAVI=",
+                    "commandMetadata": {
+                      "webCommandMetadata": {
+                        "url": "https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fwatch%253Fv%253D7AdZnOhL1Ak&hl=en",
+                        "webPageType": "WEB_PAGE_TYPE_UNKNOWN",
+                        "rootVe": 83769
+                      }
+                    },
+                    "signInEndpoint": {
+                      "nextEndpoint": {
+                        "clickTrackingParams": "CAsQ8FsiEwiDhYjX8OfyAhVYxjgGHfJHAVI=",
+                        "commandMetadata": {
+                          "webCommandMetadata": {
+                            "url": "/watch?v=7AdZnOhL1Ak",
+                            "webPageType": "WEB_PAGE_TYPE_WATCH",
+                            "rootVe": 3832
+                          }
+                        },
+                        "watchEndpoint": {
+                          "videoId": "7AdZnOhL1Ak"
+                        }
+                      }
+                    }
+                  },
+                  "accessibility": {
+                    "label": "Sign in to chat"
+                  },
+                  "trackingParams": "CAsQ8FsiEwiDhYjX8OfyAhVYxjgGHfJHAVI=",
+                  "accessibilityData": {
+                    "accessibilityData": {
+                      "label": "Sign in to chat"
+                    }
+                  }
+                }
+              },
+              "subtext": {
+                "messageSubtextRenderer": {
+                  "text": {
+                    "simpleText": "All messages you send will appear publicly"
+                  }
+                }
+              }
+            }
+          },
+          "targetId": "live-chat-message-input"
+        }
+      },
+      "itemList": {
+        "liveChatItemListRenderer": {
+          "maxItemsToDisplay": 250,
+          "moreCommentsBelowButton": {
+            "buttonRenderer": {
+              "style": "STYLE_PRIMARY",
+              "icon": {
+                "iconType": "DOWN_ARROW"
+              },
+              "trackingParams": "CAkQ8FsiEwiDhYjX8OfyAhVYxjgGHfJHAVI=",
+              "accessibilityData": {
+                "accessibilityData": {
+                  "label": "More comments below"
+                }
+              }
+            }
+          },
+          "enablePauseChatKeyboardShortcuts": false
+        }
+      },
+      "header": {
+        "liveChatHeaderRenderer": {
+          "overflowMenu": {
+            "menuRenderer": {
+              "items": [
+                {
+                  "menuServiceItemRenderer": {
+                    "text": {
+                      "runs": [
+                        {
+                          "text": "Participants"
+                        }
+                      ]
+                    },
+                    "icon": {
+                      "iconType": "PERSON"
+                    },
+                    "serviceEndpoint": {
+                      "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                      "showLiveChatParticipantsEndpoint": {
+                        "hack": true
+                      }
+                    },
+                    "trackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS"
+                  }
+                },
+                {
+                  "menuServiceItemRenderer": {
+                    "text": {
+                      "runs": [
+                        {
+                          "text": "Toggle timestamps"
+                        }
+                      ]
+                    },
+                    "icon": {
+                      "iconType": "ACCESS_TIME"
+                    },
+                    "serviceEndpoint": {
+                      "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                      "toggleLiveChatTimestampsEndpoint": {
+                        "hack": true
+                      }
+                    },
+                    "trackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS"
+                  }
+                },
+                {
+                  "menuNavigationItemRenderer": {
+                    "text": {
+                      "runs": [
+                        {
+                          "text": "Send feedback"
+                        }
+                      ]
+                    },
+                    "icon": {
+                      "iconType": "FEEDBACK"
+                    },
+                    "navigationEndpoint": {
+                      "clickTrackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+                      "commandMetadata": {
+                        "webCommandMetadata": {
+                          "ignoreNavigation": true
+                        }
+                      },
+                      "userFeedbackEndpoint": {
+                        "hack": true,
+                        "bucketIdentifier": "live_chat"
+                      }
+                    },
+                    "trackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS"
+                  }
+                }
+              ],
+              "trackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+              "accessibility": {
+                "accessibilityData": {
+                  "label": "More options"
+                }
+              }
+            }
+          },
+          "collapseButton": {
+            "buttonRenderer": {
+              "style": "STYLE_DEFAULT",
+              "size": "SIZE_DEFAULT",
+              "isDisabled": false,
+              "accessibility": {
+                "label": "Expand or collapse chat"
+              },
+              "trackingParams": "CAgQ8FsiEwiDhYjX8OfyAhVYxjgGHfJHAVI="
+            }
+          },
+          "viewSelector": {
+            "sortFilterSubMenuRenderer": {
+              "subMenuItems": [
+                {
+                  "title": "Top chat",
+                  "selected": false,
+                  "continuation": {
+                    "reloadContinuationData": {
+                      "continuation": "0ofMyAN5GlhDaWtxSndvWVZVTXdWRmhsWDB4WldqUnpZMkZYTWxoTmVXazFYMnQzRWdzM1FXUmFiazlvVERGQmF4b1Q2cWpkdVFFTkNnczNRV1JhYms5b1RERkJheUFDMAFKFggAGAAgAFCfh4jX8OfyAlgDeACiAQCCAQIIBA%3D%3D",
+                      "clickTrackingParams": "CAcQxqYCIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS"
+                    }
+                  },
+                  "accessibility": {
+                    "accessibilityData": {
+                      "label": "Top chat"
+                    }
+                  },
+                  "subtitle": "Some messages, such as potential spam, may not be visible",
+                  "trackingParams": "CAYQ48AHIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS"
+                },
+                {
+                  "title": "Live chat",
+                  "selected": true,
+                  "continuation": {
+                    "reloadContinuationData": {
+                      "continuation": "0ofMyAN5GlhDaWtxSndvWVZVTXdWRmhsWDB4WldqUnpZMkZYTWxoTmVXazFYMnQzRWdzM1FXUmFiazlvVERGQmF4b1Q2cWpkdVFFTkNnczNRV1JhYms5b1RERkJheUFDMAFKFggAGAAgAFCfh4jX8OfyAlgDeACiAQCCAQIIAQ%3D%3D",
+                      "clickTrackingParams": "CAUQxqYCIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS"
+                    }
+                  },
+                  "accessibility": {
+                    "accessibilityData": {
+                      "label": "Live chat"
+                    }
+                  },
+                  "subtitle": "All messages are visible",
+                  "trackingParams": "CAQQ48AHIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS"
+                }
+              ],
+              "accessibility": {
+                "accessibilityData": {
+                  "label": "Live Chat mode selection"
+                }
+              },
+              "trackingParams": "CAMQgdoEIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS"
+            }
+          }
+        }
+      },
+      "ticker": {
+        "liveChatTickerRenderer": {
+          "sentinel": true
+        }
+      },
+      "trackingParams": "CAEQl98BIhMIg4WI1_Dn8gIVWMY4Bh3yRwFS",
+      "participantsList": {
+        "liveChatParticipantsListRenderer": {
+          "title": {
+            "runs": [
+              {
+                "text": "Participants"
+              }
+            ]
+          },
+          "backButton": {
+            "buttonRenderer": {
+              "icon": {
+                "iconType": "BACK"
+              },
+              "trackingParams": "CAIQ8FsiEwiDhYjX8OfyAhVYxjgGHfJHAVI=",
+              "accessibilityData": {
+                "accessibilityData": {
+                  "label": "Back"
+                }
+              }
+            }
+          },
+          "participants": [
+            {
+              "liveChatParticipantRenderer": {
+                "authorName": {
+                  "simpleText": "AZKi Channel"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQQhnWKHLOLxjnXksGHHC8bnVS2UniL8Od6JTEPWQ=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQQhnWKHLOLxjnXksGHHC8bnVS2UniL8Od6JTEPWQ=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "icon": {
+                        "iconType": "VERIFIED"
+                      },
+                      "tooltip": "Verified",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Verified"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "icon": {
+                        "iconType": "OWNER"
+                      },
+                      "tooltip": "Owner",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Owner"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "clientMessages": {
+        "reconnectMessage": {
+          "runs": [
+            {
+              "text": "Chat disconnected. Please wait while we try to reconnect you."
+            }
+          ]
+        },
+        "unableToReconnectMessage": {
+          "runs": [
+            {
+              "text": "Unable to connect to chat. Please try again later."
+            }
+          ]
+        },
+        "fatalError": {
+          "runs": [
+            {
+              "text": "Unable to connect to chat. Please try again later."
+            }
+          ]
+        },
+        "reconnectedMessage": {
+          "runs": [
+            {
+              "text": "Successfully connected."
+            }
+          ]
+        },
+        "genericError": {
+          "runs": [
+            {
+              "text": "Error, try again."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

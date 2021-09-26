@@ -1,0 +1,173 @@
+{
+  "responseContext": {
+    "serviceTrackingParams": [
+      {
+        "service": "CSI",
+        "params": [
+          {
+            "key": "c",
+            "value": "WEB"
+          },
+          {
+            "key": "cver",
+            "value": "2.20210818.00.00"
+          },
+          {
+            "key": "yt_li",
+            "value": "0"
+          },
+          {
+            "key": "GetLiveChat_rid",
+            "value": "0x0d47d01f0657080b"
+          }
+        ]
+      },
+      {
+        "service": "GFEEDBACK",
+        "params": [
+          {
+            "key": "logged_in",
+            "value": "0"
+          },
+          {
+            "key": "e",
+            "value": "24036948,24016284,24088679,23944779,24069518,24002025,24056274,23940237,23975058,24049820,24050503,23882685,24037794,23946420,24059828,24083189,23918597,24080738,24060922,23884386,23966208,24002022,23996830,24057238,23983296,24087498,23804281,23857950,23934970,24083163,24007790,24082661,24002923,24053866,1714250,24058380,23974595,24084071,24047617,23998056,24007246,24004644,24083188,23990877,24065725,23968386,24001373,24083448,24061216,24028143,24069651,24083162,24077266,23986022,24090770,23744176"
+          }
+        ]
+      },
+      {
+        "service": "GUIDED_HELP",
+        "params": [
+          {
+            "key": "logged_in",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "service": "ECATCHER",
+        "params": [
+          {
+            "key": "client.version",
+            "value": "2.20210818"
+          },
+          {
+            "key": "client.name",
+            "value": "WEB"
+          }
+        ]
+      }
+    ],
+    "mainAppWebResponseContext": {
+      "loggedOut": true
+    },
+    "webResponseContextExtensionData": {
+      "hasDecorated": true
+    }
+  },
+  "continuationContents": {
+    "liveChatContinuation": {
+      "continuations": [
+        {
+          "invalidationContinuationData": {
+            "invalidationId": {
+              "objectSource": 1056,
+              "objectId": "Y2hhdH5tY1FzMGlRRTBic341NDMxMjA3",
+              "topic": "chat~mcQs0iQE0bs~5431207",
+              "subscribeToGcmTopics": true,
+              "protoCreationTimestampMs": "1629361989335"
+            },
+            "timeoutMs": 10000,
+            "continuation": "0ofMyAOsARpYQ2lrcUp3b1lWVU5hYkVSWWVrZHZiemRrTkRSaWQyUk9UMkpHWVdObkVndHRZMUZ6TUdsUlJUQmljeG9UNnFqZHVRRU5DZ3R0WTFGek1HbFJSVEJpY3lBQyi5qcix1rzyAjAAQAJKGggAGAAgAEoCCAFQ7Yb0nKG88gJYA3gAogEAUIL98LHWvPICWNyb6dOguvICggECCAGIAQCaAQIIAKAB-PPWtNa88gI%3D"
+          }
+        }
+      ],
+      "actions": [
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "👍🏻",
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://www.youtube.com/s/gaming/emoji/7ff574f2/emoji_u1f44d_1f3fb.svg"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "👍🏻",
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://www.youtube.com/s/gaming/emoji/7ff574f2/emoji_u1f44d_1f3fb.svg"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "👍🏻",
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://www.youtube.com/s/gaming/emoji/7ff574f2/emoji_u1f44d_1f3fb.svg"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "Tosan Haku"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLT0L6xK8IzCvLAk9kfHHfdgeeRY-J7l5QMlcpBV=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLT0L6xK8IzCvLAk9kfHHfdgeeRY-J7l5QMlcpBV=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2tjS1JRb2FRMUJUYjNsTVNGZDJVRWxEUmxOak1uSlJXV1JEVFhOR01IY1NKME5OTm10ZmNYSlhkbEJKUTBaUmVVdGpRVzlrZDFGRlExZFJNVFl5T1RNMk1UazRNakUwTXhvcEtpY0tHRlZEV214RVdIcEhiMjgzWkRRMFluZGtUazlpUm1Galp4SUxiV05SY3pCcFVVVXdZbk1nQWlnQk1ob0tHRlZEVG5WU1ZGUmpUa1EyYzFrNFFpMTBkazA0WXpaWlVRJTNEJTNE"
+                  }
+                },
+                "id": "CkUKGkNQU295TEhXdlBJQ0ZTYzJyUVlkQ01zRjB3EidDTTZrX3FyV3ZQSUNGUXlLY0FvZHdRRUNXUTE2MjkzNjE5ODIxNDM%3D",
+                "timestampUsec": "1629361982805177",
+                "authorExternalChannelId": "UCNuRTTcND6sY8B-tvM8c6YQ",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CM6k_qrWvPICFQyKcAodwQECWQ1629361982143"
+          }
+        }
+      ]
+    }
+  }
+}

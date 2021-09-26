@@ -1,0 +1,33 @@
+use std::convert::TryFrom;
+
+use thiserror::Error;
+
+use crate::youtube_types::actions::Action;
+
+type CoreAction = core::types::Action;
+
+mod extractors;
+
+#[derive(Error, Debug)]
+pub enum ConverterError {
+    #[error("The field for user badges is present, but has 0 elements")]
+    EmptyUserBadges,
+    #[error("Couldn't determine the membership type")]
+    MembershipType
+}
+
+pub struct Converter;
+
+impl Converter {
+    pub fn convert(actions: Vec<Action>) -> Result<Vec<CoreAction>, ConverterError> {
+        let mut result: Vec<CoreAction> = Vec::new();
+        for action in actions {
+            match Option::<CoreAction>::try_from(action)? {
+                Some(core_action) => result.push(core_action),
+                None => { }
+            }
+        }
+
+        Ok(result)
+    }
+}

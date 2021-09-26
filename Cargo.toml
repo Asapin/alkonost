@@ -1,0 +1,14 @@
+[workspace]
+members = [
+    "core",
+    "chat_manager",
+    "stream_finder",
+    "detector",
+    "cli"
+]
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+opt-level = 'z'

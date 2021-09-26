@@ -1,0 +1,13 @@
+[package]
+name = "detector"
+version = "0.1.0"
+authors = ["Asapin <1559761+Asapin@users.noreply.github.com>"]
+description = "Spam detector"
+edition = "2018"
+readme = "README.md"
+
+[dependencies]
+core = { path = "../core", version = "^0" }
+thiserror = "^1"
+tokio = { version = "^1", default-features = false }
+strsim = "^0"

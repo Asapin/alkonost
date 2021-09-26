@@ -1,0 +1,1681 @@
+{
+  "responseContext": {
+    "serviceTrackingParams": [
+      {
+        "service": "CSI",
+        "params": [
+          {
+            "key": "c",
+            "value": "WEB"
+          },
+          {
+            "key": "cver",
+            "value": "2.20210818.00.00"
+          },
+          {
+            "key": "yt_li",
+            "value": "0"
+          },
+          {
+            "key": "GetLiveChat_rid",
+            "value": "0x98e4f6aa70c0ca26"
+          }
+        ]
+      },
+      {
+        "service": "GFEEDBACK",
+        "params": [
+          {
+            "key": "logged_in",
+            "value": "0"
+          },
+          {
+            "key": "e",
+            "value": "24007246,24016724,23918597,24007613,24050503,24064095,24083188,24076879,24037794,23946420,24004644,24045469,23968386,24078328,24049820,23996830,23940238,24002022,23884386,1714244,23857949,24083162,24054727,24091188,24077266,24047616,24084939,24061215,23882685,24016284,23983296,24057238,23944779,24084804,24056274,23974157,24002025,24037586,24087264,24058781,23744176,24083189,24060921,24002922,24045470,24080738,24028143,23966208,24058380,24007790,24083163,23934970,24027696,23804281,24001373,23974595,24053866,24084071,23998056,24089182,24036947,24082661"
+          }
+        ]
+      },
+      {
+        "service": "GUIDED_HELP",
+        "params": [
+          {
+            "key": "logged_in",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "service": "ECATCHER",
+        "params": [
+          {
+            "key": "client.version",
+            "value": "2.20210818"
+          },
+          {
+            "key": "client.name",
+            "value": "WEB"
+          }
+        ]
+      }
+    ],
+    "mainAppWebResponseContext": {
+      "loggedOut": true
+    },
+    "webResponseContextExtensionData": {
+      "hasDecorated": true
+    }
+  },
+  "continuationContents": {
+    "liveChatContinuation": {
+      "continuations": [
+        {
+          "timedContinuationData": {
+            "timeoutMs": 5217,
+            "continuation": "0ofMyAOsARpYQ2lrcUp3b1lWVU5WUzBRdGRXRnZZbW81YW1seFFpMVdXSFEzTVcxQkVndFlTRmRIVWpRMk0zbGlheG9UNnFqZHVRRU5DZ3RZU0ZkSFVqUTJNM2xpYXlBQyiV--O3tLzyAjAAQAFKGggAGAAgAEoCCAFQ8JvBmKG88gJYA3gAogEAUN-li7i0vPICWL_-1-T8uvICggECCAGIAQCaAQIIAKABuJ-yuLS88gI%3D"
+          }
+        }
+      ],
+      "actions": [
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "もっと読みたい、"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "花屋カーリング"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQF_4nHkE3Ffxjhj-Crdv-zI7c4ksC1g2om0ObB=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQF_4nHkE3Ffxjhj-Crdv-zI7c4ksC1g2om0ObB=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2p3S09nb2FRMHhmUjI5TVZ6QjJVRWxEUm1WVmNuSlJXV1JIVmpoRFlrRVNIRU5QY201M2IybDNkbEJKUTBaVlRrZG9VVzlrWTNGblNWcFJMVFVhS1NvbkNoaFZRMVZMUkMxMVlXOWlhamxxYVhGQ0xWWllkRGN4YlVFU0MxaElWMGRTTkRZemVXSnJJQUlvQVRJYUNoaFZRMjFaYkZZMk5uZzBlRzFVYjFGU1MyeFlPVUpUU0VFJTNE"
+                  }
+                },
+                "id": "CjoKGkNMX0dvTFcwdlBJQ0ZlVXJyUVlkR1Y4Q2JBEhxDT3Jud29pd3ZQSUNGVU5HaFFvZGNxZ0laUS01",
+                "timestampUsec": "1629352863736701",
+                "authorExternalChannelId": "UCmYlV66x4xmToQRKlX9BSHA",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "COrnwoiwvPICFUNGhQodcqgIZQ-5"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "引き込まれる文章ｗ"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "まとまと"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQE5S66tZ6kHU3U10lhSIvAg2yKohpJXq1AqA=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQE5S66tZ6kHU3U10lhSIvAg2yKohpJXq1AqA=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2p3S09nb2FRMDFwU25oaVZ6QjJVRWxEUmxOSlF6VjNiMlJpU1UxRk1HY1NIRU5LY1ZFMkxVUTRkVjlKUTBaa1ZsbFpRVzlrTjJJMFQwbG5OVEVhS1NvbkNoaFZRMVZMUkMxMVlXOWlhamxxYVhGQ0xWWllkRGN4YlVFU0MxaElWMGRTTkRZemVXSnJJQUlvQVRJYUNoaFZRM0JNTmtKV1ZYQmtkMGRNZVZkelMwNVpPRzlwUVdjJTNE"
+                  }
+                },
+                "id": "CjoKGkNNaUp4YlcwdlBJQ0ZTSUM1d29kYklNRTBnEhxDSnFRNi1EOHVfSUNGZFZZWUFvZDdiNE9JZzUx",
+                "timestampUsec": "1629352864335122",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/Nc7_y-lh_2so22nCeGDN-zTh95b1xwscpceCLooNAwy0xMrFkNjps47CbWqZzbWpCIsZF-q6rPA=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/Nc7_y-lh_2so22nCeGDN-zTh95b1xwscpceCLooNAwy0xMrFkNjps47CbWqZzbWpCIsZF-q6rPA=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "New member",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "New member"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCpL6BVUpdwGLyWsKNY8oiAg",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CJqQ6-D8u_ICFdVYYAod7b4OIg51"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "きちゃ〜！"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "リリィ"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSBsVKJa7ygJz_WV0nNCPwc1Pr2ZrwjHPEVvzcJ=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSBsVKJa7ygJz_WV0nNCPwc1Pr2ZrwjHPEVvzcJ=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2owS093b2FRMDlFY0hsTVZ6QjJVRWxEUmxadlVISlJXV1EzYVc5RlUxRVNIVU5RVkhFNFNXRjRkbEJKUTBaVlVUTkxaMjlrVm0xVlJFbG5MVEl4R2lrcUp3b1lWVU5WUzBRdGRXRnZZbW81YW1seFFpMVdXSFEzTVcxQkVndFlTRmRIVWpRMk0zbGlheUFDS0FFeUdnb1lWVU5MV0haTmExQjNRVEY2YzNWVU5EZHllRFF0TFRsQg=="
+                  }
+                },
+                "id": "CjsKGkNPRHB5TFcwdlBJQ0ZWb1ByUVlkN2lvRVNREh1DUFRxOElheHZQSUNGVVEzS2dvZFZtVURJZy0yMQ%3D%3D",
+                "timestampUsec": "1629352864396602",
+                "authorExternalChannelId": "UCKXvMkPwA1zsuT47rx4--9A",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CPTq8IaxvPICFUQ3KgodVmUDIg-21"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "斎藤雄介１！"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "綿無ユア"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQBxIJkJVP99WBBEgiAyXZQlAq0h0VIZ20hlQ=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQBxIJkJVP99WBBEgiAyXZQlAq0h0VIZ20hlQ=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2p3S09nb2FRMUJMUkROaVZ6QjJVRWxEUmxwdlZUVjNiMlF3UmtWUExVRVNIRU5OZGtVNFpVdDVkbEJKUTBaUlRWVlhRVzlrZUU1elNqWjNNVEFhS1NvbkNoaFZRMVZMUkMxMVlXOWlhamxxYVhGQ0xWWllkRGN4YlVFU0MxaElWMGRTTkRZemVXSnJJQUlvQVRJYUNoaFZRMkpKV1d0RVRIVmpabTVqVWpselkwVjJhSFZxTkVFJTNE"
+                  }
+                },
+                "id": "CjoKGkNQS0QzYlcwdlBJQ0Zab1U1d29kMEZFTy1BEhxDTXZFOGVLeXZQSUNGUU1VV0FvZHhOc0o2dzEw",
+                "timestampUsec": "1629352864727590",
+                "authorExternalChannelId": "UCbIYkDLucfncR9scEvhuj4A",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CMvE8eKyvPICFQMUWAodxNsJ6w10"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "もうちょっと読ませろｗ"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "もふもふ団長"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSbB6AHfcEgq-mG9qCiLAmG05-gPvhG4VyuthO2=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSbB6AHfcEgq-mG9qCiLAmG05-gPvhG4VyuthO2=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2p3S09nb2FRMDVxZFRWaVZ6QjJVRWxEUm1OcmFISlJXV1J5WkhOSFJYY1NIRU5QY2xGb1dXRjJkbEJKUTBaUlVsQlhRVzlrY2pBNFNqQjNNVGthS1NvbkNoaFZRMVZMUkMxMVlXOWlhamxxYVhGQ0xWWllkRGN4YlVFU0MxaElWMGRTTkRZemVXSnJJQUlvQVRJYUNoaFZRMGxWYjFFeVVrRkVkM2RLV0ZCeVkxWkJkMVJzTW1jJTNE"
+                  }
+                },
+                "id": "CjoKGkNOanU1YlcwdlBJQ0Zja2hyUVlkcmRzR0V3EhxDT3JRaFlhdnZQSUNGUVJQV0FvZHIwOEowdzE5",
+                "timestampUsec": "1629352864872326",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/zsfhk-96Bm0H2J6srDBDVb_fO7-o8NUdR5FLWYr2SJ6CB4BaGP4dg0u1rOoEkh4p3Uoklcbe8A=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/zsfhk-96Bm0H2J6srDBDVb_fO7-o8NUdR5FLWYr2SJ6CB4BaGP4dg0u1rOoEkh4p3Uoklcbe8A=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (6 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (6 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCIUoQ2RADwwJXPrcVAwTl2g",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "COrQhYavvPICFQRPWAodr08J0w19"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "ユウちゃん！！"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "kk kc"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLT4ZcuuhsjCXcWCTTGELnTCF2mIw4rTySjOVw=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLT4ZcuuhsjCXcWCTTGELnTCF2mIw4rTySjOVw=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2owS093b2FRMDAzWHpkeVZ6QjJVRWxEUm1OVlRuSlJXV1JPWDJkQ1QyY1NIVU5NYmpFNGRHVm9kbEJKUTBaUk5XSm9VVzlrU1ZGSlRHSkJNamd5R2lrcUp3b1lWVU5WUzBRdGRXRnZZbW81YW1seFFpMVdXSFEzTVcxQkVndFlTRmRIVWpRMk0zbGlheUFDS0FFeUdnb1lWVU5LTUZVemFEUlBWR1I2VUV3NWVsUlZTa0kyV2xSQg=="
+                  }
+                },
+                "id": "CjsKGkNNN183clcwdlBJQ0ZjVU5yUVlkTl9nQk9nEh1DTG4xOHRlaHZQSUNGUTViaFFvZElRSUxiQTI4Mg%3D%3D",
+                "timestampUsec": "1629352865021947",
+                "authorExternalChannelId": "UCJ0U3h4OTdzPL9zTUJB6ZTA",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CLn18tehvPICFQ5bhQodIQILbA282"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "気になる"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "にぇーあ【着火済みSSRB】"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLT-0Cefud8MSumti4SIAbdrPXxwkAGgB6quOCch6w=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLT-0Cefud8MSumti4SIAbdrPXxwkAGgB6quOCch6w=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMDlEWTJwaVlUQjJVRWxEUmxKblVISlJXV1JWVFRSSmJsRVNHME5RWWtWcllWZDNkbEJKUTBaa1lVcFhRVzlrVHpkclRqaFJOaG9wS2ljS0dGVkRWVXRFTFhWaGIySnFPV3BwY1VJdFZsaDBOekZ0UVJJTFdFaFhSMUkwTmpONVltc2dBaWdCTWhvS0dGVkRUVXMwTUZZMVpIbHhlbDltYnpCRFoyUnhSWEZPWnclM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNPQ2NqYmEwdlBJQ0ZSZ1ByUVlkVU00SW5REhtDUGJFa2FXd3ZQSUNGZGFKV0FvZE83a044UTY%3D",
+                "timestampUsec": "1629352865517203",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/zsfhk-96Bm0H2J6srDBDVb_fO7-o8NUdR5FLWYr2SJ6CB4BaGP4dg0u1rOoEkh4p3Uoklcbe8A=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/zsfhk-96Bm0H2J6srDBDVb_fO7-o8NUdR5FLWYr2SJ6CB4BaGP4dg0u1rOoEkh4p3Uoklcbe8A=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (6 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (6 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCMK40V5dyqz_fo0CgdqEqNg",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CPbEkaWwvPICFdaJWAodO7kN8Q6"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "もう決定っすね"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "プチルマンド"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSDa_Y-eMFAm2fOecx-WPGs-xODGuy87hSJDg=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSDa_Y-eMFAm2fOecx-WPGs-xODGuy87hSJDg=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMHA2WTNSeVlUQjJVRWxEUmxOSlF6VjNiMlJpU1UxRk1HY1NHME5QVjNweFRWZHhkbEJKUTBaVWFFTm9VVzlrZEdjd1FqWkJPUm9wS2ljS0dGVkRWVXRFTFhWaGIySnFPV3BwY1VJdFZsaDBOekZ0UVJJTFdFaFhSMUkwTmpONVltc2dBaWdCTWhvS0dGVkRPVXhFUVdOTE5HZG1Va2hzWWtOc2VqaExVVzlRWnclM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNKemN0cmEwdlBJQ0ZTSUM1d29kYklNRTBnEhtDT1d6cU1XcXZQSUNGVGhDaFFvZHRnMEI2QTk%3D",
+                "timestampUsec": "1629352866197076",
+                "authorExternalChannelId": "UC9LDAcK4gfRHlbClz8KQoPg",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "COWzqMWqvPICFThChQodtg0B6A9"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "あっ"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "野うさぎのエド"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSykCyiS2OQrp6uhTRGOL3rIYrIb6nDDFY5F_xVEQ=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSykCyiS2OQrp6uhTRGOL3rIYrIb6nDDFY5F_xVEQ=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2p3S09nb2FRMDFpUm5aeVlUQjJVRWxEUm1WVmNuSlJXV1JIVmpoRFlrRVNIRU5KU0hscGRYVjRkbEJKUTBaYWIxQlpRVzlrVmxGM1ExOTNMVFlhS1NvbkNoaFZRMVZMUkMxMVlXOWlhamxxYVhGQ0xWWllkRGN4YlVFU0MxaElWMGRTTkRZemVXSnJJQUlvQVRJYUNoaFZReTF1TWt3MFYyVnJTbUpmY0Znd1NFUm5lRVJSTWxFJTNE"
+                  }
+                },
+                "id": "CjoKGkNNYkZ2cmEwdlBJQ0ZlVXJyUVlkR1Y4Q2JBEhxDSUh5aXV1eHZQSUNGWm9QWUFvZFZRd0Nfdy02",
+                "timestampUsec": "1629352866325241",
+                "authorExternalChannelId": "UC-n2L4WekJb_pX0HDgxDQ2Q",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CIHyiuuxvPICFZoPYAodVQwC_w-6"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "確定"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "ひづるみゆつき"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLS6z4LwKN7wD7XWpTN8epaqDgItzfKzpjsUIPgr=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLS6z4LwKN7wD7XWpTN8epaqDgItzfKzpjsUIPgr=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2tjS1JRb2FRMHBFU25seVlUQjJVRWxEUmxwdlZUVjNiMlF3UmtWUExVRVNKME5QUzNKclRFOWFkbEJKUTBaYWFFSm9VVzlrYTFCM1IxbEJNVFl5T1RNMU1qZzJOVEF6TVJvcEtpY0tHRlZEVlV0RUxYVmhiMkpxT1dwcGNVSXRWbGgwTnpGdFFSSUxXRWhYUjFJME5qTjVZbXNnQWlnQk1ob0tHRlZEVGs5WGJYZEJRV2cwUXkxbWFVVk1hRUUwYlhFNFFRJTNEJTNE"
+                  }
+                },
+                "id": "CkUKGkNKREp5cmEwdlBJQ0Zab1U1d29kMEZFTy1BEidDT0tya0xPWnZQSUNGWmhCaFFvZGtQd0dZQTE2MjkzNTI4NjUwMzE%3D",
+                "timestampUsec": "1629352866522307",
+                "authorExternalChannelId": "UCNOWmwAAh4C-fiELhA4mq8A",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "COKrkLOZvPICFZhBhQodkPwGYA1629352865031"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "確定！"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "秋川イリヤ"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLRYwnf0kF5hnAJl7oY9ekqJ1wFKu3FSaI7Cdzwv=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLRYwnf0kF5hnAJl7oY9ekqJ1wFKu3FSaI7Cdzwv=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMDVxT0hsTVlUQjJVRWxEUm1WNlJIZG5VV1F6YWxWSk1YY1NHME5RYVdZd2NuVjZkbEJKUTBaYVZHbFVRVWxrU20wNFIwWlJOQm9wS2ljS0dGVkRWVXRFTFhWaGIySnFPV3BwY1VJdFZsaDBOekZ0UVJJTFdFaFhSMUkwTmpONVltc2dBaWdCTWhvS0dGVkRibWt5TjA5eUxWRkhjVWxIYUVFMU9WUkZkbFJPZHclM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNOajh5TGEwdlBJQ0ZlekR3Z1FkM2pVSTF3EhtDUGlmMHJ1enZQSUNGWlRpVEFJZEptOEdGUTQ%3D",
+                "timestampUsec": "1629352866496188",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/zsfhk-96Bm0H2J6srDBDVb_fO7-o8NUdR5FLWYr2SJ6CB4BaGP4dg0u1rOoEkh4p3Uoklcbe8A=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/zsfhk-96Bm0H2J6srDBDVb_fO7-o8NUdR5FLWYr2SJ6CB4BaGP4dg0u1rOoEkh4p3Uoklcbe8A=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (6 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (6 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCni27Or-QGqIGhA59TEvTNw",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CPif0ruzvPICFZTiTAIdJm8GFQ4"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "確定！"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "黒雨2169"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLT1m8ZxJ0Pt_kAJg-TsTC6Lv80N9_LcPyqnpw=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLT1m8ZxJ0Pt_kAJg-TsTC6Lv80N9_LcPyqnpw=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2tjS1JRb2FRMHhIWlhsaVlUQjJVRWxEUm1WQlRuSlJXV1EyUjNkTk1HY1NKME5LZWxCZk5IRkdkbEJKUTBaV2JVcDNaMjlrT0ZSWlNHNW5NVFl5T1RNMU1qZzJNemsyT0JvcEtpY0tHRlZEVlV0RUxYVmhiMkpxT1dwcGNVSXRWbGgwTnpGdFFSSUxXRWhYUjFJME5qTjVZbXNnQWlnQk1ob0tHRlZEU2sxTmNHeHlUV2syY1ZSUGJYUTBiR0V5YWtoSVFRJTNEJTNE"
+                  }
+                },
+                "id": "CkUKGkNMR2V5YmEwdlBJQ0ZlQU5yUVlkNkd3TTBnEidDSnpQXzRxRnZQSUNGVm1Kd2dvZDhUWUhuZzE2MjkzNTI4NjM5Njg%3D",
+                "timestampUsec": "1629352866500473",
+                "authorExternalChannelId": "UCJMMplrMi6qTOmt4la2jHHA",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CJzP_4qFvPICFVmJwgod8TYHng1629352863968"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "なぁんだ愛の逃避行か"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "如月雪之丞"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLTR89TJIYeTWAMXuFTETPRgRr0NPzJhzVZFhA=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLTR89TJIYeTWAMXuFTETPRgRr0NPzJhzVZFhA=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2p3S09nb2FRMHBJUXpoTVlUQjJVRWxEUmxSTllqVjNiMlJ1T1dORVZsRVNIRU5LYVVWblRtRkhkbEJKUTBaU1YxZDNaMjlrV1VNNFNuTm5NalVhS1NvbkNoaFZRMVZMUkMxMVlXOWlhamxxYVhGQ0xWWllkRGN4YlVFU0MxaElWMGRTTkRZemVXSnJJQUlvQVRJYUNoaFZRemhFV21WeVJUVjNUVEpTTTA1VlRsTlBURmh5Y1djJTNE"
+                  }
+                },
+                "id": "CjoKGkNKSEM4TGEwdlBJQ0ZUTWI1d29kbjljRFZREhxDSmlFZ05hR3ZQSUNGUldXd2dvZFlDOEpzZzI1",
+                "timestampUsec": "1629352867144020",
+                "authorExternalChannelId": "UC8DZerE5wM2R3NUNSOLXrqg",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CJiEgNaGvPICFRWWwgodYC8Jsg25"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "これを書いた人は本当に鬼だったのか？"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "Rainアルク"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQ_tVfIwKsIj8VYNCETUtkrK0ySkHrBpLHF-A=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQ_tVfIwKsIj8VYNCETUtkrK0ySkHrBpLHF-A=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMGx1TW1keVpUQjJVRWxEUmxadlUzSlJXV1JEY3pCR2NHY1NHME5OVDJRMFpHRnFkbEJKUTBaaGFFaG9VVzlrUlVKdlJWcFJNQm9wS2ljS0dGVkRWVXRFTFhWaGIySnFPV3BwY1VJdFZsaDBOekZ0UVJJTFdFaFhSMUkwTmpONVltc2dBaWdCTWhvS0dGVkRkbEJyU0VOdlVGWnRYMFp4YzJzeExUSXlWMFZmUVElM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNJbjJncmUwdlBJQ0ZWb1NyUVlkQ3MwRnBnEhtDTU9kNGRhanZQSUNGYWhIaFFvZEVCb0VaUTA%3D",
+                "timestampUsec": "1629352867445589",
+                "authorExternalChannelId": "UCvPkHCoPVm_Fqsk1-22WE_A",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CMOd4dajvPICFahHhQodEBoEZQ0"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "あたりか"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "がんばるダメな子"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSvXkkaZ7yUUtxH_Rq_w3zQjuiG5tK-sYlS2-lp=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSvXkkaZ7yUUtxH_Rq_w3zQjuiG5tK-sYlS2-lp=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMUJ0YUdrM1pUQjJVRWxEUmxkM1VuSlJXV1JKUm05TVpWRVNHME5KYlhVd2RHMTVkbEJKUTBaVllVaDNaMjlrU1VGdlNYSm5NUm9wS2ljS0dGVkRWVXRFTFhWaGIySnFPV3BwY1VJdFZsaDBOekZ0UVJJTFdFaFhSMUkwTmpONVltc2dBaWdCTWhvS0dGVkRTR3d3YlV4RFZsUndhREZ3WjJGcFFucFZRWFozWnclM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNQbWhpN2UwdlBJQ0ZXd1JyUVlkSUZvTGVREhtDSW11MHRteXZQSUNGVWFId2dvZElBb0lyZzE%3D",
+                "timestampUsec": "1629352867582262",
+                "authorExternalChannelId": "UCHl0mLCVTph1pgaiBzUAvwg",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CImu0tmyvPICFUaHwgodIAoIrg1"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "あら～"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "細深雪"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQXZ7rQzjnFGEqy9SDVLdHC3ESsI55lW3gphkT6=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQXZ7rQzjnFGEqy9SDVLdHC3ESsI55lW3gphkT6=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2p3S09nb2FRMDlEYjJwaVpUQjJVRWxEUmxWSlIzSlJXV1ExZUVGSFYxRVNIRU5NYWxGZmNDMXRkbEJKUTBaWGJrMVVRVWxrTkRGSlRrMW5NemNhS1NvbkNoaFZRMVZMUkMxMVlXOWlhamxxYVhGQ0xWWllkRGN4YlVFU0MxaElWMGRTTkRZemVXSnJJQUlvQVRJYUNoaFZRMWRZYjIxYU9FTTNlV2wxUjBwb01HY3djR3hLYTJjJTNE"
+                  }
+                },
+                "id": "CjoKGkNPQ29qYmUwdlBJQ0ZVSUdyUVlkNXhBR1dREhxDTGpRX3AtbXZQSUNGV25NVEFJZDQxSU5NZzM3",
+                "timestampUsec": "1629352867615884",
+                "authorExternalChannelId": "UCWXomZ8C7yiuGJh0g0plJkg",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CLjQ_p-mvPICFWnMTAId41INMg37"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "おお"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "カブトムシ"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQAdQThMNqloyPIeUNeRgQOXBwB-lk46bfKLNGoIA=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQAdQThMNqloyPIeUNeRgQOXBwB-lk46bfKLNGoIA=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2o0S1BBb2FRMDlVZG1nM1pUQjJVRWxEUm1SblFYSlJXV1E1T0c5S01HY1NIa05PTmxsZmRuVjJkbEJKUTBaWk5tdFhRVzlrT1Zrd1NHdG5MVEV5T1JvcEtpY0tHRlZEVlV0RUxYVmhiMkpxT1dwcGNVSXRWbGgwTnpGdFFSSUxXRWhYUjFJME5qTjVZbXNnQWlnQk1ob0tHRlZEZVRsSFVuVmxWMjFWVEdGVE1FUjFRbFpJZVhablVRJTNEJTNE"
+                  }
+                },
+                "id": "CjwKGkNPVHZoN2UwdlBJQ0ZkZ0FyUVlkOThvSjBnEh5DTjZZX3Z1dnZQSUNGWTZrV0FvZDlZMEhrZy0xMjk%3D",
+                "timestampUsec": "1629352867526673",
+                "authorExternalChannelId": "UCy9GRueWmULaS0DuBVHyvgQ",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CN6Y_vuvvPICFY6kWAod9Y0Hkg-129"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "あ　確定した"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "こがね_"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/lpirGe8m3b22xa-dSNVeOH3V_QgotPualFOacx7HXPT_l-jjRV60kIPmAgQlCqVscBDNePlNHA=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/lpirGe8m3b22xa-dSNVeOH3V_QgotPualFOacx7HXPT_l-jjRV60kIPmAgQlCqVscBDNePlNHA=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2owS093b2FRMHhoTm0xTVpUQjJVRWxEUmxOSlF6VjNiMlJpU1UxRk1HY1NIVU5PVDFKNGRsUXRkVjlKUTBaamRFdExaMjlrV1ZoblNXRm5NVEl5R2lrcUp3b1lWVU5WUzBRdGRXRnZZbW81YW1seFFpMVdXSFEzTVcxQkVndFlTRmRIVWpRMk0zbGlheUFDS0FFeUdnb1lWVU0zVms0elRDMXpMV3BqTkdwYVdGWlZORVJMYUdaUg=="
+                  }
+                },
+                "id": "CjsKGkNMYTZtTGUwdlBJQ0ZTSUM1d29kYklNRTBnEh1DTk9SeHZULXVfSUNGY3RLS2dvZFlYZ0lhZzEyMg%3D%3D",
+                "timestampUsec": "1629352867798391",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/Nc7_y-lh_2so22nCeGDN-zTh95b1xwscpceCLooNAwy0xMrFkNjps47CbWqZzbWpCIsZF-q6rPA=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/Nc7_y-lh_2so22nCeGDN-zTh95b1xwscpceCLooNAwy0xMrFkNjps47CbWqZzbWpCIsZF-q6rPA=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "New member",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "New member"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UC7VN3L-s-jc4jZXVU4DKhfQ",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CNORxvT-u_ICFctKKgodYXgIag122"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "小暮さぁ…"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "ワ・カ・メ"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLTWpHIW5hbb1kOBV2_VnwAobHLcOusnzEFh9TrQ=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLTWpHIW5hbb1kOBV2_VnwAobHLcOusnzEFh9TrQ=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2tjS1JRb2FRMHR0VW5GaVpUQjJVRWxEUmxOak1uSlJXV1JEVFhOR01IY1NKME5OUkcxMFR6WmFkbEJKUTBaWlJYRlhRVzlrZUdSdlRtNUJNVFl5T1RNMU1qZzJOalV5T0JvcEtpY0tHRlZEVlV0RUxYVmhiMkpxT1dwcGNVSXRWbGgwTnpGdFFSSUxXRWhYUjFJME5qTjVZbXNnQWlnQk1ob0tHRlZEZFhreFJsSnFZVGhCVlRka1JIUkJOME4zWVhKcFVRJTNEJTNE"
+                  }
+                },
+                "id": "CkUKGkNLbVJxYmUwdlBJQ0ZTYzJyUVlkQ01zRjB3EidDTURtdE82WnZQSUNGWUVxV0FvZHhkb05uQTE2MjkzNTI4NjY1Mjg%3D",
+                "timestampUsec": "1629352868071669",
+                "authorExternalChannelId": "UCuy1FRja8AU7dDtA7CwariQ",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CMDmtO6ZvPICFYEqWAodxdoNnA1629352866528"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "邪魔すんなｗ"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "POSITIVE-SUN"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLRoSNMJ-DilKeAcrk11bK0piO6AvfKFuOdexEIPsQ=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLRoSNMJ-DilKeAcrk11bK0piO6AvfKFuOdexEIPsQ=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2owS093b2FRMHBIVUhOTVpUQjJVRWxEUm1OTlptWlJiMlJVU1RoRVQzY1NIVU5QTjBzeVNrUTJkVjlKUTBaaE5VVTVVVlZrWjBsblIyMVJNVFV6R2lrcUp3b1lWVU5WUzBRdGRXRnZZbW81YW1seFFpMVdXSFEzTVcxQkVndFlTRmRIVWpRMk0zbGlheUFDS0FFeUdnb1lWVU4zV1dKelYzaEtkM0JWWDJrd2VpMUphbmxaTmt4Ug=="
+                  }
+                },
+                "id": "CjsKGkNKR1BzTGUwdlBJQ0ZjTWZmUW9kVEk4RE93Eh1DTzdLMkpENnVfSUNGYTVFOVFVZGdJZ0dtUTE1Mw%3D%3D",
+                "timestampUsec": "1629352868186064",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/zsfhk-96Bm0H2J6srDBDVb_fO7-o8NUdR5FLWYr2SJ6CB4BaGP4dg0u1rOoEkh4p3Uoklcbe8A=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/zsfhk-96Bm0H2J6srDBDVb_fO7-o8NUdR5FLWYr2SJ6CB4BaGP4dg0u1rOoEkh4p3Uoklcbe8A=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (6 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (6 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCwYbsWxJwpU_i0z-IjyY6LQ",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CO7K2JD6u_ICFa5E9QUdgIgGmQ153"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "見つけたあああ"
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "👏🏼",
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://www.youtube.com/s/gaming/emoji/7ff574f2/emoji_u1f44f_1f3fc.svg"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "👏🏼",
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://www.youtube.com/s/gaming/emoji/7ff574f2/emoji_u1f44f_1f3fc.svg"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "桃の天然石"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQlAqHAXUGCTNeKWmIwuIRA7FWvwnmx-2WEASitZQ=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQlAqHAXUGCTNeKWmIwuIRA7FWvwnmx-2WEASitZQ=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2p3S09nb2FRMDVZZFhKeVpUQjJVRWxEUmxKblVISlJXV1JWVFRSSmJsRVNIRU5PYWxadWJ5MTZkbEJKUTBaUmRUZFhRVzlrYTE5WlFqUjNMVFFhS1NvbkNoaFZRMVZMUkMxMVlXOWlhamxxYVhGQ0xWWllkRGN4YlVFU0MxaElWMGRTTkRZemVXSnJJQUlvQVRJYUNoaFZRMFJNUjB0ZmFYRkxOVkJNVTA5RU16RXpNbXR6V1hjJTNE"
+                  }
+                },
+                "id": "CjoKGkNOWHVycmUwdlBJQ0ZSZ1ByUVlkVU00SW5REhxDTmpWbm8tenZQSUNGUXU3V0FvZGtfWUI0dy00",
+                "timestampUsec": "1629352868165537",
+                "authorExternalChannelId": "UCDLGK_iqK5PLSOD3132ksYw",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CNjVno-zvPICFQu7WAodk_YB4w-4"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "小暮貴様！"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "まさかじゅ【未着火SSRB変更不可】"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/UmS74li7Bq3POLWXf-GQTCyAkV7gVGmDpNSgqUg1stuzd51MAbeZGEHoX-wCfH8pLicCl9Z4chc=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/UmS74li7Bq3POLWXf-GQTCyAkV7gVGmDpNSgqUg1stuzd51MAbeZGEHoX-wCfH8pLicCl9Z4chc=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2owS093b2FRMUJVYjNkaVpUQjJVRWxEUm1WVmNuSlJXV1JIVmpoRFlrRVNIVU5NUTFrME5EWjVkbEJKUTBaUlpGZExaMjlrUkRaM1JqbFJMVEV3R2lrcUp3b1lWVU5WUzBRdGRXRnZZbW81YW1seFFpMVdXSFEzTVcxQkVndFlTRmRIVWpRMk0zbGlheUFDS0FFeUdnb1lWVU0xUkhsVFFqQm9RMWhIVTA5V2RqRTRkVGRzZG5Obg=="
+                  }
+                },
+                "id": "CjsKGkNQVG93YmUwdlBJQ0ZlVXJyUVlkR1Y4Q2JBEh1DTENZNDQ2eXZQSUNGUWRXS2dvZEQ2d0Y5US0xMA%3D%3D",
+                "timestampUsec": "1629352868476067",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/Nc7_y-lh_2so22nCeGDN-zTh95b1xwscpceCLooNAwy0xMrFkNjps47CbWqZzbWpCIsZF-q6rPA=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/Nc7_y-lh_2so22nCeGDN-zTh95b1xwscpceCLooNAwy0xMrFkNjps47CbWqZzbWpCIsZF-q6rPA=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "New member",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "New member"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UC5DySB0hCXGSOVv18u7lvsg",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CLCY446yvPICFQdWKgodD6wF9Q-10"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "夢中じゃんw"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "なぎてんおじさん"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLRiXNP7rOpiLrxe8AuJ40iZT0-yOHNund3hcQ=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLRiXNP7rOpiLrxe8AuJ40iZT0-yOHNund3hcQ=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2tjS1JRb2FRMDl4TVRGTVpUQjJVRWxEUmxOSlF6VjNiMlJpU1UxRk1HY1NKME5MWldSMFdVZHVkbEJKUTBaU1UxTjNaMjlrWm5CUlNuQlJNVFl5T1RNMU1qZzJOemcyTVJvcEtpY0tHRlZEVlV0RUxYVmhiMkpxT1dwcGNVSXRWbGgwTnpGdFFSSUxXRWhYUjFJME5qTjVZbXNnQWlnQk1ob0tHRlZEVldWbFJuTkVkMVZVYm5SSk9XODBVR05WYUhCRlp3JTNEJTNE"
+                  }
+                },
+                "id": "CkUKGkNPcTExTGUwdlBJQ0ZTSUM1d29kYklNRTBnEidDS2VkdFlHbnZQSUNGUlNTd2dvZGZwUUpwUTE2MjkzNTI4Njc4NjE%3D",
+                "timestampUsec": "1629352868780834",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/zsfhk-96Bm0H2J6srDBDVb_fO7-o8NUdR5FLWYr2SJ6CB4BaGP4dg0u1rOoEkh4p3Uoklcbe8A=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/zsfhk-96Bm0H2J6srDBDVb_fO7-o8NUdR5FLWYr2SJ6CB4BaGP4dg0u1rOoEkh4p3Uoklcbe8A=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (6 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (6 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCUeeFsDwUTntI9o4PcUhpEg",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CKedtYGnvPICFRSSwgodfpQJpQ1629352867861"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "！？"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "FC GAMES"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQtmSB3gRY2JbEAKZWpgup_E47d5SMO0vTuOYdC4A=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQtmSB3gRY2JbEAKZWpgup_E47d5SMO0vTuOYdC4A=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2owS093b2FRMDlVY1ROaVpUQjJVRWxEUmxwdlZUVjNiMlF3UmtWUExVRVNIVU5PU0VrdE4zVjNkbEJKUTBaVk9GUkxaMjlrYmtOblVFUjNMVE14R2lrcUp3b1lWVU5WUzBRdGRXRnZZbW81YW1seFFpMVdXSFEzTVcxQkVndFlTRmRIVWpRMk0zbGlheUFDS0FFeUdnb1lWVU5FZFZsR1RUQlJaMHRYTW5wbU0wRllaVWt4YzJaMw=="
+                  }
+                },
+                "id": "CjsKGkNPVHEzYmUwdlBJQ0Zab1U1d29kMEZFTy1BEh1DTkhJLTd1d3ZQSUNGVThUS2dvZG5DZ1BEdy0zMQ%3D%3D",
+                "timestampUsec": "1629352868935058",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/5rM9V_amA6DCk_TofaSfV8YdOJAWRHUvz1sElasgzM3yKEq4NaqFibG_i9O1qFQpL3PzhsuYKg=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/5rM9V_amA6DCk_TofaSfV8YdOJAWRHUvz1sElasgzM3yKEq4NaqFibG_i9O1qFQpL3PzhsuYKg=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (1 month)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (1 month)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCDuYFM0QgKW2zf3AXeI1sfw",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CNHI-7uwvPICFU8TKgodnCgPDw-31"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "小暮～！"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "いじけ苺"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ACLI83mmy87X5iSqdnMXkJ--oAEK2jLi90epc1YWGTwHXI7WTDIVZHso-coS7SL3u3edyDidJg=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ACLI83mmy87X5iSqdnMXkJ--oAEK2jLi90epc1YWGTwHXI7WTDIVZHso-coS7SL3u3edyDidJg=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2tjS1JRb2FRMDFxTkRRM1pUQjJVRWxEUmxSTllqVjNiMlJ1T1dORVZsRVNKME5NVnpSdldsTmlkbEJKUTBaallVWnFkMjlrVWpCelJTMTNNVFl5T1RNMU1qZzJOamt5T0JvcEtpY0tHRlZEVlV0RUxYVmhiMkpxT1dwcGNVSXRWbGgwTnpGdFFSSUxXRWhYUjFJME5qTjVZbXNnQWlnQk1ob0tHRlZEZDNObWRuSkRTWEJuTmw5VlpIcDJlRTV3T0VWM1VRJTNEJTNE"
+                  }
+                },
+                "id": "CkUKGkNNajQ0N2UwdlBJQ0ZUTWI1d29kbjljRFZREidDTFc0b1pTYnZQSUNGY2FGandvZFIwc0UtdzE2MjkzNTI4NjY5Mjg%3D",
+                "timestampUsec": "1629352869035134",
+                "authorExternalChannelId": "UCwsfvrCIpg6_UdzvxNp8EwQ",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CLW4oZSbvPICFcaFjwodR0sE-w1629352866928"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "lol"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "Kreceir"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQgPL179hkCbnrIOqqsLG5yCL4pkbu1glQieSg-UA=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQgPL179hkCbnrIOqqsLG5yCL4pkbu1glQieSg-UA=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMDQzWnpKeVpUQjJVRWxEUmxGTFRIZFJiMlE1TTAxUGJIY1NHME5KWm1KblkyMTJkbEJKUTBaUmJYTldVVzlrZDFGelVISjNNeG9wS2ljS0dGVkRWVXRFTFhWaGIySnFPV3BwY1VJdFZsaDBOekZ0UVJJTFdFaFhSMUkwTmpONVltc2dBaWdCTWhvS0dGVkRWVzR5ZWtwRFJpMTVTR1ZaTm1aU2NIbElTVzVLUVElM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNON2cycmUwdlBJQ0ZRS0x3UW9kOTNNT2x3EhtDSWZiZ2NtdnZQSUNGUW1zVlFvZHdRc1BydzM%3D",
+                "timestampUsec": "1629352868884630",
+                "authorExternalChannelId": "UCUn2zJCF-yHeY6fRpyHInJA",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CIfbgcmvvPICFQmsVQodwQsPrw3"
+          }
+        },
+        {
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "あら"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "ごしたろう"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLT2DAd5KFZi32pLlM2mHBz7shjxK3M_G-Yw1ayUrA=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLT2DAd5KFZi32pLlM2mHBz7shjxK3M_G-Yw1ayUrA=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2p3S09nb2FRMDlRTmpRM1pUQjJVRWxEUmxWSlIzSlJXV1ExZUVGSFYxRVNIRU5MUjFwZldVTnlkbEJKUTBaUmFrTlBRVmxrTFZWQlJ6WjNNaklhS1NvbkNoaFZRMVZMUkMxMVlXOWlhamxxYVhGQ0xWWllkRGN4YlVFU0MxaElWMGRTTkRZemVXSnJJQUlvQVRJYUNoaFZRMVZ4UzBKSVFWUktibkZ0VFRWQk1GZzBibEpwWDBFJTNE"
+                  }
+                },
+                "id": "CjoKGkNPUDY0N2UwdlBJQ0ZVSUdyUVlkNXhBR1dREhxDS0daX1lDcnZQSUNGUWpDT0FZZC1VQUc2dzIy",
+                "timestampUsec": "1629352869035413",
+                "authorExternalChannelId": "UCUqKBHATJnqmM5A0X4nRi_A",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CKGZ_YCrvPICFQjCOAYd-UAG6w22"
+          }
+        }
+      ]
+    }
+  }
+}

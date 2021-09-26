@@ -1,0 +1,15 @@
+[package]
+name = "core"
+version = "0.1.0"
+authors = ["Asapin <1559761+Asapin@users.noreply.github.com>"]
+description = "Core types and functionality that are used throughout Alkonost"
+edition = "2018"
+readme = "README.md"
+
+[dependencies]
+thiserror = "^1"
+reqwest = { version = "^0", default-features = false, features = ["rustls-tls", "gzip", "brotli", "deflate"] }
+tokio = { version = "^1", default-features = false }
+vec1 = { version = "^1", default-features = false }
+lazy-regex = "^2"
+chrono = { version = "^0", default-features = false, features = ["clock"] }

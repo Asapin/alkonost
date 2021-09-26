@@ -1,0 +1,4657 @@
+{
+  "responseContext": {
+    "serviceTrackingParams": [
+      {
+        "service": "CSI",
+        "params": [
+          {
+            "key": "c",
+            "value": "WEB"
+          },
+          {
+            "key": "cver",
+            "value": "2.20210903.05.01"
+          },
+          {
+            "key": "yt_li",
+            "value": "0"
+          },
+          {
+            "key": "GetLiveChat_rid",
+            "value": "0xcebc8db9dc1b4b91"
+          }
+        ]
+      },
+      {
+        "service": "GFEEDBACK",
+        "params": [
+          {
+            "key": "logged_in",
+            "value": "0"
+          },
+          {
+            "key": "e",
+            "value": "24037794,24091075,24083188,24004644,24049820,24007246,24050503,23998056,24074565,1714255,24087223,9405987,23884386,24079271,24088877,23918597,24087532,23968386,23986016,23946420,24083448,23885487,24077266,23996830,23983296,24083162,24056274,24002025,23944779,23882685,24036948,24077375,24091701,24082662,24028143,23966208,24080738,24083189,24077242,23990877,24001373,23804281,23857950,23934970,24083163,24007790,24097229,24002022,24058380,23974595,23744176,24047617,24037790"
+          }
+        ]
+      },
+      {
+        "service": "GUIDED_HELP",
+        "params": [
+          {
+            "key": "logged_in",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "service": "ECATCHER",
+        "params": [
+          {
+            "key": "client.version",
+            "value": "2.20210903"
+          },
+          {
+            "key": "client.name",
+            "value": "WEB"
+          }
+        ]
+      }
+    ],
+    "mainAppWebResponseContext": {
+      "loggedOut": true
+    },
+    "webResponseContextExtensionData": {
+      "hasDecorated": true
+    }
+  },
+  "trackingParams": "CAAQ0b4BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+  "continuationContents": {
+    "liveChatContinuation": {
+      "continuations": [
+        {
+          "invalidationContinuationData": {
+            "invalidationId": {
+              "objectSource": 1056,
+              "objectId": "Y2hhdH5zN2hha09Tc1UtSX41NDM2MTU1",
+              "topic": "chat~s7hakOSsU-I~5436155",
+              "subscribeToGcmTopics": true,
+              "protoCreationTimestampMs": "1630846504443"
+            },
+            "timeoutMs": 10000,
+            "continuation": "0ofMyAOoARpYQ2lrcUp3b1lWVU53TmprNU0zZDRjSGxFVUVoVmNHRjJkMFJHY1dkbkVndHpOMmhoYTA5VGMxVXRTUm9UNnFqZHVRRU5DZ3R6TjJoaGEwOVRjMVV0U1NBQyjTwqyl8OfyAjAAQAJKFggBGAAgAFD6pMjU8OfyAlgDeACiAQBQjbnVpfDn8gJYjaisvMPl8gKCAQIIAYgBAJoBAggAoAH3vNLU8OfyAg%3D%3D",
+            "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+          }
+        }
+      ],
+      "actions": [
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UCp6993wxpyDPHUpavwDFqgg/HFdkYMm0M6HY_APcg4joCA",
+                        "shortcuts": [
+                          ":_ぬんぬん2:",
+                          ":ぬんぬん2:"
+                        ],
+                        "searchTerms": [
+                          "_ぬんぬん2",
+                          "ぬんぬん2"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/SOxB2EwE6fIIlopPlFAXKrYoyoM7ADGnn7JfTLIzxpqANhKkCzuDloxdABljazSw0z6yWDy0E20=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/SOxB2EwE6fIIlopPlFAXKrYoyoM7ADGnn7JfTLIzxpqANhKkCzuDloxdABljazSw0z6yWDy0E20=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "ぬんぬん2"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UCp6993wxpyDPHUpavwDFqgg/HFdkYLm1M6HY_APcg4joCA",
+                        "shortcuts": [
+                          ":_ぬん1:",
+                          ":ぬん1:"
+                        ],
+                        "searchTerms": [
+                          "_ぬん1",
+                          "ぬん1"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/5KwgzXwRQ3nmc0q-PNq9Y7pZH-D3j1sqzbHs5LWpxS7dZv1bDFyHsSWxuNPdXICSy9J3L0L6=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/5KwgzXwRQ3nmc0q-PNq9Y7pZH-D3j1sqzbHs5LWpxS7dZv1bDFyHsSWxuNPdXICSy9J3L0L6=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "ぬん1"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UCp6993wxpyDPHUpavwDFqgg/HFdkYPy1M6HY_APcg4joCA",
+                        "shortcuts": [
+                          ":_ぬん2:",
+                          ":ぬん2:"
+                        ],
+                        "searchTerms": [
+                          "_ぬん2",
+                          "ぬん2"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/qJZGqnVC0LLFH2JzX6xNveeCuKonALIaR7vS4SBPFq7HdFdQMta-4Hf4kcPqIXscQzhk3nAnpA=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/qJZGqnVC0LLFH2JzX6xNveeCuKonALIaR7vS4SBPFq7HdFdQMta-4Hf4kcPqIXscQzhk3nAnpA=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "ぬん2"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "bricksmashtv"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQ0JtopsnChOtfBxllZNN9P8OmayxjinEsrsPMPoQ=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQ0JtopsnChOtfBxllZNN9P8OmayxjinEsrsPMPoQ=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2p3S09nb2FRMUJpYlMxUVNGWTFYMGxEUmxGTlZISlJXV1JvT1hkS1luY1NIRU5RUTFnMmRYcFdOVjlKUTBaV1VUWnlVVmxrUlVkRlIyWkJMVEFhS1NvbkNoaFZRM0EyT1RremQzaHdlVVJRU0ZWd1lYWjNSRVp4WjJjU0MzTTNhR0ZyVDFOelZTMUpJQUlvQVRJYUNoaFZRelJSWjE4dGJYaExVR1pyYjNaRGVsVk9ia1ZyV25jJTNE"
+                  }
+                },
+                "id": "CjoKGkNQYm0tUEhWNV9JQ0ZRTVRyUVlkaDl3SmJ3EhxDUENYNnV6VjVfSUNGVlE2clFZZEVHRUdmQS0w",
+                "timestampUsec": "1630839318131676",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/yo-IUPc4oxCLW65E9k1C1SINFA_mMQAo2ylJ_C_NScG1S2xGltgVUMGWubFYPClrDcGh_HbyUQ=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/yo-IUPc4oxCLW65E9k1C1SINFA_mMQAo2ylJ_C_NScG1S2xGltgVUMGWubFYPClrDcGh_HbyUQ=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (2 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (2 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UC4Qg_-mxKPfkovCzUNnEkZw",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CPCX6uzV5_ICFVQ6rQYdEGEGfA-0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "markChatItemAsDeletedAction": {
+            "deletedStateMessage": {
+              "runs": [
+                {
+                  "text": "[message retracted]"
+                }
+              ]
+            },
+            "targetItemId": "CjkKGkNJZTJuSlRYNV9JQ0ZlVXJyUVlkU0xrRnZREhtDTEhlMDR2WDVfSUNGZmJEVEFJZHA0UUZTdzA%3D"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatMembershipItemRenderer": {
+                "id": "ChwKGkNQWERyNERZNV9JQ0ZjVU5yUVlkZlpVSWJn",
+                "timestampUsec": "1630839885314393",
+                "authorExternalChannelId": "UCpjkoWiJs5MSR-BvRWIKraA",
+                "headerSubtext": {
+                  "runs": [
+                    {
+                      "text": "Welcome to "
+                    },
+                    {
+                      "text": "そらとも"
+                    },
+                    {
+                      "text": "!"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "Darwin gram"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQaW9qzrpO-i6211VMwQBuvruaBBHDxYP5LOGJPag=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQaW9qzrpO-i6211VMwQBuvruaBBHDxYP5LOGJPag=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/yo-IUPc4oxCLW65E9k1C1SINFA_mMQAo2ylJ_C_NScG1S2xGltgVUMGWubFYPClrDcGh_HbyUQ=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/yo-IUPc4oxCLW65E9k1C1SINFA_mMQAo2ylJ_C_NScG1S2xGltgVUMGWubFYPClrDcGh_HbyUQ=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (2 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (2 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CBwQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2g0S0hBb2FRMUJZUkhJMFJGazFYMGxEUm1OVlRuSlJXV1JtV2xWSlltY2FLU29uQ2hoVlEzQTJPVGt6ZDNod2VVUlFTRlZ3WVhaM1JFWnhaMmNTQzNNM2FHRnJUMU56VlMxSklBSW9BVElhQ2hoVlEzQnFhMjlYYVVwek5VMVRVaTFDZGxKWFNVdHlZVUUlM0Q="
+                  }
+                },
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                },
+                "trackingParams": "CBwQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+              }
+            }
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatMembershipItemRenderer": {
+                "id": "ChwKGkNOUDdsWVBZNV9JQ0ZVSUdyUVlkcnlBTzBn",
+                "timestampUsec": "1630839891181809",
+                "authorExternalChannelId": "UCqqnkuqbRY3S-tbBKIz53-w",
+                "headerSubtext": {
+                  "runs": [
+                    {
+                      "text": "Welcome to "
+                    },
+                    {
+                      "text": "そらとも"
+                    },
+                    {
+                      "text": "!"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "黒澤大治"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/6_d0O1kEvT7eLs_XmF7aJQXCpWViE8sm4r6F69nFo8gnhZ55vHkRQ49oLUU5GFmzF7Ku0N6r=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/6_d0O1kEvT7eLs_XmF7aJQXCpWViE8sm4r6F69nFo8gnhZ55vHkRQ49oLUU5GFmzF7Ku0N6r=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/5kRhwMeLh3fh4FRffNIwMVYR0W_6GKO7OI5hdVfAmnms8kQA11aLheekNxzOpwblYGvWRCK6nw=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/5kRhwMeLh3fh4FRffNIwMVYR0W_6GKO7OI5hdVfAmnms8kQA11aLheekNxzOpwblYGvWRCK6nw=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "New member",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "New member"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CBsQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2g0S0hBb2FRMDVRTjJ4WlVGazFYMGxEUmxWSlIzSlJXV1J5ZVVGUE1HY2FLU29uQ2hoVlEzQTJPVGt6ZDNod2VVUlFTRlZ3WVhaM1JFWnhaMmNTQzNNM2FHRnJUMU56VlMxSklBSW9BVElhQ2hoVlEzRnhibXQxY1dKU1dUTlRMWFJpUWt0SmVqVXpMWGMlM0Q="
+                  }
+                },
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                },
+                "trackingParams": "CBsQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+              }
+            }
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatMembershipItemRenderer": {
+                "id": "ChwKGkNKLXdfTnJZNV9JQ0ZVUURmUW9kYzdBS2J3",
+                "timestampUsec": "1630840075337473",
+                "authorExternalChannelId": "UCrvJDswjK8-YirfuvQwR6cw",
+                "headerSubtext": {
+                  "runs": [
+                    {
+                      "text": "Welcome to "
+                    },
+                    {
+                      "text": "そらとも"
+                    },
+                    {
+                      "text": "!"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "クー·フーリン"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/3FjvEfV-GKEc7NlbgiGvz6pr5yS_TLVgO7vzd5nupD4Nfcmb0YT6zGjke8gv-s7JMNFvUcCzJg=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/3FjvEfV-GKEc7NlbgiGvz6pr5yS_TLVgO7vzd5nupD4Nfcmb0YT6zGjke8gv-s7JMNFvUcCzJg=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/5kRhwMeLh3fh4FRffNIwMVYR0W_6GKO7OI5hdVfAmnms8kQA11aLheekNxzOpwblYGvWRCK6nw=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/5kRhwMeLh3fh4FRffNIwMVYR0W_6GKO7OI5hdVfAmnms8kQA11aLheekNxzOpwblYGvWRCK6nw=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "New member",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "New member"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CBoQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2g0S0hBb2FRMG90ZDE5T2NsazFYMGxEUmxWUlJHWlJiMlJqTjBGTFluY2FLU29uQ2hoVlEzQTJPVGt6ZDNod2VVUlFTRlZ3WVhaM1JFWnhaMmNTQzNNM2FHRnJUMU56VlMxSklBSW9BVElhQ2hoVlEzSjJTa1J6ZDJwTE9DMVphWEptZFhaUmQxSTJZM2MlM0Q="
+                  }
+                },
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                },
+                "trackingParams": "CBoQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+              }
+            }
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "Nice! Looking forward to it! "
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "❤",
+                        "shortcuts": [
+                          ":red_heart:",
+                          ":heart:",
+                          "\u003c3"
+                        ],
+                        "searchTerms": [
+                          "red",
+                          "heart"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://www.youtube.com/s/gaming/emoji/7ff574f2/emoji_u2764.svg"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "text": " "
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "qwertcurt123"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSxfy2NWBY4NQYXt15fcSnTAnL_sg21mADAM6qA=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSxfy2NWBY4NQYXt15fcSnTAnL_sg21mADAM6qA=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMHhFTkdvMmJtRTFYMGxEUmxGTlZISlJXV1JvT1hkS1luY1NHME5PYlRoNU5XSmhOVjlKUTBabGNrTlVRVWxrZUZaWlFVNW5NQm9wS2ljS0dGVkRjRFk1T1ROM2VIQjVSRkJJVlhCaGRuZEVSbkZuWnhJTGN6ZG9ZV3RQVTNOVkxVa2dBaWdCTWhvS0dGVkROM2d3YzJWZlRDMXRYMEp3U1ZaSWJYWXRSblpKZHclM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNMRDRqNm5hNV9JQ0ZRTVRyUVlkaDl3SmJ3EhtDTm04eTViYTVfSUNGZXJDVEFJZHhWWUFOZzA%3D",
+                "timestampUsec": "1630840507595910",
+                "authorExternalChannelId": "UC7x0se_L-m_BpIVHmv-FvIw",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CNm8y5ba5_ICFerCTAIdxVYANg0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatMembershipItemRenderer": {
+                "id": "ChwKGkNJWGxsYUxiNV9JQ0ZRZ2JyUVlka000R19n",
+                "timestampUsec": "1630840761542834",
+                "authorExternalChannelId": "UClUNRA7nvnnzIQ_gfP4IdJA",
+                "headerSubtext": {
+                  "runs": [
+                    {
+                      "text": "Welcome to "
+                    },
+                    {
+                      "text": "そらとも"
+                    },
+                    {
+                      "text": "!"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "ツアレ"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/7t-_SVdZzm5PeVQbJtdpd48xQJSHspTuZKN4ir9pDs7IYtZ3eEZXCmqWNmmLSCo44tD6h6Tc=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/7t-_SVdZzm5PeVQbJtdpd48xQJSHspTuZKN4ir9pDs7IYtZ3eEZXCmqWNmmLSCo44tD6h6Tc=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/yo-IUPc4oxCLW65E9k1C1SINFA_mMQAo2ylJ_C_NScG1S2xGltgVUMGWubFYPClrDcGh_HbyUQ=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/yo-IUPc4oxCLW65E9k1C1SINFA_mMQAo2ylJ_C_NScG1S2xGltgVUMGWubFYPClrDcGh_HbyUQ=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (2 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (2 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CBkQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2g0S0hBb2FRMGxZYkd4aFRHSTFYMGxEUmxGblluSlJXV1JyVFRSSFgyY2FLU29uQ2hoVlEzQTJPVGt6ZDNod2VVUlFTRlZ3WVhaM1JFWnhaMmNTQzNNM2FHRnJUMU56VlMxSklBSW9BVElhQ2hoVlEyeFZUbEpCTjI1MmJtNTZTVkZmWjJaUU5FbGtTa0UlM0Q="
+                  }
+                },
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                },
+                "trackingParams": "CBkQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+              }
+            }
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatMembershipItemRenderer": {
+                "id": "ChwKGkNPYlN0TmpiNV9JQ0ZlVXJyUVlkU0xrRnZR",
+                "timestampUsec": "1630840875340210",
+                "authorExternalChannelId": "UCEB2-aQDlaxXcvTU0H9hIuw",
+                "headerSubtext": {
+                  "runs": [
+                    {
+                      "text": "Welcome to "
+                    },
+                    {
+                      "text": "そらとも"
+                    },
+                    {
+                      "text": "!"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "フワフワフレア"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/qwfg_lSsWkk_c4LEP4gdsTnzLo5npaVqIAA1eGJr7fmWLX39F2t1hsVoS-yQ_WnnkxRFkaRziLk=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/qwfg_lSsWkk_c4LEP4gdsTnzLo5npaVqIAA1eGJr7fmWLX39F2t1hsVoS-yQ_WnnkxRFkaRziLk=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/5kRhwMeLh3fh4FRffNIwMVYR0W_6GKO7OI5hdVfAmnms8kQA11aLheekNxzOpwblYGvWRCK6nw=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/5kRhwMeLh3fh4FRffNIwMVYR0W_6GKO7OI5hdVfAmnms8kQA11aLheekNxzOpwblYGvWRCK6nw=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "New member",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "New member"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CBgQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2g0S0hBb2FRMDlpVTNST2FtSTFYMGxEUm1WVmNuSlJXV1JUVEd0R2RsRWFLU29uQ2hoVlEzQTJPVGt6ZDNod2VVUlFTRlZ3WVhaM1JFWnhaMmNTQzNNM2FHRnJUMU56VlMxSklBSW9BVElhQ2hoVlEwVkNNaTFoVVVSc1lYaFlZM1pVVlRCSU9XaEpkWGMlM0Q="
+                  }
+                },
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                },
+                "trackingParams": "CBgQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+              }
+            }
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatMembershipItemRenderer": {
+                "id": "ChwKGkNLdUJqOXpiNV9JQ0ZlVXJyUVlkU0xrRnZR",
+                "timestampUsec": "1630840883026042",
+                "authorExternalChannelId": "UCuKTqyL_HaVRK2J_i7INfbg",
+                "headerSubtext": {
+                  "runs": [
+                    {
+                      "text": "Welcome to "
+                    },
+                    {
+                      "text": "そらとも"
+                    },
+                    {
+                      "text": "!"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "Jay 草"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ago-Eikxluc2nucpksi3TzpQXvad9cyuf4JUEP8udf7eJAUDWbuq8yKCqdir6Y77HIPRuWbZYg=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ago-Eikxluc2nucpksi3TzpQXvad9cyuf4JUEP8udf7eJAUDWbuq8yKCqdir6Y77HIPRuWbZYg=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/5kRhwMeLh3fh4FRffNIwMVYR0W_6GKO7OI5hdVfAmnms8kQA11aLheekNxzOpwblYGvWRCK6nw=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/5kRhwMeLh3fh4FRffNIwMVYR0W_6GKO7OI5hdVfAmnms8kQA11aLheekNxzOpwblYGvWRCK6nw=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "New member",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "New member"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CBcQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2g0S0hBb2FRMHQxUW1vNWVtSTFYMGxEUm1WVmNuSlJXV1JUVEd0R2RsRWFLU29uQ2hoVlEzQTJPVGt6ZDNod2VVUlFTRlZ3WVhaM1JFWnhaMmNTQzNNM2FHRnJUMU56VlMxSklBSW9BVElhQ2hoVlEzVkxWSEY1VEY5SVlWWlNTekpLWDJrM1NVNW1ZbWMlM0Q="
+                  }
+                },
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                },
+                "trackingParams": "CBcQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+              }
+            }
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatMembershipItemRenderer": {
+                "id": "ChwKGkNQRHIyYkRjNV9JQ0ZSUU1yUVlkSElFTUNn",
+                "timestampUsec": "1630841060443041",
+                "authorExternalChannelId": "UCXmC2CjO9mEgQovrz3TjJcA",
+                "headerSubtext": {
+                  "runs": [
+                    {
+                      "text": "Welcome to "
+                    },
+                    {
+                      "text": "そらとも"
+                    },
+                    {
+                      "text": "!"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "Sora's Apostle [1st Apostle of the twelve]"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLT9fyGaVLxm1AQ6FAhWejugcDJ3qv8OQGYZv9cWrQ=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLT9fyGaVLxm1AQ6FAhWejugcDJ3qv8OQGYZv9cWrQ=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/1KHiGkUCdCBAECBrjs9W_FDP1TKphBtz-RhqL1vLzyB9s-YnKlrHYtlvIl6tS_TFRz5EmPSP9Q=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/1KHiGkUCdCBAECBrjs9W_FDP1TKphBtz-RhqL1vLzyB9s-YnKlrHYtlvIl6tS_TFRz5EmPSP9Q=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (1 month)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (1 month)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CBYQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2g0S0hBb2FRMUJFY2pKaVJHTTFYMGxEUmxKUlRYSlJXV1JJU1VWTlEyY2FLU29uQ2hoVlEzQTJPVGt6ZDNod2VVUlFTRlZ3WVhaM1JFWnhaMmNTQzNNM2FHRnJUMU56VlMxSklBSW9BVElhQ2hoVlExaHRRekpEYWs4NWJVVm5VVzkyY25velZHcEtZMEUlM0Q="
+                  }
+                },
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                },
+                "trackingParams": "CBYQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+              }
+            }
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "Sora-chan"
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "🐻",
+                        "shortcuts": [
+                          ":bear:"
+                        ],
+                        "searchTerms": [
+                          "bear"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://www.youtube.com/s/gaming/emoji/7ff574f2/emoji_u1f43b.svg"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "Se Be"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSevZNPSH7QELfOs5Zyh8DDyFQw_nW5NMKrPgxM-iEq4wU0axjsgZRhf36Wj-ml=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSevZNPSH7QELfOs5Zyh8DDyFQw_nW5NMKrPgxM-iEq4wU0axjsgZRhf36Wj-ml=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2p3S09nb2FRMGxIVURoZmNtUTFYMGxEUmxOSlF6VjNiMlJVTVZGSVgyY1NIRU5PVUZoNWRXcGtOVjlKUTBaU2VrZEdaMnRrVnpWalQwNW5MVEFhS1NvbkNoaFZRM0EyT1RremQzaHdlVVJRU0ZWd1lYWjNSRVp4WjJjU0MzTTNhR0ZyVDFOelZTMUpJQUlvQVRJYUNoaFZRMkZXT0hocWRtOWhWak55YzBZNFNWaG1TWFJTVVhjJTNE"
+                  }
+                },
+                "id": "CjoKGkNJR1A4X3JkNV9JQ0ZTSUM1d29kVDFRSF9nEhxDTlBYeXVqZDVfSUNGUnpHRmdrZFc1Y09OZy0w",
+                "timestampUsec": "1630841484396464",
+                "authorExternalChannelId": "UCaV8xjvoaV3rsF8IXfItRQw",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CNPXyujd5_ICFRzGFgkdW5cONg-0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatMembershipItemRenderer": {
+                "id": "ChwKGkNOVGVyN2ZlNV9JQ0ZVUFp3UW9kVWI4Qktn",
+                "timestampUsec": "1630841611251863",
+                "authorExternalChannelId": "UC30zf58LtnGcNe2SSAe2MuA",
+                "headerSubtext": {
+                  "runs": [
+                    {
+                      "text": "Welcome to "
+                    },
+                    {
+                      "text": "そらとも"
+                    },
+                    {
+                      "text": "!"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "Carlos"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQS_TsJm_1GVZ5zd_ndbEK9K4UKnSaJIpwlhS_1RA=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQS_TsJm_1GVZ5zd_ndbEK9K4UKnSaJIpwlhS_1RA=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/5kRhwMeLh3fh4FRffNIwMVYR0W_6GKO7OI5hdVfAmnms8kQA11aLheekNxzOpwblYGvWRCK6nw=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/5kRhwMeLh3fh4FRffNIwMVYR0W_6GKO7OI5hdVfAmnms8kQA11aLheekNxzOpwblYGvWRCK6nw=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "New member",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "New member"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CBUQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2g0S0hBb2FRMDVVWlhJM1ptVTFYMGxEUmxWUVduZFJiMlJWWWpoQ1MyY2FLU29uQ2hoVlEzQTJPVGt6ZDNod2VVUlFTRlZ3WVhaM1JFWnhaMmNTQzNNM2FHRnJUMU56VlMxSklBSW9BVElhQ2hoVlF6TXdlbVkxT0V4MGJrZGpUbVV5VTFOQlpUSk5kVUUlM0Q="
+                  }
+                },
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                },
+                "trackingParams": "CBUQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+              }
+            }
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatMembershipItemRenderer": {
+                "id": "ChwKGkNJX1FvOXZlNV9JQ0ZZa1hyUVlkdDlzRmZn",
+                "timestampUsec": "1630841686630175",
+                "authorExternalChannelId": "UCAQuN4BiXXpVTe4vo0qKGGg",
+                "headerSubtext": {
+                  "runs": [
+                    {
+                      "text": "Welcome to "
+                    },
+                    {
+                      "text": "そらとも"
+                    },
+                    {
+                      "text": "!"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "羊乳ぷりん"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/O7g3rheOOYXFr8ZE25czq2_8qihWlef0sx0Got9PYV15yAWTOPhwSVXEalH6dtPg6P47g_J6=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/O7g3rheOOYXFr8ZE25czq2_8qihWlef0sx0Got9PYV15yAWTOPhwSVXEalH6dtPg6P47g_J6=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/5kRhwMeLh3fh4FRffNIwMVYR0W_6GKO7OI5hdVfAmnms8kQA11aLheekNxzOpwblYGvWRCK6nw=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/5kRhwMeLh3fh4FRffNIwMVYR0W_6GKO7OI5hdVfAmnms8kQA11aLheekNxzOpwblYGvWRCK6nw=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "New member",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "New member"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CBQQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2g0S0hBb2FRMGxmVVc4NWRtVTFYMGxEUmxscldISlJXV1IwT1hOR1ptY2FLU29uQ2hoVlEzQTJPVGt6ZDNod2VVUlFTRlZ3WVhaM1JFWnhaMmNTQzNNM2FHRnJUMU56VlMxSklBSW9BVElhQ2hoVlEwRlJkVTQwUW1sWVdIQldWR1UwZG04d2NVdEhSMmMlM0Q="
+                  }
+                },
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                },
+                "trackingParams": "CBQQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+              }
+            }
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatMembershipItemRenderer": {
+                "id": "ChwKGkNMZld4TERnNV9JQ0ZlVXJyUVlkU0xrRnZR",
+                "timestampUsec": "1630842133894328",
+                "authorExternalChannelId": "UCIZenxCQznl3W-vU9dc-2Kg",
+                "headerSubtext": {
+                  "runs": [
+                    {
+                      "text": "Welcome to "
+                    },
+                    {
+                      "text": "そらとも"
+                    },
+                    {
+                      "text": "!"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "backday peace"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSt2huyquQEtXOxyubBlMma58CIc_AKEAT1WTwP=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSt2huyquQEtXOxyubBlMma58CIc_AKEAT1WTwP=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/5kRhwMeLh3fh4FRffNIwMVYR0W_6GKO7OI5hdVfAmnms8kQA11aLheekNxzOpwblYGvWRCK6nw=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/5kRhwMeLh3fh4FRffNIwMVYR0W_6GKO7OI5hdVfAmnms8kQA11aLheekNxzOpwblYGvWRCK6nw=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "New member",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "New member"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CBMQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2g0S0hBb2FRMHhtVjNoTVJHYzFYMGxEUm1WVmNuSlJXV1JUVEd0R2RsRWFLU29uQ2hoVlEzQTJPVGt6ZDNod2VVUlFTRlZ3WVhaM1JFWnhaMmNTQzNNM2FHRnJUMU56VlMxSklBSW9BVElhQ2hoVlEwbGFaVzU0UTFGNmJtd3pWeTEyVlRsa1l5MHlTMmMlM0Q="
+                  }
+                },
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                },
+                "trackingParams": "CBMQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+              }
+            }
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UCp6993wxpyDPHUpavwDFqgg/3iLkYNn9Bsvw8gTb4auQCA",
+                        "shortcuts": [
+                          ":_ぬんぬん1:",
+                          ":ぬんぬん1:"
+                        ],
+                        "searchTerms": [
+                          "_ぬんぬん1",
+                          "ぬんぬん1"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/bCQ0XfFOodA9gHTKmyuQ1iiWsKu5kDYn5ZNC61Fjk6Vw_BbRzhlwFti88gpP-PR0nF5dtkOwLw=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/bCQ0XfFOodA9gHTKmyuQ1iiWsKu5kDYn5ZNC61Fjk6Vw_BbRzhlwFti88gpP-PR0nF5dtkOwLw=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "ぬんぬん1"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UCp6993wxpyDPHUpavwDFqgg/3iLkYNn9Bsvw8gTb4auQCA",
+                        "shortcuts": [
+                          ":_ぬんぬん1:",
+                          ":ぬんぬん1:"
+                        ],
+                        "searchTerms": [
+                          "_ぬんぬん1",
+                          "ぬんぬん1"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/bCQ0XfFOodA9gHTKmyuQ1iiWsKu5kDYn5ZNC61Fjk6Vw_BbRzhlwFti88gpP-PR0nF5dtkOwLw=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/bCQ0XfFOodA9gHTKmyuQ1iiWsKu5kDYn5ZNC61Fjk6Vw_BbRzhlwFti88gpP-PR0nF5dtkOwLw=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "ぬんぬん1"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "Mr. K"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLRYqJwt1pCcHC8-F0l85kejOq7tYFcn8VWvTHitCg=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLRYqJwt1pCcHC8-F0l85kejOq7tYFcn8VWvTHitCg=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMDVtZVc0Mk0yZzFYMGxEUmxscldISlJXV1IwT1hOR1ptY1NHME5KU0U5ek5sUlFOWFpKUTBaUlpVNTNaMjlrUVdKSlFtOUJNQm9wS2ljS0dGVkRjRFk1T1ROM2VIQjVSRkJJVlhCaGRuZEVSbkZuWnhJTGN6ZG9ZV3RQVTNOVkxVa2dBaWdCTWhvS0dGVkRZa2xKT1V0aFMzQjZOQzF1UVZRMmFVWm5WREJ6VVElM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNOZnluNjNoNV9JQ0ZZa1hyUVlkdDlzRmZnEhtDSUhPczZUUDV2SUNGUWVOd2dvZEFiSUJvQTA%3D",
+                "timestampUsec": "1630842395294095",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/2qviCv5D8muQMgGmaEmSHzg92czaqDLw67INRWH0fKDKobatZszLeMgauwQ9JqM-Q0_Z_oQO=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/2qviCv5D8muQMgGmaEmSHzg92czaqDLw67INRWH0fKDKobatZszLeMgauwQ9JqM-Q0_Z_oQO=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (6 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (6 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCbII9KaKpz4-nAT6iFgT0sQ",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CIHOs6TP5vICFQeNwgodAbIBoA0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatMembershipItemRenderer": {
+                "id": "ChwKGkNKMlUzNGprNV9JQ0ZWa0tyUVlkbWxRSUNn",
+                "timestampUsec": "1630843124151745",
+                "authorExternalChannelId": "UCz5v4-SI2BiwG8T7pgnUqMQ",
+                "headerSubtext": {
+                  "runs": [
+                    {
+                      "text": "Welcome to "
+                    },
+                    {
+                      "text": "そらとも"
+                    },
+                    {
+                      "text": "!"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "るー"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSYJA0Q9rQthSaeeitOPkBOrzSEnN6-t5iGJ6V9idC8EaeX6EQH71jURoMugB7k4GcDtS4=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSYJA0Q9rQthSaeeitOPkBOrzSEnN6-t5iGJ6V9idC8EaeX6EQH71jURoMugB7k4GcDtS4=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/5kRhwMeLh3fh4FRffNIwMVYR0W_6GKO7OI5hdVfAmnms8kQA11aLheekNxzOpwblYGvWRCK6nw=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/5kRhwMeLh3fh4FRffNIwMVYR0W_6GKO7OI5hdVfAmnms8kQA11aLheekNxzOpwblYGvWRCK6nw=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "New member",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "New member"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CBIQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2g0S0hBb2FRMG95VlRNMGFtczFYMGxEUmxaclMzSlJXV1J0YkZGSlEyY2FLU29uQ2hoVlEzQTJPVGt6ZDNod2VVUlFTRlZ3WVhaM1JFWnhaMmNTQzNNM2FHRnJUMU56VlMxSklBSW9BVElhQ2hoVlEzbzFkalF0VTBreVFtbDNSemhVTjNCbmJsVnhUVkUlM0Q="
+                  }
+                },
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                },
+                "trackingParams": "CBIQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+              }
+            }
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UCp6993wxpyDPHUpavwDFqgg/ilhkYIT8BKHY_APcg4joCA",
+                        "shortcuts": [
+                          ":_やったー:",
+                          ":やったー:"
+                        ],
+                        "searchTerms": [
+                          "_やったー",
+                          "やったー"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/68nHxbbGMCdO_qhDnM24p6Gf6Sd5wtXQKdQoRUdC3YWFr3mAGaOMRSwz9EebDPq6NUpKICG-=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/68nHxbbGMCdO_qhDnM24p6Gf6Sd5wtXQKdQoRUdC3YWFr3mAGaOMRSwz9EebDPq6NUpKICG-=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "やったー"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "M T"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSP4KfPJFPOuB8uXV_LUIwjO8mJkAywhqi0Mw=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLSP4KfPJFPOuB8uXV_LUIwjO8mJkAywhqi0Mw=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMUI2ZFRZNU4yczFYMGxEUmxSTllqVjNiMlJVTTFWSVgzY1NHME5LTFc1dFRuWnJOVjlKUTBaUmNHWkxaMjlrTVRGWlRVTkJNQm9wS2ljS0dGVkRjRFk1T1ROM2VIQjVSRkJJVlhCaGRuZEVSbkZuWnhJTGN6ZG9ZV3RQVTNOVkxVa2dBaWdCTWhvS0dGVkRORzF4ZWs5cFkyeHpZVGRrU1c5alNtVk1ZWGgwVVElM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNQenU2OTdrNV9JQ0ZUTWI1d29kVDNVSF93EhtDSi1ubU52azVfSUNGUXBmS2dvZDExWU1DQTA%3D",
+                "timestampUsec": "1630843304605612",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/2qviCv5D8muQMgGmaEmSHzg92czaqDLw67INRWH0fKDKobatZszLeMgauwQ9JqM-Q0_Z_oQO=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/2qviCv5D8muQMgGmaEmSHzg92czaqDLw67INRWH0fKDKobatZszLeMgauwQ9JqM-Q0_Z_oQO=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (6 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (6 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UC4mqzOiclsa7dIocJeLaxtQ",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CJ-nmNvk5_ICFQpfKgod11YMCA0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UCp6993wxpyDPHUpavwDFqgg/HFdkYMm0M6HY_APcg4joCA",
+                        "shortcuts": [
+                          ":_ぬんぬん2:",
+                          ":ぬんぬん2:"
+                        ],
+                        "searchTerms": [
+                          "_ぬんぬん2",
+                          "ぬんぬん2"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/SOxB2EwE6fIIlopPlFAXKrYoyoM7ADGnn7JfTLIzxpqANhKkCzuDloxdABljazSw0z6yWDy0E20=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/SOxB2EwE6fIIlopPlFAXKrYoyoM7ADGnn7JfTLIzxpqANhKkCzuDloxdABljazSw0z6yWDy0E20=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "ぬんぬん2"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UCp6993wxpyDPHUpavwDFqgg/HFdkYLm1M6HY_APcg4joCA",
+                        "shortcuts": [
+                          ":_ぬん1:",
+                          ":ぬん1:"
+                        ],
+                        "searchTerms": [
+                          "_ぬん1",
+                          "ぬん1"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/5KwgzXwRQ3nmc0q-PNq9Y7pZH-D3j1sqzbHs5LWpxS7dZv1bDFyHsSWxuNPdXICSy9J3L0L6=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/5KwgzXwRQ3nmc0q-PNq9Y7pZH-D3j1sqzbHs5LWpxS7dZv1bDFyHsSWxuNPdXICSy9J3L0L6=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "ぬん1"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UCp6993wxpyDPHUpavwDFqgg/HFdkYPy1M6HY_APcg4joCA",
+                        "shortcuts": [
+                          ":_ぬん2:",
+                          ":ぬん2:"
+                        ],
+                        "searchTerms": [
+                          "_ぬん2",
+                          "ぬん2"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/qJZGqnVC0LLFH2JzX6xNveeCuKonALIaR7vS4SBPFq7HdFdQMta-4Hf4kcPqIXscQzhk3nAnpA=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/qJZGqnVC0LLFH2JzX6xNveeCuKonALIaR7vS4SBPFq7HdFdQMta-4Hf4kcPqIXscQzhk3nAnpA=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "ぬん2"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "ゆすけまる"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLRwi8PJ4-EHRHiZRWMSuDSDT4oVRaSHUJbs1vcx=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLRwi8PJ4-EHRHiZRWMSuDSDT4oVRaSHUJbs1vcx=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2p3S09nb2FRMHR4T0dkbU4ydzFYMGxEUm1WVmNuSlJXV1JUVEd0R2RsRVNIRU5KUjNsemRtWnNOVjlKUTBaUlZrcFpRVzlrWWxaUlNFaDNMVEFhS1NvbkNoaFZRM0EyT1RremQzaHdlVVJRU0ZWd1lYWjNSRVp4WjJjU0MzTTNhR0ZyVDFOelZTMUpJQUlvQVRJYUNoaFZRM2RFT0hkNlpFZFZTMVZrT1dsVVpYQlZhVXhpWjBFJTNE"
+                  }
+                },
+                "id": "CjoKGkNLcThnZjdsNV9JQ0ZlVXJyUVlkU0xrRnZREhxDSUd5c3ZmbDVfSUNGUVZKWUFvZGJWUUhIdy0w",
+                "timestampUsec": "1630843638406749",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/yo-IUPc4oxCLW65E9k1C1SINFA_mMQAo2ylJ_C_NScG1S2xGltgVUMGWubFYPClrDcGh_HbyUQ=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/yo-IUPc4oxCLW65E9k1C1SINFA_mMQAo2ylJ_C_NScG1S2xGltgVUMGWubFYPClrDcGh_HbyUQ=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (2 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (2 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCwD8wzdGUKUd9iTepUiLbgA",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CIGysvfl5_ICFQVJYAodbVQHHw-0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "text": "(๑╹ᆺ╹)"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "DS"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQT6l8_1Zr5uqUbNI9QdKO818YpUYXilqLjkPdZ=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQT6l8_1Zr5uqUbNI9QdKO818YpUYXilqLjkPdZ=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMDlMUlY5Zk4ydzFYMGxEUm1aVk5ISlJXV1JTUjBWTFluY1NHME5RWVRGb2RraEtOVjlKUTBaWmIycExaMjlrZVc5dlVIcEJNQm9wS2ljS0dGVkRjRFk1T1ROM2VIQjVSRkJJVlhCaGRuZEVSbkZuWnhJTGN6ZG9ZV3RQVTNOVkxVa2dBaWdCTWhvS0dGVkRRVUZLU1Y5MldVUnpUMFpwWm5CV2NqRXdabGRWUVElM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNPS0VfXzdsNV9JQ0ZmVTRyUVlkUkdFS2J3EhtDUGExaHZISjVfSUNGWW9qS2dvZHlvb1B6QTA%3D",
+                "timestampUsec": "1630843640464003",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/2qviCv5D8muQMgGmaEmSHzg92czaqDLw67INRWH0fKDKobatZszLeMgauwQ9JqM-Q0_Z_oQO=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/2qviCv5D8muQMgGmaEmSHzg92czaqDLw67INRWH0fKDKobatZszLeMgauwQ9JqM-Q0_Z_oQO=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (6 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (6 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCAAJI_vYDsOFifpVr10fWUA",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CPa1hvHJ5_ICFYojKgodyooPzA0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UCp6993wxpyDPHUpavwDFqgg/3iLkYNn9Bsvw8gTb4auQCA",
+                        "shortcuts": [
+                          ":_ぬんぬん1:",
+                          ":ぬんぬん1:"
+                        ],
+                        "searchTerms": [
+                          "_ぬんぬん1",
+                          "ぬんぬん1"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/bCQ0XfFOodA9gHTKmyuQ1iiWsKu5kDYn5ZNC61Fjk6Vw_BbRzhlwFti88gpP-PR0nF5dtkOwLw=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/bCQ0XfFOodA9gHTKmyuQ1iiWsKu5kDYn5ZNC61Fjk6Vw_BbRzhlwFti88gpP-PR0nF5dtkOwLw=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "ぬんぬん1"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UCp6993wxpyDPHUpavwDFqgg/bTXkYNCiGMvw8gTb4auQCA",
+                        "shortcuts": [
+                          ":_ぬんぬんちゃん:",
+                          ":ぬんぬんちゃん:"
+                        ],
+                        "searchTerms": [
+                          "_ぬんぬんちゃん",
+                          "ぬんぬんちゃん"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/nTkRDM_ebmuqTbWdhK__vSueT5de2oZgJLmftWntb9F6j5zooADLQKGGPNZ6QxBRCxbs-7QASg=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/nTkRDM_ebmuqTbWdhK__vSueT5de2oZgJLmftWntb9F6j5zooADLQKGGPNZ6QxBRCxbs-7QASg=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "ぬんぬんちゃん"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UCp6993wxpyDPHUpavwDFqgg/HFdkYPy1M6HY_APcg4joCA",
+                        "shortcuts": [
+                          ":_ぬん2:",
+                          ":ぬん2:"
+                        ],
+                        "searchTerms": [
+                          "_ぬん2",
+                          "ぬん2"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/qJZGqnVC0LLFH2JzX6xNveeCuKonALIaR7vS4SBPFq7HdFdQMta-4Hf4kcPqIXscQzhk3nAnpA=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/qJZGqnVC0LLFH2JzX6xNveeCuKonALIaR7vS4SBPFq7HdFdQMta-4Hf4kcPqIXscQzhk3nAnpA=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "ぬん2"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UCp6993wxpyDPHUpavwDFqgg/HFdkYLm1M6HY_APcg4joCA",
+                        "shortcuts": [
+                          ":_ぬん1:",
+                          ":ぬん1:"
+                        ],
+                        "searchTerms": [
+                          "_ぬん1",
+                          "ぬん1"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/5KwgzXwRQ3nmc0q-PNq9Y7pZH-D3j1sqzbHs5LWpxS7dZv1bDFyHsSWxuNPdXICSy9J3L0L6=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/5KwgzXwRQ3nmc0q-PNq9Y7pZH-D3j1sqzbHs5LWpxS7dZv1bDFyHsSWxuNPdXICSy9J3L0L6=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "ぬん1"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "えのしまのそら"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLS04x8RcmddfH1xn_13Got5kH35Rg5oyqYxtGYCBg=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLS04x8RcmddfH1xn_13Got5kH35Rg5oyqYxtGYCBg=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2p3S09nb2FRMHBtV20xTE4yMDFYMGxEUmxscldISlJXV1IwT1hOR1ptY1NIRU5RZFZoMVMySnROVjlKUTBaUlVrRTVVVlZrU1VSSlQyVjNMVEFhS1NvbkNoaFZRM0EyT1RremQzaHdlVVJRU0ZWd1lYWjNSRVp4WjJjU0MzTTNhR0ZyVDFOelZTMUpJQUlvQVRJYUNoaFZRelUxUVhOak1UYzNlSEV4WlhKTFpEaGxXR3RxT1ZFJTNE"
+                  }
+                },
+                "id": "CjoKGkNKZlptSzdtNV9JQ0ZZa1hyUVlkdDlzRmZnEhxDUHVYdUtibTVfSUNGUVJBOVFVZElESU9ldy0w",
+                "timestampUsec": "1630843739450573",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/2qviCv5D8muQMgGmaEmSHzg92czaqDLw67INRWH0fKDKobatZszLeMgauwQ9JqM-Q0_Z_oQO=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/2qviCv5D8muQMgGmaEmSHzg92czaqDLw67INRWH0fKDKobatZszLeMgauwQ9JqM-Q0_Z_oQO=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (6 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (6 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UC55Asc177xq1erKd8eXkj9Q",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CPuXuKbm5_ICFQRA9QUdIDIOew-0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UCp6993wxpyDPHUpavwDFqgg/HFdkYMm0M6HY_APcg4joCA",
+                        "shortcuts": [
+                          ":_ぬんぬん2:",
+                          ":ぬんぬん2:"
+                        ],
+                        "searchTerms": [
+                          "_ぬんぬん2",
+                          "ぬんぬん2"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/SOxB2EwE6fIIlopPlFAXKrYoyoM7ADGnn7JfTLIzxpqANhKkCzuDloxdABljazSw0z6yWDy0E20=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/SOxB2EwE6fIIlopPlFAXKrYoyoM7ADGnn7JfTLIzxpqANhKkCzuDloxdABljazSw0z6yWDy0E20=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "ぬんぬん2"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UCp6993wxpyDPHUpavwDFqgg/HFdkYLm1M6HY_APcg4joCA",
+                        "shortcuts": [
+                          ":_ぬん1:",
+                          ":ぬん1:"
+                        ],
+                        "searchTerms": [
+                          "_ぬん1",
+                          "ぬん1"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/5KwgzXwRQ3nmc0q-PNq9Y7pZH-D3j1sqzbHs5LWpxS7dZv1bDFyHsSWxuNPdXICSy9J3L0L6=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/5KwgzXwRQ3nmc0q-PNq9Y7pZH-D3j1sqzbHs5LWpxS7dZv1bDFyHsSWxuNPdXICSy9J3L0L6=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "ぬん1"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UCp6993wxpyDPHUpavwDFqgg/HFdkYPy1M6HY_APcg4joCA",
+                        "shortcuts": [
+                          ":_ぬん2:",
+                          ":ぬん2:"
+                        ],
+                        "searchTerms": [
+                          "_ぬん2",
+                          "ぬん2"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/qJZGqnVC0LLFH2JzX6xNveeCuKonALIaR7vS4SBPFq7HdFdQMta-4Hf4kcPqIXscQzhk3nAnpA=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/qJZGqnVC0LLFH2JzX6xNveeCuKonALIaR7vS4SBPFq7HdFdQMta-4Hf4kcPqIXscQzhk3nAnpA=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "ぬん2"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "極ちゃん"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQU0_jz-yMPNuA8K2lSAsABQKrV1gjTTnq_xsqz=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQU0_jz-yMPNuA8K2lSAsABQKrV1gjTTnq_xsqz=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMDFZZFhwT2RtNDFYMGxEUmxOak1uSlJXV1JuTnpoRFduY1NHME5LVnpWM09EZHVOVjlKUTBaUmJrNXFkMjlrTjJWUlFqUkJNQm9wS2ljS0dGVkRjRFk1T1ROM2VIQjVSRkJJVlhCaGRuZEVSbkZuWnhJTGN6ZG9ZV3RQVTNOVkxVa2dBaWdCTWhvS0dGVkRUbHBhVG5aa1gyOUxiVFF6WDI5UU5sUnBVR3RmWnclM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNNWHV6TnZuNV9JQ0ZTYzJyUVlkZzc4Q1p3EhtDSlc1dzg3bjVfSUNGUW5OandvZDdlUUI0QTA%3D",
+                "timestampUsec": "1630844103112563",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/2qviCv5D8muQMgGmaEmSHzg92czaqDLw67INRWH0fKDKobatZszLeMgauwQ9JqM-Q0_Z_oQO=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/2qviCv5D8muQMgGmaEmSHzg92czaqDLw67INRWH0fKDKobatZszLeMgauwQ9JqM-Q0_Z_oQO=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (6 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (6 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCNZZNvd_oKm43_oP6TiPk_g",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CJW5w87n5_ICFQnNjwod7eQB4A0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatMembershipItemRenderer": {
+                "id": "ChwKGkNKdUs4dnZzNV9JQ0ZZa1hyUVlkdDlzRmZn",
+                "timestampUsec": "1630845513115491",
+                "authorExternalChannelId": "UCD7lc-i20yjX1Q_I0IzzW1g",
+                "headerSubtext": {
+                  "runs": [
+                    {
+                      "text": "Welcome to "
+                    },
+                    {
+                      "text": "そらとも"
+                    },
+                    {
+                      "text": "!"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "C.C YANG"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLT_x6ajB6iT2zF9M9eA3tiyPx72s4r20OgRtw=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLT_x6ajB6iT2zF9M9eA3tiyPx72s4r20OgRtw=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/5kRhwMeLh3fh4FRffNIwMVYR0W_6GKO7OI5hdVfAmnms8kQA11aLheekNxzOpwblYGvWRCK6nw=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/5kRhwMeLh3fh4FRffNIwMVYR0W_6GKO7OI5hdVfAmnms8kQA11aLheekNxzOpwblYGvWRCK6nw=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "New member",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "New member"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CBEQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2g0S0hBb2FRMHAxU3poMmRuTTFYMGxEUmxscldISlJXV1IwT1hOR1ptY2FLU29uQ2hoVlEzQTJPVGt6ZDNod2VVUlFTRlZ3WVhaM1JFWnhaMmNTQzNNM2FHRnJUMU56VlMxSklBSW9BVElhQ2hoVlEwUTNiR010YVRJd2VXcFlNVkZmU1RCSmVucFhNV2MlM0Q="
+                  }
+                },
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                },
+                "trackingParams": "CBEQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+              }
+            }
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatMembershipItemRenderer": {
+                "id": "ChwKGkNQNmpuZnpzNV9JQ0ZjVU5yUVlkZlpVSWJn",
+                "timestampUsec": "1630845513811838",
+                "authorExternalChannelId": "UCn5U467CAUM0zb5dITZON7A",
+                "headerSubtext": {
+                  "runs": [
+                    {
+                      "text": "Welcome to "
+                    },
+                    {
+                      "text": "そらとも"
+                    },
+                    {
+                      "text": "!"
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "玥夜ゲツヤ"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLTVJZkB1VzIQ4FY55TTFC1gpPqb5MJAoA8uSFW9tA=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLTVJZkB1VzIQ4FY55TTFC1gpPqb5MJAoA8uSFW9tA=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/2qviCv5D8muQMgGmaEmSHzg92czaqDLw67INRWH0fKDKobatZszLeMgauwQ9JqM-Q0_Z_oQO=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/2qviCv5D8muQMgGmaEmSHzg92czaqDLw67INRWH0fKDKobatZszLeMgauwQ9JqM-Q0_Z_oQO=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (6 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (6 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CBAQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2g0S0hBb2FRMUEyYW01bWVuTTFYMGxEUm1OVlRuSlJXV1JtV2xWSlltY2FLU29uQ2hoVlEzQTJPVGt6ZDNod2VVUlFTRlZ3WVhaM1JFWnhaMmNTQzNNM2FHRnJUMU56VlMxSklBSW9BVElhQ2hoVlEyNDFWVFEyTjBOQlZVMHdlbUkxWkVsVVdrOU9OMEUlM0Q="
+                  }
+                },
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                },
+                "trackingParams": "CBAQ4P0GIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+              }
+            }
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatTextMessageRenderer": {
+                "message": {
+                  "runs": [
+                    {
+                      "emoji": {
+                        "emojiId": "UCp6993wxpyDPHUpavwDFqgg/HFdkYLm1M6HY_APcg4joCA",
+                        "shortcuts": [
+                          ":_ぬん1:",
+                          ":ぬん1:"
+                        ],
+                        "searchTerms": [
+                          "_ぬん1",
+                          "ぬん1"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/5KwgzXwRQ3nmc0q-PNq9Y7pZH-D3j1sqzbHs5LWpxS7dZv1bDFyHsSWxuNPdXICSy9J3L0L6=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/5KwgzXwRQ3nmc0q-PNq9Y7pZH-D3j1sqzbHs5LWpxS7dZv1bDFyHsSWxuNPdXICSy9J3L0L6=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "ぬん1"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UCp6993wxpyDPHUpavwDFqgg/HFdkYPy1M6HY_APcg4joCA",
+                        "shortcuts": [
+                          ":_ぬん2:",
+                          ":ぬん2:"
+                        ],
+                        "searchTerms": [
+                          "_ぬん2",
+                          "ぬん2"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/qJZGqnVC0LLFH2JzX6xNveeCuKonALIaR7vS4SBPFq7HdFdQMta-4Hf4kcPqIXscQzhk3nAnpA=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/qJZGqnVC0LLFH2JzX6xNveeCuKonALIaR7vS4SBPFq7HdFdQMta-4Hf4kcPqIXscQzhk3nAnpA=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "ぬん2"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    },
+                    {
+                      "emoji": {
+                        "emojiId": "UCp6993wxpyDPHUpavwDFqgg/3iLkYNn9Bsvw8gTb4auQCA",
+                        "shortcuts": [
+                          ":_ぬんぬん1:",
+                          ":ぬんぬん1:"
+                        ],
+                        "searchTerms": [
+                          "_ぬんぬん1",
+                          "ぬんぬん1"
+                        ],
+                        "image": {
+                          "thumbnails": [
+                            {
+                              "url": "https://yt3.ggpht.com/bCQ0XfFOodA9gHTKmyuQ1iiWsKu5kDYn5ZNC61Fjk6Vw_BbRzhlwFti88gpP-PR0nF5dtkOwLw=w24-h24-c-k-nd",
+                              "width": 24,
+                              "height": 24
+                            },
+                            {
+                              "url": "https://yt3.ggpht.com/bCQ0XfFOodA9gHTKmyuQ1iiWsKu5kDYn5ZNC61Fjk6Vw_BbRzhlwFti88gpP-PR0nF5dtkOwLw=w48-h48-c-k-nd",
+                              "width": 48,
+                              "height": 48
+                            }
+                          ],
+                          "accessibility": {
+                            "accessibilityData": {
+                              "label": "ぬんぬん1"
+                            }
+                          }
+                        },
+                        "isCustomEmoji": true
+                      }
+                    }
+                  ]
+                },
+                "authorName": {
+                  "simpleText": "戦艦のそら"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLTYN1WRVe_Iv_5HQD7biUa7IEhOMEGjs7BLYuqC=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLTYN1WRVe_Iv_5HQD7biUa7IEhOMEGjs7BLYuqC=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "contextMenuEndpoint": {
+                  "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                  "commandMetadata": {
+                    "webCommandMetadata": {
+                      "ignoreNavigation": true
+                    }
+                  },
+                  "liveChatItemContextMenuEndpoint": {
+                    "params": "Q2pzS09Rb2FRMHA2UTNKTFdIYzFYMGxEUmxscldISlJXV1IwT1hOR1ptY1NHME5OUzBNek5UTjNOVjlKUTBaUmNHTlhRVzlrT0dWVlJIUkJNQm9wS2ljS0dGVkRjRFk1T1ROM2VIQjVSRkJJVlhCaGRuZEVSbkZuWnhJTGN6ZG9ZV3RQVTNOVkxVa2dBaWdCTWhvS0dGVkRSVUZqZG5wQlUyRk5WVU5VTWpVeGNtY3paM0I2WnclM0QlM0Q="
+                  }
+                },
+                "id": "CjkKGkNKekNyS1h3NV9JQ0ZZa1hyUVlkdDlzRmZnEhtDTUtDMzUzdzVfSUNGUXBjV0FvZDhlVUR0QTA%3D",
+                "timestampUsec": "1630846405255507",
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "customThumbnail": {
+                        "thumbnails": [
+                          {
+                            "url": "https://yt3.ggpht.com/yo-IUPc4oxCLW65E9k1C1SINFA_mMQAo2ylJ_C_NScG1S2xGltgVUMGWubFYPClrDcGh_HbyUQ=s16-c-k"
+                          },
+                          {
+                            "url": "https://yt3.ggpht.com/yo-IUPc4oxCLW65E9k1C1SINFA_mMQAo2ylJ_C_NScG1S2xGltgVUMGWubFYPClrDcGh_HbyUQ=s32-c-k"
+                          }
+                        ]
+                      },
+                      "tooltip": "Member (2 months)",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Member (2 months)"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "authorExternalChannelId": "UCEAcvzASaMUCT251rg3gpzg",
+                "contextMenuAccessibility": {
+                  "accessibilityData": {
+                    "label": "Comment actions"
+                  }
+                }
+              }
+            },
+            "clientId": "CMKC353w5_ICFQpcWAod8eUDtA0"
+          }
+        },
+        {
+          "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+          "addChatItemAction": {
+            "item": {
+              "liveChatViewerEngagementMessageRenderer": {
+                "id": "CjEKL0NPTU1VTklUWV9HVUlERUxJTkVTX1ZFTTIwMjEvMDkvMDUtMDU6NTU6MDQuNDQz",
+                "timestampUsec": "1630846504443479",
+                "icon": {
+                  "iconType": "YOUTUBE_ROUND"
+                },
+                "message": {
+                  "runs": [
+                    {
+                      "text": "Welcome to live chat! Remember to guard your privacy and abide by our community guidelines."
+                    }
+                  ]
+                },
+                "actionButton": {
+                  "buttonRenderer": {
+                    "style": "STYLE_BLUE_TEXT",
+                    "size": "SIZE_DEFAULT",
+                    "isDisabled": false,
+                    "text": {
+                      "simpleText": "Learn more"
+                    },
+                    "navigationEndpoint": {
+                      "clickTrackingParams": "CA8Q8FsiEwj7oMjU8OfyAhXPNioKHeORDDg=",
+                      "commandMetadata": {
+                        "webCommandMetadata": {
+                          "url": "//support.google.com/youtube/answer/2853856?hl=en#safe",
+                          "webPageType": "WEB_PAGE_TYPE_UNKNOWN",
+                          "rootVe": 83769
+                        }
+                      },
+                      "urlEndpoint": {
+                        "url": "//support.google.com/youtube/answer/2853856?hl=en#safe",
+                        "target": "TARGET_NEW_WINDOW"
+                      }
+                    },
+                    "trackingParams": "CA8Q8FsiEwj7oMjU8OfyAhXPNioKHeORDDg=",
+                    "accessibilityData": {
+                      "accessibilityData": {
+                        "label": "Learn more"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "actionPanel": {
+        "liveChatMessageInputRenderer": {
+          "inputField": {
+            "liveChatTextInputFieldRenderer": {
+              "placeholder": {
+                "runs": [
+                  {
+                    "text": "Say something... (slow mode is on)"
+                  }
+                ]
+              },
+              "maxCharacterLimit": 200,
+              "emojiCharacterCount": 10
+            }
+          },
+          "sendButton": {
+            "buttonRenderer": {
+              "style": "STYLE_DEFAULT",
+              "size": "SIZE_DEFAULT",
+              "isDisabled": false,
+              "icon": {
+                "iconType": "SEND"
+              },
+              "accessibility": {
+                "label": "Send"
+              },
+              "trackingParams": "CA4Q8FsiEwj7oMjU8OfyAhXPNioKHeORDDg=",
+              "accessibilityData": {
+                "accessibilityData": {
+                  "label": "Send"
+                }
+              }
+            }
+          },
+          "pickers": [
+            {
+              "emojiPickerRenderer": {
+                "id": "emoji",
+                "categories": [
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "people",
+                      "title": {
+                        "simpleText": "People"
+                      },
+                      "emojiIds": [
+                        "😀",
+                        "😃",
+                        "😄",
+                        "😁",
+                        "😆",
+                        "😅",
+                        "🤣",
+                        "😂",
+                        "🙂",
+                        "🙃",
+                        "😉",
+                        "😊",
+                        "😇",
+                        "🥰",
+                        "😍",
+                        "🤩",
+                        "😘",
+                        "😗",
+                        "☺",
+                        "😚",
+                        "😙",
+                        "🥲",
+                        "😋",
+                        "😛",
+                        "😜",
+                        "🤪",
+                        "😝",
+                        "🤑",
+                        "🤗",
+                        "🤭",
+                        "🤫",
+                        "🤔",
+                        "🤐",
+                        "🤨",
+                        "😐",
+                        "😑",
+                        "😶",
+                        "😶\u200d🌫",
+                        "😏",
+                        "😒",
+                        "🙄",
+                        "😬",
+                        "😮\u200d💨",
+                        "🤥",
+                        "😌",
+                        "😔",
+                        "😪",
+                        "🤤",
+                        "😴",
+                        "😷",
+                        "🤒",
+                        "🤕",
+                        "🤢",
+                        "🤮",
+                        "🤧",
+                        "🥵",
+                        "🥶",
+                        "🥴",
+                        "😵",
+                        "😵\u200d💫",
+                        "🤯",
+                        "🤠",
+                        "🥳",
+                        "🥸",
+                        "😎",
+                        "🤓",
+                        "🧐",
+                        "😕",
+                        "😟",
+                        "🙁",
+                        "☹",
+                        "😮",
+                        "😯",
+                        "😲",
+                        "😳",
+                        "🥺",
+                        "😦",
+                        "😧",
+                        "😨",
+                        "😰",
+                        "😥",
+                        "😢",
+                        "😭",
+                        "😱",
+                        "😖",
+                        "😣",
+                        "😞",
+                        "😓",
+                        "😩",
+                        "😫",
+                        "🥱",
+                        "😤",
+                        "😡",
+                        "😠",
+                        "🤬",
+                        "😈",
+                        "👿",
+                        "💀",
+                        "☠",
+                        "💩",
+                        "🤡",
+                        "👹",
+                        "👺",
+                        "👻",
+                        "👽",
+                        "👾",
+                        "🤖",
+                        "😺",
+                        "😸",
+                        "😹",
+                        "😻",
+                        "😼",
+                        "😽",
+                        "🙀",
+                        "😿",
+                        "😾",
+                        "🙈",
+                        "🙉",
+                        "🙊",
+                        "💋",
+                        "💌",
+                        "💘",
+                        "💝",
+                        "💖",
+                        "💗",
+                        "💓",
+                        "💞",
+                        "💕",
+                        "💟",
+                        "❣",
+                        "💔",
+                        "❤\u200d🔥",
+                        "❤\u200d🩹",
+                        "❤",
+                        "🧡",
+                        "💛",
+                        "💚",
+                        "💙",
+                        "💜",
+                        "🤎",
+                        "🖤",
+                        "🤍",
+                        "💯",
+                        "💢",
+                        "💥",
+                        "💫",
+                        "💦",
+                        "💨",
+                        "🕳",
+                        "💣",
+                        "💬",
+                        "👁\u200d🗨",
+                        "🗨",
+                        "🗯",
+                        "💭",
+                        "💤",
+                        "👋",
+                        "🤚",
+                        "🖐",
+                        "✋",
+                        "🖖",
+                        "👌",
+                        "🤌",
+                        "🤏",
+                        "✌",
+                        "🤞",
+                        "🤟",
+                        "🤘",
+                        "🤙",
+                        "👈",
+                        "👉",
+                        "👆",
+                        "🖕",
+                        "👇",
+                        "☝",
+                        "👍",
+                        "👎",
+                        "✊",
+                        "👊",
+                        "🤛",
+                        "🤜",
+                        "👏",
+                        "🙌",
+                        "👐",
+                        "🤲",
+                        "🤝",
+                        "🙏",
+                        "✍",
+                        "💅",
+                        "🤳",
+                        "💪",
+                        "🦾",
+                        "🦿",
+                        "🦵",
+                        "🦶",
+                        "👂",
+                        "🦻",
+                        "👃",
+                        "🧠",
+                        "🫀",
+                        "🫁",
+                        "🦷",
+                        "🦴",
+                        "👀",
+                        "👁",
+                        "👅",
+                        "👄",
+                        "👶",
+                        "🧒",
+                        "👦",
+                        "👧",
+                        "🧑",
+                        "👱",
+                        "👨",
+                        "🧔",
+                        "🧔\u200d♂",
+                        "🧔\u200d♀",
+                        "👩",
+                        "👱\u200d♀",
+                        "👱\u200d♂",
+                        "🧓",
+                        "👴",
+                        "👵",
+                        "🙍",
+                        "🙍\u200d♂",
+                        "🙍\u200d♀",
+                        "🙎",
+                        "🙎\u200d♂",
+                        "🙎\u200d♀",
+                        "🙅",
+                        "🙅\u200d♂",
+                        "🙅\u200d♀",
+                        "🙆",
+                        "🙆\u200d♂",
+                        "🙆\u200d♀",
+                        "💁",
+                        "💁\u200d♂",
+                        "💁\u200d♀",
+                        "🙋",
+                        "🙋\u200d♂",
+                        "🙋\u200d♀",
+                        "🧏",
+                        "🧏\u200d♂",
+                        "🧏\u200d♀",
+                        "🙇",
+                        "🙇\u200d♂",
+                        "🙇\u200d♀",
+                        "🤦",
+                        "🤦\u200d♂",
+                        "🤦\u200d♀",
+                        "🤷",
+                        "🤷\u200d♂",
+                        "🤷\u200d♀",
+                        "🧑\u200d⚕",
+                        "👨\u200d⚕",
+                        "👩\u200d⚕",
+                        "🧑\u200d🎓",
+                        "👨\u200d🎓",
+                        "👩\u200d🎓",
+                        "🧑\u200d🏫",
+                        "👨\u200d🏫",
+                        "👩\u200d🏫",
+                        "🧑\u200d⚖",
+                        "👨\u200d⚖",
+                        "👩\u200d⚖",
+                        "🧑\u200d🌾",
+                        "👨\u200d🌾",
+                        "👩\u200d🌾",
+                        "🧑\u200d🍳",
+                        "👨\u200d🍳",
+                        "👩\u200d🍳",
+                        "🧑\u200d🔧",
+                        "👨\u200d🔧",
+                        "👩\u200d🔧",
+                        "🧑\u200d🏭",
+                        "👨\u200d🏭",
+                        "👩\u200d🏭",
+                        "🧑\u200d💼",
+                        "👨\u200d💼",
+                        "👩\u200d💼",
+                        "🧑\u200d🔬",
+                        "👨\u200d🔬",
+                        "👩\u200d🔬",
+                        "🧑\u200d💻",
+                        "👨\u200d💻",
+                        "👩\u200d💻",
+                        "🧑\u200d🎤",
+                        "👨\u200d🎤",
+                        "👩\u200d🎤",
+                        "🧑\u200d🎨",
+                        "👨\u200d🎨",
+                        "👩\u200d🎨",
+                        "🧑\u200d✈",
+                        "👨\u200d✈",
+                        "👩\u200d✈",
+                        "🧑\u200d🚀",
+                        "👨\u200d🚀",
+                        "👩\u200d🚀",
+                        "🧑\u200d🚒",
+                        "👨\u200d🚒",
+                        "👩\u200d🚒",
+                        "👮",
+                        "👮\u200d♂",
+                        "👮\u200d♀",
+                        "🕵",
+                        "🕵\u200d♂",
+                        "🕵\u200d♀",
+                        "💂",
+                        "💂\u200d♂",
+                        "💂\u200d♀",
+                        "🥷",
+                        "👷",
+                        "👷\u200d♂",
+                        "👷\u200d♀",
+                        "🤴",
+                        "👸",
+                        "👳",
+                        "👳\u200d♂",
+                        "👳\u200d♀",
+                        "👲",
+                        "🧕",
+                        "🤵",
+                        "🤵\u200d♂",
+                        "🤵\u200d♀",
+                        "👰",
+                        "👰\u200d♂",
+                        "👰\u200d♀",
+                        "🤰",
+                        "🤱",
+                        "👩\u200d🍼",
+                        "👨\u200d🍼",
+                        "🧑\u200d🍼",
+                        "👼",
+                        "🎅",
+                        "🤶",
+                        "🧑\u200d🎄",
+                        "🦸",
+                        "🦸\u200d♂",
+                        "🦸\u200d♀",
+                        "🦹",
+                        "🦹\u200d♂",
+                        "🦹\u200d♀",
+                        "🧙",
+                        "🧙\u200d♂",
+                        "🧙\u200d♀",
+                        "🧚",
+                        "🧚\u200d♂",
+                        "🧚\u200d♀",
+                        "🧛",
+                        "🧛\u200d♂",
+                        "🧛\u200d♀",
+                        "🧜",
+                        "🧜\u200d♂",
+                        "🧜\u200d♀",
+                        "🧝",
+                        "🧝\u200d♂",
+                        "🧝\u200d♀",
+                        "🧞",
+                        "🧞\u200d♂",
+                        "🧞\u200d♀",
+                        "🧟",
+                        "🧟\u200d♂",
+                        "🧟\u200d♀",
+                        "💆",
+                        "💆\u200d♂",
+                        "💆\u200d♀",
+                        "💇",
+                        "💇\u200d♂",
+                        "💇\u200d♀",
+                        "🚶",
+                        "🚶\u200d♂",
+                        "🚶\u200d♀",
+                        "🧍",
+                        "🧍\u200d♂",
+                        "🧍\u200d♀",
+                        "🧎",
+                        "🧎\u200d♂",
+                        "🧎\u200d♀",
+                        "🧑\u200d🦯",
+                        "👨\u200d🦯",
+                        "👩\u200d🦯",
+                        "🧑\u200d🦼",
+                        "👨\u200d🦼",
+                        "👩\u200d🦼",
+                        "🧑\u200d🦽",
+                        "👨\u200d🦽",
+                        "👩\u200d🦽",
+                        "🏃",
+                        "🏃\u200d♂",
+                        "🏃\u200d♀",
+                        "💃",
+                        "🕺",
+                        "🕴",
+                        "👯",
+                        "👯\u200d♂",
+                        "👯\u200d♀",
+                        "🧖",
+                        "🧖\u200d♂",
+                        "🧖\u200d♀",
+                        "🧗",
+                        "🧗\u200d♂",
+                        "🧗\u200d♀",
+                        "🤺",
+                        "🏇",
+                        "⛷",
+                        "🏂",
+                        "🏌",
+                        "🏌\u200d♂",
+                        "🏌\u200d♀",
+                        "🏄",
+                        "🏄\u200d♂",
+                        "🏄\u200d♀",
+                        "🚣",
+                        "🚣\u200d♂",
+                        "🚣\u200d♀",
+                        "🏊",
+                        "🏊\u200d♂",
+                        "🏊\u200d♀",
+                        "⛹",
+                        "⛹\u200d♂",
+                        "⛹\u200d♀",
+                        "🏋",
+                        "🏋\u200d♂",
+                        "🏋\u200d♀",
+                        "🚴",
+                        "🚴\u200d♂",
+                        "🚴\u200d♀",
+                        "🚵",
+                        "🚵\u200d♂",
+                        "🚵\u200d♀",
+                        "🤸",
+                        "🤸\u200d♂",
+                        "🤸\u200d♀",
+                        "🤼",
+                        "🤼\u200d♂",
+                        "🤼\u200d♀",
+                        "🤽",
+                        "🤽\u200d♂",
+                        "🤽\u200d♀",
+                        "🤾",
+                        "🤾\u200d♂",
+                        "🤾\u200d♀",
+                        "🤹",
+                        "🤹\u200d♂",
+                        "🤹\u200d♀",
+                        "🧘",
+                        "🧘\u200d♂",
+                        "🧘\u200d♀",
+                        "🛀",
+                        "🛌",
+                        "🧑\u200d🤝\u200d🧑",
+                        "👭",
+                        "👫",
+                        "👬",
+                        "💏",
+                        "👩\u200d❤\u200d💋\u200d👨",
+                        "👨\u200d❤\u200d💋\u200d👨",
+                        "👩\u200d❤\u200d💋\u200d👩",
+                        "💑",
+                        "👩\u200d❤\u200d👨",
+                        "👨\u200d❤\u200d👨",
+                        "👩\u200d❤\u200d👩",
+                        "👪",
+                        "👨\u200d👩\u200d👦",
+                        "👨\u200d👩\u200d👧",
+                        "👨\u200d👩\u200d👧\u200d👦",
+                        "👨\u200d👩\u200d👦\u200d👦",
+                        "👨\u200d👩\u200d👧\u200d👧",
+                        "👨\u200d👨\u200d👦",
+                        "👨\u200d👨\u200d👧",
+                        "👨\u200d👨\u200d👧\u200d👦",
+                        "👨\u200d👨\u200d👦\u200d👦",
+                        "👨\u200d👨\u200d👧\u200d👧",
+                        "👩\u200d👩\u200d👦",
+                        "👩\u200d👩\u200d👧",
+                        "👩\u200d👩\u200d👧\u200d👦",
+                        "👩\u200d👩\u200d👦\u200d👦",
+                        "👩\u200d👩\u200d👧\u200d👧",
+                        "👨\u200d👦",
+                        "👨\u200d👦\u200d👦",
+                        "👨\u200d👧",
+                        "👨\u200d👧\u200d👦",
+                        "👨\u200d👧\u200d👧",
+                        "👩\u200d👦",
+                        "👩\u200d👦\u200d👦",
+                        "👩\u200d👧",
+                        "👩\u200d👧\u200d👦",
+                        "👩\u200d👧\u200d👧",
+                        "🗣",
+                        "👤",
+                        "👥",
+                        "🫂",
+                        "👣"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwj7oMjU8OfyAhXPNioKHeORDDg="
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "nature",
+                      "title": {
+                        "simpleText": "Nature"
+                      },
+                      "emojiIds": [
+                        "🐵",
+                        "🐒",
+                        "🦍",
+                        "🦧",
+                        "🐶",
+                        "🐕",
+                        "🦮",
+                        "🐕\u200d🦺",
+                        "🐩",
+                        "🐺",
+                        "🦊",
+                        "🦝",
+                        "🐱",
+                        "🐈",
+                        "🐈\u200d⬛",
+                        "🦁",
+                        "🐯",
+                        "🐅",
+                        "🐆",
+                        "🐴",
+                        "🐎",
+                        "🦄",
+                        "🦓",
+                        "🦌",
+                        "🦬",
+                        "🐮",
+                        "🐂",
+                        "🐃",
+                        "🐄",
+                        "🐷",
+                        "🐖",
+                        "🐗",
+                        "🐽",
+                        "🐏",
+                        "🐑",
+                        "🐐",
+                        "🐪",
+                        "🐫",
+                        "🦙",
+                        "🦒",
+                        "🐘",
+                        "🦣",
+                        "🦏",
+                        "🦛",
+                        "🐭",
+                        "🐁",
+                        "🐀",
+                        "🐹",
+                        "🐰",
+                        "🐇",
+                        "🐿",
+                        "🦫",
+                        "🦔",
+                        "🦇",
+                        "🐻",
+                        "🐻\u200d❄",
+                        "🐨",
+                        "🐼",
+                        "🦥",
+                        "🦦",
+                        "🦨",
+                        "🦘",
+                        "🦡",
+                        "🐾",
+                        "🦃",
+                        "🐔",
+                        "🐓",
+                        "🐣",
+                        "🐤",
+                        "🐥",
+                        "🐦",
+                        "🐧",
+                        "🕊",
+                        "🦅",
+                        "🦆",
+                        "🦢",
+                        "🦉",
+                        "🦤",
+                        "🪶",
+                        "🦩",
+                        "🦚",
+                        "🦜",
+                        "🐸",
+                        "🐊",
+                        "🐢",
+                        "🦎",
+                        "🐍",
+                        "🐲",
+                        "🐉",
+                        "🦕",
+                        "🦖",
+                        "🐳",
+                        "🐋",
+                        "🐬",
+                        "🦭",
+                        "🐟",
+                        "🐠",
+                        "🐡",
+                        "🦈",
+                        "🐙",
+                        "🐚",
+                        "🐌",
+                        "🦋",
+                        "🐛",
+                        "🐜",
+                        "🐝",
+                        "🪲",
+                        "🐞",
+                        "🦗",
+                        "🪳",
+                        "🕷",
+                        "🕸",
+                        "🦂",
+                        "🦟",
+                        "🪰",
+                        "🪱",
+                        "🦠",
+                        "💐",
+                        "🌸",
+                        "💮",
+                        "🏵",
+                        "🌹",
+                        "🥀",
+                        "🌺",
+                        "🌻",
+                        "🌼",
+                        "🌷",
+                        "🌱",
+                        "🪴",
+                        "🌲",
+                        "🌳",
+                        "🌴",
+                        "🌵",
+                        "🌾",
+                        "🌿",
+                        "☘",
+                        "🍀",
+                        "🍁",
+                        "🍂",
+                        "🍃"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwj7oMjU8OfyAhXPNioKHeORDDg="
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "food",
+                      "title": {
+                        "simpleText": "Food"
+                      },
+                      "emojiIds": [
+                        "🍇",
+                        "🍈",
+                        "🍉",
+                        "🍊",
+                        "🍋",
+                        "🍌",
+                        "🍍",
+                        "🥭",
+                        "🍎",
+                        "🍏",
+                        "🍐",
+                        "🍑",
+                        "🍒",
+                        "🍓",
+                        "🫐",
+                        "🥝",
+                        "🍅",
+                        "🫒",
+                        "🥥",
+                        "🥑",
+                        "🍆",
+                        "🥔",
+                        "🥕",
+                        "🌽",
+                        "🌶",
+                        "🫑",
+                        "🥒",
+                        "🥬",
+                        "🥦",
+                        "🧄",
+                        "🧅",
+                        "🍄",
+                        "🥜",
+                        "🌰",
+                        "🍞",
+                        "🥐",
+                        "🥖",
+                        "🫓",
+                        "🥨",
+                        "🥯",
+                        "🥞",
+                        "🧇",
+                        "🧀",
+                        "🍖",
+                        "🍗",
+                        "🥩",
+                        "🥓",
+                        "🍔",
+                        "🍟",
+                        "🍕",
+                        "🌭",
+                        "🥪",
+                        "🌮",
+                        "🌯",
+                        "🫔",
+                        "🥙",
+                        "🧆",
+                        "🥚",
+                        "🍳",
+                        "🥘",
+                        "🍲",
+                        "🫕",
+                        "🥣",
+                        "🥗",
+                        "🍿",
+                        "🧈",
+                        "🧂",
+                        "🥫",
+                        "🍱",
+                        "🍘",
+                        "🍙",
+                        "🍚",
+                        "🍛",
+                        "🍜",
+                        "🍝",
+                        "🍠",
+                        "🍢",
+                        "🍣",
+                        "🍤",
+                        "🍥",
+                        "🥮",
+                        "🍡",
+                        "🥟",
+                        "🥠",
+                        "🥡",
+                        "🦀",
+                        "🦞",
+                        "🦐",
+                        "🦑",
+                        "🦪",
+                        "🍦",
+                        "🍧",
+                        "🍨",
+                        "🍩",
+                        "🍪",
+                        "🎂",
+                        "🍰",
+                        "🧁",
+                        "🥧",
+                        "🍫",
+                        "🍬",
+                        "🍭",
+                        "🍮",
+                        "🍯",
+                        "🍼",
+                        "🥛",
+                        "☕",
+                        "🫖",
+                        "🍵",
+                        "🍶",
+                        "🍾",
+                        "🍷",
+                        "🍸",
+                        "🍹",
+                        "🍺",
+                        "🍻",
+                        "🥂",
+                        "🥃",
+                        "🥤",
+                        "🧋",
+                        "🧃",
+                        "🧉",
+                        "🧊",
+                        "🥢",
+                        "🍽",
+                        "🍴",
+                        "🥄",
+                        "🔪",
+                        "🏺"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwj7oMjU8OfyAhXPNioKHeORDDg="
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "travel",
+                      "title": {
+                        "simpleText": "Travel"
+                      },
+                      "emojiIds": [
+                        "🌍",
+                        "🌎",
+                        "🌏",
+                        "🌐",
+                        "🗺",
+                        "🗾",
+                        "🧭",
+                        "🏔",
+                        "⛰",
+                        "🌋",
+                        "🗻",
+                        "🏕",
+                        "🏖",
+                        "🏜",
+                        "🏝",
+                        "🏞",
+                        "🏟",
+                        "🏛",
+                        "🏗",
+                        "🧱",
+                        "🪨",
+                        "🪵",
+                        "🛖",
+                        "🏘",
+                        "🏚",
+                        "🏠",
+                        "🏡",
+                        "🏢",
+                        "🏣",
+                        "🏤",
+                        "🏥",
+                        "🏦",
+                        "🏨",
+                        "🏩",
+                        "🏪",
+                        "🏫",
+                        "🏬",
+                        "🏭",
+                        "🏯",
+                        "🏰",
+                        "💒",
+                        "🗼",
+                        "🗽",
+                        "⛪",
+                        "🕌",
+                        "🛕",
+                        "🕍",
+                        "⛩",
+                        "🕋",
+                        "⛲",
+                        "⛺",
+                        "🌁",
+                        "🌃",
+                        "🏙",
+                        "🌄",
+                        "🌅",
+                        "🌆",
+                        "🌇",
+                        "🌉",
+                        "♨",
+                        "🎠",
+                        "🎡",
+                        "🎢",
+                        "💈",
+                        "🎪",
+                        "🚂",
+                        "🚃",
+                        "🚄",
+                        "🚅",
+                        "🚆",
+                        "🚇",
+                        "🚈",
+                        "🚉",
+                        "🚊",
+                        "🚝",
+                        "🚞",
+                        "🚋",
+                        "🚌",
+                        "🚍",
+                        "🚎",
+                        "🚐",
+                        "🚑",
+                        "🚒",
+                        "🚓",
+                        "🚔",
+                        "🚕",
+                        "🚖",
+                        "🚗",
+                        "🚘",
+                        "🚙",
+                        "🛻",
+                        "🚚",
+                        "🚛",
+                        "🚜",
+                        "🏎",
+                        "🏍",
+                        "🛵",
+                        "🦽",
+                        "🦼",
+                        "🛺",
+                        "🚲",
+                        "🛴",
+                        "🛹",
+                        "🛼",
+                        "🚏",
+                        "🛣",
+                        "🛤",
+                        "🛢",
+                        "⛽",
+                        "🚨",
+                        "🚥",
+                        "🚦",
+                        "🛑",
+                        "🚧",
+                        "⚓",
+                        "⛵",
+                        "🛶",
+                        "🚤",
+                        "🛳",
+                        "⛴",
+                        "🛥",
+                        "🚢",
+                        "✈",
+                        "🛩",
+                        "🛫",
+                        "🛬",
+                        "🪂",
+                        "💺",
+                        "🚁",
+                        "🚟",
+                        "🚠",
+                        "🚡",
+                        "🛰",
+                        "🚀",
+                        "🛸",
+                        "🛎",
+                        "🧳",
+                        "⌛",
+                        "⏳",
+                        "⌚",
+                        "⏰",
+                        "⏱",
+                        "⏲",
+                        "🕰",
+                        "🕛",
+                        "🕧",
+                        "🕐",
+                        "🕜",
+                        "🕑",
+                        "🕝",
+                        "🕒",
+                        "🕞",
+                        "🕓",
+                        "🕟",
+                        "🕔",
+                        "🕠",
+                        "🕕",
+                        "🕡",
+                        "🕖",
+                        "🕢",
+                        "🕗",
+                        "🕣",
+                        "🕘",
+                        "🕤",
+                        "🕙",
+                        "🕥",
+                        "🕚",
+                        "🕦",
+                        "🌑",
+                        "🌒",
+                        "🌓",
+                        "🌔",
+                        "🌕",
+                        "🌖",
+                        "🌗",
+                        "🌘",
+                        "🌙",
+                        "🌚",
+                        "🌛",
+                        "🌜",
+                        "🌡",
+                        "☀",
+                        "🌝",
+                        "🌞",
+                        "🪐",
+                        "⭐",
+                        "🌟",
+                        "🌠",
+                        "🌌",
+                        "☁",
+                        "⛅",
+                        "⛈",
+                        "🌤",
+                        "🌥",
+                        "🌦",
+                        "🌧",
+                        "🌨",
+                        "🌩",
+                        "🌪",
+                        "🌫",
+                        "🌬",
+                        "🌀",
+                        "🌈",
+                        "🌂",
+                        "☂",
+                        "☔",
+                        "⛱",
+                        "⚡",
+                        "❄",
+                        "☃",
+                        "⛄",
+                        "☄",
+                        "🔥",
+                        "💧",
+                        "🌊"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwj7oMjU8OfyAhXPNioKHeORDDg="
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "activities",
+                      "title": {
+                        "simpleText": "Activities"
+                      },
+                      "emojiIds": [
+                        "🎃",
+                        "🎄",
+                        "🎆",
+                        "🎇",
+                        "🧨",
+                        "✨",
+                        "🎈",
+                        "🎉",
+                        "🎊",
+                        "🎋",
+                        "🎍",
+                        "🎎",
+                        "🎏",
+                        "🎐",
+                        "🎑",
+                        "🧧",
+                        "🎀",
+                        "🎁",
+                        "🎗",
+                        "🎟",
+                        "🎫",
+                        "🎖",
+                        "🏆",
+                        "🏅",
+                        "🥇",
+                        "🥈",
+                        "🥉",
+                        "⚽",
+                        "⚾",
+                        "🥎",
+                        "🏀",
+                        "🏐",
+                        "🏈",
+                        "🏉",
+                        "🎾",
+                        "🥏",
+                        "🎳",
+                        "🏏",
+                        "🏑",
+                        "🏒",
+                        "🥍",
+                        "🏓",
+                        "🏸",
+                        "🥊",
+                        "🥋",
+                        "🥅",
+                        "⛳",
+                        "⛸",
+                        "🎣",
+                        "🤿",
+                        "🎽",
+                        "🎿",
+                        "🛷",
+                        "🥌",
+                        "🎯",
+                        "🪀",
+                        "🪁",
+                        "🎱",
+                        "🔮",
+                        "🪄",
+                        "🧿",
+                        "🎮",
+                        "🕹",
+                        "🎰",
+                        "🎲",
+                        "🧩",
+                        "🧸",
+                        "🪅",
+                        "🪆",
+                        "♠",
+                        "♥",
+                        "♦",
+                        "♣",
+                        "♟",
+                        "🃏",
+                        "🀄",
+                        "🎴",
+                        "🎭",
+                        "🖼",
+                        "🎨",
+                        "🧵",
+                        "🪡",
+                        "🧶",
+                        "🪢"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwj7oMjU8OfyAhXPNioKHeORDDg="
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "objects",
+                      "title": {
+                        "simpleText": "Objects"
+                      },
+                      "emojiIds": [
+                        "👓",
+                        "🕶",
+                        "🥽",
+                        "🥼",
+                        "🦺",
+                        "👔",
+                        "👕",
+                        "👖",
+                        "🧣",
+                        "🧤",
+                        "🧥",
+                        "🧦",
+                        "👗",
+                        "👘",
+                        "🥻",
+                        "🩱",
+                        "🩲",
+                        "🩳",
+                        "👙",
+                        "👚",
+                        "👛",
+                        "👜",
+                        "👝",
+                        "🛍",
+                        "🎒",
+                        "🩴",
+                        "👞",
+                        "👟",
+                        "🥾",
+                        "🥿",
+                        "👠",
+                        "👡",
+                        "🩰",
+                        "👢",
+                        "👑",
+                        "👒",
+                        "🎩",
+                        "🎓",
+                        "🧢",
+                        "🪖",
+                        "⛑",
+                        "📿",
+                        "💄",
+                        "💍",
+                        "💎",
+                        "🔇",
+                        "🔈",
+                        "🔉",
+                        "🔊",
+                        "📢",
+                        "📣",
+                        "📯",
+                        "🔔",
+                        "🔕",
+                        "🎼",
+                        "🎵",
+                        "🎶",
+                        "🎙",
+                        "🎚",
+                        "🎛",
+                        "🎤",
+                        "🎧",
+                        "📻",
+                        "🎷",
+                        "🪗",
+                        "🎸",
+                        "🎹",
+                        "🎺",
+                        "🎻",
+                        "🪕",
+                        "🥁",
+                        "🪘",
+                        "📱",
+                        "📲",
+                        "☎",
+                        "📞",
+                        "📟",
+                        "📠",
+                        "🔋",
+                        "🔌",
+                        "💻",
+                        "🖥",
+                        "🖨",
+                        "⌨",
+                        "🖱",
+                        "🖲",
+                        "💽",
+                        "💾",
+                        "💿",
+                        "📀",
+                        "🧮",
+                        "🎥",
+                        "🎞",
+                        "📽",
+                        "🎬",
+                        "📺",
+                        "📷",
+                        "📸",
+                        "📹",
+                        "📼",
+                        "🔍",
+                        "🔎",
+                        "🕯",
+                        "💡",
+                        "🔦",
+                        "🏮",
+                        "🪔",
+                        "📔",
+                        "📕",
+                        "📖",
+                        "📗",
+                        "📘",
+                        "📙",
+                        "📚",
+                        "📓",
+                        "📒",
+                        "📃",
+                        "📜",
+                        "📄",
+                        "📰",
+                        "🗞",
+                        "📑",
+                        "🔖",
+                        "🏷",
+                        "💰",
+                        "🪙",
+                        "💴",
+                        "💵",
+                        "💶",
+                        "💷",
+                        "💸",
+                        "💳",
+                        "🧾",
+                        "💹",
+                        "✉",
+                        "📧",
+                        "📨",
+                        "📩",
+                        "📤",
+                        "📥",
+                        "📦",
+                        "📫",
+                        "📪",
+                        "📬",
+                        "📭",
+                        "📮",
+                        "🗳",
+                        "✏",
+                        "✒",
+                        "🖋",
+                        "🖊",
+                        "🖌",
+                        "🖍",
+                        "📝",
+                        "💼",
+                        "📁",
+                        "📂",
+                        "🗂",
+                        "📅",
+                        "📆",
+                        "🗒",
+                        "🗓",
+                        "📇",
+                        "📈",
+                        "📉",
+                        "📊",
+                        "📋",
+                        "📌",
+                        "📍",
+                        "📎",
+                        "🖇",
+                        "📏",
+                        "📐",
+                        "✂",
+                        "🗃",
+                        "🗄",
+                        "🗑",
+                        "🔒",
+                        "🔓",
+                        "🔏",
+                        "🔐",
+                        "🔑",
+                        "🗝",
+                        "🔨",
+                        "🪓",
+                        "⛏",
+                        "⚒",
+                        "🛠",
+                        "🗡",
+                        "⚔",
+                        "🔫",
+                        "🪃",
+                        "🏹",
+                        "🛡",
+                        "🪚",
+                        "🔧",
+                        "🪛",
+                        "🔩",
+                        "⚙",
+                        "🗜",
+                        "⚖",
+                        "🦯",
+                        "🔗",
+                        "⛓",
+                        "🪝",
+                        "🧰",
+                        "🧲",
+                        "🪜",
+                        "⚗",
+                        "🧪",
+                        "🧫",
+                        "🧬",
+                        "🔬",
+                        "🔭",
+                        "📡",
+                        "💉",
+                        "🩸",
+                        "💊",
+                        "🩹",
+                        "🩺",
+                        "🚪",
+                        "🛗",
+                        "🪞",
+                        "🪟",
+                        "🛏",
+                        "🛋",
+                        "🪑",
+                        "🚽",
+                        "🪠",
+                        "🚿",
+                        "🛁",
+                        "🪤",
+                        "🪒",
+                        "🧴",
+                        "🧷",
+                        "🧹",
+                        "🧺",
+                        "🧻",
+                        "🪣",
+                        "🧼",
+                        "🪥",
+                        "🧽",
+                        "🧯",
+                        "🛒",
+                        "🚬",
+                        "⚰",
+                        "🪦",
+                        "⚱",
+                        "🗿",
+                        "🪧"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwj7oMjU8OfyAhXPNioKHeORDDg="
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryRenderer": {
+                      "categoryId": "symbols",
+                      "title": {
+                        "simpleText": "Symbols"
+                      },
+                      "emojiIds": [
+                        "🏧",
+                        "🚮",
+                        "🚰",
+                        "♿",
+                        "🚹",
+                        "🚺",
+                        "🚻",
+                        "🚼",
+                        "🚾",
+                        "🛂",
+                        "🛃",
+                        "🛄",
+                        "🛅",
+                        "⚠",
+                        "🚸",
+                        "⛔",
+                        "🚫",
+                        "🚳",
+                        "🚭",
+                        "🚯",
+                        "🚱",
+                        "🚷",
+                        "📵",
+                        "🔞",
+                        "☢",
+                        "☣",
+                        "⬆",
+                        "↗",
+                        "➡",
+                        "↘",
+                        "⬇",
+                        "↙",
+                        "⬅",
+                        "↖",
+                        "↕",
+                        "↔",
+                        "↩",
+                        "↪",
+                        "⤴",
+                        "⤵",
+                        "🔃",
+                        "🔄",
+                        "🔙",
+                        "🔚",
+                        "🔛",
+                        "🔜",
+                        "🔝",
+                        "🛐",
+                        "⚛",
+                        "🕉",
+                        "✡",
+                        "☸",
+                        "☯",
+                        "✝",
+                        "☦",
+                        "☪",
+                        "☮",
+                        "🕎",
+                        "🔯",
+                        "♈",
+                        "♉",
+                        "♊",
+                        "♋",
+                        "♌",
+                        "♍",
+                        "♎",
+                        "♏",
+                        "♐",
+                        "♑",
+                        "♒",
+                        "♓",
+                        "⛎",
+                        "🔀",
+                        "🔁",
+                        "🔂",
+                        "▶",
+                        "⏩",
+                        "⏭",
+                        "⏯",
+                        "◀",
+                        "⏪",
+                        "⏮",
+                        "🔼",
+                        "⏫",
+                        "🔽",
+                        "⏬",
+                        "⏸",
+                        "⏹",
+                        "⏺",
+                        "⏏",
+                        "🎦",
+                        "🔅",
+                        "🔆",
+                        "📶",
+                        "📳",
+                        "📴",
+                        "♀",
+                        "♂",
+                        "⚧",
+                        "✖",
+                        "➕",
+                        "➖",
+                        "➗",
+                        "♾",
+                        "‼",
+                        "⁉",
+                        "❓",
+                        "❔",
+                        "❕",
+                        "❗",
+                        "〰",
+                        "💱",
+                        "💲",
+                        "⚕",
+                        "♻",
+                        "⚜",
+                        "🔱",
+                        "📛",
+                        "🔰",
+                        "⭕",
+                        "✅",
+                        "☑",
+                        "✔",
+                        "❌",
+                        "❎",
+                        "➰",
+                        "➿",
+                        "〽",
+                        "✳",
+                        "✴",
+                        "❇",
+                        "©",
+                        "®",
+                        "™",
+                        "🔴",
+                        "🟠",
+                        "🟡",
+                        "🟢",
+                        "🔵",
+                        "🟣",
+                        "🟤",
+                        "⚫",
+                        "⚪",
+                        "🟥",
+                        "🟧",
+                        "🟨",
+                        "🟩",
+                        "🟦",
+                        "🟪",
+                        "🟫",
+                        "⬛",
+                        "⬜",
+                        "◼",
+                        "◻",
+                        "◾",
+                        "◽",
+                        "▪",
+                        "▫",
+                        "🔶",
+                        "🔷",
+                        "🔸",
+                        "🔹",
+                        "🔺",
+                        "🔻",
+                        "💠",
+                        "🔘",
+                        "🔳",
+                        "🔲",
+                        "🏁",
+                        "🚩",
+                        "🎌",
+                        "🏴",
+                        "🏳",
+                        "🏳\u200d🌈",
+                        "🏳\u200d⚧",
+                        "🏴\u200d☠"
+                      ],
+                      "trackingParams": "CA0QsrQCGAYiEwj7oMjU8OfyAhXPNioKHeORDDg="
+                    }
+                  }
+                ],
+                "categoryButtons": [
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "people",
+                      "icon": {
+                        "iconType": "EMOJI_PEOPLE"
+                      },
+                      "tooltip": "People",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "People"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "nature",
+                      "icon": {
+                        "iconType": "EMOJI_NATURE"
+                      },
+                      "tooltip": "Nature",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Nature"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "food",
+                      "icon": {
+                        "iconType": "EMOJI_FOOD"
+                      },
+                      "tooltip": "Food",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Food"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "travel",
+                      "icon": {
+                        "iconType": "EMOJI_TRAVEL"
+                      },
+                      "tooltip": "Travel",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Travel"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "activities",
+                      "icon": {
+                        "iconType": "EMOJI_ACTIVITIES"
+                      },
+                      "tooltip": "Activities",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Activities"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "objects",
+                      "icon": {
+                        "iconType": "EMOJI_OBJECTS"
+                      },
+                      "tooltip": "Objects",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Objects"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "emojiPickerCategoryButtonRenderer": {
+                      "categoryId": "symbols",
+                      "icon": {
+                        "iconType": "EMOJI_SYMBOLS"
+                      },
+                      "tooltip": "Symbols",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Symbols"
+                        }
+                      }
+                    }
+                  }
+                ],
+                "searchPlaceholderText": {
+                  "runs": [
+                    {
+                      "text": "Search emoji"
+                    }
+                  ]
+                },
+                "searchNoResultsText": {
+                  "runs": [
+                    {
+                      "text": "No emoji found"
+                    }
+                  ]
+                },
+                "pickSkinToneText": {
+                  "runs": [
+                    {
+                      "text": "Pick emoji skin tone"
+                    }
+                  ]
+                },
+                "trackingParams": "CA0QsrQCGAYiEwj7oMjU8OfyAhXPNioKHeORDDg=",
+                "clearSearchLabel": "Clear search",
+                "skinToneGenericLabel": "Generic skin tone",
+                "skinToneLightLabel": "Light skin tone",
+                "skinToneMediumLightLabel": "Medium light skin tone",
+                "skinToneMediumLabel": "Medium skin tone",
+                "skinToneMediumDarkLabel": "Medium dark skin tone",
+                "skinToneDarkLabel": "Dark skin tone"
+              }
+            }
+          ],
+          "pickerButtons": [
+            {
+              "liveChatIconToggleButtonRenderer": {
+                "targetId": "emoji",
+                "icon": {
+                  "iconType": "EMOJI"
+                },
+                "tooltip": "Custom emojis",
+                "accessibility": {
+                  "accessibilityData": {
+                    "label": "Custom emojis"
+                  }
+                },
+                "toggledIcon": {
+                  "iconType": "KEYBOARD"
+                },
+                "trackingParams": "CAwQtIkEGAciEwj7oMjU8OfyAhXPNioKHeORDDg="
+              }
+            }
+          ],
+          "interactionMessage": {
+            "messageRenderer": {
+              "trackingParams": "CAoQljsiEwj7oMjU8OfyAhXPNioKHeORDDg=",
+              "button": {
+                "buttonRenderer": {
+                  "style": "STYLE_DARK",
+                  "size": "SIZE_DEFAULT",
+                  "isDisabled": false,
+                  "text": {
+                    "simpleText": "Sign in to chat"
+                  },
+                  "navigationEndpoint": {
+                    "clickTrackingParams": "CAsQ8FsiEwj7oMjU8OfyAhXPNioKHeORDDg=",
+                    "commandMetadata": {
+                      "webCommandMetadata": {
+                        "url": "https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fwatch%253Fv%253Ds7hakOSsU-I&hl=en",
+                        "webPageType": "WEB_PAGE_TYPE_UNKNOWN",
+                        "rootVe": 83769
+                      }
+                    },
+                    "signInEndpoint": {
+                      "nextEndpoint": {
+                        "clickTrackingParams": "CAsQ8FsiEwj7oMjU8OfyAhXPNioKHeORDDg=",
+                        "commandMetadata": {
+                          "webCommandMetadata": {
+                            "url": "/watch?v=s7hakOSsU-I",
+                            "webPageType": "WEB_PAGE_TYPE_WATCH",
+                            "rootVe": 3832
+                          }
+                        },
+                        "watchEndpoint": {
+                          "videoId": "s7hakOSsU-I"
+                        }
+                      }
+                    }
+                  },
+                  "accessibility": {
+                    "label": "Sign in to chat"
+                  },
+                  "trackingParams": "CAsQ8FsiEwj7oMjU8OfyAhXPNioKHeORDDg=",
+                  "accessibilityData": {
+                    "accessibilityData": {
+                      "label": "Sign in to chat"
+                    }
+                  }
+                }
+              },
+              "subtext": {
+                "messageSubtextRenderer": {
+                  "text": {
+                    "simpleText": "All messages you send will appear publicly"
+                  }
+                }
+              }
+            }
+          },
+          "targetId": "live-chat-message-input"
+        }
+      },
+      "itemList": {
+        "liveChatItemListRenderer": {
+          "maxItemsToDisplay": 250,
+          "moreCommentsBelowButton": {
+            "buttonRenderer": {
+              "style": "STYLE_PRIMARY",
+              "icon": {
+                "iconType": "DOWN_ARROW"
+              },
+              "trackingParams": "CAkQ8FsiEwj7oMjU8OfyAhXPNioKHeORDDg=",
+              "accessibilityData": {
+                "accessibilityData": {
+                  "label": "More comments below"
+                }
+              }
+            }
+          },
+          "enablePauseChatKeyboardShortcuts": false
+        }
+      },
+      "header": {
+        "liveChatHeaderRenderer": {
+          "overflowMenu": {
+            "menuRenderer": {
+              "items": [
+                {
+                  "menuServiceItemRenderer": {
+                    "text": {
+                      "runs": [
+                        {
+                          "text": "Participants"
+                        }
+                      ]
+                    },
+                    "icon": {
+                      "iconType": "PERSON"
+                    },
+                    "serviceEndpoint": {
+                      "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                      "showLiveChatParticipantsEndpoint": {
+                        "hack": true
+                      }
+                    },
+                    "trackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+                  }
+                },
+                {
+                  "menuServiceItemRenderer": {
+                    "text": {
+                      "runs": [
+                        {
+                          "text": "Toggle timestamps"
+                        }
+                      ]
+                    },
+                    "icon": {
+                      "iconType": "ACCESS_TIME"
+                    },
+                    "serviceEndpoint": {
+                      "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                      "toggleLiveChatTimestampsEndpoint": {
+                        "hack": true
+                      }
+                    },
+                    "trackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+                  }
+                },
+                {
+                  "menuNavigationItemRenderer": {
+                    "text": {
+                      "runs": [
+                        {
+                          "text": "Send feedback"
+                        }
+                      ]
+                    },
+                    "icon": {
+                      "iconType": "FEEDBACK"
+                    },
+                    "navigationEndpoint": {
+                      "clickTrackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+                      "commandMetadata": {
+                        "webCommandMetadata": {
+                          "ignoreNavigation": true
+                        }
+                      },
+                      "userFeedbackEndpoint": {
+                        "hack": true,
+                        "bucketIdentifier": "live_chat"
+                      }
+                    },
+                    "trackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+                  }
+                }
+              ],
+              "trackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+              "accessibility": {
+                "accessibilityData": {
+                  "label": "More options"
+                }
+              }
+            }
+          },
+          "collapseButton": {
+            "buttonRenderer": {
+              "style": "STYLE_DEFAULT",
+              "size": "SIZE_DEFAULT",
+              "isDisabled": false,
+              "accessibility": {
+                "label": "Expand or collapse chat"
+              },
+              "trackingParams": "CAgQ8FsiEwj7oMjU8OfyAhXPNioKHeORDDg="
+            }
+          },
+          "viewSelector": {
+            "sortFilterSubMenuRenderer": {
+              "subMenuItems": [
+                {
+                  "title": "Top chat",
+                  "selected": false,
+                  "continuation": {
+                    "reloadContinuationData": {
+                      "continuation": "0ofMyAN5GlhDaWtxSndvWVZVTndOams1TTNkNGNIbEVVRWhWY0dGMmQwUkdjV2RuRWd0ek4yaGhhMDlUYzFVdFNSb1Q2cWpkdVFFTkNndHpOMmhoYTA5VGMxVXRTU0FDMAFKFggBGAAgAFD6pMjU8OfyAlgDeACiAQCCAQIIBA%3D%3D",
+                      "clickTrackingParams": "CAcQxqYCIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+                    }
+                  },
+                  "accessibility": {
+                    "accessibilityData": {
+                      "label": "Top chat"
+                    }
+                  },
+                  "subtitle": "Some messages, such as potential spam, may not be visible",
+                  "trackingParams": "CAYQ48AHIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+                },
+                {
+                  "title": "Live chat",
+                  "selected": true,
+                  "continuation": {
+                    "reloadContinuationData": {
+                      "continuation": "0ofMyAN5GlhDaWtxSndvWVZVTndOams1TTNkNGNIbEVVRWhWY0dGMmQwUkdjV2RuRWd0ek4yaGhhMDlUYzFVdFNSb1Q2cWpkdVFFTkNndHpOMmhoYTA5VGMxVXRTU0FDMAFKFggBGAAgAFD6pMjU8OfyAlgDeACiAQCCAQIIAQ%3D%3D",
+                      "clickTrackingParams": "CAUQxqYCIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+                    }
+                  },
+                  "accessibility": {
+                    "accessibilityData": {
+                      "label": "Live chat"
+                    }
+                  },
+                  "subtitle": "All messages are visible",
+                  "trackingParams": "CAQQ48AHIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+                }
+              ],
+              "accessibility": {
+                "accessibilityData": {
+                  "label": "Live Chat mode selection"
+                }
+              },
+              "trackingParams": "CAMQgdoEIhMI-6DI1PDn8gIVzzYqCh3jkQw4"
+            }
+          }
+        }
+      },
+      "ticker": {
+        "liveChatTickerRenderer": {
+          "sentinel": true
+        }
+      },
+      "trackingParams": "CAEQl98BIhMI-6DI1PDn8gIVzzYqCh3jkQw4",
+      "participantsList": {
+        "liveChatParticipantsListRenderer": {
+          "title": {
+            "runs": [
+              {
+                "text": "Participants"
+              }
+            ]
+          },
+          "backButton": {
+            "buttonRenderer": {
+              "icon": {
+                "iconType": "BACK"
+              },
+              "trackingParams": "CAIQ8FsiEwj7oMjU8OfyAhXPNioKHeORDDg=",
+              "accessibilityData": {
+                "accessibilityData": {
+                  "label": "Back"
+                }
+              }
+            }
+          },
+          "participants": [
+            {
+              "liveChatParticipantRenderer": {
+                "authorName": {
+                  "simpleText": "SoraCh. ときのそらチャンネル"
+                },
+                "authorPhoto": {
+                  "thumbnails": [
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQO9Vyz7ysAwPSio5xvkw6n0xvlyDu7A9eawqIH3w=s32-c-k-c0x00ffffff-no-rj",
+                      "width": 32,
+                      "height": 32
+                    },
+                    {
+                      "url": "https://yt4.ggpht.com/ytc/AKedOLQO9Vyz7ysAwPSio5xvkw6n0xvlyDu7A9eawqIH3w=s64-c-k-c0x00ffffff-no-rj",
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                "authorBadges": [
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "icon": {
+                        "iconType": "VERIFIED"
+                      },
+                      "tooltip": "Verified",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Verified"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "liveChatAuthorBadgeRenderer": {
+                      "icon": {
+                        "iconType": "OWNER"
+                      },
+                      "tooltip": "Owner",
+                      "accessibility": {
+                        "accessibilityData": {
+                          "label": "Owner"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "clientMessages": {
+        "reconnectMessage": {
+          "runs": [
+            {
+              "text": "Chat disconnected. Please wait while we try to reconnect you."
+            }
+          ]
+        },
+        "unableToReconnectMessage": {
+          "runs": [
+            {
+              "text": "Unable to connect to chat. Please try again later."
+            }
+          ]
+        },
+        "fatalError": {
+          "runs": [
+            {
+              "text": "Unable to connect to chat. Please try again later."
+            }
+          ]
+        },
+        "reconnectedMessage": {
+          "runs": [
+            {
+              "text": "Successfully connected."
+            }
+          ]
+        },
+        "genericError": {
+          "runs": [
+            {
+              "text": "Error, try again."
+            }
+          ]
+        }
+      }
+    }
+  }
+}
