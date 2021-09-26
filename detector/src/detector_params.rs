@@ -6,7 +6,7 @@ pub struct DetectorParams {
     avg_length_min_message_count: u64,
     similarity_threshold: f64,
     similarity_count_threshold: u16,
-    similarity_min_message_length: usize
+    similarity_min_message_length: usize,
 }
 
 impl DetectorParams {
@@ -18,7 +18,7 @@ impl DetectorParams {
         avg_length_min_message_count: u64,
         similarity_threshold: f64,
         similarity_count_threshold: u16,
-        similarity_min_message_length: usize
+        similarity_min_message_length: usize,
     ) -> Self {
         Self {
             deleted_messages_threshold,
@@ -28,7 +28,7 @@ impl DetectorParams {
             avg_length_min_message_count,
             similarity_threshold,
             similarity_count_threshold,
-            similarity_min_message_length
+            similarity_min_message_length,
         }
     }
 
@@ -37,13 +37,13 @@ impl DetectorParams {
     }
 
     pub fn is_too_fast(&self, current_delay: f32, sent_messages_count: u64) -> bool {
-        sent_messages_count >= self.avg_delay_min_message_count &&
-        current_delay < self.avg_delay_threshold
+        sent_messages_count >= self.avg_delay_min_message_count
+            && current_delay < self.avg_delay_threshold
     }
 
     pub fn are_messages_too_long(&self, current_avg_length: f32, sent_messages_count: u64) -> bool {
-        sent_messages_count >= self.avg_length_min_message_count &&
-        current_avg_length >= self.avg_length_threshold
+        sent_messages_count >= self.avg_length_min_message_count
+            && current_avg_length >= self.avg_length_threshold
     }
 
     pub fn should_check_message(&self, message_length: usize) -> bool {

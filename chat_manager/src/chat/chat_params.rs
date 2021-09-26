@@ -5,7 +5,7 @@ use serde::Serialize;
 struct MainWebAppInfo {
     graft_url: String,
     web_display_mode: String,
-    is_web_native_share_available: bool
+    is_web_native_share_available: bool,
 }
 
 #[derive(Serialize)]
@@ -34,13 +34,13 @@ struct Client {
     screen_width_points: u16,
     screen_height_points: u16,
     utc_offset_minutes: i32,
-    main_app_web_info: MainWebAppInfo
+    main_app_web_info: MainWebAppInfo,
 }
 
 #[derive(Serialize)]
 #[serde(rename_all(serialize = "camelCase"))]
 struct User {
-    locked_safety_mode: bool
+    locked_safety_mode: bool,
 }
 
 #[derive(Serialize)]
@@ -48,21 +48,21 @@ struct User {
 struct Request {
     use_ssl: bool,
     internal_experiment_flags: Vec<String>,
-    consistency_token_jars: Vec<String>
+    consistency_token_jars: Vec<String>,
 }
 
 #[derive(Serialize)]
 #[serde(rename_all(serialize = "camelCase"))]
 struct AdParam {
     key: String,
-    value: String
+    value: String,
 }
 
 impl AdParam {
     fn new(key: &str, value: &str) -> AdParam {
-        AdParam { 
-            key: key.to_string(), 
-            value: value.to_string() 
+        AdParam {
+            key: key.to_string(),
+            value: value.to_string(),
         }
     }
 }
@@ -70,7 +70,7 @@ impl AdParam {
 #[derive(Serialize)]
 #[serde(rename_all(serialize = "camelCase"))]
 struct AdSignalsInfo {
-    params: Vec<AdParam>
+    params: Vec<AdParam>,
 }
 
 #[derive(Serialize)]
@@ -79,13 +79,13 @@ struct Context {
     client: Client,
     user: User,
     request: Request,
-    ad_signals_info: AdSignalsInfo
+    ad_signals_info: AdSignalsInfo,
 }
 
 #[derive(Serialize)]
 #[serde(rename_all(serialize = "camelCase"))]
 struct WebClientInfo {
-    is_document_hidden: bool
+    is_document_hidden: bool,
 }
 
 #[derive(Serialize)]
@@ -93,7 +93,7 @@ struct WebClientInfo {
 pub struct ChatParams {
     context: Context,
     continuation: String,
-    web_client_info: WebClientInfo
+    web_client_info: WebClientInfo,
 }
 
 impl ChatParams {
@@ -109,12 +109,15 @@ impl ChatParams {
         browser_version: String,
         timestamp: i64,
         utc_offset: i32,
-        continuation: String
+        continuation: String,
     ) -> ChatParams {
         let main_app_web_info = MainWebAppInfo {
-            graft_url: format!("https://www.youtube.com/live_chat?is_popout=1&v={}", &video_id),
+            graft_url: format!(
+                "https://www.youtube.com/live_chat?is_popout=1&v={}",
+                &video_id
+            ),
             web_display_mode: "WEB_DISPLAY_MODE_BROWSER".to_string(),
-            is_web_native_share_available: false
+            is_web_native_share_available: false,
         };
 
         let client = Client {
@@ -129,7 +132,10 @@ impl ChatParams {
             client_version,
             os_name: "Windows".to_string(),
             os_version: "10.0".to_string(),
-            original_url: format!("https://www.youtube.com/live_chat?is_popout=1&v={}", &video_id),
+            original_url: format!(
+                "https://www.youtube.com/live_chat?is_popout=1&v={}",
+                &video_id
+            ),
             screen_pixel_density: 1,
             platform: "DESKTOP".to_string(),
             client_form_factor: "UNKNOWN_FORM_FACTOR".to_string(),
@@ -141,17 +147,17 @@ impl ChatParams {
             screen_width_points: 1536,
             screen_height_points: 464,
             utc_offset_minutes: utc_offset,
-            main_app_web_info
+            main_app_web_info,
         };
 
         let user = User {
-            locked_safety_mode: false
+            locked_safety_mode: false,
         };
 
         let request = Request {
             use_ssl: true,
             internal_experiment_flags: vec![],
-            consistency_token_jars: vec![]
+            consistency_token_jars: vec![],
         };
 
         let mut params = Vec::with_capacity(20);
@@ -171,30 +177,31 @@ impl ChatParams {
         params.push(AdParam::new("bc", "31"));
         params.push(AdParam::new("bih", "464"));
         params.push(AdParam::new("biw", "1536"));
-        params.push(AdParam::new("brdim", "1529,857,1529,857,1536,0,1536,864,1536,464"));
+        params.push(AdParam::new(
+            "brdim",
+            "1529,857,1529,857,1536,0,1536,864,1536,464",
+        ));
         params.push(AdParam::new("vis", "1"));
         params.push(AdParam::new("wgl", "true"));
         params.push(AdParam::new("ca_type", "image"));
 
-        let ad_signals_info = AdSignalsInfo {
-            params
-        };
+        let ad_signals_info = AdSignalsInfo { params };
 
         let context = Context {
             client,
             user,
             request,
-            ad_signals_info
+            ad_signals_info,
         };
 
         let web_client_info = WebClientInfo {
-            is_document_hidden: false
+            is_document_hidden: false,
         };
 
         ChatParams {
             context,
             continuation,
-            web_client_info
+            web_client_info,
         }
     }
 

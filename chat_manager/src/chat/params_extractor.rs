@@ -1,4 +1,7 @@
-use core::{http_client::{HttpClient, RequestSettings}, youtube_regexes::YoutubeRegexes};
+use core::{
+    http_client::{HttpClient, RequestSettings},
+    youtube_regexes::YoutubeRegexes,
+};
 
 use super::{chat_params::ChatParams, error::ParamsExtractingError};
 
@@ -7,9 +10,9 @@ pub struct ParamsExtractor;
 pub enum ExtractingResult {
     Extracted {
         chat_params: ChatParams,
-        chat_key: String
+        chat_key: String,
     },
-    ChatDisabled
+    ChatDisabled,
 }
 
 impl ParamsExtractor {
@@ -17,10 +20,10 @@ impl ParamsExtractor {
         video_id: &str,
         chat_url: &str,
         http_client: &HttpClient,
-        request_settings: &RequestSettings
+        request_settings: &RequestSettings,
     ) -> Result<ExtractingResult, ParamsExtractingError> {
         let chat_page_content = http_client
-            .get_request(&chat_url, &request_settings.user_agent)
+            .get_request(chat_url, &request_settings.user_agent)
             .await?;
 
         if !YoutubeRegexes::is_chat_enabled(&chat_page_content) {
@@ -54,34 +57,34 @@ impl ParamsExtractor {
 
         let chat_key = match YoutubeRegexes::extract_chat_key(&chat_page_content) {
             Some(chat_key) => chat_key,
-            None => return Err(ParamsExtractingError::ChatKey(chat_page_content))
+            None => return Err(ParamsExtractingError::ChatKey(chat_page_content)),
         };
 
         let now = chrono::Local::now();
         let timestamp = now.timestamp_millis();
         let offset_min = now.offset().local_minus_utc() / 60;
 
-        let time_zone = YoutubeRegexes::extract_time_zone(&chat_page_content)
-            .unwrap_or_else(|| "Asia/Tokyo");
+        let time_zone =
+            YoutubeRegexes::extract_time_zone(&chat_page_content).unwrap_or("Asia/Tokyo");
 
         let stream_params = ChatParams::init(
-            gl.to_string(), 
-            remote_host.to_string(), 
-            visitor_data.to_string(), 
-            request_settings.user_agent.clone(), 
-            client_version.to_string(), 
-            video_id, 
-            time_zone.to_string(), 
-            request_settings.browser_name.clone(), 
-            request_settings.browser_version.clone(), 
-            timestamp, 
-            offset_min, 
-            continuation.to_string()
+            gl.to_string(),
+            remote_host.to_string(),
+            visitor_data.to_string(),
+            request_settings.user_agent.clone(),
+            client_version.to_string(),
+            video_id,
+            time_zone.to_string(),
+            request_settings.browser_name.clone(),
+            request_settings.browser_version.clone(),
+            timestamp,
+            offset_min,
+            continuation.to_string(),
         );
 
         Ok(ExtractingResult::Extracted {
             chat_params: stream_params,
-            chat_key: chat_key.to_string()
+            chat_key: chat_key.to_string(),
         })
     }
 }

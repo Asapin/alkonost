@@ -24,10 +24,10 @@ mod tests {
                 let content = std::fs::read_to_string(&path).unwrap();
                 let result = serde_json::from_str::<ChatJson>(&content);
                 match result {
-                    Ok(_) => { },
+                    Ok(_) => {}
                     Err(e) => {
                         panic!("{:?}: {}", &path, &e);
-                    },
+                    }
                 }
             });
     }

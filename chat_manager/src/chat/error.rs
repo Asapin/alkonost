@@ -20,7 +20,7 @@ pub enum ChatManagerError {
     #[error("Chat poller disappeared from the inprogress_chats before it sent `StreamEnded` message. Should never happen")]
     ChatPollerDisappeared,
     #[error("Processing message {0:?} took too long")]
-    SlowProcessing(ManagerMessages)
+    SlowProcessing(ManagerMessages),
 }
 
 impl From<SendError<SpamDetectorMessages>> for ChatManagerError {
@@ -72,7 +72,7 @@ pub enum PollerError {
     #[error("Error while extracting actions from json {0}")]
     Extractor(ActionExtractorError),
     #[error("Channel closed")]
-    ChannelClosed
+    ChannelClosed,
 }
 
 impl From<serde_json::Error> for PollerError {

@@ -2,10 +2,10 @@
 
 use tokio::{sync::mpsc::Sender, task::JoinHandle};
 
-pub mod types;
 pub mod http_client;
-pub mod youtube_regexes;
 pub mod messages;
+pub mod types;
+pub mod youtube_regexes;
 
 pub struct ActorWrapper<T> {
     pub join_handle: JoinHandle<()>,
@@ -18,5 +18,5 @@ pub enum SuspicionReason {
     TooLong(f32),
     Similar,
     Blocked,
-    TooManyDeletedMessages
+    TooManyDeletedMessages,
 }

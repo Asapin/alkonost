@@ -1,6 +1,9 @@
 use std::time::Duration;
 
-use reqwest::{Client, header::{self, ACCEPT, ACCEPT_LANGUAGE, DNT, REFERER, UPGRADE_INSECURE_REQUESTS, USER_AGENT}};
+use reqwest::{
+    header::{self, ACCEPT, ACCEPT_LANGUAGE, DNT, REFERER, UPGRADE_INSECURE_REQUESTS, USER_AGENT},
+    Client,
+};
 use thiserror::Error;
 
 #[derive(Error, Debug)]
@@ -29,20 +32,31 @@ pub enum HttpClientLoadError {
 pub struct RequestSettings {
     pub user_agent: String,
     pub browser_name: String,
-    pub browser_version: String
+    pub browser_version: String,
 }
 
 pub struct HttpClient {
-    client: Client
+    client: Client,
 }
 
 impl HttpClient {
     pub fn init() -> Result<HttpClient, HttpClientInitError> {
         let mut headers = header::HeaderMap::new();
-        headers.insert(ACCEPT, header::HeaderValue::from_static("text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"));
-        headers.insert(ACCEPT_LANGUAGE, header::HeaderValue::from_static("en-US,en;q=0.5"));
+        headers.insert(
+            ACCEPT,
+            header::HeaderValue::from_static(
+                "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+            ),
+        );
+        headers.insert(
+            ACCEPT_LANGUAGE,
+            header::HeaderValue::from_static("en-US,en;q=0.5"),
+        );
         headers.insert(DNT, header::HeaderValue::from_static("1"));
-        headers.insert(UPGRADE_INSECURE_REQUESTS, header::HeaderValue::from_static("1"));
+        headers.insert(
+            UPGRADE_INSECURE_REQUESTS,
+            header::HeaderValue::from_static("1"),
+        );
 
         let client = reqwest::ClientBuilder::new()
             .tcp_keepalive(Some(Duration::from_secs(120)))
@@ -53,41 +67,43 @@ impl HttpClient {
             .default_headers(headers)
             .use_rustls_tls()
             .build()?;
-        
+
         Ok(HttpClient { client })
     }
 
     pub async fn get_request(
-        &self, 
-        url: &str, 
-        user_agent: &str
+        &self,
+        url: &str,
+        user_agent: &str,
     ) -> Result<String, HttpClientLoadError> {
-        self.client.get(url)
+        self.client
+            .get(url)
             .header(USER_AGENT, user_agent)
             .send()
             .await
-            .map_err(|e| HttpClientLoadError::GetRequest(e))?
+            .map_err(HttpClientLoadError::GetRequest)?
             .text()
             .await
-            .map_err(|e| HttpClientLoadError::ResponseBody(e))
+            .map_err(HttpClientLoadError::ResponseBody)
     }
 
     pub async fn post_request(
-        &self, 
-        url: &str, 
+        &self,
+        url: &str,
         user_agent: &str,
         referer: &str,
-        body: String
+        body: String,
     ) -> Result<String, HttpClientLoadError> {
-        self.client.post(url)
+        self.client
+            .post(url)
             .header(USER_AGENT, user_agent)
             .header(REFERER, referer)
             .body(body)
             .send()
             .await
-            .map_err(|e| HttpClientLoadError::PostRequest(e))?
+            .map_err(HttpClientLoadError::PostRequest)?
             .text()
             .await
-            .map_err(|e| HttpClientLoadError::ResponseBody(e))
+            .map_err(HttpClientLoadError::ResponseBody)
     }
 }

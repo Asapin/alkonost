@@ -1,14 +1,17 @@
-use core::{ActorWrapper, messages::{DetectorResults, SpamDetectorMessages}};
+use core::{
+    messages::{DetectorResults, SpamDetectorMessages},
+    ActorWrapper,
+};
 use std::collections::HashMap;
 
 use detector_params::DetectorParams;
 use spam_detector::SpamDetector;
 use thiserror::Error;
-use tokio::sync::mpsc::{self, Receiver, Sender, error::SendError};
+use tokio::sync::mpsc::{self, error::SendError, Receiver, Sender};
 
+mod message_data;
 mod spam_detector;
 mod user_data;
-mod message_data;
 
 pub mod detector_params;
 
@@ -30,13 +33,13 @@ pub struct DetectorManager {
     streams: HashMap<String, SpamDetector>,
     rx: Receiver<SpamDetectorMessages>,
     result_tx: Sender<DetectorResults>,
-    params: DetectorParams
+    params: DetectorParams,
 }
 
 impl DetectorManager {
     pub fn init(
         detector_params: DetectorParams,
-        result_tx: Sender<DetectorResults>
+        result_tx: Sender<DetectorResults>,
     ) -> ActorWrapper<SpamDetectorMessages> {
         let (tx, rx) = mpsc::channel(32);
         let manager = Self {
@@ -50,17 +53,14 @@ impl DetectorManager {
             manager.run().await;
         });
 
-        ActorWrapper {
-            join_handle,
-            tx
-        }
+        ActorWrapper { join_handle, tx }
     }
 
     async fn run(mut self) {
         match self.do_run().await {
             Ok(_r) => {
                 // Manager finished it's work due to incoming `Close` message
-            },
+            }
             Err(e) => {
                 println!("DetectorManager: Error, while processing messages: {}", &e);
             }
@@ -71,7 +71,7 @@ impl DetectorManager {
             Ok(_r) => {
                 // Successfully sent a message to the receiver
                 // Nothing else to do
-            },
+            }
             Err(e) => {
                 println!("DetectorManager: Couldn't send `Close` message: {}", &e);
             }
@@ -85,36 +85,34 @@ impl DetectorManager {
                 Some(message) => message,
                 None => {
                     return Err(DetectorError::IncomingChannelClosed);
-                },
+                }
             };
 
             match message {
                 SpamDetectorMessages::Close => {
                     return Ok(());
-                },
-                SpamDetectorMessages::NewBatch { 
-                    video_id, 
-                    actions 
-                } => {
-                    let detector_instance = self.streams
+                }
+                SpamDetectorMessages::NewBatch { video_id, actions } => {
+                    let detector_instance = self
+                        .streams
                         .entry(video_id.clone())
-                        .or_insert_with(|| SpamDetector::init());
+                        .or_insert_with(SpamDetector::init);
                     let decisions = detector_instance.process_new_messages(actions, &self.params);
                     if !decisions.is_empty() {
                         let result = DetectorResults::ProcessingResult {
                             video_id,
-                            decisions
+                            decisions,
                         };
 
                         self.result_tx.send(result).await?;
                     }
-                },
-                SpamDetectorMessages::StreamEnded { 
-                    video_id 
-                } => {
+                }
+                SpamDetectorMessages::StreamEnded { video_id } => {
                     self.streams.remove(&video_id);
-                    self.result_tx.send(DetectorResults::StreamEnded { video_id }).await?;
-                },
+                    self.result_tx
+                        .send(DetectorResults::StreamEnded { video_id })
+                        .await?;
+                }
             }
         }
     }

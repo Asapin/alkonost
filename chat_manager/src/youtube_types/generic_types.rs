@@ -1,4 +1,4 @@
-use serde::{Deserialize, de::Visitor};
+use serde::{de::Visitor, Deserialize};
 use vec1::Vec1;
 
 #[derive(Deserialize)]
@@ -7,20 +7,20 @@ pub struct Emoji {
     pub emoji_id: String,
     pub shortcuts: Option<Vec1<String>>,
     #[serde(default)]
-    pub is_custom_emoji: bool
+    pub is_custom_emoji: bool,
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "camelCase"))]
 pub struct AuthorBadge {
-    pub live_chat_author_badge_renderer: AuthorBadgeRenderer
+    pub live_chat_author_badge_renderer: AuthorBadgeRenderer,
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "camelCase"))]
 pub struct AuthorBadgeRenderer {
     #[serde(flatten)]
-    pub icon: AuthorBadgeIcon
+    pub icon: AuthorBadgeIcon,
 }
 
 #[derive(Deserialize)]
@@ -28,9 +28,9 @@ pub struct AuthorBadgeRenderer {
 pub enum AuthorBadgeIcon {
     #[serde(rename_all(deserialize = "camelCase"))]
     Icon {
-        icon_type: AuthorBadgeIconType
+        icon_type: AuthorBadgeIconType,
     },
-    CustomThumbnail { }
+    CustomThumbnail {},
 }
 
 #[derive(Deserialize)]
@@ -38,7 +38,7 @@ pub enum AuthorBadgeIcon {
 pub enum AuthorBadgeIconType {
     Verified,
     Owner,
-    Moderator
+    Moderator,
 }
 
 #[derive(Deserialize)]
@@ -55,7 +55,7 @@ pub struct AuthorInfo {
 #[serde(rename_all(deserialize = "camelCase"))]
 pub struct Image {
     pub thumbnails: Vec1<Thumbnail>,
-    pub accessibility: Accessibility
+    pub accessibility: Accessibility,
 }
 
 #[derive(Deserialize)]
@@ -63,85 +63,91 @@ pub struct Image {
 pub struct Thumbnail {
     pub url: String,
     pub width: u16,
-    pub height: u16
+    pub height: u16,
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "camelCase"))]
 pub struct Accessibility {
-    pub accessibility_data: AccessibilityData
+    pub accessibility_data: AccessibilityData,
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "camelCase"))]
 pub struct AccessibilityData {
-    pub label: String
+    pub label: String,
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "camelCase"))]
 pub struct LinkUrl {
     #[serde(flatten)]
-    pub endpoint: LinkEndpoint
+    pub endpoint: LinkEndpoint,
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "camelCase"))]
 pub enum LinkEndpoint {
     UrlEndpoint {
-        url: String
+        url: String,
     },
     #[serde(rename_all(deserialize = "camelCase"))]
     WatchEndpoint {
-        video_id: String
-    }
+        video_id: String,
+    },
 }
 
 pub enum MessageContent {
     Link {
         text: String,
-        url: LinkUrl
+        url: LinkUrl,
     },
     Text {
         text: String,
         bold: bool,
-        italics: bool
+        italics: bool,
     },
-    Emoji(Emoji)
+    Emoji(Emoji),
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "camelCase"))]
 pub enum Message {
     SimpleText(String),
-    Runs(Vec<MessageContent>)
+    Runs(Vec<MessageContent>),
 }
 
 mod custom_deser_impls {
-    use serde::Deserialize;
     use super::*;
+    use serde::Deserialize;
 
-    impl <'de> Deserialize<'de> for MessageContent {
+    impl<'de> Deserialize<'de> for MessageContent {
         fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>
         where
-            D: serde::Deserializer<'de> 
+            D: serde::Deserializer<'de>,
         {
             #[derive(Deserialize)]
             #[serde(field_identifier, rename_all = "camelCase")]
-            enum Field { Text, Emoji, NavigationEndpoint, Italics, Bold }
+            enum Field {
+                Text,
+                Emoji,
+                NavigationEndpoint,
+                Italics,
+                Bold,
+            }
 
             struct ContentVisitor;
-    
+
             impl<'de> Visitor<'de> for ContentVisitor {
                 type Value = MessageContent;
-    
+
                 fn expecting(&self, formatter: &mut std::fmt::Formatter) -> std::fmt::Result {
                     formatter.write_str("enum MessageContent")
                 }
-    
+
                 fn visit_map<A>(self, mut map: A) -> Result<Self::Value, A::Error>
                 where
-                    A: serde::de::MapAccess<'de>, 
+                    A: serde::de::MapAccess<'de>,
                 {
                     let mut text: Option<String> = None;
                     let mut url: Option<LinkUrl> = None;
@@ -153,80 +159,82 @@ mod custom_deser_impls {
                             Field::Text => {
                                 if emoji.is_some() {
                                     return Err(serde::de::Error::invalid_value(
-                                        serde::de::Unexpected::StructVariant, 
-                                        &"can't have both a text and an emoji"
+                                        serde::de::Unexpected::StructVariant,
+                                        &"can't have both a text and an emoji",
                                     ));
                                 }
                                 if text.is_some() {
                                     return Err(serde::de::Error::duplicate_field("text"));
                                 }
                                 text = Some(map.next_value()?);
-                            },
+                            }
                             Field::Emoji => {
                                 if text.is_some() {
                                     return Err(serde::de::Error::invalid_value(
-                                        serde::de::Unexpected::StructVariant, 
-                                        &"can't have both a text and an emoji"
+                                        serde::de::Unexpected::StructVariant,
+                                        &"can't have both a text and an emoji",
                                     ));
                                 }
                                 if url.is_some() {
                                     return Err(serde::de::Error::invalid_value(
-                                        serde::de::Unexpected::StructVariant, 
-                                        &"can't have both a url and an emoji"
+                                        serde::de::Unexpected::StructVariant,
+                                        &"can't have both a url and an emoji",
                                     ));
                                 }
                                 if italics.is_some() {
                                     return Err(serde::de::Error::invalid_value(
-                                        serde::de::Unexpected::StructVariant, 
-                                        &"can't have both an emoji and an italics modifier"
+                                        serde::de::Unexpected::StructVariant,
+                                        &"can't have both an emoji and an italics modifier",
                                     ));
                                 }
                                 if bold.is_some() {
                                     return Err(serde::de::Error::invalid_value(
-                                        serde::de::Unexpected::StructVariant, 
-                                        &"can't have both an emoji and a bold modifier"
+                                        serde::de::Unexpected::StructVariant,
+                                        &"can't have both an emoji and a bold modifier",
                                     ));
                                 }
                                 if emoji.is_some() {
                                     return Err(serde::de::Error::duplicate_field("emoji"));
                                 }
                                 emoji = Some(map.next_value()?);
-                            },
+                            }
                             Field::NavigationEndpoint => {
                                 if emoji.is_some() {
                                     return Err(serde::de::Error::invalid_value(
-                                        serde::de::Unexpected::StructVariant, 
-                                        &"can't have both a url and an emoji"
+                                        serde::de::Unexpected::StructVariant,
+                                        &"can't have both a url and an emoji",
                                     ));
                                 }
                                 if italics.is_some() {
                                     return Err(serde::de::Error::invalid_value(
-                                        serde::de::Unexpected::StructVariant, 
-                                        &"can't have both a url and an italics modifier"
+                                        serde::de::Unexpected::StructVariant,
+                                        &"can't have both a url and an italics modifier",
                                     ));
                                 }
                                 if bold.is_some() {
                                     return Err(serde::de::Error::invalid_value(
-                                        serde::de::Unexpected::StructVariant, 
-                                        &"can't have both a url and a bold modifier"
+                                        serde::de::Unexpected::StructVariant,
+                                        &"can't have both a url and a bold modifier",
                                     ));
                                 }
                                 if url.is_some() {
-                                    return Err(serde::de::Error::duplicate_field("navigationEndpoint"));
+                                    return Err(serde::de::Error::duplicate_field(
+                                        "navigationEndpoint",
+                                    ));
                                 }
                                 url = Some(map.next_value()?);
-                            },
+                            }
                             Field::Italics => {
                                 if emoji.is_some() {
                                     return Err(serde::de::Error::invalid_value(
-                                        serde::de::Unexpected::StructVariant, 
-                                        &"can't have both an emoji and an italics modifier"
+                                        serde::de::Unexpected::StructVariant,
+                                        &"can't have both an emoji and an italics modifier",
                                     ));
                                 }
                                 if url.is_some() {
                                     return Err(serde::de::Error::invalid_value(
-                                        serde::de::Unexpected::StructVariant, 
-                                        &"can't have both a url and an italics modifier"
+                                        serde::de::Unexpected::StructVariant,
+                                        &"can't have both a url and an italics modifier",
                                     ));
                                 }
                                 if italics.is_some() {
@@ -237,14 +245,14 @@ mod custom_deser_impls {
                             Field::Bold => {
                                 if emoji.is_some() {
                                     return Err(serde::de::Error::invalid_value(
-                                        serde::de::Unexpected::StructVariant, 
-                                        &"can't have both an emoji and a bold modifier"
+                                        serde::de::Unexpected::StructVariant,
+                                        &"can't have both an emoji and a bold modifier",
                                     ));
                                 }
                                 if url.is_some() {
                                     return Err(serde::de::Error::invalid_value(
-                                        serde::de::Unexpected::StructVariant, 
-                                        &"can't have both a url and a bold modifier"
+                                        serde::de::Unexpected::StructVariant,
+                                        &"can't have both a url and a bold modifier",
                                     ));
                                 }
                                 if bold.is_some() {
@@ -254,29 +262,25 @@ mod custom_deser_impls {
                             }
                         }
                     }
-    
+
                     if let Some(emoji) = emoji {
                         return Ok(MessageContent::Emoji(emoji));
                     }
-    
-                    let text = text
-                        .ok_or_else(|| serde::de::Error::missing_field("text"))?;
+
+                    let text = text.ok_or_else(|| serde::de::Error::missing_field("text"))?;
                     if let Some(link) = url {
-                        return Ok(MessageContent::Link {
-                            text,
-                            url: link
-                        });
+                        Ok(MessageContent::Link { text, url: link })
                     } else {
-                        return Ok(MessageContent::Text { 
+                        Ok(MessageContent::Text {
                             text,
                             bold: bold.unwrap_or_default(),
-                            italics: italics.unwrap_or_default()
+                            italics: italics.unwrap_or_default(),
                         })
                     }
                 }
             }
-    
-            const FIELDS: &'static [&'static str] = &["text", "emoji", "url"];
+
+            const FIELDS: &[&str] = &["text", "emoji", "url"];
             deserializer.deserialize_struct("MessageContent", FIELDS, ContentVisitor)
         }
     }

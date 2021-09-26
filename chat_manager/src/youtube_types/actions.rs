@@ -8,50 +8,34 @@ use super::generic_types::{AuthorInfo, Image, Message};
 #[serde(rename_all(deserialize = "camelCase"))]
 pub enum Action {
     #[serde(rename_all(deserialize = "camelCase"))]
-    AddChatItemAction { 
-        item: MessageItem
-    },
+    AddChatItemAction { item: MessageItem },
     #[serde(rename_all(deserialize = "camelCase"))]
-    MarkChatItemAsDeletedAction {
-        target_item_id: String,
-    },
+    MarkChatItemAsDeletedAction { target_item_id: String },
     #[serde(rename_all(deserialize = "camelCase"))]
-    MarkChatItemsByAuthorAsDeletedAction {
-        external_channel_id: String
-    },
+    MarkChatItemsByAuthorAsDeletedAction { external_channel_id: String },
     #[serde(rename_all(deserialize = "camelCase"))]
     ReplaceChatItemAction {
         target_item_id: String,
-        replacement_item: MessageItem
+        replacement_item: MessageItem,
     },
     #[serde(rename_all(deserialize = "camelCase"))]
     AddLiveChatTickerItemAction {
         // Ticker is a small message about a superchat or a new membership,
-        // that shows up on top of the chat window, and usually is duplicated by a regular AddChatItemAction,
-        // that shows inside the chat window.
+    // that shows up on top of the chat window, and usually is duplicated by a regular AddChatItemAction,
+    // that shows inside the chat window.
     },
     #[serde(rename_all(deserialize = "camelCase"))]
-    AddBannerToLiveChatCommand {
-        banner_renderer: BannerItem
-    },
+    AddBannerToLiveChatCommand { banner_renderer: BannerItem },
     #[serde(rename_all(deserialize = "camelCase"))]
-    RemoveBannerForLiveChatCommand {
-        target_action_id: String
-    },
+    RemoveBannerForLiveChatCommand { target_action_id: String },
     #[serde(rename_all(deserialize = "camelCase"))]
-    ShowLiveChatTooltipCommand { },
+    ShowLiveChatTooltipCommand {},
     #[serde(rename_all(deserialize = "camelCase"))]
-    ShowLiveChatActionPanelAction {
-        panel_to_show: PanelItem
-    },
+    ShowLiveChatActionPanelAction { panel_to_show: PanelItem },
     #[serde(rename_all(deserialize = "camelCase"))]
-    UpdateLiveChatPollAction {
-        poll_to_update: PollToUpdateItem
-    },
+    UpdateLiveChatPollAction { poll_to_update: PollToUpdateItem },
     #[serde(rename_all(deserialize = "camelCase"))]
-    CloseLiveChatActionPanelAction {
-        target_panel_id: String
-    }
+    CloseLiveChatActionPanelAction { target_panel_id: String },
 }
 
 #[derive(Deserialize)]
@@ -74,8 +58,8 @@ pub enum MessageItem {
         #[serde(flatten)]
         author_info: AuthorInfo,
         header_primary_text: Option<Message>, // Showed only for members who renewed their membership
-        header_subtext: Option<Message>,      // Showed either for new members or if the channel set custom name for their membership
-        message: Option<Message>              // Optional message
+        header_subtext: Option<Message>, // Showed either for new members or if the channel set custom name for their membership
+        message: Option<Message>,        // Optional message
     },
     #[serde(rename_all(deserialize = "camelCase"))]
     LiveChatPaidMessageRenderer {
@@ -99,16 +83,16 @@ pub enum MessageItem {
     },
     #[serde(rename_all(deserialize = "camelCase"))]
     LiveChatViewerEngagementMessageRenderer {
-        // Standard YouTube message about protecting you privacy 
-        // and following community guidelines, 
+        // Standard YouTube message about protecting you privacy
+        // and following community guidelines,
         // that appears as the last message in chat when you load it
         id: String,
         timestamp_usec: Option<WrappedU64>,
         message: Message,
-        icon: EngagementMessageIcon
+        icon: EngagementMessageIcon,
     },
     #[serde(rename_all(deserialize = "camelCase"))]
-    LiveChatPlaceholderItemRenderer { 
+    LiveChatPlaceholderItemRenderer {
         // No idea what this message type means, because
         // messages of this type don't appear in chat.
         // Have nothing other than an id and a timestamp.
@@ -124,7 +108,7 @@ pub enum MessageItem {
         timestamp_usec: u64,
         text: Message,
         subtext: Message,
-        icon: ChatModeIcon
+        icon: ChatModeIcon,
     },
     #[serde(rename_all(deserialize = "camelCase"))]
     LiveChatDonationAnnouncementRenderer {
@@ -135,19 +119,19 @@ pub enum MessageItem {
         subtext: Message,
         #[serde(flatten)]
         author_info: Option<AuthorInfo>,
-    }
+    },
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "camelCase"))]
 pub struct BannerItem {
-    pub live_chat_banner_renderer: BannerItemRenderer
+    pub live_chat_banner_renderer: BannerItemRenderer,
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "camelCase"))]
 pub struct BannerItemRenderer {
-    pub contents: BannerItemContent
+    pub contents: BannerItemContent,
 }
 
 #[derive(Deserialize)]
@@ -160,37 +144,37 @@ pub enum BannerItemContent {
         author_info: AuthorInfo,
         #[serde(deserialize_with = "from_str")]
         timestamp_usec: u64,
-        id: String
+        id: String,
     },
     #[serde(rename_all(deserialize = "camelCase"))]
     PollRenderer {
         #[serde(flatten)]
-        poll_renderer: Poll
+        poll_renderer: Poll,
     },
     #[serde(rename_all(deserialize = "camelCase"))]
     DonationsProgressBarRenderer {
         raised: Message,
         campaign_title: String,
-        goal_reached_label: String
-    }
+        goal_reached_label: String,
+    },
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "camelCase"))]
 pub struct PanelItem {
-    pub live_chat_action_panel_renderer: PanelItemRenderer
+    pub live_chat_action_panel_renderer: PanelItemRenderer,
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "camelCase"))]
 pub struct PanelItemRenderer {
-    pub contents: PanelItemItemContent
+    pub contents: PanelItemItemContent,
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "camelCase"))]
 pub struct PanelItemItemContent {
-    pub poll_renderer: Poll
+    pub poll_renderer: Poll,
 }
 
 #[derive(Deserialize)]
@@ -198,38 +182,38 @@ pub struct PanelItemItemContent {
 pub struct Poll {
     pub choices: Vec<PollChoices>,
     pub live_chat_poll_id: String,
-    pub header: PollHeader
+    pub header: PollHeader,
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "camelCase"))]
 pub struct PollChoices {
-    pub text: Message
+    pub text: Message,
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "camelCase"))]
 pub struct PollHeader {
-    pub poll_header_renderer: PollHeaderRenderer
+    pub poll_header_renderer: PollHeaderRenderer,
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "camelCase"))]
 pub struct PollHeaderRenderer {
     pub poll_question: Message,
-    pub live_chat_poll_type: PollType
+    pub live_chat_poll_type: PollType,
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "SCREAMING_SNAKE_CASE"))]
 pub enum PollType {
-    LiveChatPollTypeCreator
+    LiveChatPollTypeCreator,
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "camelCase"))]
 pub struct PollToUpdateItem {
-    pub poll_renderer: PollToUpdateItemRenderer
+    pub poll_renderer: PollToUpdateItemRenderer,
 }
 
 #[derive(Deserialize)]
@@ -237,20 +221,20 @@ pub struct PollToUpdateItem {
 pub struct PollToUpdateItemRenderer {
     pub choices: Vec<ResultingPollChoices>,
     pub live_chat_poll_id: String,
-    pub header: PollHeader
+    pub header: PollHeader,
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "camelCase"))]
 pub struct ResultingPollChoices {
     pub text: Message,
-    pub vote_ratio: f64
+    pub vote_ratio: f64,
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "camelCase"))]
 pub struct ChatModeIcon {
-    pub icon_type: ChatModeIconType
+    pub icon_type: ChatModeIconType,
 }
 
 #[derive(Deserialize)]
@@ -265,23 +249,24 @@ pub enum ChatModeIconType {
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "camelCase"))]
 pub struct EngagementMessageIcon {
-    pub icon_type: EngagementMessageIconType
+    pub icon_type: EngagementMessageIconType,
 }
 
 #[derive(Deserialize)]
 #[serde(rename_all(deserialize = "SCREAMING_SNAKE_CASE"))]
 pub enum EngagementMessageIconType {
     YoutubeRound, // standard YouTube greeting message
-    Poll
+    Poll,
 }
 
 #[derive(Deserialize)]
 pub struct WrappedU64(#[serde(deserialize_with = "from_str")] pub u64);
 
 fn from_str<'de, T, D>(deserializer: D) -> Result<T, D::Error>
-    where T: FromStr,
-          T::Err: Display,
-          D: serde::de::Deserializer<'de>
+where
+    T: FromStr,
+    T::Err: Display,
+    D: serde::de::Deserializer<'de>,
 {
     let s = String::deserialize(deserializer)?;
     T::from_str(&s).map_err(serde::de::Error::custom)

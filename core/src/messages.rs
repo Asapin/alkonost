@@ -1,6 +1,6 @@
 use std::collections::HashSet;
 
-use crate::{SuspicionReason, types::Action};
+use crate::{types::Action, SuspicionReason};
 
 #[derive(Debug)]
 pub enum StreamFinderMessages {
@@ -10,10 +10,7 @@ pub enum StreamFinderMessages {
     UpdatePollInterval(u64),
     UpdateUserAgent(String),
     UpdateBrowserVersion(String),
-    UpdateBrowserNameAndVersion {
-        name: String,
-        version: String
-    }
+    UpdateBrowserNameAndVersion { name: String, version: String },
 }
 
 #[derive(Debug)]
@@ -22,10 +19,7 @@ pub enum ChatManagerMessages {
     FoundStreamIds(HashSet<String>),
     UpdateUserAgent(String),
     UpdateBrowserVersion(String),
-    UpdateBrowserNameAndVersion {
-        name: String,
-        version: String
-    }
+    UpdateBrowserNameAndVersion { name: String, version: String },
 }
 
 #[derive(Debug)]
@@ -33,11 +27,11 @@ pub enum SpamDetectorMessages {
     Close,
     NewBatch {
         video_id: String,
-        actions: Vec<Action>
+        actions: Vec<Action>,
     },
     StreamEnded {
-        video_id: String
-    }
+        video_id: String,
+    },
 }
 
 #[derive(Debug)]
@@ -45,11 +39,11 @@ pub enum DetectorResults {
     Close,
     ProcessingResult {
         video_id: String,
-        decisions: Vec<DetectorDecision>
+        decisions: Vec<DetectorDecision>,
     },
     StreamEnded {
-        video_id: String
-    }
+        video_id: String,
+    },
 }
 
 #[derive(Debug)]
@@ -69,8 +63,8 @@ impl DetectorDecision {
     }
 
     pub fn add_user(user: String, reason: SuspicionReason) -> Self {
-        DetectorDecision { 
-            user, 
+        DetectorDecision {
+            user,
             timestamp: chrono::Utc::now().timestamp() as u64,
             action: DecisionAction::Add(reason),
         }
@@ -80,5 +74,5 @@ impl DetectorDecision {
 #[derive(Debug)]
 pub enum DecisionAction {
     Add(SuspicionReason),
-    Remove
+    Remove,
 }

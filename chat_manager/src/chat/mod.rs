@@ -1,17 +1,34 @@
-use core::{ActorWrapper, http_client::{HttpClient, RequestSettings}, messages::{ChatManagerMessages, SpamDetectorMessages}};
-use std::{collections::{HashMap, HashSet}, sync::Arc, time::Duration};
+use core::{
+    http_client::{HttpClient, RequestSettings},
+    messages::{ChatManagerMessages, SpamDetectorMessages},
+    ActorWrapper,
+};
+use std::{
+    collections::{HashMap, HashSet},
+    sync::Arc,
+    time::Duration,
+};
 
-use tokio::{sync::mpsc::{self, Receiver, Sender}, task::JoinHandle, time::timeout};
+use tokio::{
+    sync::mpsc::{self, Receiver, Sender},
+    task::JoinHandle,
+    time::timeout,
+};
 
 use crate::chat::inner_messages::ManagerMessages;
 
-use self::{error::ChatManagerError, inner_messages::{PollerMessages, PollingResultMessages}, poller::{ChatPoller, InitResult}, retranslator::Retranslator};
+use self::{
+    error::ChatManagerError,
+    inner_messages::{PollerMessages, PollingResultMessages},
+    poller::{ChatPoller, InitResult},
+    retranslator::Retranslator,
+};
 
 mod chat_params;
-mod poller;
-mod params_extractor;
 mod error;
 mod inner_messages;
+mod params_extractor;
+mod poller;
 mod retranslator;
 
 pub struct ChatManager {
@@ -23,39 +40,30 @@ pub struct ChatManager {
     http_client: Arc<HttpClient>,
     request_settings: RequestSettings,
     inprogress_chats: HashMap<String, ActorWrapper<PollerMessages>>,
-    detector_tx: Sender<SpamDetectorMessages>
+    detector_tx: Sender<SpamDetectorMessages>,
 }
 
 impl ChatManager {
     pub fn init(
-        http_client: Arc<HttpClient>, 
+        http_client: Arc<HttpClient>,
         request_settings: RequestSettings,
-        detector_tx: Sender<SpamDetectorMessages>
+        detector_tx: Sender<SpamDetectorMessages>,
     ) -> ActorWrapper<ChatManagerMessages> {
         let (outside_tx, outside_rx) = mpsc::channel(32);
         let (manager_tx, manager_rx) = mpsc::channel(32);
         let (poller_tx, poller_rx) = mpsc::channel(32);
 
         let mut incoming_proxy = Retranslator::init(
-            outside_rx, 
-            manager_tx.clone(), 
-            Box::new(|message| {
-                match message {
-                    ManagerMessages::Close => true,
-                    _ => false,
-                }
-            })
+            outside_rx,
+            manager_tx.clone(),
+            Box::new(|message| matches!(message, ManagerMessages::Close)),
         );
 
         let incoming_proxy_join_handler = tokio::spawn(async move {
             let _result = incoming_proxy.run().await;
         });
 
-        let mut poller_proxy = Retranslator::init(
-            poller_rx,
-            manager_tx,
-            Box::new(|_| false)
-        );
+        let mut poller_proxy = Retranslator::init(poller_rx, manager_tx, Box::new(|_| false));
 
         let poller_proxy_join_handler = tokio::spawn(async move {
             let _result = poller_proxy.run().await;
@@ -69,7 +77,7 @@ impl ChatManager {
             http_client,
             request_settings,
             inprogress_chats: HashMap::with_capacity(20),
-            detector_tx
+            detector_tx,
         };
 
         let join_handle = tokio::spawn(async move {
@@ -78,7 +86,7 @@ impl ChatManager {
 
         ActorWrapper {
             join_handle,
-            tx: outside_tx
+            tx: outside_tx,
         }
     }
 
@@ -86,7 +94,7 @@ impl ChatManager {
         match self.do_run().await {
             Ok(_r) => {
                 // Chat manager was closed due to received `Close` message
-            },
+            }
             Err(e) => {
                 println!("ChatManager: encountered an error: {}", &e);
             }
@@ -95,7 +103,7 @@ impl ChatManager {
         match self.close_gracefully().await {
             Ok(_r) => {
                 // All active chat pollers were closed successfully
-            },
+            }
             Err(e) => {
                 println!("ChatManager: encountered an error while closing: {}", &e);
             }
@@ -110,78 +118,83 @@ impl ChatManager {
         loop {
             let message = match self.manager_rx.recv().await {
                 Some(message) => message,
-                None => {
-                    return Err(ChatManagerError::ReceiverClosed)
-                },
+                None => return Err(ChatManagerError::ReceiverClosed),
             };
 
-            match timeout(Duration::from_millis(10_000), self.process_message(message.clone())).await {
-                Ok(r) => {
-                    match r? {
-                        true => return Ok(()),
-                        false => {  }
-                    }
-                }
-                Err(_e) => {
-                    return Err(ChatManagerError::SlowProcessing(message))
-                }
+            match timeout(
+                Duration::from_millis(10_000),
+                self.process_message(message.clone()),
+            )
+            .await
+            {
+                Ok(r) => match r? {
+                    true => return Ok(()),
+                    false => {}
+                },
+                Err(_e) => return Err(ChatManagerError::SlowProcessing(message)),
             }
-        };
+        }
     }
 
-    async fn process_message(&mut self, message: ManagerMessages) -> Result<bool, ChatManagerError> {
+    async fn process_message(
+        &mut self,
+        message: ManagerMessages,
+    ) -> Result<bool, ChatManagerError> {
         match message {
             ManagerMessages::Close => {
                 return Ok(true);
-            },
+            }
             ManagerMessages::FoundStreamIds(stream_ids) => {
                 let new_streams = stream_ids
                     .into_iter()
                     .filter(|video_id| !self.inprogress_chats.contains_key(video_id))
                     .collect::<Vec<_>>();
-                
+
                 for video_id in new_streams {
                     match ChatPoller::init(
-                        video_id.clone(), 
-                        self.http_client.clone(), 
-                        self.request_settings.clone(), 
-                        self.poller_tx.clone()
-                    ).await {
-                        Ok(r) => {
-                            match r {
-                                InitResult::ChatDisabled => {  },
-                                InitResult::Started(actor) => {
-                                    self.inprogress_chats.insert(video_id, actor);
-                                }
+                        video_id.clone(),
+                        self.http_client.clone(),
+                        self.request_settings.clone(),
+                        self.poller_tx.clone(),
+                    )
+                    .await
+                    {
+                        Ok(r) => match r {
+                            InitResult::ChatDisabled => {}
+                            InitResult::Started(actor) => {
+                                self.inprogress_chats.insert(video_id, actor);
                             }
                         },
                         Err(e) => {
                             // Not a hard error
-                            println!("ChatManager: Couldn't initialize chat poller for {}: {}", &video_id, &e);
+                            println!(
+                                "ChatManager: Couldn't initialize chat poller for {}: {}",
+                                &video_id, &e
+                            );
                         }
                     }
                 }
-            },
+            }
             ManagerMessages::UpdateUserAgent(user_agent) => {
                 self.request_settings.user_agent = user_agent.clone();
                 let poller_message = PollerMessages::UpdateUserAgent(user_agent);
                 self.send_message_to_pollers(poller_message).await?;
-            },
+            }
             ManagerMessages::UpdateBrowserVersion(version) => {
                 self.request_settings.browser_version = version.clone();
                 let poller_message = PollerMessages::UpdateBrowserVersion(version);
                 self.send_message_to_pollers(poller_message).await?;
-            },
+            }
             ManagerMessages::UpdateBrowserNameAndVersion { name, version } => {
                 self.request_settings.browser_name = name.clone();
                 self.request_settings.browser_version = name.clone();
                 let poller_message = PollerMessages::UpdateBrowserNameAndVersion { name, version };
                 self.send_message_to_pollers(poller_message).await?;
-            },
+            }
             ManagerMessages::NewMessages { video_id, actions } => {
                 let detector_message = SpamDetectorMessages::NewBatch { video_id, actions };
                 self.detector_tx.send(detector_message).await?;
-            },
+            }
             ManagerMessages::StreamEnded { video_id } => {
                 if let Some(actor) = self.inprogress_chats.remove(&video_id) {
                     actor.join_handle.await?;
@@ -190,18 +203,21 @@ impl ChatManager {
                 } else {
                     println!("ChatManager: Received `Close` from the {} chat, but it already has been closed", &video_id);
                 }
-            },
+            }
         };
 
-        return Ok(false)
+        Ok(false)
     }
 
-    async fn send_message_to_pollers(&mut self, message: PollerMessages) -> Result<(), ChatManagerError> {
+    async fn send_message_to_pollers(
+        &mut self,
+        message: PollerMessages,
+    ) -> Result<(), ChatManagerError> {
         let mut already_closed_pollers = HashSet::new();
 
         for (video_id, actor) in self.inprogress_chats.iter_mut() {
             match actor.tx.send(message.clone()).await {
-                Ok(_r) => {  },
+                Ok(_r) => {}
                 Err(_e) => {
                     // It's possible for a poller to be closed but still present in the hashmap,
                     // because the chat manager is yet to process the StreamEnded message from the poller.
@@ -218,7 +234,7 @@ impl ChatManager {
                     chat_poller.join_handle.await?;
                     let detector_message = SpamDetectorMessages::StreamEnded { video_id };
                     self.detector_tx.send(detector_message).await?;
-                },
+                }
                 None => {
                     return Err(ChatManagerError::ChatPollerDisappeared);
                 }
@@ -238,21 +254,21 @@ impl ChatManager {
         while let Ok(message) = timeout(Duration::from_millis(5000), self.manager_rx.recv()).await {
             if let Some(content) = message {
                 match content {
-                    ManagerMessages::Close |
-                    ManagerMessages::FoundStreamIds(_) |
-                    ManagerMessages::UpdateUserAgent(_) |
-                    ManagerMessages::UpdateBrowserVersion(_) |
-                    ManagerMessages::UpdateBrowserNameAndVersion { .. } => {
+                    ManagerMessages::Close
+                    | ManagerMessages::FoundStreamIds(_)
+                    | ManagerMessages::UpdateUserAgent(_)
+                    | ManagerMessages::UpdateBrowserVersion(_)
+                    | ManagerMessages::UpdateBrowserNameAndVersion { .. } => {
                         return Err(ChatManagerError::UseAfterClosing);
-                    },
+                    }
                     ManagerMessages::NewMessages { video_id, actions } => {
                         let detector_message = SpamDetectorMessages::NewBatch { video_id, actions };
                         self.detector_tx.send(detector_message).await?;
-                    },
+                    }
                     ManagerMessages::StreamEnded { video_id } => {
                         let detector_message = SpamDetectorMessages::StreamEnded { video_id };
                         self.detector_tx.send(detector_message).await?;
-                    },
+                    }
                 }
             }
         }
@@ -263,10 +279,13 @@ impl ChatManager {
     async fn shutdown(mut self) {
         println!("ChatManager: Shutting down incoming proxy...");
         match self.incoming_proxy_join_handler.await {
-            Ok(_r) => { },
+            Ok(_r) => {}
             Err(e) => {
-                println!("ChatManager: Error, while waiting for an incoming proxy to close: {}", ChatManagerError::from(e));
-            },
+                println!(
+                    "ChatManager: Error, while waiting for an incoming proxy to close: {}",
+                    ChatManagerError::from(e)
+                );
+            }
         }
 
         println!("ChatManager: Aborting ChatPollers that weren't closed before...");
@@ -280,7 +299,7 @@ impl ChatManager {
         println!("ChatManager: Sending `Close` message to the spam detector...");
         let detector_message = SpamDetectorMessages::Close;
         match self.detector_tx.send(detector_message).await {
-            Ok(_r) => {  },
+            Ok(_r) => {}
             Err(e) => {
                 println!("ChatManager: Error, while trying to send `Close` message to the spam detector: {}", &e);
             }

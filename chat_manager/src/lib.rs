@@ -1,3 +1,3 @@
-mod youtube_types;
-mod type_converter;
 pub mod chat;
+mod type_converter;
+mod youtube_types;
