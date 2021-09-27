@@ -17,7 +17,7 @@ All modules, except `core` are implemented as independend actors, which should a
 
 ## YouTube API
 
-This app doesn't use YouTube API, and instead opted to emulate the behaviour of a browser with the chat being open. The reason for this decision is that YouTube by default provides only 10 thousand credits a day to spend on requests. 1 request to load new messages from the chat costs [5 credits][1], and, depending on how active the chat, should be performed every 5-10 seconds. If we assume that on average the app would perform 5 requests per minute, we can estimate that we will spend around 1500 credits per hour. 
+This app doesn't use YouTube API, and instead tries to emulate the behaviour of a browser. The reason for this decision is that YouTube by default provides only 10 thousand credits a day to spend on requests. 1 request to load new messages from the chat costs [5 credits][1], and, depending on how active the chat, should be performed every 5-10 seconds. If we assume that on average the app would perform 5 requests per minute, we can estimate that we will spend around 1500 credits per hour. 
 
 [1]: https://stackoverflow.com/a/67745370
 
