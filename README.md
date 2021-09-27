@@ -24,3 +24,11 @@ This app doesn't use YouTube API, and instead tries to emulate the behaviour of 
 And some channels either stream for 24/7, for example [Lofi Girl](https://www.youtube.com/channel/UCSJ4gkVC6NrvII8umztf0Ow), or have streams planned far into the future, that effectively act as a chat rooms for viewers without the need to create Discord server. That's ~36000 credits per day for each such stream/chat room.
 
 Moreover, to get the list of live broadcasts, we would have to use [Search API](https://developers.google.com/youtube/v3/docs/search/list), which costs 100 credist for each request, meaning that we can only make 1 request every ~15 minutes. And then we would have only 400 credits left to actually collect chat messages. And that's only for 1 channel.
+
+## How to use
+
+At the moment, all parameters are hardcoded inside the `main.rs` file. Spam detection parameters are stored inside `DetectorParams` struct. 
+
+The list of channels to track is stored inside `channels` hash set (lines 73-85). The app is using `channel id` when adding a new channel to track, but some YouTube channels use custom user name instead of channel id (e.g. https://www.youtube.com/user/PewDiePie). In that case you need to open any video from that channel, and then click on channel's name under the video. This would open the same channel page, but this time instead of a custom user name, you'll see a channel id in the browser's address bar (e.g. https://www.youtube.com/channel/UC-lHJZR3Gqxm24_Vd_AJ5Yw for PewDiePie).
+
+To actually run the app, just run `cargo run --release`
