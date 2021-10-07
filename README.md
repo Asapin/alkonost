@@ -25,10 +25,12 @@ And some channels either stream for 24/7, for example [Lofi Girl](https://www.yo
 
 Moreover, to get the list of live broadcasts, we would have to use [Search API](https://developers.google.com/youtube/v3/docs/search/list), which costs 100 credist for each request, meaning that we can only make 1 request every ~15 minutes. And then we would have only 400 credits left to actually collect chat messages. And that's only for 1 channel.
 
-## How to use
+## Setup
 
-At the moment, all parameters are hardcoded inside the `main.rs` file. Spam detection parameters are stored inside `DetectorParams` struct. 
+Before using the app, you need to provide several settings: spam detection parameters (`DetectorParams` struct), user agent to use when making HTTP-requests (`RequestSettings` struct) and a frequency of how often the app should check for new streams.
 
-The list of channels to track is stored inside `channels` hash set (lines 73-85). The app is using `channel id` when adding a new channel to track, but some YouTube channels use custom user name instead of channel id (e.g. https://www.youtube.com/user/PewDiePie). In that case you need to open any video from that channel, and then click on channel's name under the video. This would open the same channel page, but this time instead of a custom user name, you'll see a channel id in the browser's address bar (e.g. https://www.youtube.com/channel/UC-lHJZR3Gqxm24_Vd_AJ5Yw for PewDiePie).
+For now all those setting are hardcoded inside each UI implementation, but eventually they all should be loaded from a database, and should be accessible for modification at runtime through UI.
 
-To actually run the app, just run `cargo run --release`
+You also need to provide a list of channels to track. The app is using `channel id` when adding a new channel, but some YouTube channels use custom user name instead of channel id (e.g. https://www.youtube.com/user/PewDiePie). In that case you need to open any video from the channel, and then click on the channel's name under the video. This would open the same channel page, but this time instead of custom user name, you'll see channel id in the browser's address bar (e.g. https://www.youtube.com/channel/UC-lHJZR3Gqxm24_Vd_AJ5Yw for PewDiePie).
+
+To see what exactly you need to do, when implementing new UI, please check how simple [CLI UI](ui/src/bin/cli.rs) is implemented.
