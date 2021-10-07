@@ -1,6 +1,6 @@
 use std::{collections::HashSet, time::Duration};
 
-use alkonost::{Alkonost, DetectorParams, DetectorResults, RequestSettings, StreamFinderMessages};
+use alkonost::{Alkonost, AlkonostMessage, DetectorParams, DetectorResults, RequestSettings, StreamFinderMessages};
 use tokio::time::sleep;
 
 #[tokio::main]
@@ -16,7 +16,7 @@ pub async fn main() {
     let poll_interval = Duration::from_secs(90);
 
     let Alkonost {
-        mut detector_rx, 
+        mut alkonost_rx, 
         handler, 
         stream_finder_tx 
     } = match Alkonost::init(detector_params, request_settings, poll_interval) {
@@ -29,25 +29,32 @@ pub async fn main() {
 
     let detector_results = tokio::spawn(async move {
         loop {
-            match detector_rx.recv().await {
+            match alkonost_rx.recv().await {
                 Some(results) => match results {
-                    DetectorResults::Close => {
-                        return;
-                    }
-                    DetectorResults::ProcessingResult {
-                        video_id,
-                        decisions,
-                    } => {
-                        println!("CLI: <{}>: {:?}", video_id, decisions);
-                    }
-                    DetectorResults::StreamEnded { video_id } => {
+                    AlkonostMessage::ChatClosed(video_id) => {
                         println!("CLI: stream <{}> ended", video_id);
-                    }
+                    },
+                    AlkonostMessage::NewChats(new_chats) => {
+                        println!("CLI: detected new chats: {:?}", new_chats);
+                    },
+                    AlkonostMessage::DetectorMessage(detector_result) => {
+                        match detector_result {
+                            DetectorResults::Close => {
+                                return;
+                            },
+                            DetectorResults::ProcessingResult {
+                                video_id,
+                                decisions
+                            } => {
+                                println!("CLI: <{}>: {:?}", video_id, decisions);
+                            },
+                        };
+                    },
                 },
                 None => {
                     println!("CLI: Channel from the detector manager has been closed before receiving `Close` message.")
                 }
-            }
+            };
         }
     });
 
