@@ -9,9 +9,9 @@ Consists of several modules:
 * [StreamFinder](stream_finder/) - monitors YouTube channels for live and upcoming streams and premiers
 * [ChatManager](chat_manager/) - collects messages from every open chat room
 * [Detector](detector/) - analyses messages and tries to detect potential spammers
-* [CLI](cli/) - temporary CLI front end
 * `DB` - saves all messages and desicions, made by `Detector` to a database (module is not implemented yet)
-* `WEB` - web front end, that allows to add and remove channels from monitoring and to change various aspects of spam detection (module is not implemented yet)
+* [Alkonost](alkonost/) - main library, responsible for creating all other modules and re-exporting only functionality, that should be used by UI implementation
+* [UI](ui/) - a collection of UI implementations for `Alkonost`
 
 All modules, except `core` are implemented as independend actors, which should allow for an easy horizontal scallability in the future, if such a need ever arises.
 
