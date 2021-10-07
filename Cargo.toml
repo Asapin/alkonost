@@ -4,7 +4,8 @@ members = [
     "chat_manager",
     "stream_finder",
     "detector",
-    "cli"
+    "alkonost",
+    "ui"
 ]
 
 [profile.release]

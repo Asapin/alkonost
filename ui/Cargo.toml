@@ -1,0 +1,15 @@
+[package]
+name = "ui"
+version = "0.1.0"
+authors = ["Asapin <1559761+Asapin@users.noreply.github.com>"]
+description = "Various UI options for Alkonost"
+edition = "2018"
+readme = "README.md"
+
+[dependencies]
+alkonost = { path = "../alkonost", version = "^0" }
+thiserror = "^1"
+tokio = { version = "^1", default-features = false, features = ["macros", "rt-multi-thread"]}
+
+[[bin]]
+name = "cli"

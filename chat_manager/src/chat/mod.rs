@@ -245,6 +245,7 @@ impl ChatManager {
     }
 
     async fn close_gracefully(&mut self) -> Result<(), ChatManagerError> {
+        println!("ChatManager: Sending `Close` message to currently active chat pollers...");
         let poller_message = PollerMessages::Close;
         self.send_message_to_pollers(poller_message).await?;
         for (_, actor) in self.inprogress_chats.drain() {

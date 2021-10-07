@@ -1,8 +1,8 @@
 [package]
-name = "cli"
+name = "alkonost"
 version = "0.1.0"
 authors = ["Asapin <1559761+Asapin@users.noreply.github.com>"]
-description = "Simple CLI"
+description = "Main library to use as a dependency for binaries, that provide a UI"
 edition = "2018"
 readme = "README.md"
 
@@ -12,4 +12,4 @@ chat_manager = { path = "../chat_manager", version = "^0" }
 stream_finder = { path = "../stream_finder", version = "^0" }
 detector = { path = "../detector", version = "^0" }
 thiserror = "^1"
-tokio = { version = "^1", default-features = false, features = ["macros", "rt-multi-thread"]}
+tokio = { version = "^1", default-features = false }
