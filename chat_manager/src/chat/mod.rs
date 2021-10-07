@@ -121,7 +121,7 @@ impl ChatManager {
             };
 
             match timeout(
-                Duration::from_millis(10_000),
+                Duration::from_millis(30_000),
                 self.process_message(message.clone()),
             )
             .await
@@ -258,6 +258,7 @@ impl ChatManager {
             let _r = actor.join_handle.await?;
         }
 
+        println!("ChatManager: Waiting for remaining messages...");
         while let Ok(message) = timeout(Duration::from_millis(5000), self.manager_rx.recv()).await {
             if let Some(content) = message {
                 match content {
