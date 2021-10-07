@@ -35,14 +35,18 @@ pub enum SpamDetectorMessages {
 }
 
 #[derive(Debug)]
+pub enum AlkonostMessage {
+    DetectorMessage(DetectorResults),
+    NewChats(HashSet<String>),
+    ChatClosed(String)
+}
+
+#[derive(Debug)]
 pub enum DetectorResults {
     Close,
     ProcessingResult {
         video_id: String,
         decisions: Vec<DetectorDecision>,
-    },
-    StreamEnded {
-        video_id: String,
     },
 }
 

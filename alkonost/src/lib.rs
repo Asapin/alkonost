@@ -12,7 +12,11 @@ use tokio::{sync::mpsc::{self, Receiver, Sender}, task::JoinHandle};
 pub mod error;
 pub type DetectorParams = detector::detector_params::DetectorParams;
 pub type RequestSettings = core::http_client::RequestSettings;
+pub type AlkonostMessage = core::messages::AlkonostMessage;
 pub type DetectorResults = core::messages::DetectorResults;
+pub type DetectorDecision = core::messages::DetectorDecision;
+pub type DecisionAction = core::messages::DecisionAction;
+pub type SuspicionReason = core::SuspicionReason;
 pub type StreamFinderMessages = core::messages::StreamFinderMessages;
 
 pub struct AlkonostHandle {
@@ -30,7 +34,7 @@ impl AlkonostHandle {
 }
 
 pub struct Alkonost {
-    pub detector_rx: Receiver<DetectorResults>,
+    pub alkonost_rx: Receiver<AlkonostMessage>,
     pub handler: AlkonostHandle,
     pub stream_finder_tx: Sender<StreamFinderMessages>
 }
@@ -42,12 +46,13 @@ impl Alkonost {
         chat_poll_interval: Duration
     ) -> Result<Self, AlkonostInitError> {
         let http_client = Arc::new(HttpClient::init()?);
-        let (detector_result_tx, detector_result_rx) = mpsc::channel(32);
-        let detector = DetectorManager::init(detector_params, detector_result_tx);
+        let (alkonost_tx, alkonost_rx) = mpsc::channel(32);
+        let detector = DetectorManager::init(detector_params, alkonost_tx.clone());
         let chat_manager = ChatManager::init(
             http_client.clone(), 
             request_settings.clone(), 
-            detector.tx
+            detector.tx,
+            alkonost_tx
         );
         let stream_finder = StreamFinder::init(
             http_client, 
@@ -63,7 +68,7 @@ impl Alkonost {
         };
 
         Ok(Self {
-            detector_rx: detector_result_rx,
+            alkonost_rx,
             handler: alkonost_handler,
             stream_finder_tx: stream_finder.tx
         })

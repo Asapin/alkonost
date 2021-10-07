@@ -1,7 +1,4 @@
-use core::{
-    messages::{DetectorResults, SpamDetectorMessages},
-    ActorWrapper,
-};
+use core::{ActorWrapper, messages::{AlkonostMessage, DetectorResults, SpamDetectorMessages}};
 use std::collections::HashMap;
 
 use detector_params::DetectorParams;
@@ -20,11 +17,11 @@ enum DetectorError {
     #[error("Incoming messages channel was closed. That should never happen.")]
     IncomingChannelClosed,
     #[error("Outgoing messages channel was closed: {0}")]
-    OutgoingChannelClosed(#[source] SendError<DetectorResults>),
+    OutgoingChannelClosed(#[source] SendError<AlkonostMessage>),
 }
 
-impl From<SendError<DetectorResults>> for DetectorError {
-    fn from(e: SendError<DetectorResults>) -> Self {
+impl From<SendError<AlkonostMessage>> for DetectorError {
+    fn from(e: SendError<AlkonostMessage>) -> Self {
         DetectorError::OutgoingChannelClosed(e)
     }
 }
@@ -32,20 +29,20 @@ impl From<SendError<DetectorResults>> for DetectorError {
 pub struct DetectorManager {
     streams: HashMap<String, SpamDetector>,
     rx: Receiver<SpamDetectorMessages>,
-    result_tx: Sender<DetectorResults>,
+    alkonost_tx: Sender<AlkonostMessage>,
     params: DetectorParams,
 }
 
 impl DetectorManager {
     pub fn init(
         detector_params: DetectorParams,
-        result_tx: Sender<DetectorResults>,
+        alkonost_tx: Sender<AlkonostMessage>,
     ) -> ActorWrapper<SpamDetectorMessages> {
         let (tx, rx) = mpsc::channel(32);
         let manager = Self {
             streams: HashMap::new(),
             rx,
-            result_tx,
+            alkonost_tx,
             params: detector_params,
         };
 
@@ -67,7 +64,7 @@ impl DetectorManager {
         }
 
         println!("DetectorManager: Sending `Close` message down the line...");
-        match self.result_tx.send(DetectorResults::Close).await {
+        match self.alkonost_tx.send(AlkonostMessage::DetectorMessage(DetectorResults::Close)).await {
             Ok(_r) => {
                 // Successfully sent a message to the receiver
                 // Nothing else to do
@@ -104,13 +101,13 @@ impl DetectorManager {
                             decisions,
                         };
 
-                        self.result_tx.send(result).await?;
+                        self.alkonost_tx.send(AlkonostMessage::DetectorMessage(result)).await?;
                     }
                 }
                 SpamDetectorMessages::StreamEnded { video_id } => {
                     self.streams.remove(&video_id);
-                    self.result_tx
-                        .send(DetectorResults::StreamEnded { video_id })
+                    self.alkonost_tx
+                        .send(AlkonostMessage::ChatClosed(video_id))
                         .await?;
                 }
             }

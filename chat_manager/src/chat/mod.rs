@@ -1,8 +1,4 @@
-use core::{
-    http_client::{HttpClient, RequestSettings},
-    messages::{ChatManagerMessages, SpamDetectorMessages},
-    ActorWrapper,
-};
+use core::{ActorWrapper, http_client::{HttpClient, RequestSettings}, messages::{AlkonostMessage, ChatManagerMessages, SpamDetectorMessages}};
 use std::{
     collections::{HashMap, HashSet},
     sync::Arc,
@@ -41,6 +37,7 @@ pub struct ChatManager {
     request_settings: RequestSettings,
     inprogress_chats: HashMap<String, ActorWrapper<PollerMessages>>,
     detector_tx: Sender<SpamDetectorMessages>,
+    alkonost_tx: Sender<AlkonostMessage>,
 }
 
 impl ChatManager {
@@ -48,6 +45,7 @@ impl ChatManager {
         http_client: Arc<HttpClient>,
         request_settings: RequestSettings,
         detector_tx: Sender<SpamDetectorMessages>,
+        alkonost_tx: Sender<AlkonostMessage>,
     ) -> ActorWrapper<ChatManagerMessages> {
         let (outside_tx, outside_rx) = mpsc::channel(32);
         let (manager_tx, manager_rx) = mpsc::channel(32);
@@ -78,6 +76,7 @@ impl ChatManager {
             request_settings,
             inprogress_chats: HashMap::with_capacity(20),
             detector_tx,
+            alkonost_tx,
         };
 
         let join_handle = tokio::spawn(async move {
@@ -149,6 +148,8 @@ impl ChatManager {
                     .into_iter()
                     .filter(|video_id| !self.inprogress_chats.contains_key(video_id))
                     .collect::<Vec<_>>();
+                
+                let mut new_active_chats = HashSet::new();
 
                 for video_id in new_streams {
                     match ChatPoller::init(
@@ -162,6 +163,7 @@ impl ChatManager {
                         Ok(r) => match r {
                             InitResult::ChatDisabled => {}
                             InitResult::Started(actor) => {
+                                new_active_chats.insert(video_id.clone());
                                 self.inprogress_chats.insert(video_id, actor);
                             }
                         },
@@ -173,6 +175,10 @@ impl ChatManager {
                             );
                         }
                     }
+                }
+
+                if !new_active_chats.is_empty() {
+                    self.alkonost_tx.send(AlkonostMessage::NewChats(new_active_chats)).await?;
                 }
             }
             ManagerMessages::UpdateUserAgent(user_agent) => {

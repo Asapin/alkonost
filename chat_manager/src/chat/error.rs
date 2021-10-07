@@ -1,4 +1,4 @@
-use core::{http_client::HttpClientLoadError, messages::SpamDetectorMessages};
+use core::{http_client::HttpClientLoadError, messages::{AlkonostMessage, SpamDetectorMessages}};
 
 use thiserror::Error;
 use tokio::{sync::mpsc::error::SendError, task::JoinError};
@@ -13,6 +13,8 @@ pub enum ChatManagerError {
     ReceiverClosed,
     #[error("Couldn't send message to the spam detector: {0}")]
     DetectorChannelClosed(#[source] SendError<SpamDetectorMessages>),
+    #[error("Couldn't send message to the alkonost channel: {0}")]
+    AlkonostChannelClosed(#[source] SendError<AlkonostMessage>),
     #[error("Couldn't join Tokio task: {0}")]
     JoinTask(#[source] JoinError),
     #[error("Stream finder has attempted to send another message after if already sent `Close` message. Should never happen")]
@@ -26,6 +28,12 @@ pub enum ChatManagerError {
 impl From<SendError<SpamDetectorMessages>> for ChatManagerError {
     fn from(e: SendError<SpamDetectorMessages>) -> Self {
         ChatManagerError::DetectorChannelClosed(e)
+    }
+}
+
+impl From<SendError<AlkonostMessage>> for ChatManagerError {
+    fn from(e: SendError<AlkonostMessage>) -> Self {
+        ChatManagerError::AlkonostChannelClosed(e)
     }
 }
 
