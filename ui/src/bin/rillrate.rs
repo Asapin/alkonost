@@ -93,99 +93,17 @@ pub async fn main() {
     });
 
     let mut channels = HashSet::new();
-        // 0th Gen
-        channels.insert("UCp6993wxpyDPHUpavwDFqgg"); // Tokino Sora
-        channels.insert("UCDqI2jOz0weumE8s7paEk6g"); // Robocosan
-        channels.insert("UC-hM6YJuNYVAmUWxeIr9FeA"); // Sakura Miko
-        channels.insert("UC5CwaMl1eIgY8h02uZw7u8A"); // Hoshimachi Suisei
-        channels.insert("UC0TXe_LYZ4scaW2XMyi5_kw"); // AZKi
-    
-        // 1st Gen
-        channels.insert("UCD8HOxPs4Xvsm8H0ZxXGiBw"); // Yozora Mel
-        channels.insert("UCdn5BQ06XqgXoAxIhbqw5Rg"); // Shirakami Fubuki
-        channels.insert("UCQ0UDLQCjY0rmuxCDE38FGg"); // Natsuiro Matsuri
-        channels.insert("UCFTLzh12_nrtzqBPsTCqenA"); // Aki Rosenthal
-        channels.insert("UCLbtM3JZfRTg8v2KGag-RMw"); // Aki Rosenthal (sub)
-        channels.insert("UC1CfXB_kRs3C-zaeTG3oGyg"); // Akai Haato
-        channels.insert("UCHj_mh57PVMXhAUDphUQDFA"); // Akai Haato (sub)
-    
-        // 2nd Gen
-        channels.insert("UC1opHUrw8rvnsadT-iGp7Cg"); // Minato Aqua
-        channels.insert("UCXTpFs_3PqI41qX2d9tL2Rw"); // Murasaki Shion
-        channels.insert("UC7fk0CB07ly8oSl0aqKkqFg"); // Nakiri Ayame
-        channels.insert("UC1suqwovbL1kzsoaZgFZLKg"); // Yuzuki Choco
-        channels.insert("UCp3tgHXw_HI0QMk1K8qh3gQ"); // Yuzuki Choco (sub)
-        channels.insert("UCvzGlP9oQwU--Y0r9id_jnA"); // Oozora Subaru
-    
-        // Gamers
-        channels.insert("UCp-5t9SrOQwXMU7iIjQfARg"); // Ookami Mio
-        channels.insert("UCvaTdHTWBGv3MKj3KVqJVCw"); // Nekomata Okayu
-        channels.insert("UChAnqc_AY5_I3Px5dig3X1Q"); // Inugami Korone
-    
-        // 3rd Gen
-        channels.insert("UC1DCedRgGHBdm81E1llLhOQ"); // Usada Pekora
-        channels.insert("UCl_gCybOJRIgOXw6Qb4qJzQ"); // Uruha Rushia
-        channels.insert("UCvInZx9h3jC2JzsIzoOebWg"); // Shiranui Flare
-        channels.insert("UCdyqAaZDKHXg4Ahi7VENThQ"); // Shirogane Noel
-        channels.insert("UCCzUftO8KOVkV4wQG1vkUvg"); // Houshou Marine
-    
-        // 4th Gen
-        channels.insert("UCZlDXzGoo7d44bwdNObFacg"); // Amane Kanata
-        channels.insert("UCqm3BQLlJfvkTsX_hvm0UmA"); // Tsunomaki Watame
-        channels.insert("UC1uv2Oq6kNxgATlCiez59hw"); // Tokoyami Towa
-        channels.insert("UCa9Y57gfeY0Zro_noHRVrnw"); // Himemori Luna
-        channels.insert("UCS9uQI-jC3DE0L4IpXyvr6w"); // Kiryu Coco
-    
-        // 5th Gen
-        channels.insert("UCFKOVgVbGmX65RxO3EtH3iw"); // Yukihana Lamy
-        channels.insert("UCAWSyEs_Io8MtpY3m-zqILA"); // Momosuzu Nene
-        channels.insert("UCUKD-uaobj9jiqB-VXt71mA"); // Shishiro Botan
-        channels.insert("UCK9V2B22uJYu3N7eR_BT9QA"); // Omaru Polka
-        channels.insert("UCgZuwn-O7Szh9cAgHqJ6vjw"); // Mano Aloe
-    
-        // ID 1st Gen
-        channels.insert("UCOyYb1c43VlX9rc_lT6NKQw"); // Ayunda Risu
-        channels.insert("UCP0BspO_AMEe3aQqqpo89Dg"); // Hoshinova Moona
-        channels.insert("UCAoy6rzhSf4ydcYjJw3WoVg"); // Airani Iofifteen
-        
-        // ID 2nd Gen
-        channels.insert("UCYz_5n-uDuChHtLo7My1HnQ"); // Kureiji Ollie
-        channels.insert("UC727SQYUvx5pDDGQpTICNWg"); // Melfissa Anya
-        channels.insert("UChgTyjG-pdNvxxhdsXfHQ5Q"); // Pavolia Reine
-    
-        // EN 1st Gen
-        channels.insert("UCL_qhgtOy0dy1Agp8vkySQg"); // Mori Calliope
-        channels.insert("UCHsx4Hqa-1ORjQTh9TYDhww"); // Takanashi Kiara
-        channels.insert("UCMwGHR0BTZuLsmjY_NT5Pwg"); // Ninomae Ina'nis
-        channels.insert("UCoSrY_IQQVpmIRZ9Xf-y93g"); // Gawr Gura
-        channels.insert("UCyl1z3jo3XHR1riLFKG5UAg"); // Watson Amelia
-        
-        // Hope
-        channels.insert("UC8rcEBzJSleTkf_-agPM20g"); // IRyS
-    
-        // EN 2nd Gen
-        channels.insert("UCsUj0dszADCGbF3gNrQEuSQ"); // Tsukumo Sana
-        channels.insert("UCO_aKKYxn4tvrqPjcTzZ6EQ"); // Ceres Fauna
-        channels.insert("UCmbs8T6MWqUHP1tIQvSgKrg"); // Ouro Kronii
-        channels.insert("UC3n5uGu18FoCy23ggWWp8tA"); // Nanashi Mumei
-        channels.insert("UCgmPnx-EEeOrZSg5Tiw7ZRQ"); // Hakos Baelz
-        
-        // Official channels
-        channels.insert("UCJFZiqLMntJufDCHc6bQixg"); // Hololive
-        channels.insert("UCotXwY6s8pWmuWd_snKYjhg"); // Hololive English
-        channels.insert("UCfrWoRGlawPQDQxxeIDRP0Q"); // Hololive Indonesia
-    
-        // Indies
-        channels.insert("UCIumx9FItlv6B_JsHVMjVYA"); // Mirea Sheltzs
-        channels.insert("UC7YXqPO3eUnxbJ6rN0z2z1Q"); // DELUTAYA Δ
-        channels.insert("UC04BxRrX3feybf0W3r1LcDg"); // Hitomi Cocco
-        channels.insert("UC22BVlBsZc6ta3Dqz75NU6Q"); // Pochimaru
-        // channels.insert("UCdMb33pUEzy-gcoAlaJmVlw"); // Shirono Ten
-        channels.insert("UCGhGLjOhmqfVWmq7AiugHyQ"); // Prune
-        channels.insert("UC9ruVYPv7yJmV0Rh0NKA-Lw"); // kson ONAIR
-        
-        
-        channels.insert("UCSolk-6yJ_-cJPJLtA4UB0A"); // BlackPantsLegion
+    channels.insert("UCtMVHI3AJD4Qk4hcbZnI9ZQ"); // SomeOrdinaryGamers
+    channels.insert("UC-lHJZR3Gqxm24_Vd_AJ5Yw"); // PewDiePie
+    channels.insert("UCqNH56x9g4QYVpzmWTzqVYg"); // Dynamo Gaming
+    channels.insert("UCam8T03EOFBsNdR0thrFHdQ"); // VEGETTA777
+    channels.insert("UCaHEdZtk6k7SVP-umnzifmQ"); // TheDonato
+    channels.insert("UC5c9VlYTSvBSCaoMu_GI6gQ"); // Total Gaming
+    channels.insert("UChXi_PlJkRMPYFQBOJ3MpxA"); // Gyan Gaming
+    channels.insert("UCSJ4gkVC6NrvII8umztf0Ow"); // Lofi Girl
+    channels.insert("UC2wKfjlioOCLP4xQMOWNcgg"); // Typical Gamer
+    channels.insert("UCw7FkXsC00lH2v2yB5LQoYA"); // jackfrags
+    channels.insert("UCsjTQnlZcSB6fSiP7ht_0OQ"); // Hacks Busters
 
     for channel_id in channels {
         let message = StreamFinderMessages::AddChannel(channel_id.to_string());
