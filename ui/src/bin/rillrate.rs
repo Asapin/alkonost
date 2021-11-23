@@ -55,15 +55,12 @@ pub async fn main() {
             match alkonost_rx.recv().await {
                 Some(results) => match results {
                     AlkonostMessage::ChatClosed(video_id) => {
-                        if active_chats.remove(&video_id) {
-                            active_chat_pulse.push(active_chats.len() as f64);
-                        }
+                        active_chats.remove(&video_id);
                     },
                     AlkonostMessage::NewChats(new_chats) => {
                         for chat in new_chats {
                             active_chats.insert(chat);
                         }
-                        active_chat_pulse.push(active_chats.len() as f64);
                     },
                     AlkonostMessage::DetectorMessage(detector_result) => {
                         match detector_result {
@@ -89,6 +86,7 @@ pub async fn main() {
                     println!("RillRate: Channel from the detector manager has been closed before receiving `Close` message.")
                 }
             }
+            active_chat_pulse.push(active_chats.len() as f64);
         }
     });
 
