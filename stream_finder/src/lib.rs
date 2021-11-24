@@ -2,20 +2,20 @@
 
 use core::{
     http_client::{HttpClient, RequestSettings},
-    messages::{ChatManagerMessages, StreamFinderMessages},
     youtube_regexes::YoutubeRegexes,
     ActorWrapper,
 };
 use std::io::Write;
 use std::{
-    collections::{HashMap, HashSet},
+    collections::HashMap,
     fs::File,
     sync::Arc,
     time::Duration,
 };
 
-use error::{LoadError, StreamFinderError};
+use error::StreamFinderError;
 use futures::stream::{FuturesUnordered, StreamExt};
+use messages::{IncMessages, OutMessages};
 use tokio::{
     sync::mpsc::{self, Receiver, Sender},
     time::{timeout_at, Instant},
@@ -24,10 +24,11 @@ use video_list::VideoList;
 
 mod error;
 mod video_list;
+pub mod messages;
 
 pub struct StreamFinder {
-    rx: Receiver<StreamFinderMessages>,
-    result_tx: Sender<ChatManagerMessages>,
+    rx: Receiver<IncMessages>,
+    result_tx: Sender<OutMessages>,
     next_poll_time: Instant,
     poll_interval: Duration,
     channels: HashMap<String, String>,
@@ -35,18 +36,13 @@ pub struct StreamFinder {
     http_client: Arc<HttpClient>,
 }
 
-struct PollChannelsResult {
-    streams: HashSet<String>,
-    encountered_errors: Vec<LoadError>,
-}
-
 impl StreamFinder {
     pub fn init(
         http_client: Arc<HttpClient>,
         request_settings: RequestSettings,
-        result_tx: Sender<ChatManagerMessages>,
+        result_tx: Sender<OutMessages>,
         poll_interval: Duration,
-    ) -> ActorWrapper<StreamFinderMessages> {
+    ) -> ActorWrapper<IncMessages> {
         let (tx, rx) = mpsc::channel(32);
 
         let stream_finder = Self {
@@ -88,27 +84,27 @@ impl StreamFinder {
             while let Ok(recv_result) = timeout_at(self.next_poll_time, self.rx.recv()).await {
                 match recv_result {
                     Some(message) => match message {
-                        StreamFinderMessages::Close => return Ok(()),
-                        StreamFinderMessages::AddChannel(channel_id) => {
+                        IncMessages::Close => return Ok(()),
+                        IncMessages::AddChannel(channel_id) => {
                             let url = format!(
                                 "https://www.youtube.com/channel/{}/videos?view=57",
                                 &channel_id
                             );
                             self.channels.insert(channel_id, url);
                         }
-                        StreamFinderMessages::RemoveChannel(channel_id) => {
+                        IncMessages::RemoveChannel(channel_id) => {
                             self.channels.remove(&channel_id);
                         }
-                        StreamFinderMessages::UpdatePollInterval(interval_ms) => {
+                        IncMessages::UpdatePollInterval(interval_ms) => {
                             self.poll_interval = Duration::from_millis(interval_ms);
                         }
-                        StreamFinderMessages::UpdateUserAgent(user_agent) => {
+                        IncMessages::UpdateUserAgent(user_agent) => {
                             self.request_settings.user_agent = user_agent.clone();
                         }
-                        StreamFinderMessages::UpdateBrowserVersion(version) => {
+                        IncMessages::UpdateBrowserVersion(version) => {
                             self.request_settings.browser_version = version.clone();
                         }
-                        StreamFinderMessages::UpdateBrowserNameAndVersion { name, version } => {
+                        IncMessages::UpdateBrowserNameAndVersion { name, version } => {
                             self.request_settings.browser_name = name.clone();
                             self.request_settings.browser_version = version.clone();
                         }
@@ -121,53 +117,35 @@ impl StreamFinder {
                 }
             }
 
-            let poll_result = self.poll_channels().await;
-            for encountered_error in poll_result.encountered_errors {
-                println!("StreamFinder: {}", &encountered_error);
-            }
-            self.report_poll_results(poll_result.streams).await?;
+            self.poll_channels().await;
             self.next_poll_time = Instant::now() + self.poll_interval;
         }
     }
 
-    async fn poll_channels(&self) -> PollChannelsResult {
+    async fn poll_channels(&self) {
         let poll_results: FuturesUnordered<_> = self
             .channels
             .iter()
             .map(|(channel_id, url)| {
                 let channel_id = channel_id.clone();
-                let url = url.clone();
+                let channel_url = url.clone();
+                let result_tx = self.result_tx.clone();
 
-                async { self.load_streams(channel_id, url).await }
+                async { self.load_streams_from_channel(channel_id, channel_url, result_tx).await }
             })
             .collect();
 
-        let mut streams = HashSet::new();
-        let mut encountered_errors = Vec::new();
-        for poll_result in poll_results.collect::<Vec<_>>().await {
-            match poll_result {
-                Ok(video_ids) => {
-                    if let Some(ids) = video_ids {
-                        streams.extend(ids.into_iter())
-                    }
-                }
-                Err(e) => {
-                    encountered_errors.push(e);
-                }
-            }
-        }
-
-        PollChannelsResult {
-            streams,
-            encountered_errors,
+        for _ in poll_results.collect::<Vec<_>>().await {
+            // Just waiting for all futures to complete
         }
     }
 
-    async fn load_streams(
+    async fn load_streams_from_channel(
         &self,
         channel_id: String,
         channel_url: String,
-    ) -> Result<Option<HashSet<String>>, LoadError> {
+        result_tx: Sender<OutMessages>
+    ) {
         let load_result = self
             .http_client
             .get_request(&channel_url, &self.request_settings.user_agent)
@@ -176,7 +154,8 @@ impl StreamFinder {
         let channel_page = match load_result {
             Ok(data) => data,
             Err(e) => {
-                return Err(LoadError::LoadContent(channel_id, e));
+                println!("StreamFinder: couldn't load content from {} channel, reason: {}", channel_id, e);
+                return;
             }
         };
 
@@ -184,7 +163,7 @@ impl StreamFinder {
             Some(video_list) => video_list,
             None => {
                 // No scheduled or airing streams or premiers
-                return Ok(None);
+                return;
             }
         };
 
@@ -195,31 +174,38 @@ impl StreamFinder {
                 let mut request_output = match File::create(format!("{}.channel", &channel_id)) {
                     Ok(file) => file,
                     Err(io_e) => {
-                        return Err(LoadError::DumpError(channel_id, e, io_e));
+                        println!(
+                            "StreamFinder: couldn't dump an error {} from the channel {}, reason: {}",
+                            e, channel_id, io_e
+                        );
+                        return;
                     }
                 };
 
                 match write!(request_output, "{}", channel_page) {
                     Ok(_r) => {}
                     Err(io_e) => {
-                        return Err(LoadError::DumpError(channel_id, e, io_e));
+                        println!(
+                            "StreamFinder: couldn't dump an error {} from the channel {}, reason: {}",
+                            e, channel_id, io_e
+                        );
+                        return;
                     }
                 }
 
-                return Err(LoadError::VideoList(channel_id, e));
+                println!("StreamFinder: couldn't extract video list from the channel {}, reason: {}", channel_id, e);
+                return;
             }
         };
 
-        Ok(Some(video_list.streams))
-    }
-
-    async fn report_poll_results(
-        &self,
-        airing_streams: HashSet<String>,
-    ) -> Result<(), StreamFinderError> {
-        self.result_tx
-            .send(ChatManagerMessages::FoundStreamIds(airing_streams))
-            .await
-            .map_err(|e| e.into())
+        match result_tx
+            .send(OutMessages::NewStreams { channel: channel_id.clone(), streams: video_list.streams })
+            .await 
+            {
+                Ok(_r) => { },
+                Err(e) => {
+                    println!("StreamFinder: couldn't send polling results from channel {}, reason: {}", channel_id, e);
+                },
+            }
     }
 }
