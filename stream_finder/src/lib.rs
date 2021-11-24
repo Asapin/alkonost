@@ -27,7 +27,7 @@ mod video_list;
 
 pub struct StreamFinder {
     rx: Receiver<StreamFinderMessages>,
-    chat_manager_tx: Sender<ChatManagerMessages>,
+    result_tx: Sender<ChatManagerMessages>,
     next_poll_time: Instant,
     poll_interval: Duration,
     channels: HashMap<String, String>,
@@ -44,14 +44,14 @@ impl StreamFinder {
     pub fn init(
         http_client: Arc<HttpClient>,
         request_settings: RequestSettings,
-        chat_manager_tx: Sender<ChatManagerMessages>,
+        result_tx: Sender<ChatManagerMessages>,
         poll_interval: Duration,
     ) -> ActorWrapper<StreamFinderMessages> {
         let (tx, rx) = mpsc::channel(32);
 
         let stream_finder = Self {
             rx,
-            chat_manager_tx,
+            result_tx,
             next_poll_time: Instant::now(),
             poll_interval,
             channels: HashMap::new(),
@@ -69,29 +69,15 @@ impl StreamFinder {
     async fn run(mut self) {
         match self.do_run().await {
             Ok(_r) => {
-                // Stream finder finished it's work due to incoming `Close` message
+                // StreamFinder finished it's work due to incoming `Close` message
             }
             Err(e) => {
-                println!("StreamFinder: Error, while looking for new and ongoing streams and premiers: {}", &e);
+                println!("StreamFinder: Error, while looking for new and airing streams and premiers: {}", &e);
             }
         }
 
-        println!("StreamFinder: Sending `Close` message to the chat manager...");
-        match self
-            .send_message_to_chat_manager(ChatManagerMessages::Close)
-            .await
-        {
-            Ok(_r) => {
-                // Successfully sent a message to the chat manager
-                // Nothing else to do
-            }
-            Err(e) => {
-                println!(
-                    "StreamFinder: Couldn't send message to the chat manager: {}",
-                    &e
-                );
-            }
-        }
+        // We can do some cleaup work here before closing StreamFinder
+
         println!("StreamFinder has been closed");
     }
 
@@ -118,30 +104,18 @@ impl StreamFinder {
                         }
                         StreamFinderMessages::UpdateUserAgent(user_agent) => {
                             self.request_settings.user_agent = user_agent.clone();
-                            self.send_message_to_chat_manager(
-                                ChatManagerMessages::UpdateUserAgent(user_agent),
-                            )
-                            .await?;
                         }
                         StreamFinderMessages::UpdateBrowserVersion(version) => {
                             self.request_settings.browser_version = version.clone();
-                            self.send_message_to_chat_manager(
-                                ChatManagerMessages::UpdateBrowserVersion(version),
-                            )
-                            .await?;
                         }
                         StreamFinderMessages::UpdateBrowserNameAndVersion { name, version } => {
                             self.request_settings.browser_name = name.clone();
                             self.request_settings.browser_version = version.clone();
-
-                            let message =
-                                ChatManagerMessages::UpdateBrowserNameAndVersion { name, version };
-                            self.send_message_to_chat_manager(message).await?;
                         }
                     },
                     None => {
                         // Incoming channel was closed. That should never happen,
-                        // as the StreamFinder should be closed first, after receiveng the `Close` message
+                        // as the ChatFinder should be closed first, after receiveng the `Close` message
                         return Err(StreamFinderError::IncomingChannelClosed);
                     }
                 }
@@ -151,11 +125,7 @@ impl StreamFinder {
             for encountered_error in poll_result.encountered_errors {
                 println!("StreamFinder: {}", &encountered_error);
             }
-            self.send_message_to_chat_manager(ChatManagerMessages::FoundStreamIds(
-                poll_result.streams,
-            ))
-            .await?;
-
+            self.report_poll_results(poll_result.streams).await?;
             self.next_poll_time = Instant::now() + self.poll_interval;
         }
     }
@@ -243,12 +213,12 @@ impl StreamFinder {
         Ok(Some(video_list.streams))
     }
 
-    async fn send_message_to_chat_manager(
+    async fn report_poll_results(
         &self,
-        message: ChatManagerMessages,
+        airing_streams: HashSet<String>,
     ) -> Result<(), StreamFinderError> {
-        self.chat_manager_tx
-            .send(message)
+        self.result_tx
+            .send(ChatManagerMessages::FoundStreamIds(airing_streams))
             .await
             .map_err(|e| e.into())
     }
