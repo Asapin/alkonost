@@ -3,7 +3,7 @@ use core::{
     youtube_regexes::YoutubeRegexes,
 };
 
-use super::{chat_params::ChatParams, error::ParamsExtractingError};
+use crate::{chat_params::ChatParams, error::InitError};
 
 pub struct ParamsExtractor;
 
@@ -21,7 +21,7 @@ impl ParamsExtractor {
         chat_url: &str,
         http_client: &HttpClient,
         request_settings: &RequestSettings,
-    ) -> Result<ExtractingResult, ParamsExtractingError> {
+    ) -> Result<ExtractingResult, InitError> {
         let chat_page_content = http_client
             .get_request(chat_url, &request_settings.user_agent)
             .await?;
@@ -32,32 +32,32 @@ impl ParamsExtractor {
 
         let gl = match YoutubeRegexes::extract_gl(&chat_page_content) {
             Some(gl) => gl,
-            None => return Err(ParamsExtractingError::ExtractGl(chat_page_content)),
+            None => return Err(InitError::ExtractGl(chat_page_content)),
         };
 
         let remote_host = match YoutubeRegexes::extract_remote_host(&chat_page_content) {
             Some(gl) => gl,
-            None => return Err(ParamsExtractingError::RemoteHost(chat_page_content)),
+            None => return Err(InitError::RemoteHost(chat_page_content)),
         };
 
         let visitor_data = match YoutubeRegexes::extract_visitor_data(&chat_page_content) {
             Some(gl) => gl,
-            None => return Err(ParamsExtractingError::VisitorData(chat_page_content)),
+            None => return Err(InitError::VisitorData(chat_page_content)),
         };
 
         let client_version = match YoutubeRegexes::extract_client_version(&chat_page_content) {
             Some(gl) => gl,
-            None => return Err(ParamsExtractingError::ClientVersion(chat_page_content)),
+            None => return Err(InitError::ClientVersion(chat_page_content)),
         };
 
         let continuation = match YoutubeRegexes::extract_last_continuation(&chat_page_content) {
             Some(gl) => gl,
-            None => return Err(ParamsExtractingError::Continuation(chat_page_content)),
+            None => return Err(InitError::Continuation(chat_page_content)),
         };
 
         let chat_key = match YoutubeRegexes::extract_chat_key(&chat_page_content) {
             Some(chat_key) => chat_key,
-            None => return Err(ParamsExtractingError::ChatKey(chat_page_content)),
+            None => return Err(InitError::ChatKey(chat_page_content)),
         };
 
         let now = chrono::Local::now();

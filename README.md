@@ -6,7 +6,8 @@ Monitors a set of YouTube channels, and starts collecting messages as soon as a 
 
 Consists of several modules:
 * [core](core/) - common types and objects used by other modules
-* [StreamFinder](stream_finder/) - monitors YouTube channels for live and upcoming streams and premiers
+* [StreamFinder](stream_finder/) - monitors YouTube channels for airing and upcoming streams and premiers
+* [ChatPoller](chat_poller/) - loads messages from the YouTube chat
 * [ChatManager](chat_manager/) - collects messages from every open chat room
 * [Detector](detector/) - analyses messages and tries to detect potential spammers
 * `DB` - saves all messages and desicions, made by `Detector` to a database (module is not implemented yet)

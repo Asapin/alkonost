@@ -1,8 +1,9 @@
 [workspace]
 members = [
     "core",
-    "chat_manager",
     "stream_finder",
+    "chat_poller",
+    "chat_manager",
     "detector",
     "alkonost",
     "ui"
