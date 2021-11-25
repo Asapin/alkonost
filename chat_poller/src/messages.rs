@@ -1,6 +1,6 @@
 use core::types::Action;
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub enum IncMessages {
     Close,
     UpdateUserAgent(String),

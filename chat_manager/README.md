@@ -1,21 +1,15 @@
 # Chat manager
-This module is responsible for keeping track of all open chat rooms, loading messages from them, and redirecting those messages to both `SpamDetector` and `DB` (the latter is not implemented yet).
+This module is responsible for keeping track of all open chat rooms and creating new chat pollers.
 
 Can be easily transformed to a standalone app, if the amount of request from a single computer becomes too high to the point when it triggers YouTube's anti-ddos protection. All that is needed to be done in that case is to replace incoming and outgoing channels with RabbitMQ channels or something similar.
 
-Can also be easily scaled horizontally if placed behind a balancing router. Router should ensure, that the same stream id inside the message `FoundStreamIds(HashSet<String>)` would be always sent to the same instance.
+Doesn't need any horizontal scaling, as all it does is just creates and controls chat pollers.
 
 ## How it works
 
-During the initialization process, the module creates two proxies in two separate Tokio tasks. 
-* The first proxy is responsible for receiving `ChatManagerMessages` messages from the `StreamFinder` module, converting them to `ManagerMessages`, and resending them to the inner `manager_tx` channel.
-* The second proxy is responsible for receiving `PollingResultMessages` messages from all existing `ChatPoller`'s, also converting them to `ManagerMessages`, and resending them to the inner `manager_tx` channel.
+During the initialization process, the module creates a new Tokio task, which reads incoming messages from an MPSC channel named `rx` until the `check_children_period` has passed in an endless loop. When the deadline is reached, this task checks if any of the active chat pollers has notified about its closure, and removes such pollers.
 
-The module itself reads all those messages from the single `manager_rx` channel, initializes `ChatPoller`'s for new streams, updates request parameters in all existing `ChatPoller`'s, and resends all chat messages, received from existing `ChatPoller`'s, to the `SpamDetector` (and to the `DB` in the future).
-
-Upon receiving `Close` message or on encountering an unrecoverable error, `ChatManager` will try to gracefully close all `ChatPoller`'s, resend all remaining `NewMessages` and `StreamEnded` messages to the `SpamDetector` (and to the `DB` in the future), shutdown both proxies, and send `Close` message to the `SpamDetector` (and to the `DB` in the future).
-
-### Possible incoming messages from the StreamFinder
+### Possible incoming messages
 
 * `FoundStreamIds(HashSet<String>)` - list of all upcoming and live streams and premiers
 * `UpdateUserAgent(String)` - update user agent, that's used when making GET and POST request to YouTube
@@ -25,32 +19,9 @@ Upon receiving `Close` message or on encountering an unrecoverable error, `ChatM
 
 Messages `UpdateUserAgent`, `UpdateBrowserVersion` and `UpdateBrowserNameAndVersion` are also retranslated to all existing `ChatPoller`'s.
 
-### Possible incoming messages from the ChatPoller
-
-* `NewBatch { video_id: String, actions: Vec<Action> }` - list of new messages in the chat
-* `StreamEnded { video_id: String }` - indicates that the chat has been closed
-
-Both of those messages are retranslated to the `SpamDetector` (and to the `DB` in the future).
-
-## Chat poller
-
-Responsible for actually loading messages from the YouTube chat by performing a POST-request to the `https://www.youtube.com/youtubei/v1/live_chat/get_live_chat?key=<chat_key>` url. The response is a JSON string, that contains: 
-
-* all messages since the last request
-* `continuation` parameter, that must be sent during the next POST-request
-* `timeout_ms` parameter, that indicates how long the `ChatPoller` should wait, before making another POST-requst
-
-During the initialization process, `ChatPoller` first makes a GET-request to the `https://www.youtube.com/live_chat?is_popout=1&v=<video_id>` url, which return an HTML-page with embedded JSON string inside. This JSON string actually contains two `continuation` parameters: using the first one would result in loading messages, marked by YouTube as `Top chat`, while the second one will load messages, marked as `Live chat`.
-
-After the initialization, all other request will return either only one `continuation` parameter, or no `continuation` at all, which indicates, that the chat has been closed.
-
 ### Existing bugs/errors
 
-Attempting to load new messages from the chat would result sometimes in a `Broken pipe` error. It's a somewhat rare error, occuring only 3-4 times during the 10-12 hours of collecting messages, and I'm not sure if it's a bug in the `reqwest` library, if it's a Windows-specific bug, or if it's a problem with YouTube.
-
-Regardless of whose fault it is, the `ChatPoller` will perform 3 attempts to load new messages, waiting 100ms between each request. If it fails 3 times in a row, than the `ChatPoller` would be considered broken, and would be closed. Every successful request would resend the amount of attempts left back to 3.
-
-Also, if the `ChatPoller` encounters any error during the deserialization of a JSON-string, it will log the error, and save incoming JSON-string to a file for further analysis.
+None that I know of.
 
 ## Possible future improvements
 
