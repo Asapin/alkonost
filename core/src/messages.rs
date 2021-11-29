@@ -1,5 +1,3 @@
-use std::collections::HashSet;
-
 use crate::SuspicionReason;
 
 pub mod stream_finder {
@@ -69,28 +67,21 @@ pub mod chat_manager {
 }
 
 pub mod detector {
-    use super::chat_poller;
+    use super::{DetectorDecision, chat_poller};
 
     pub enum IncMessages {
         Close,
         ChatPoller(chat_poller::OutMessages)
     }
-}
 
-#[derive(Debug)]
-pub enum AlkonostMessage {
-    DetectorMessage(DetectorResults),
-    NewChats(HashSet<String>),
-    ChatClosed(String)
-}
-
-#[derive(Debug)]
-pub enum DetectorResults {
-    Close,
-    ProcessingResult {
-        video_id: String,
-        decisions: Vec<DetectorDecision>,
-    },
+    #[derive(Debug)]
+    pub enum OutMessages {
+        ChatClosed(String),
+        DetectorResult {
+            video_id: String,
+            decisions: Vec<DetectorDecision>,
+        }
+    }
 }
 
 #[derive(Debug)]

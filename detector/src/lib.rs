@@ -1,48 +1,35 @@
-use core::{ActorWrapper, messages::{AlkonostMessage, DetectorResults, SpamDetectorMessages}};
+use core::{ActorWrapper, messages::detector::{IncMessages, OutMessages}};
 use std::collections::HashMap;
 
 use detector_params::DetectorParams;
+use error::DetectorError;
 use spam_detector::SpamDetector;
-use thiserror::Error;
-use tokio::sync::mpsc::{self, error::SendError, Receiver, Sender};
+use tokio::sync::mpsc::{self, Receiver, Sender};
 
 mod message_data;
 mod spam_detector;
 mod user_data;
+mod error;
 
 pub mod detector_params;
 
-#[derive(Error, Debug)]
-enum DetectorError {
-    #[error("Incoming messages channel was closed. That should never happen.")]
-    IncomingChannelClosed,
-    #[error("Outgoing messages channel was closed: {0}")]
-    OutgoingChannelClosed(#[source] SendError<AlkonostMessage>),
-}
-
-impl From<SendError<AlkonostMessage>> for DetectorError {
-    fn from(e: SendError<AlkonostMessage>) -> Self {
-        DetectorError::OutgoingChannelClosed(e)
-    }
-}
-
 pub struct DetectorManager {
     streams: HashMap<String, SpamDetector>,
-    rx: Receiver<SpamDetectorMessages>,
-    alkonost_tx: Sender<AlkonostMessage>,
+    rx: Receiver<IncMessages>,
+    result_tx: Sender<OutMessages>,
     params: DetectorParams,
 }
 
 impl DetectorManager {
     pub fn init(
         detector_params: DetectorParams,
-        alkonost_tx: Sender<AlkonostMessage>,
-    ) -> ActorWrapper<SpamDetectorMessages> {
+        result_tx: Sender<OutMessages>,
+    ) -> ActorWrapper<IncMessages> {
         let (tx, rx) = mpsc::channel(32);
         let manager = Self {
             streams: HashMap::new(),
             rx,
-            alkonost_tx,
+            result_tx,
             params: detector_params,
         };
 
@@ -63,16 +50,6 @@ impl DetectorManager {
             }
         }
 
-        println!("DetectorManager: Sending `Close` message down the line...");
-        match self.alkonost_tx.send(AlkonostMessage::DetectorMessage(DetectorResults::Close)).await {
-            Ok(_r) => {
-                // Successfully sent a message to the receiver
-                // Nothing else to do
-            }
-            Err(e) => {
-                println!("DetectorManager: Couldn't send `Close` message: {}", &e);
-            }
-        }
         println!("DetectorManager has been closed");
     }
 
@@ -86,29 +63,51 @@ impl DetectorManager {
             };
 
             match message {
-                SpamDetectorMessages::Close => {
-                    return Ok(());
-                }
-                SpamDetectorMessages::NewBatch { video_id, actions } => {
-                    let detector_instance = self
-                        .streams
-                        .entry(video_id.clone())
-                        .or_insert_with(SpamDetector::init);
-                    let decisions = detector_instance.process_new_messages(actions, &self.params);
-                    if !decisions.is_empty() {
-                        let result = DetectorResults::ProcessingResult {
-                            video_id,
-                            decisions,
-                        };
+                IncMessages::Close => return Ok(()),
+                IncMessages::ChatPoller(poller_message) => {
+                    match poller_message {
+                        core::messages::chat_poller::OutMessages::ChatInit { 
+                            channel: _, 
+                            video_id 
+                        } => {
+                            // TODO: load channel specific detector params
+                            self.streams.insert(video_id, SpamDetector::init());
+                        },
+                        core::messages::chat_poller::OutMessages::NewBatch { 
+                            video_id, 
+                            actions 
+                        } => {
+                            let detector_instance = self
+                                .streams
+                                .get_mut(&video_id);
+                            
+                            let detector_instance = match detector_instance {
+                                Some(instance) => instance,
+                                None => {
+                                    println!("DetectorManager: {} has sent `NewBatch` before `ChatInit`", &video_id);
+                                    continue;
+                                }
+                            };
 
-                        self.alkonost_tx.send(AlkonostMessage::DetectorMessage(result)).await?;
+                            let decisions = detector_instance.process_new_messages(actions, &self.params);
+                            if !decisions.is_empty() {
+                                let result = OutMessages::DetectorResult {
+                                    video_id,
+                                    decisions,
+                                };
+        
+                                self.result_tx.send(result).await?;
+                            }
+                        },
+                        core::messages::chat_poller::OutMessages::StreamEnded { 
+                            video_id 
+                        } => {
+                            self.streams.remove(&video_id);
+                            self.result_tx
+                                .send(OutMessages::ChatClosed(video_id))
+                                .await?;
+                        },
                     }
-                }
-                SpamDetectorMessages::StreamEnded { video_id } => {
-                    self.streams.remove(&video_id);
-                    self.alkonost_tx
-                        .send(AlkonostMessage::ChatClosed(video_id))
-                        .await?;
                 }
             }
         }
