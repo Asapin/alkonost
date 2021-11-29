@@ -15,8 +15,9 @@ pub mod stream_finder {
     }
 
     #[derive(Debug)]
-    pub enum OutMessages {
-        NewStreams { channel: String, streams: HashSet<String> }
+    pub struct OutMessage {
+        pub channel: String, 
+        pub streams: HashSet<String>
     }
 }
 

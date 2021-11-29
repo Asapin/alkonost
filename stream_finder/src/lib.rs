@@ -4,7 +4,7 @@ use core::{
     http_client::{HttpClient, RequestSettings},
     youtube_regexes::YoutubeRegexes,
     ActorWrapper,
-    messages::stream_finder::{IncMessages, OutMessages}
+    messages::stream_finder::{IncMessages, OutMessage}
 };
 use std::io::Write;
 use std::{
@@ -27,7 +27,7 @@ mod video_list;
 
 pub struct StreamFinder {
     rx: Receiver<IncMessages>,
-    result_tx: Sender<OutMessages>,
+    result_tx: Sender<OutMessage>,
     next_poll_time: Instant,
     poll_interval: Duration,
     channels: HashMap<String, String>,
@@ -39,7 +39,7 @@ impl StreamFinder {
     pub fn init(
         http_client: Arc<HttpClient>,
         request_settings: RequestSettings,
-        result_tx: Sender<OutMessages>,
+        result_tx: Sender<OutMessage>,
         poll_interval: Duration,
     ) -> ActorWrapper<IncMessages> {
         let (tx, rx) = mpsc::channel(32);
@@ -143,7 +143,7 @@ impl StreamFinder {
         &self,
         channel_id: String,
         channel_url: String,
-        result_tx: Sender<OutMessages>
+        result_tx: Sender<OutMessage>
     ) {
         let load_result = self
             .http_client
@@ -198,7 +198,7 @@ impl StreamFinder {
         };
 
         match result_tx
-            .send(OutMessages::NewStreams { channel: channel_id.clone(), streams: video_list.streams })
+            .send(OutMessage { channel: channel_id.clone(), streams: video_list.streams })
             .await 
             {
                 Ok(_r) => { },
