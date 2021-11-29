@@ -1,6 +1,6 @@
-use core::SuspicionReason;
+use core::{SuspicionReason, detector_params::DetectorParams};
 
-use crate::{detector_params::DetectorParams, message_data::MessageData};
+use crate::message_data::MessageData;
 
 pub struct UserData {
     history: Vec<MessageData>,

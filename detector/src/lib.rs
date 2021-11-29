@@ -1,7 +1,6 @@
-use core::{ActorWrapper, messages::detector::{IncMessages, OutMessages}};
+use core::{ActorWrapper, detector_params::DetectorParams, messages::detector::{IncMessages, OutMessages}};
 use std::collections::HashMap;
 
-use detector_params::DetectorParams;
 use error::DetectorError;
 use spam_detector::SpamDetector;
 use tokio::sync::mpsc::{self, Receiver, Sender};
@@ -10,8 +9,6 @@ mod message_data;
 mod spam_detector;
 mod user_data;
 mod error;
-
-pub mod detector_params;
 
 pub struct DetectorManager {
     streams: HashMap<String, SpamDetector>,

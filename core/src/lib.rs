@@ -6,6 +6,7 @@ pub mod http_client;
 pub mod messages;
 pub mod types;
 pub mod youtube_regexes;
+pub mod detector_params;
 
 pub struct ActorWrapper<T> {
     pub join_handle: JoinHandle<()>,
