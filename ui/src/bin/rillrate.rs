@@ -1,8 +1,7 @@
 use std::{collections::HashSet, time::Duration};
 
-use alkonost::{Alkonost, AlkonostMessage, DetectorParams, DetectorResults, RequestSettings, StreamFinderMessages};
+use alkonost::{Alkonost, AlkonostInMessage, AlkonostOutMessage, DetectorParams, RequestSettings};
 use rillrate::prime::{LiveTail, LiveTailOpts, Pulse, PulseOpts};
-use tokio::time::sleep;
 
 #[tokio::main]
 pub async fn main() {
@@ -16,11 +15,11 @@ pub async fn main() {
     };
     let poll_interval = Duration::from_secs(90);
 
-    let Alkonost {
-        mut alkonost_rx, 
-        handler, 
-        stream_finder_tx 
-    } = match Alkonost::init(detector_params, request_settings, poll_interval) {
+    let (actor, mut result_rx) = match Alkonost::init(
+        detector_params, 
+        request_settings, 
+        poll_interval
+    ) {
         Ok(r) => r,
         Err(e) => {
             println!("RillRate: Error initializing alkonost: {}", &e);
@@ -49,45 +48,31 @@ pub async fn main() {
     );
     active_chat_pulse.push(0);
 
-    let detector_results = tokio::spawn(async move {
+    let rx_reader = tokio::spawn(async move {
         let mut active_chats = HashSet::new();
-        loop {
-            match alkonost_rx.recv().await {
-                Some(results) => match results {
-                    AlkonostMessage::ChatClosed(video_id) => {
-                        active_chats.remove(&video_id);
-                    },
-                    AlkonostMessage::NewChats(new_chats) => {
-                        for chat in new_chats {
-                            active_chats.insert(chat);
-                        }
-                    },
-                    AlkonostMessage::DetectorMessage(detector_result) => {
-                        match detector_result {
-                            DetectorResults::Close => {
-                                return;
-                            },
-                            DetectorResults::ProcessingResult {
-                                video_id,
-                                decisions
-                            } => {
-                                for decision in decisions {
-                                    decision_log_tail.log_now(
-                                        video_id.clone(), 
-                                        decision.user, 
-                                        format!("{:?}", decision.action)
-                                    );
-                                }
-                            }
-                        }
-                    }
+        while let Some(message) = result_rx.recv().await {
+            match message {
+                AlkonostOutMessage::ChatClosed(video_id) => {
+                    active_chats.remove(&video_id);
                 },
-                None => {
-                    println!("RillRate: Channel from the detector manager has been closed before receiving `Close` message.")
-                }
+                AlkonostOutMessage::DetectorResult { 
+                    video_id, 
+                    decisions 
+                } => {
+                    for decision in decisions {
+                        decision_log_tail.log_now(
+                            video_id.clone(), 
+                            decision.user, 
+                            format!("{:?}", decision.action)
+                        );
+                    }
+                    active_chats.insert(video_id);
+                },
             }
             active_chat_pulse.push(active_chats.len() as f64);
         }
+
+        println!("RillRate: rx_reader has been closed");
     });
 
     let mut channels = HashSet::new();
@@ -104,8 +89,8 @@ pub async fn main() {
     channels.insert("UCsjTQnlZcSB6fSiP7ht_0OQ"); // Hacks Busters
 
     for channel_id in channels {
-        let message = StreamFinderMessages::AddChannel(channel_id.to_string());
-        match stream_finder_tx.send(message).await {
+        let message = AlkonostInMessage::AddChannel(channel_id.to_string());
+        match actor.tx.send(message).await {
             Ok(_r) => {}
             Err(e) => {
                 println!("RillRate: Couldn't send message to a stream finder: {}", &e);
@@ -114,17 +99,8 @@ pub async fn main() {
         }
     }
 
-    // sleep(Duration::from_secs(130)).await;
-    // println!("RillRate: Closing...");
-    // match stream_finder_tx.send(StreamFinderMessages::Close).await {
-    //     Ok(_r) => { },
-    //     Err(e) => {
-    //         println!("RillRate: Couldn't send message to a stream finder: {}", &e);
-    //         return;
-    //     },
-    // }
-    handler.join().await;
-    let _ = detector_results.await;
+    let _ = actor.join_handle.await;
+    let _ = rx_reader.await;
 
     match rillrate::uninstall() {
         Ok(_r) => { },
