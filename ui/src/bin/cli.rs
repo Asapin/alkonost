@@ -1,6 +1,7 @@
+use core::{detector_params::DetectorParams, messages::alkonost::IncMessage};
 use std::{collections::HashSet, time::Duration};
 
-use alkonost::{Alkonost, AlkonostMessage, DetectorParams, DetectorResults, RequestSettings, StreamFinderMessages};
+use alkonost::{Alkonost, RequestSettings};
 use tokio::time::sleep;
 
 #[tokio::main]
@@ -15,11 +16,11 @@ pub async fn main() {
     };
     let poll_interval = Duration::from_secs(90);
 
-    let Alkonost {
-        mut alkonost_rx, 
-        handler, 
-        stream_finder_tx 
-    } = match Alkonost::init(detector_params, request_settings, poll_interval) {
+    let (actor, mut result_rx) = match Alkonost::init(
+        detector_params, 
+        request_settings, 
+        poll_interval
+    ) {
         Ok(r) => r,
         Err(e) => {
             println!("CLI: Error initializing alkonost: {}", &e);
@@ -27,35 +28,22 @@ pub async fn main() {
         },
     };
 
-    let detector_results = tokio::spawn(async move {
-        loop {
-            match alkonost_rx.recv().await {
-                Some(results) => match results {
-                    AlkonostMessage::ChatClosed(video_id) => {
-                        println!("CLI: stream <{}> ended", video_id);
-                    },
-                    AlkonostMessage::NewChats(new_chats) => {
-                        println!("CLI: detected new chats: {:?}", new_chats);
-                    },
-                    AlkonostMessage::DetectorMessage(detector_result) => {
-                        match detector_result {
-                            DetectorResults::Close => {
-                                return;
-                            },
-                            DetectorResults::ProcessingResult {
-                                video_id,
-                                decisions
-                            } => {
-                                println!("CLI: <{}>: {:?}", video_id, decisions);
-                            },
-                        };
-                    },
+    let rx_reader = tokio::spawn(async move {
+        while let Some(message) = result_rx.recv().await {
+            match message {
+                core::messages::detector::OutMessages::ChatClosed(video_id) => {
+                    println!("CLI: stream <{}> has ended", video_id);
                 },
-                None => {
-                    println!("CLI: Channel from the detector manager has been closed before receiving `Close` message.")
-                }
-            };
+                core::messages::detector::OutMessages::DetectorResult { 
+                    video_id, 
+                    decisions 
+                } => {
+                    println!("CLI: <{}>: {:?}", video_id, decisions);
+                },
+            }
         }
+
+        println!("CLI: rx_reader has been closed");
     });
 
     let mut channels = HashSet::new();
@@ -72,8 +60,8 @@ pub async fn main() {
     channels.insert("UCsjTQnlZcSB6fSiP7ht_0OQ"); // Hacks Busters
 
     for channel_id in channels {
-        let message = StreamFinderMessages::AddChannel(channel_id.to_string());
-        match stream_finder_tx.send(message).await {
+        let message = IncMessage::AddChannel(channel_id.to_string());
+        match actor.tx.send(message).await {
             Ok(_r) => {}
             Err(e) => {
                 println!("CLI: Couldn't send message to a stream finder: {}", &e);
@@ -84,15 +72,16 @@ pub async fn main() {
 
     sleep(Duration::from_secs(130)).await;
     println!("CLI: Closing...");
-    match stream_finder_tx.send(StreamFinderMessages::Close).await {
+    match actor.tx.send(IncMessage::Close).await {
         Ok(_r) => { },
         Err(e) => {
             println!("CLI: Couldn't send message to a stream finder: {}", &e);
             return;
         },
     }
-    handler.join().await;
-    let _ = detector_results.await;
+
+    let _ = actor.join_handle.await;
+    let _ = rx_reader.await;
 
     println!("CLI has been closed");
 }
