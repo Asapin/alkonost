@@ -3,7 +3,7 @@ use crate::SuspicionReason;
 pub mod stream_finder {
     use std::collections::HashSet;
 
-    #[derive(Debug)]
+    #[derive(Debug, Clone)]
     pub enum IncMessages {
         Close,
         AddChannel(String),
@@ -32,7 +32,7 @@ pub mod chat_poller {
         UpdateBrowserNameAndVersion { name: String, version: String },
     }
 
-    #[derive(Debug)]
+    #[derive(Debug, Clone)]
     pub enum OutMessages {
         ChatInit {
             channel: String,
@@ -70,6 +70,7 @@ pub mod chat_manager {
 pub mod detector {
     use super::{DetectorDecision, chat_poller};
 
+    #[derive(Debug, Clone)]
     pub enum IncMessages {
         Close,
         ChatPoller(chat_poller::OutMessages)
@@ -82,6 +83,18 @@ pub mod detector {
             video_id: String,
             decisions: Vec<DetectorDecision>,
         }
+    }
+}
+
+pub mod alkonost {
+    pub enum IncMessage {
+        Close,
+        AddChannel(String),
+        RemoveChannel(String),
+        UpdateStreamPollInterval(u64),
+        UpdateUserAgent(String),
+        UpdateBrowserVersion(String),
+        UpdateBrowserNameAndVersion { name: String, version: String },
     }
 }
 
