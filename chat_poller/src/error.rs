@@ -1,9 +1,9 @@
-use core::http_client::HttpClientLoadError;
+use core::{http_client::HttpClientLoadError, messages::chat_poller::OutMessages};
 
 use thiserror::Error;
 use tokio::sync::mpsc::error::SendError;
 
-use crate::{messages::OutMessages, type_converter::ConverterError};
+use crate::type_converter::ConverterError;
 
 #[derive(Error, Debug)]
 pub enum InitError {

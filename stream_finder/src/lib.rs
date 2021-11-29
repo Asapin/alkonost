@@ -4,6 +4,7 @@ use core::{
     http_client::{HttpClient, RequestSettings},
     youtube_regexes::YoutubeRegexes,
     ActorWrapper,
+    messages::stream_finder::{IncMessages, OutMessages}
 };
 use std::io::Write;
 use std::{
@@ -15,7 +16,6 @@ use std::{
 
 use error::StreamFinderError;
 use futures::stream::{FuturesUnordered, StreamExt};
-use messages::{IncMessages, OutMessages};
 use tokio::{
     sync::mpsc::{self, Receiver, Sender},
     time::{timeout_at, Instant},
@@ -24,7 +24,6 @@ use video_list::VideoList;
 
 mod error;
 mod video_list;
-pub mod messages;
 
 pub struct StreamFinder {
     rx: Receiver<IncMessages>,

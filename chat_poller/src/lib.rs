@@ -3,12 +3,12 @@
 use core::http_client::{HttpClient, RequestSettings};
 use core::types::Action;
 use core::ActorWrapper;
+use core::messages::chat_poller::{IncMessages, OutMessages};
 use std::io::Write;
 use std::time::Duration;
 use std::{fs::File, sync::Arc};
 
 use chat_params::ChatParams;
-use messages::{IncMessages, OutMessages};
 use tokio::sync::mpsc::{self, Sender};
 use tokio::sync::oneshot;
 use tokio::{
@@ -25,7 +25,6 @@ mod chat_params;
 mod params_extractor;
 mod type_converter;
 mod youtube_types;
-pub mod messages;
 pub mod error;
 
 pub enum InitResult {

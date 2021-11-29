@@ -1,37 +1,80 @@
 use std::collections::HashSet;
 
-use crate::{types::Action, SuspicionReason};
+use crate::SuspicionReason;
 
-#[derive(Debug)]
-pub enum StreamFinderMessages {
-    Close,
-    AddChannel(String),
-    RemoveChannel(String),
-    UpdatePollInterval(u64),
-    UpdateUserAgent(String),
-    UpdateBrowserVersion(String),
-    UpdateBrowserNameAndVersion { name: String, version: String },
+pub mod stream_finder {
+    use std::collections::HashSet;
+
+    #[derive(Debug)]
+    pub enum IncMessages {
+        Close,
+        AddChannel(String),
+        RemoveChannel(String),
+        UpdatePollInterval(u64),
+        UpdateUserAgent(String),
+        UpdateBrowserVersion(String),
+        UpdateBrowserNameAndVersion { name: String, version: String },
+    }
+
+    #[derive(Debug)]
+    pub enum OutMessages {
+        NewStreams { channel: String, streams: HashSet<String> }
+    }
 }
 
-#[derive(Debug)]
-pub enum ChatManagerMessages {
-    Close,
-    FoundStreamIds(HashSet<String>),
-    UpdateUserAgent(String),
-    UpdateBrowserVersion(String),
-    UpdateBrowserNameAndVersion { name: String, version: String },
+pub mod chat_poller {
+    use crate::types::Action;
+
+    #[derive(Debug, Clone)]
+    pub enum IncMessages {
+        Close,
+        UpdateUserAgent(String),
+        UpdateBrowserVersion(String),
+        UpdateBrowserNameAndVersion { name: String, version: String },
+    }
+
+    #[derive(Debug)]
+    pub enum OutMessages {
+        ChatInit {
+            channel: String,
+            video_id: String,
+        },
+        NewBatch {
+            video_id: String,
+            actions: Vec<Action>,
+        },
+        StreamEnded {
+            video_id: String,
+        },
+    }
 }
 
-#[derive(Debug)]
-pub enum SpamDetectorMessages {
-    Close,
-    NewBatch {
-        video_id: String,
-        actions: Vec<Action>,
-    },
-    StreamEnded {
-        video_id: String,
-    },
+pub mod chat_manager {
+    use std::collections::HashSet;
+
+    #[derive(Debug, Clone)]
+    pub enum IncMessages {
+        Close,
+        FoundStreams {
+            channel: String,
+            streams: HashSet<String>
+        },
+        UpdateUserAgent(String),
+        UpdateBrowserVersion(String),
+        UpdateBrowserNameAndVersion {
+            name: String,
+            version: String,
+        }
+    }
+}
+
+pub mod detector {
+    use super::chat_poller;
+
+    pub enum IncMessages {
+        Close,
+        ChatPoller(chat_poller::OutMessages)
+    }
 }
 
 #[derive(Debug)]
