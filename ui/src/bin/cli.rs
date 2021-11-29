@@ -30,6 +30,12 @@ pub async fn main() {
     let rx_reader = tokio::spawn(async move {
         while let Some(message) = result_rx.recv().await {
             match message {
+                AlkonostOutMessage::NewChat {
+                    channel,
+                    video_id
+                } => {
+                    println!("New stream <{}> on channel <{}>", video_id, channel);
+                },
                 AlkonostOutMessage::ChatClosed(video_id) => {
                     println!("CLI: stream <{}> has ended", video_id);
                 },

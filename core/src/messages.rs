@@ -78,6 +78,10 @@ pub mod detector {
 
     #[derive(Debug)]
     pub enum OutMessage {
+        NewChat {
+            channel: String,
+            video_id: String
+        },
         ChatClosed(String),
         DetectorResult {
             video_id: String,

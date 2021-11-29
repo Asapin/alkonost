@@ -64,11 +64,17 @@ impl DetectorManager {
                 IncMessage::ChatPoller(poller_message) => {
                     match poller_message {
                         core::messages::chat_poller::OutMessage::ChatInit { 
-                            channel: _, 
+                            channel, 
                             video_id 
                         } => {
                             // TODO: load channel specific detector params
-                            self.streams.insert(video_id, SpamDetector::init());
+                            self.streams.insert(video_id.clone(), SpamDetector::init());
+
+                            let message = OutMessage::NewChat {
+                                channel,
+                                video_id
+                            };
+                            self.result_tx.send(message).await?;
                         },
                         core::messages::chat_poller::OutMessage::NewBatch { 
                             video_id, 

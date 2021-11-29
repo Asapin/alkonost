@@ -52,6 +52,12 @@ pub async fn main() {
         let mut active_chats = HashSet::new();
         while let Some(message) = result_rx.recv().await {
             match message {
+                AlkonostOutMessage::NewChat {
+                    channel: _,
+                    video_id
+                } => {
+                    active_chats.insert(video_id);
+                },
                 AlkonostOutMessage::ChatClosed(video_id) => {
                     active_chats.remove(&video_id);
                 },
@@ -66,7 +72,6 @@ pub async fn main() {
                             format!("{:?}", decision.action)
                         );
                     }
-                    active_chats.insert(video_id);
                 },
             }
             active_chat_pulse.push(active_chats.len() as f64);

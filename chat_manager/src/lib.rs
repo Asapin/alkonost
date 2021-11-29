@@ -163,7 +163,9 @@ impl ChatManager {
                 if closed_safely {
                     println!("ChatManager: waiting for {} chat poller to finish its work", &video_id);
                     match chat.actor.join_handle.await {
-                        Ok(_r) => { },
+                        Ok(_r) => {
+                            println!("ChatManager: chat poller {} has finished its work", &video_id);
+                        },
                         Err(e) => {
                             println!("ChatManager: chat poller for {} has panicked: {}", &video_id, e);
                         },
