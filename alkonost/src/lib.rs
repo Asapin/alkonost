@@ -1,10 +1,10 @@
 #![allow(proc_macro_derive_resolution_fallback, unused_attributes)]
 
-use core::{ActorWrapper, http_client::HttpClient, messages::{self, alkonost::IncMessage}};
+use core::{ActorWrapper, detector_params::DetectorParams, http_client::HttpClient, messages::{self, alkonost::IncMessage}};
 use std::{sync::Arc, time::Duration};
 
 use ::chat_manager::ChatManager;
-use ::detector::{DetectorManager, detector_params::DetectorParams};
+use ::detector::DetectorManager;
 use error::{AlkonostError, AlkonostInitError};
 use stream_finder::StreamFinder;
 use tokio::{sync::mpsc::{self, Receiver, Sender}, task::JoinHandle};
