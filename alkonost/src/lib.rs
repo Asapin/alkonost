@@ -1,6 +1,6 @@
 #![allow(proc_macro_derive_resolution_fallback, unused_attributes)]
 
-use core::{ActorWrapper, detector_params::DetectorParams, http_client::HttpClient, messages::{self, alkonost::IncMessage}};
+use core::{ActorWrapper, http_client::HttpClient, messages::{self, alkonost::IncMessage}};
 use std::{sync::Arc, time::Duration};
 
 use ::chat_manager::ChatManager;
@@ -10,9 +10,11 @@ use stream_finder::StreamFinder;
 use tokio::{sync::mpsc::{self, Receiver, Sender}, task::JoinHandle};
 
 pub mod error;
+
+pub type DetectorParams = core::detector_params::DetectorParams;
 pub type RequestSettings = core::http_client::RequestSettings;
-pub type DecisionAction = core::messages::DecisionAction;
-pub type SuspicionReason = core::SuspicionReason;
+pub type AlkonostInMessage = core::messages::alkonost::IncMessage;
+pub type AlkonostOutMessage = core::messages::detector::OutMessage;
 
 pub struct Alkonost {
     rx: Receiver<IncMessage>,
