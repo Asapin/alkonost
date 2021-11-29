@@ -3,7 +3,7 @@
 use core::http_client::{HttpClient, RequestSettings};
 use core::types::Action;
 use core::ActorWrapper;
-use core::messages::chat_poller::{IncMessages, OutMessages};
+use core::messages::chat_poller::{IncMessage, OutMessage};
 use std::io::Write;
 use std::time::Duration;
 use std::{fs::File, sync::Arc};
@@ -29,7 +29,7 @@ pub mod error;
 
 pub enum InitResult {
     Started { 
-        actor: ActorWrapper<IncMessages>,
+        actor: ActorWrapper<IncMessage>,
         notify_close_rx: oneshot::Receiver<()>
     },
     ChatDisabled,
@@ -43,8 +43,8 @@ pub struct ChatPoller {
     endpoint_url: String,
     next_poll_time: Instant,
     chat_params: ChatParams,
-    rx: Receiver<IncMessages>,
-    result_tx: Sender<OutMessages>,
+    rx: Receiver<IncMessage>,
+    result_tx: Sender<OutMessage>,
     poll_errors_count: u8,
     notify_close_tx: oneshot::Sender<()>
 }
@@ -55,7 +55,7 @@ impl ChatPoller {
         channel_id: String,
         http_client: Arc<HttpClient>,
         request_settings: RequestSettings,
-        result_tx: Sender<OutMessages>,
+        result_tx: Sender<OutMessage>,
     ) -> Result<InitResult, InitError> {
         let chat_url = format!(
             "https://www.youtube.com/live_chat?is_popout=1&v={}",
@@ -100,7 +100,7 @@ impl ChatPoller {
             notify_close_tx
         };
 
-        poller.result_tx.send(OutMessages::ChatInit { channel: channel_id, video_id }).await?;
+        poller.result_tx.send(OutMessage::ChatInit { channel: channel_id, video_id }).await?;
 
         let join_handle = tokio::spawn(async move {
             poller.run().await;
@@ -129,7 +129,7 @@ impl ChatPoller {
             "{}: Sending `StreamEnded` message...",
             &self.video_id
         );
-        let closing_message = OutMessages::StreamEnded {
+        let closing_message = OutMessage::StreamEnded {
             video_id: self.video_id.clone(),
         };
         match self.result_tx.send(closing_message).await {
@@ -162,16 +162,16 @@ impl ChatPoller {
             while let Ok(recv_result) = timeout_at(self.next_poll_time, self.rx.recv()).await {
                 match recv_result {
                     Some(message) => match message {
-                        IncMessages::Close => {
+                        IncMessage::Close => {
                             return Ok(());
                         }
-                        IncMessages::UpdateUserAgent(user_agent) => {
+                        IncMessage::UpdateUserAgent(user_agent) => {
                             self.request_settings.user_agent = user_agent;
                         }
-                        IncMessages::UpdateBrowserVersion(version) => {
+                        IncMessage::UpdateBrowserVersion(version) => {
                             self.request_settings.browser_version = version;
                         }
-                        IncMessages::UpdateBrowserNameAndVersion { name, version } => {
+                        IncMessage::UpdateBrowserNameAndVersion { name, version } => {
                             self.request_settings.browser_name = name;
                             self.request_settings.browser_version = version;
                         }
@@ -214,7 +214,7 @@ impl ChatPoller {
             }
 
             if let Some(actions) = actions {
-                let polling_results = OutMessages::NewBatch {
+                let polling_results = OutMessage::NewBatch {
                     actions,
                     video_id: self.video_id.clone(),
                 };

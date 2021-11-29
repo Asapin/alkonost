@@ -4,7 +4,7 @@ pub mod stream_finder {
     use std::collections::HashSet;
 
     #[derive(Debug, Clone)]
-    pub enum IncMessages {
+    pub enum IncMessage {
         Close,
         AddChannel(String),
         RemoveChannel(String),
@@ -25,7 +25,7 @@ pub mod chat_poller {
     use crate::types::Action;
 
     #[derive(Debug, Clone)]
-    pub enum IncMessages {
+    pub enum IncMessage {
         Close,
         UpdateUserAgent(String),
         UpdateBrowserVersion(String),
@@ -33,7 +33,7 @@ pub mod chat_poller {
     }
 
     #[derive(Debug, Clone)]
-    pub enum OutMessages {
+    pub enum OutMessage {
         ChatInit {
             channel: String,
             video_id: String,
@@ -52,7 +52,7 @@ pub mod chat_manager {
     use std::collections::HashSet;
 
     #[derive(Debug, Clone)]
-    pub enum IncMessages {
+    pub enum IncMessage {
         Close,
         FoundStreams {
             channel: String,
@@ -71,13 +71,13 @@ pub mod detector {
     use super::{DetectorDecision, chat_poller};
 
     #[derive(Debug, Clone)]
-    pub enum IncMessages {
+    pub enum IncMessage {
         Close,
-        ChatPoller(chat_poller::OutMessages)
+        ChatPoller(chat_poller::OutMessage)
     }
 
     #[derive(Debug)]
-    pub enum OutMessages {
+    pub enum OutMessage {
         ChatClosed(String),
         DetectorResult {
             video_id: String,

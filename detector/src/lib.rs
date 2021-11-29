@@ -1,4 +1,4 @@
-use core::{ActorWrapper, detector_params::DetectorParams, messages::detector::{IncMessages, OutMessages}};
+use core::{ActorWrapper, detector_params::DetectorParams, messages::detector::{IncMessage, OutMessage}};
 use std::collections::HashMap;
 
 use error::DetectorError;
@@ -12,16 +12,16 @@ mod error;
 
 pub struct DetectorManager {
     streams: HashMap<String, SpamDetector>,
-    rx: Receiver<IncMessages>,
-    result_tx: Sender<OutMessages>,
+    rx: Receiver<IncMessage>,
+    result_tx: Sender<OutMessage>,
     params: DetectorParams,
 }
 
 impl DetectorManager {
     pub fn init(
         detector_params: DetectorParams,
-        result_tx: Sender<OutMessages>,
-    ) -> ActorWrapper<IncMessages> {
+        result_tx: Sender<OutMessage>,
+    ) -> ActorWrapper<IncMessage> {
         let (tx, rx) = mpsc::channel(32);
         let manager = Self {
             streams: HashMap::new(),
@@ -60,17 +60,17 @@ impl DetectorManager {
             };
 
             match message {
-                IncMessages::Close => return Ok(()),
-                IncMessages::ChatPoller(poller_message) => {
+                IncMessage::Close => return Ok(()),
+                IncMessage::ChatPoller(poller_message) => {
                     match poller_message {
-                        core::messages::chat_poller::OutMessages::ChatInit { 
+                        core::messages::chat_poller::OutMessage::ChatInit { 
                             channel: _, 
                             video_id 
                         } => {
                             // TODO: load channel specific detector params
                             self.streams.insert(video_id, SpamDetector::init());
                         },
-                        core::messages::chat_poller::OutMessages::NewBatch { 
+                        core::messages::chat_poller::OutMessage::NewBatch { 
                             video_id, 
                             actions 
                         } => {
@@ -88,7 +88,7 @@ impl DetectorManager {
 
                             let decisions = detector_instance.process_new_messages(actions, &self.params);
                             if !decisions.is_empty() {
-                                let result = OutMessages::DetectorResult {
+                                let result = OutMessage::DetectorResult {
                                     video_id,
                                     decisions,
                                 };
@@ -96,12 +96,12 @@ impl DetectorManager {
                                 self.result_tx.send(result).await?;
                             }
                         },
-                        core::messages::chat_poller::OutMessages::StreamEnded { 
+                        core::messages::chat_poller::OutMessage::StreamEnded { 
                             video_id 
                         } => {
                             self.streams.remove(&video_id);
                             self.result_tx
-                                .send(OutMessages::ChatClosed(video_id))
+                                .send(OutMessage::ChatClosed(video_id))
                                 .await?;
                         },
                     }

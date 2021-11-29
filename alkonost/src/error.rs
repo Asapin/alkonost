@@ -20,29 +20,29 @@ pub enum AlkonostError {
     #[error("Incoming messages channel was closed. That should never happen.")]
     IncomingChannelClosed,
     #[error("Couldn't send message to the StreamFinder: {0}")]
-    StreamFinderChannel(#[source] SendError<messages::stream_finder::IncMessages>),
+    StreamFinderChannel(#[source] SendError<messages::stream_finder::IncMessage>),
     #[error("Couldn't send message to the ChatManager: {0}")]
-    ChatManagerChannel(#[source] SendError<messages::chat_manager::IncMessages>),
+    ChatManagerChannel(#[source] SendError<messages::chat_manager::IncMessage>),
     #[error("Couldn't send message to the Detector: {0}")]
-    DetectorChannel(#[source] SendError<messages::detector::IncMessages>),
+    DetectorChannel(#[source] SendError<messages::detector::IncMessage>),
     #[error("Couldn't join child task: {0}")]
     JoinTask(#[source] JoinError)
 }
 
-impl From<SendError<messages::stream_finder::IncMessages>> for AlkonostError {
-    fn from(e: SendError<messages::stream_finder::IncMessages>) -> Self {
+impl From<SendError<messages::stream_finder::IncMessage>> for AlkonostError {
+    fn from(e: SendError<messages::stream_finder::IncMessage>) -> Self {
         Self::StreamFinderChannel(e)
     }
 }
 
-impl From<SendError<messages::chat_manager::IncMessages>> for AlkonostError {
-    fn from(e: SendError<messages::chat_manager::IncMessages>) -> Self {
+impl From<SendError<messages::chat_manager::IncMessage>> for AlkonostError {
+    fn from(e: SendError<messages::chat_manager::IncMessage>) -> Self {
         Self::ChatManagerChannel(e)
     }
 }
 
-impl From<SendError<messages::detector::IncMessages>> for AlkonostError {
-    fn from(e: SendError<messages::detector::IncMessages>) -> Self {
+impl From<SendError<messages::detector::IncMessage>> for AlkonostError {
+    fn from(e: SendError<messages::detector::IncMessage>) -> Self {
         Self::DetectorChannel(e)
     }
 }

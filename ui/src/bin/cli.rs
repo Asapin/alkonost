@@ -31,10 +31,10 @@ pub async fn main() {
     let rx_reader = tokio::spawn(async move {
         while let Some(message) = result_rx.recv().await {
             match message {
-                core::messages::detector::OutMessages::ChatClosed(video_id) => {
+                core::messages::detector::OutMessage::ChatClosed(video_id) => {
                     println!("CLI: stream <{}> has ended", video_id);
                 },
-                core::messages::detector::OutMessages::DetectorResult { 
+                core::messages::detector::OutMessage::DetectorResult { 
                     video_id, 
                     decisions 
                 } => {

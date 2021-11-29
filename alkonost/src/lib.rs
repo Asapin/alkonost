@@ -21,9 +21,9 @@ pub struct Alkonost {
     detector: JoinHandle<()>,
     finder_to_chat_handle: JoinHandle<()>,
     chat_to_detector_handle: JoinHandle<()>,
-    stream_finder_tx: Sender<messages::stream_finder::IncMessages>,
-    chat_manager_tx: Sender<messages::chat_manager::IncMessages>,
-    detector_tx: Sender<messages::detector::IncMessages>,
+    stream_finder_tx: Sender<messages::stream_finder::IncMessage>,
+    chat_manager_tx: Sender<messages::chat_manager::IncMessage>,
+    detector_tx: Sender<messages::detector::IncMessage>,
 }
 
 impl Alkonost {
@@ -31,7 +31,7 @@ impl Alkonost {
         detector_params: DetectorParams,
         request_settings: RequestSettings,
         chat_poll_interval: Duration,
-    ) -> Result<(ActorWrapper<IncMessage>, Receiver<messages::detector::OutMessages>), AlkonostInitError> {
+    ) -> Result<(ActorWrapper<IncMessage>, Receiver<messages::detector::OutMessage>), AlkonostInitError> {
         let (detector_result_tx, detector_result_rx) = mpsc::channel(32);
         let ActorWrapper { join_handle: detector, tx: detector_tx } = DetectorManager::init(
             detector_params, 
@@ -60,7 +60,7 @@ impl Alkonost {
 
         let chat_to_detector_handle = tokio::spawn(async move {
             while let Some(out_message) = chat_manager_result_rx.recv().await {
-                let inc_message = messages::detector::IncMessages::ChatPoller(out_message);
+                let inc_message = messages::detector::IncMessage::ChatPoller(out_message);
                 match detector_tx_clone.send(inc_message).await {
                     Ok(_r) => { },
                     Err(e) => {
@@ -73,7 +73,7 @@ impl Alkonost {
 
         let finder_to_chat_handle = tokio::spawn(async move {
             while let Some(out_message) = stream_finder_result_rx.recv().await {
-                let inc_message = messages::chat_manager::IncMessages::FoundStreams {
+                let inc_message = messages::chat_manager::IncMessage::FoundStreams {
                     channel: out_message.channel,
                     streams: out_message.streams
                 };
@@ -135,9 +135,9 @@ impl Alkonost {
 
             match message {
                 messages::alkonost::IncMessage::Close => {
-                    self.stream_finder_tx.send(messages::stream_finder::IncMessages::Close).await?;
-                    self.chat_manager_tx.send(messages::chat_manager::IncMessages::Close).await?;
-                    self.detector_tx.send(messages::detector::IncMessages::Close).await?;
+                    self.stream_finder_tx.send(messages::stream_finder::IncMessage::Close).await?;
+                    self.chat_manager_tx.send(messages::chat_manager::IncMessage::Close).await?;
+                    self.detector_tx.send(messages::detector::IncMessage::Close).await?;
                     self.stream_finder.await?;
                     self.finder_to_chat_handle.await?;
                     self.chat_manager.await?;
@@ -146,26 +146,26 @@ impl Alkonost {
                     return Ok(());
                 },
                 messages::alkonost::IncMessage::AddChannel(channel) => {
-                    let module_message = messages::stream_finder::IncMessages::AddChannel(channel);
+                    let module_message = messages::stream_finder::IncMessage::AddChannel(channel);
                     self.stream_finder_tx.send(module_message).await?;
                 },
                 messages::alkonost::IncMessage::RemoveChannel(channel) => {
-                    let module_message = messages::stream_finder::IncMessages::RemoveChannel(channel);
+                    let module_message = messages::stream_finder::IncMessage::RemoveChannel(channel);
                     self.stream_finder_tx.send(module_message).await?;
                 },
                 messages::alkonost::IncMessage::UpdateStreamPollInterval(interval) => {
-                    let module_message = messages::stream_finder::IncMessages::UpdatePollInterval(interval);
+                    let module_message = messages::stream_finder::IncMessage::UpdatePollInterval(interval);
                     self.stream_finder_tx.send(module_message).await?;
                 },
                 messages::alkonost::IncMessage::UpdateUserAgent(user_agent) => {
-                    let module_message_1 = messages::stream_finder::IncMessages::UpdateUserAgent(user_agent.clone());
-                    let module_message_2 = messages::chat_manager::IncMessages::UpdateUserAgent(user_agent);
+                    let module_message_1 = messages::stream_finder::IncMessage::UpdateUserAgent(user_agent.clone());
+                    let module_message_2 = messages::chat_manager::IncMessage::UpdateUserAgent(user_agent);
                     self.stream_finder_tx.send(module_message_1).await?;
                     self.chat_manager_tx.send(module_message_2).await?;
                 },
                 messages::alkonost::IncMessage::UpdateBrowserVersion(browser_version) => {
-                    let module_message_1 = messages::stream_finder::IncMessages::UpdateBrowserVersion(browser_version.clone());
-                    let module_message_2 = messages::chat_manager::IncMessages::UpdateBrowserVersion(browser_version);
+                    let module_message_1 = messages::stream_finder::IncMessage::UpdateBrowserVersion(browser_version.clone());
+                    let module_message_2 = messages::chat_manager::IncMessage::UpdateBrowserVersion(browser_version);
                     self.stream_finder_tx.send(module_message_1).await?;
                     self.chat_manager_tx.send(module_message_2).await?;
                 },
@@ -173,12 +173,12 @@ impl Alkonost {
                     name, 
                     version 
                 } => {
-                    let module_message_1 = messages::stream_finder::IncMessages::UpdateBrowserNameAndVersion {
+                    let module_message_1 = messages::stream_finder::IncMessage::UpdateBrowserNameAndVersion {
                         name: name.clone(),
                         version: version.clone()
                     };
 
-                    let module_message_2 = messages::chat_manager::IncMessages::UpdateBrowserNameAndVersion {
+                    let module_message_2 = messages::chat_manager::IncMessage::UpdateBrowserNameAndVersion {
                         name,
                         version
                     };

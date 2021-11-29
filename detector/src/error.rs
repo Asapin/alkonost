@@ -1,4 +1,4 @@
-use core::messages::detector::OutMessages;
+use core::messages::detector::OutMessage;
 
 use thiserror::Error;
 use tokio::sync::mpsc::error::SendError;
@@ -8,11 +8,11 @@ pub enum DetectorError {
     #[error("Incoming messages channel was closed. That should never happen.")]
     IncomingChannelClosed,
     #[error("Outgoing messages channel was closed: {0}")]
-    OutgoingChannelClosed(#[source] SendError<OutMessages>),
+    OutgoingChannelClosed(#[source] SendError<OutMessage>),
 }
 
-impl From<SendError<OutMessages>> for DetectorError {
-    fn from(e: SendError<OutMessages>) -> Self {
+impl From<SendError<OutMessage>> for DetectorError {
+    fn from(e: SendError<OutMessage>) -> Self {
         DetectorError::OutgoingChannelClosed(e)
     }
 }

@@ -4,7 +4,7 @@ use core::{
     http_client::{HttpClient, RequestSettings},
     youtube_regexes::YoutubeRegexes,
     ActorWrapper,
-    messages::stream_finder::{IncMessages, OutMessage}
+    messages::stream_finder::{IncMessage, OutMessage}
 };
 use std::io::Write;
 use std::{
@@ -26,7 +26,7 @@ mod error;
 mod video_list;
 
 pub struct StreamFinder {
-    rx: Receiver<IncMessages>,
+    rx: Receiver<IncMessage>,
     result_tx: Sender<OutMessage>,
     next_poll_time: Instant,
     poll_interval: Duration,
@@ -41,7 +41,7 @@ impl StreamFinder {
         request_settings: RequestSettings,
         result_tx: Sender<OutMessage>,
         poll_interval: Duration,
-    ) -> ActorWrapper<IncMessages> {
+    ) -> ActorWrapper<IncMessage> {
         let (tx, rx) = mpsc::channel(32);
 
         let stream_finder = Self {
@@ -83,27 +83,27 @@ impl StreamFinder {
             while let Ok(recv_result) = timeout_at(self.next_poll_time, self.rx.recv()).await {
                 match recv_result {
                     Some(message) => match message {
-                        IncMessages::Close => return Ok(()),
-                        IncMessages::AddChannel(channel_id) => {
+                        IncMessage::Close => return Ok(()),
+                        IncMessage::AddChannel(channel_id) => {
                             let url = format!(
                                 "https://www.youtube.com/channel/{}/videos?view=57",
                                 &channel_id
                             );
                             self.channels.insert(channel_id, url);
                         }
-                        IncMessages::RemoveChannel(channel_id) => {
+                        IncMessage::RemoveChannel(channel_id) => {
                             self.channels.remove(&channel_id);
                         }
-                        IncMessages::UpdatePollInterval(interval_ms) => {
+                        IncMessage::UpdatePollInterval(interval_ms) => {
                             self.poll_interval = Duration::from_millis(interval_ms);
                         }
-                        IncMessages::UpdateUserAgent(user_agent) => {
+                        IncMessage::UpdateUserAgent(user_agent) => {
                             self.request_settings.user_agent = user_agent.clone();
                         }
-                        IncMessages::UpdateBrowserVersion(version) => {
+                        IncMessage::UpdateBrowserVersion(version) => {
                             self.request_settings.browser_version = version.clone();
                         }
-                        IncMessages::UpdateBrowserNameAndVersion { name, version } => {
+                        IncMessage::UpdateBrowserNameAndVersion { name, version } => {
                             self.request_settings.browser_name = name.clone();
                             self.request_settings.browser_version = version.clone();
                         }

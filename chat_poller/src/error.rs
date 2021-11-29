@@ -1,4 +1,4 @@
-use core::{http_client::HttpClientLoadError, messages::chat_poller::OutMessages};
+use core::{http_client::HttpClientLoadError, messages::chat_poller::OutMessage};
 
 use thiserror::Error;
 use tokio::sync::mpsc::error::SendError;
@@ -22,7 +22,7 @@ pub enum InitError {
     #[error("Couldn't find <INNERTUBE_API_KEY> param: {0}")]
     ChatKey(String),
     #[error("Couldn't chat poller init: {0}")]
-    NotifyingAboutInit(SendError<OutMessages>)
+    NotifyingAboutInit(SendError<OutMessage>)
 }
 
 impl From<HttpClientLoadError> for InitError {
@@ -31,8 +31,8 @@ impl From<HttpClientLoadError> for InitError {
     }
 }
 
-impl From<SendError<OutMessages>> for InitError {
-    fn from(e: SendError<OutMessages>) -> Self {
+impl From<SendError<OutMessage>> for InitError {
+    fn from(e: SendError<OutMessage>) -> Self {
         InitError::NotifyingAboutInit(e)
     }
 }
@@ -44,7 +44,7 @@ pub enum PollerError {
     #[error("Couldn't load chat messages: {0}")]
     LoadingMessages(#[source] HttpClientLoadError),
     #[error("Couldn't send message to chat manager: {0}")]
-    SendToDetector(#[source] SendError<OutMessages>),
+    SendToDetector(#[source] SendError<OutMessage>),
     #[error("Couldn't dump error {0} due to another error {1}")]
     DumpError(ActionExtractorError, std::io::Error),
     #[error("Error while extracting actions from json {0}")]
@@ -59,8 +59,8 @@ impl From<serde_json::Error> for PollerError {
     }
 }
 
-impl From<SendError<OutMessages>> for PollerError {
-    fn from(e: SendError<OutMessages>) -> Self {
+impl From<SendError<OutMessage>> for PollerError {
+    fn from(e: SendError<OutMessage>) -> Self {
         PollerError::SendToDetector(e)
     }
 }

@@ -1,6 +1,6 @@
 #![allow(proc_macro_derive_resolution_fallback, unused_attributes)]
 
-use core::{ActorWrapper, http_client::{HttpClient, RequestSettings}, messages::{self, chat_manager::IncMessages}};
+use core::{ActorWrapper, http_client::{HttpClient, RequestSettings}, messages::{self, chat_manager::IncMessage}};
 use std::{collections::{HashMap, HashSet}, sync::Arc, time::Duration};
 
 use chat_poller::{ChatPoller, InitResult};
@@ -10,25 +10,25 @@ use tokio::{sync::{mpsc::{self, Receiver, Sender}, oneshot}, time::timeout};
 mod error;
 
 struct InprogressChat {
-    actor: ActorWrapper<messages::chat_poller::IncMessages>,
+    actor: ActorWrapper<messages::chat_poller::IncMessage>,
     notify_close_rx: oneshot::Receiver<()>
 }
 
 pub struct ChatManager {
-    rx: Receiver<IncMessages>,
+    rx: Receiver<IncMessage>,
     check_children_period: Duration,
     http_client: Arc<HttpClient>,
     request_settings: RequestSettings,
     inprogress_chats: HashMap<String, InprogressChat>,
-    result_tx: Sender<messages::chat_poller::OutMessages>
+    result_tx: Sender<messages::chat_poller::OutMessage>
 }
 
 impl ChatManager {
     pub fn init(
         http_client: Arc<HttpClient>,
         request_settings: RequestSettings,
-        result_tx: Sender<messages::chat_poller::OutMessages>
-    ) -> ActorWrapper<IncMessages> {
+        result_tx: Sender<messages::chat_poller::OutMessage>
+    ) -> ActorWrapper<IncMessage> {
         let (tx, rx) = mpsc::channel(32);
         let check_children_period = Duration::from_secs(60);
 
@@ -70,8 +70,8 @@ impl ChatManager {
             while let Ok(recv_result) = timeout(self.check_children_period, self.rx.recv()).await {
                 match recv_result {
                     Some(message) => match message {
-                        IncMessages::Close => return Ok(()),
-                        IncMessages::FoundStreams { 
+                        IncMessage::Close => return Ok(()),
+                        IncMessage::FoundStreams { 
                             channel, 
                             streams 
                         } => {
@@ -110,20 +110,20 @@ impl ChatManager {
                                 }
                             }
                         },
-                        IncMessages::UpdateUserAgent(user_agent) => {
+                        IncMessage::UpdateUserAgent(user_agent) => {
                             self.request_settings.user_agent = user_agent.clone();
-                            let poller_message = messages::chat_poller::IncMessages::UpdateUserAgent(user_agent);
+                            let poller_message = messages::chat_poller::IncMessage::UpdateUserAgent(user_agent);
                             self.send_message_to_pollers(poller_message).await;
                         },
-                        IncMessages::UpdateBrowserVersion(version) => {
+                        IncMessage::UpdateBrowserVersion(version) => {
                             self.request_settings.browser_version = version.clone();
-                            let poller_message = messages::chat_poller::IncMessages::UpdateBrowserVersion(version);
+                            let poller_message = messages::chat_poller::IncMessage::UpdateBrowserVersion(version);
                             self.send_message_to_pollers(poller_message).await;
                         },
-                        IncMessages::UpdateBrowserNameAndVersion { name, version } => {
+                        IncMessage::UpdateBrowserNameAndVersion { name, version } => {
                             self.request_settings.browser_name = name.clone();
                             self.request_settings.browser_version = name.clone();
-                            let poller_message = messages::chat_poller::IncMessages::UpdateBrowserNameAndVersion { name, version };
+                            let poller_message = messages::chat_poller::IncMessage::UpdateBrowserNameAndVersion { name, version };
                             self.send_message_to_pollers(poller_message).await;
                         },
                     },
@@ -178,7 +178,7 @@ impl ChatManager {
 
     async fn send_message_to_pollers(
         &mut self,
-        message: messages::chat_poller::IncMessages,
+        message: messages::chat_poller::IncMessage,
     ) {
         let mut already_closed_pollers = HashSet::new();
 
@@ -202,7 +202,7 @@ impl ChatManager {
 
     async fn close_gracefully(&mut self) {
         println!("ChatManager: Sending `Close` message to currently active chat pollers...");
-        let close_message = messages::chat_poller::IncMessages::Close;
+        let close_message = messages::chat_poller::IncMessage::Close;
         self.send_message_to_pollers(close_message).await;
         for (video_id, chat) in self.inprogress_chats.drain() {
             ChatManager::close_chat_poller(video_id, chat).await;
