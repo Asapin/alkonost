@@ -21,8 +21,8 @@ pub enum Action {
     #[serde(rename_all(deserialize = "camelCase"))]
     AddLiveChatTickerItemAction {
         // Ticker is a small message about a superchat or a new membership,
-    // that shows up on top of the chat window, and usually is duplicated by a regular AddChatItemAction,
-    // that shows inside the chat window.
+        // that shows up on top of the chat window, and usually is duplicated by a regular AddChatItemAction,
+        // that shows inside the chat window.
     },
     #[serde(rename_all(deserialize = "camelCase"))]
     AddBannerToLiveChatCommand { banner_renderer: BannerItem },

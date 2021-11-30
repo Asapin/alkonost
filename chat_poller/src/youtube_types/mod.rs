@@ -9,7 +9,7 @@ mod tests {
     #[test]
     fn deserialize_chat_json() {
         let json = include_str!("../../unimplemented_types.json");
-        let _chat_json = serde_json::from_str::<ChatJson>(&json).unwrap();
+        let _chat_json = serde_json::from_str::<ChatJson>(json).unwrap();
     }
 
     #[test]
