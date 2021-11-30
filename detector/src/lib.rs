@@ -49,11 +49,11 @@ impl DetectorManager {
                 // Manager finished it's work due to incoming `Close` message
             }
             Err(e) => {
-                println!("DetectorManager: Error, while processing messages: {}", &e);
+                shared::tracing_warn!("Error, while processing messages: {}", &e);
             }
         }
 
-        println!("DetectorManager has been closed");
+        shared::tracing_info!("Closed");
     }
 
     async fn do_run(&mut self) -> Result<(), DetectorError> {
@@ -88,8 +88,8 @@ impl DetectorManager {
                             let detector_instance = match detector_instance {
                                 Some(instance) => instance,
                                 None => {
-                                    println!(
-                                        "DetectorManager: {} has sent `NewBatch` before `ChatInit`",
+                                    shared::tracing_warn!(
+                                        "{} has sent `NewBatch` before `ChatInit`",
                                         &video_id
                                     );
                                     continue;

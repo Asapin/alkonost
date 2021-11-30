@@ -68,12 +68,12 @@ impl ChatManager {
                 // Chat manager was closed due to received `Close` message
             }
             Err(e) => {
-                println!("ChatManager: encountered an error: {}", &e);
+                shared::tracing_error!("Encountered an error: {}", &e);
             }
         }
 
         self.close_gracefully().await;
-        println!("ChatManager has been closed");
+        shared::tracing_info!("Closed");
     }
 
     async fn do_run(&mut self) -> Result<(), ChatManagerError> {
@@ -113,8 +113,8 @@ impl ChatManager {
                                     },
                                     Err(e) => {
                                         // Not a hard error
-                                        println!(
-                                            "ChatManager: Couldn't initialize chat poller for {}: {}",
+                                        shared::tracing_warn!(
+                                            "Couldn't initialize chat poller {}: {}",
                                             &video_id, &e
                                         );
                                     }
@@ -176,27 +176,27 @@ impl ChatManager {
         for (video_id, closed_safely) in closed_chats {
             if let Some(chat) = self.inprogress_chats.remove(&video_id) {
                 if closed_safely {
-                    println!(
-                        "ChatManager: waiting for {} chat poller to finish its work",
+                    shared::tracing_info!(
+                        "Waiting for chat poller {} to finish its work",
                         &video_id
                     );
                     match chat.actor.join_handle.await {
                         Ok(_r) => {
-                            println!(
-                                "ChatManager: chat poller {} has finished its work",
+                            shared::tracing_info!(
+                                "Chat poller {} has finished its work",
                                 &video_id
                             );
                         }
                         Err(e) => {
-                            println!(
-                                "ChatManager: chat poller for {} has panicked: {}",
+                            shared::tracing_warn!(
+                                "Chat poller {} has panicked: {}",
                                 &video_id, e
                             );
                         }
                     };
                 } else {
-                    println!(
-                        "ChatManager: chat poller for {} closed before sending the notification",
+                    shared::tracing_warn!(
+                        "Chat poller {} closed before sending the notification. Aborting the task...",
                         &video_id
                     );
                     chat.actor.join_handle.abort()
@@ -227,7 +227,7 @@ impl ChatManager {
     }
 
     async fn close_gracefully(&mut self) {
-        println!("ChatManager: Sending `Close` message to currently active chat pollers...");
+        shared::tracing_info!("Sending `Close` message to currently active chat pollers...");
         let close_message = messages::chat_poller::IncMessage::Close;
         self.send_message_to_pollers(close_message).await;
         for (video_id, chat) in self.inprogress_chats.drain() {
@@ -238,15 +238,15 @@ impl ChatManager {
     async fn close_chat_poller(video_id: String, mut chat: InprogressChat) {
         match chat.notify_close_rx.try_recv() {
             Ok(_r) => {
-                println!(
-                    "ChatManager: waiting for {} chat poller to finish its work",
+                shared::tracing_info!(
+                    "Waiting for chat poller {} to finish its work",
                     &video_id
                 );
                 match chat.actor.join_handle.await {
                     Ok(_r) => {}
                     Err(e) => {
-                        println!(
-                            "ChatManager: chat poller for {} has panicked: {}",
+                        shared::tracing_warn!(
+                            "Chat poller {} has panicked: {}",
                             &video_id, e
                         );
                     }
@@ -255,14 +255,14 @@ impl ChatManager {
             Err(e) => {
                 match e {
                     oneshot::error::TryRecvError::Empty => {
-                        println!(
-                            "ChatManager: chat poller for {} closed it's rx without closing itself which shouldn't be possible", 
+                        shared::tracing_warn!(
+                            "Chat poller {} closed it's rx without closing itself which shouldn't be possible. Aborting the task...", 
                             &video_id
                         );
                     }
                     oneshot::error::TryRecvError::Closed => {
-                        println!(
-                            "ChatManager: chat poller for {} closed before sending the notification", 
+                        shared::tracing_warn!(
+                            "Chat poller {} closed before sending the notification. Aborting the task...", 
                             &video_id
                         );
                     }

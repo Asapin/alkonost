@@ -34,5 +34,4 @@ Also, if the `ChatPoller` encounters any error during the deserialization of a J
 
 ## Possible future improvements
 
-* Replace all `println!()` calls with the use of a proper logging framework
 * Upon receiving `Close` message, return the underlying data like `chat_params`, `next_poll_time` and so on of every existing `ChatPoller`, for a potential migration to another instance

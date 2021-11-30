@@ -35,7 +35,6 @@ Not that I'm aware of.
 
 ## Possible future improvements
 
-* Replace all `println!()` calls with the use of a proper logging framework
 * Upon receiving `Close` message, return the underlying data like `streams`, `params` and so on, for a potential migration to another instance
 * Separate `DetectorParams` for every stream and channel
 * Analyze messages and user names for offensive and blacklisted words

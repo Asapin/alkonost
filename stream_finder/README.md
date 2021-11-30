@@ -34,5 +34,4 @@ Sometimes loading a channel page would result in an HTML, that has a slightly di
 
 ## Possible future improvements
 
-* Replace all `println!()` calls with the use of a proper logging framework
 * Upon receiving `Close` message, return the underlying data like `poll_interval`, `channels` and so on, for a potential migration to another instance

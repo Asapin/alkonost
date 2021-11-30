@@ -8,6 +8,7 @@ readme = "README.md"
 
 [dependencies]
 thiserror = "^1"
+tracing = { version = "^0", features = ["log"] }
 reqwest = { version = "^0", default-features = false, features = ["rustls-tls", "gzip", "brotli", "deflate"] }
 tokio = { version = "^1", default-features = false }
 vec1 = { version = "^1", default-features = false }

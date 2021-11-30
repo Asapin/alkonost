@@ -61,13 +61,12 @@ impl StreamFinder {
                 // StreamFinder finished it's work due to incoming `Close` message
             }
             Err(e) => {
-                println!("StreamFinder: Error, while looking for new and airing streams and premiers: {}", &e);
+                shared::tracing_error!("Error, while looking for new and airing streams and premiers: {}", &e);
             }
         }
 
         // We can do some cleaup work here before closing StreamFinder
-
-        println!("StreamFinder has been closed");
+        shared::tracing_info!("Closed");
     }
 
     async fn do_run(&mut self) -> Result<(), StreamFinderError> {
@@ -150,8 +149,8 @@ impl StreamFinder {
         let channel_page = match load_result {
             Ok(data) => data,
             Err(e) => {
-                println!(
-                    "StreamFinder: couldn't load content from {} channel, reason: {}",
+                shared::tracing_error!(
+                    "Couldn't load content from {} channel, reason: {}",
                     channel_id, e
                 );
                 return;
@@ -173,8 +172,8 @@ impl StreamFinder {
                 let mut request_output = match File::create(format!("{}.channel", &channel_id)) {
                     Ok(file) => file,
                     Err(io_e) => {
-                        println!(
-                            "StreamFinder: couldn't dump an error {} from the channel {}, reason: {}",
+                        shared::tracing_error!(
+                            "Couldn't dump an error {} from the channel {}, reason: {}",
                             e, channel_id, io_e
                         );
                         return;
@@ -184,16 +183,16 @@ impl StreamFinder {
                 match write!(request_output, "{}", channel_page) {
                     Ok(_r) => {}
                     Err(io_e) => {
-                        println!(
-                            "StreamFinder: couldn't dump an error {} from the channel {}, reason: {}",
+                        shared::tracing_error!(
+                            "Couldn't dump an error {} from the channel {}, reason: {}",
                             e, channel_id, io_e
                         );
                         return;
                     }
                 }
 
-                println!(
-                    "StreamFinder: couldn't extract video list from the channel {}, reason: {}",
+                shared::tracing_error!(
+                    "Couldn't extract video list from the channel {}, reason: {}",
                     channel_id, e
                 );
                 return;
@@ -209,8 +208,8 @@ impl StreamFinder {
         {
             Ok(_r) => {}
             Err(e) => {
-                println!(
-                    "StreamFinder: couldn't send polling results from channel {}, reason: {}",
+                shared::tracing_error!(
+                    "Couldn't send polling results from channel {}, reason: {}",
                     channel_id, e
                 );
             }

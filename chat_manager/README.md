@@ -25,5 +25,4 @@ None that I know of.
 
 ## Possible future improvements
 
-* Replace all `println!()` calls with the use of a proper logging framework
 * Upon receiving `Close` message, return the underlying data like `chat_params`, `next_poll_time` and so on of every existing `ChatPoller`, for a potential migration to another instance

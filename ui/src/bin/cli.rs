@@ -2,9 +2,17 @@ use std::{collections::HashSet, time::Duration};
 
 use alkonost::{Alkonost, AlkonostInMessage, AlkonostOutMessage, DetectorParams, RequestSettings};
 use tokio::time::sleep;
+use tracing::Level;
 
 #[tokio::main]
 pub async fn main() {
+    let subscriber = tracing_subscriber::FmtSubscriber::builder()
+        .with_max_level(Level::INFO)
+        .finish();
+
+    tracing::subscriber::set_global_default(subscriber)
+        .expect("setting default subscriber failed");
+
     let detector_params = DetectorParams::new(4, 5000.0, 5, 30.0, 5, 0.85, 3, 10);
     let request_settings = RequestSettings {
         browser_name: "Firefox".to_string(),
@@ -19,7 +27,7 @@ pub async fn main() {
         match Alkonost::init(detector_params, request_settings, poll_interval) {
             Ok(r) => r,
             Err(e) => {
-                println!("CLI: Error initializing alkonost: {}", &e);
+                tracing::error!("Error initializing alkonost: {}", &e);
                 return;
             }
         };
@@ -28,21 +36,21 @@ pub async fn main() {
         while let Some(message) = result_rx.recv().await {
             match message {
                 AlkonostOutMessage::NewChat { channel, video_id } => {
-                    println!("New stream <{}> on channel <{}>", video_id, channel);
+                    tracing::info!("New stream <{}> on channel <{}>", video_id, channel);
                 }
                 AlkonostOutMessage::ChatClosed(video_id) => {
-                    println!("CLI: stream <{}> has ended", video_id);
+                    tracing::info!("Stream <{}> has ended", video_id);
                 }
                 AlkonostOutMessage::DetectorResult {
                     video_id,
                     decisions,
                 } => {
-                    println!("CLI: <{}>: {:?}", video_id, decisions);
+                    tracing::info!("<{}>: {:?}", video_id, decisions);
                 }
             }
         }
 
-        println!("CLI: rx_reader has been closed");
+        tracing::info!("rx_reader has been closed");
     });
 
     let mut channels = HashSet::new();
@@ -63,18 +71,18 @@ pub async fn main() {
         match actor.tx.send(message).await {
             Ok(_r) => {}
             Err(e) => {
-                println!("CLI: Couldn't send message to a stream finder: {}", &e);
+                tracing::error!("Couldn't send message to a stream finder: {}", &e);
                 return;
             }
         }
     }
 
     sleep(Duration::from_secs(130)).await;
-    println!("CLI: Closing...");
+    tracing::info!("Closing...");
     match actor.tx.send(AlkonostInMessage::Close).await {
         Ok(_r) => {}
         Err(e) => {
-            println!("CLI: Couldn't send message to a stream finder: {}", &e);
+            tracing::error!("Couldn't send message to a stream finder: {}", &e);
             return;
         }
     }
@@ -82,5 +90,5 @@ pub async fn main() {
     let _ = actor.join_handle.await;
     let _ = rx_reader.await;
 
-    println!("CLI has been closed");
+    tracing::info!("Closed");
 }

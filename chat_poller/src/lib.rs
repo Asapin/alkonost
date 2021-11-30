@@ -127,14 +127,14 @@ impl ChatPoller {
                 // or because the poller received `Close` message
             }
             Err(e) => {
-                println!(
+                shared::tracing_error!(
                     "{}: Error, while processing messages: {}",
                     &self.video_id, &e
                 );
             }
         }
 
-        println!("{}: Sending `StreamEnded` message...", &self.video_id);
+        shared::tracing_info!("{}: Sending `StreamEnded` message...", &self.video_id);
         let closing_message = OutMessage::StreamEnded {
             video_id: self.video_id.clone(),
         };
@@ -143,14 +143,14 @@ impl ChatPoller {
                 // Nothing else to do
             }
             Err(e) => {
-                println!(
+                shared::tracing_error!(
                     "{}: Couldn't send `StreamEnded` message: {}",
                     &self.video_id, &e
                 );
             }
         }
 
-        println!(
+        shared::tracing_info!(
             "{}: Notifying that the module has stopped...",
             self.video_id
         );
@@ -159,11 +159,11 @@ impl ChatPoller {
                 // Nothing else to do
             }
             Err(_e) => {
-                println!("{}: Couldn't notify that module has stopped", self.video_id);
+                shared::tracing_error!("{}: Couldn't notify that module has stopped", self.video_id);
             }
         }
 
-        println!("{}: Chat poller has been closed", self.video_id);
+        shared::tracing_info!("{}: Chat poller has been closed", self.video_id);
     }
 
     async fn do_run(&mut self) -> Result<(), PollerError> {
@@ -255,7 +255,7 @@ impl ChatPoller {
                     if self.poll_errors_count > 2 {
                         return Err(e.into());
                     }
-                    println!(
+                    shared::tracing_warn!(
                         "{}: Encountered an error while polling for new messages. Retrying in 100ms. Attempt #: {}. Error: {}",
                         &self.video_id,
                         self.poll_errors_count,

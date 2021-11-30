@@ -2,7 +2,9 @@
 
 use tokio::{sync::mpsc::Sender, task::JoinHandle};
 
-pub use thiserror::{self, *};
+pub use tracing::info as tracing_info;
+pub use tracing::warn as tracing_warn;
+pub use tracing::error as tracing_error;
 
 pub mod detector_params;
 pub mod http_client;

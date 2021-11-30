@@ -85,8 +85,8 @@ impl Alkonost {
                 match detector_tx_clone.send(inc_message).await {
                     Ok(_r) => {}
                     Err(e) => {
-                        println!(
-                            "ChatToDetector: Detector's end of the channel has closed: {}",
+                        shared::tracing_error!(
+                            "Detector's end of the channel has closed: {}",
                             &e
                         );
                         return;
@@ -104,8 +104,8 @@ impl Alkonost {
                 match chat_manager_tx_clone.send(inc_message).await {
                     Ok(_r) => {}
                     Err(e) => {
-                        println!(
-                            "FinderToChat: Chat Manager's end of the channel has closed: {}",
+                        shared::tracing_error!(
+                            "Chat Manager's end of the channel has closed: {}",
                             &e
                         );
                         return;
@@ -143,12 +143,12 @@ impl Alkonost {
                 // Alkonost finished it's work due to incoming `Close` message
             }
             Err(e) => {
-                println!("Alkonost: Error: {}", &e);
+                shared::tracing_error!("Error: {}", &e);
             }
         }
 
         // We can do some cleaup work here before closing Alkonost
-        println!("Alkonost has been closed");
+        shared::tracing_info!("Closed");
     }
 
     async fn do_run(mut self) -> Result<(), AlkonostError> {
