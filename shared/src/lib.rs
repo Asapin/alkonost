@@ -2,11 +2,13 @@
 
 use tokio::{sync::mpsc::Sender, task::JoinHandle};
 
+pub use thiserror::{self, *};
+
+pub mod detector_params;
 pub mod http_client;
 pub mod messages;
 pub mod types;
 pub mod youtube_regexes;
-pub mod detector_params;
 
 pub struct ActorWrapper<T> {
     pub join_handle: JoinHandle<()>,

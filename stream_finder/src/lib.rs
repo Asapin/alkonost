@@ -1,18 +1,13 @@
 #![allow(proc_macro_derive_resolution_fallback, unused_attributes)]
 
-use core::{
+use shared::{
     http_client::{HttpClient, RequestSettings},
+    messages::stream_finder::{IncMessage, OutMessage},
     youtube_regexes::YoutubeRegexes,
     ActorWrapper,
-    messages::stream_finder::{IncMessage, OutMessage}
 };
 use std::io::Write;
-use std::{
-    collections::HashMap,
-    fs::File,
-    sync::Arc,
-    time::Duration,
-};
+use std::{collections::HashMap, fs::File, sync::Arc, time::Duration};
 
 use error::StreamFinderError;
 use futures::stream::{FuturesUnordered, StreamExt};
@@ -130,7 +125,10 @@ impl StreamFinder {
                 let channel_url = url.clone();
                 let result_tx = self.result_tx.clone();
 
-                async { self.load_streams_from_channel(channel_id, channel_url, result_tx).await }
+                async {
+                    self.load_streams_from_channel(channel_id, channel_url, result_tx)
+                        .await
+                }
             })
             .collect();
 
@@ -143,7 +141,7 @@ impl StreamFinder {
         &self,
         channel_id: String,
         channel_url: String,
-        result_tx: Sender<OutMessage>
+        result_tx: Sender<OutMessage>,
     ) {
         let load_result = self
             .http_client
@@ -153,7 +151,10 @@ impl StreamFinder {
         let channel_page = match load_result {
             Ok(data) => data,
             Err(e) => {
-                println!("StreamFinder: couldn't load content from {} channel, reason: {}", channel_id, e);
+                println!(
+                    "StreamFinder: couldn't load content from {} channel, reason: {}",
+                    channel_id, e
+                );
                 return;
             }
         };
@@ -192,19 +193,28 @@ impl StreamFinder {
                     }
                 }
 
-                println!("StreamFinder: couldn't extract video list from the channel {}, reason: {}", channel_id, e);
+                println!(
+                    "StreamFinder: couldn't extract video list from the channel {}, reason: {}",
+                    channel_id, e
+                );
                 return;
             }
         };
 
         match result_tx
-            .send(OutMessage { channel: channel_id.clone(), streams: video_list.streams })
-            .await 
-            {
-                Ok(_r) => { },
-                Err(e) => {
-                    println!("StreamFinder: couldn't send polling results from channel {}, reason: {}", channel_id, e);
-                },
+            .send(OutMessage {
+                channel: channel_id.clone(),
+                streams: video_list.streams,
+            })
+            .await
+        {
+            Ok(_r) => {}
+            Err(e) => {
+                println!(
+                    "StreamFinder: couldn't send polling results from channel {}, reason: {}",
+                    channel_id, e
+                );
             }
+        }
     }
 }

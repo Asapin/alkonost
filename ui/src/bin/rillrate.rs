@@ -15,24 +15,21 @@ pub async fn main() {
     };
     let poll_interval = Duration::from_secs(90);
 
-    let (actor, mut result_rx) = match Alkonost::init(
-        detector_params, 
-        request_settings, 
-        poll_interval
-    ) {
-        Ok(r) => r,
-        Err(e) => {
-            println!("RillRate: Error initializing alkonost: {}", &e);
-            return;
-        },
-    };
+    let (actor, mut result_rx) =
+        match Alkonost::init(detector_params, request_settings, poll_interval) {
+            Ok(r) => r,
+            Err(e) => {
+                println!("RillRate: Error initializing alkonost: {}", &e);
+                return;
+            }
+        };
 
     match rillrate::install("demo") {
-        Ok(_r) => { },
+        Ok(_r) => {}
         Err(e) => {
             println!("RillRate: couldn't install RillRate dashboard: {}", &e);
             return;
-        },
+        }
     };
 
     let decision_log_tail = LiveTail::new(
@@ -42,9 +39,9 @@ pub async fn main() {
     );
 
     let active_chat_pulse = Pulse::new(
-        "app.dashboard.stats.Chats count", 
-        Default::default(), 
-        PulseOpts::default().retain(3600 as u32)
+        "app.dashboard.stats.Chats count",
+        Default::default(),
+        PulseOpts::default().retain(3600 as u32),
     );
     active_chat_pulse.push(0);
 
@@ -54,25 +51,25 @@ pub async fn main() {
             match message {
                 AlkonostOutMessage::NewChat {
                     channel: _,
-                    video_id
+                    video_id,
                 } => {
                     active_chats.insert(video_id);
-                },
+                }
                 AlkonostOutMessage::ChatClosed(video_id) => {
                     active_chats.remove(&video_id);
-                },
-                AlkonostOutMessage::DetectorResult { 
-                    video_id, 
-                    decisions 
+                }
+                AlkonostOutMessage::DetectorResult {
+                    video_id,
+                    decisions,
                 } => {
                     for decision in decisions {
                         decision_log_tail.log_now(
-                            video_id.clone(), 
-                            decision.user, 
-                            format!("{:?}", decision.action)
+                            video_id.clone(),
+                            decision.user,
+                            format!("{:?}", decision.action),
                         );
                     }
-                },
+                }
             }
             active_chat_pulse.push(active_chats.len() as f64);
         }
@@ -108,10 +105,10 @@ pub async fn main() {
     let _ = rx_reader.await;
 
     match rillrate::uninstall() {
-        Ok(_r) => { },
+        Ok(_r) => {}
         Err(e) => {
             println!("RillRate: Couldn't uninstall: {}", &e);
-        },
+        }
     }
 
     println!("RillRate has been closed");

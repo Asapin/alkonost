@@ -5,7 +5,7 @@ Simple console spam detector for YouTube chats.
 Monitors a set of YouTube channels, and starts collecting messages as soon as a new chat room opens. All collected messages are then sent to an embedded spam detector and also saved to a database for a further analysis when searching for a ways to improve spam detection.
 
 Consists of several modules:
-* [core](core/) - common types and objects used by other modules
+* [shared](shared/) - common types and objects used by other modules
 * [StreamFinder](stream_finder/) - monitors YouTube channels for airing and upcoming streams and premiers
 * [ChatPoller](chat_poller/) - loads messages from the YouTube chat
 * [ChatManager](chat_manager/) - collects messages from every open chat room
@@ -14,7 +14,7 @@ Consists of several modules:
 * [Alkonost](alkonost/) - main library, responsible for creating all other modules and re-exporting only functionality, that should be used by UI implementation
 * [UI](ui/) - a collection of UI implementations for `Alkonost`
 
-All modules, except `core` are implemented as independend actors, which should allow for an easy horizontal scallability in the future, if such a need ever arises.
+All modules, except `shared` are implemented as independend actors, which should allow for an easy horizontal scallability in the future, if such a need ever arises.
 
 ## YouTube API
 

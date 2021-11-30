@@ -16,8 +16,8 @@ pub mod stream_finder {
 
     #[derive(Debug)]
     pub struct OutMessage {
-        pub channel: String, 
-        pub streams: HashSet<String>
+        pub channel: String,
+        pub streams: HashSet<String>,
     }
 }
 
@@ -56,37 +56,37 @@ pub mod chat_manager {
         Close,
         FoundStreams {
             channel: String,
-            streams: HashSet<String>
+            streams: HashSet<String>,
         },
         UpdateUserAgent(String),
         UpdateBrowserVersion(String),
         UpdateBrowserNameAndVersion {
             name: String,
             version: String,
-        }
+        },
     }
 }
 
 pub mod detector {
-    use super::{DetectorDecision, chat_poller};
+    use super::{chat_poller, DetectorDecision};
 
     #[derive(Debug, Clone)]
     pub enum IncMessage {
         Close,
-        ChatPoller(chat_poller::OutMessage)
+        ChatPoller(chat_poller::OutMessage),
     }
 
     #[derive(Debug)]
     pub enum OutMessage {
         NewChat {
             channel: String,
-            video_id: String
+            video_id: String,
         },
         ChatClosed(String),
         DetectorResult {
             video_id: String,
             decisions: Vec<DetectorDecision>,
-        }
+        },
     }
 }
 

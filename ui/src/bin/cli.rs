@@ -15,36 +15,30 @@ pub async fn main() {
     };
     let poll_interval = Duration::from_secs(90);
 
-    let (actor, mut result_rx) = match Alkonost::init(
-        detector_params, 
-        request_settings, 
-        poll_interval
-    ) {
-        Ok(r) => r,
-        Err(e) => {
-            println!("CLI: Error initializing alkonost: {}", &e);
-            return;
-        },
-    };
+    let (actor, mut result_rx) =
+        match Alkonost::init(detector_params, request_settings, poll_interval) {
+            Ok(r) => r,
+            Err(e) => {
+                println!("CLI: Error initializing alkonost: {}", &e);
+                return;
+            }
+        };
 
     let rx_reader = tokio::spawn(async move {
         while let Some(message) = result_rx.recv().await {
             match message {
-                AlkonostOutMessage::NewChat {
-                    channel,
-                    video_id
-                } => {
+                AlkonostOutMessage::NewChat { channel, video_id } => {
                     println!("New stream <{}> on channel <{}>", video_id, channel);
-                },
+                }
                 AlkonostOutMessage::ChatClosed(video_id) => {
                     println!("CLI: stream <{}> has ended", video_id);
-                },
-                AlkonostOutMessage::DetectorResult { 
-                    video_id, 
-                    decisions 
+                }
+                AlkonostOutMessage::DetectorResult {
+                    video_id,
+                    decisions,
                 } => {
                     println!("CLI: <{}>: {:?}", video_id, decisions);
-                },
+                }
             }
         }
 
@@ -78,11 +72,11 @@ pub async fn main() {
     sleep(Duration::from_secs(130)).await;
     println!("CLI: Closing...");
     match actor.tx.send(AlkonostInMessage::Close).await {
-        Ok(_r) => { },
+        Ok(_r) => {}
         Err(e) => {
             println!("CLI: Couldn't send message to a stream finder: {}", &e);
             return;
-        },
+        }
     }
 
     let _ = actor.join_handle.await;

@@ -1,9 +1,9 @@
 #![allow(proc_macro_derive_resolution_fallback, unused_attributes)]
 
-use core::http_client::{HttpClient, RequestSettings};
-use core::types::Action;
-use core::ActorWrapper;
-use core::messages::chat_poller::{IncMessage, OutMessage};
+use shared::http_client::{HttpClient, RequestSettings};
+use shared::messages::chat_poller::{IncMessage, OutMessage};
+use shared::types::Action;
+use shared::ActorWrapper;
 use std::io::Write;
 use std::time::Duration;
 use std::{fs::File, sync::Arc};
@@ -18,19 +18,19 @@ use tokio::{
 use type_converter::Converter;
 use youtube_types::root::{ChatJson, Continuation};
 
+use crate::error::{ActionExtractorError, InitError, PollerError};
 use crate::params_extractor::{ExtractingResult, ParamsExtractor};
-use crate::error::{InitError, PollerError, ActionExtractorError};
 
 mod chat_params;
+pub mod error;
 mod params_extractor;
 mod type_converter;
 mod youtube_types;
-pub mod error;
 
 pub enum InitResult {
-    Started { 
+    Started {
         actor: ActorWrapper<IncMessage>,
-        notify_close_rx: oneshot::Receiver<()>
+        notify_close_rx: oneshot::Receiver<()>,
     },
     ChatDisabled,
 }
@@ -46,7 +46,7 @@ pub struct ChatPoller {
     rx: Receiver<IncMessage>,
     result_tx: Sender<OutMessage>,
     poll_errors_count: u8,
-    notify_close_tx: oneshot::Sender<()>
+    notify_close_tx: oneshot::Sender<()>,
 }
 
 impl ChatPoller {
@@ -97,17 +97,26 @@ impl ChatPoller {
             rx,
             result_tx,
             poll_errors_count: 0,
-            notify_close_tx
+            notify_close_tx,
         };
 
-        poller.result_tx.send(OutMessage::ChatInit { channel: channel_id, video_id }).await?;
+        poller
+            .result_tx
+            .send(OutMessage::ChatInit {
+                channel: channel_id,
+                video_id,
+            })
+            .await?;
 
         let join_handle = tokio::spawn(async move {
             poller.run().await;
         });
 
         let wraper = ActorWrapper { join_handle, tx };
-        Ok(InitResult::Started { actor: wraper, notify_close_rx })
+        Ok(InitResult::Started {
+            actor: wraper,
+            notify_close_rx,
+        })
     }
 
     async fn run(mut self) {
@@ -125,10 +134,7 @@ impl ChatPoller {
             }
         }
 
-        println!(
-            "{}: Sending `StreamEnded` message...",
-            &self.video_id
-        );
+        println!("{}: Sending `StreamEnded` message...", &self.video_id);
         let closing_message = OutMessage::StreamEnded {
             video_id: self.video_id.clone(),
         };
@@ -144,14 +150,17 @@ impl ChatPoller {
             }
         }
 
-        println!("{}: Notifying that the module has stopped...", self.video_id);
+        println!(
+            "{}: Notifying that the module has stopped...",
+            self.video_id
+        );
         match self.notify_close_tx.send(()) {
             Ok(_r) => {
                 // Nothing else to do
-            },
+            }
             Err(_e) => {
                 println!("{}: Couldn't notify that module has stopped", self.video_id);
-            },
+            }
         }
 
         println!("{}: Chat poller has been closed", self.video_id);

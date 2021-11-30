@@ -1,4 +1,4 @@
-use core::{
+use shared::{
     http_client::{HttpClient, RequestSettings},
     youtube_regexes::YoutubeRegexes,
 };

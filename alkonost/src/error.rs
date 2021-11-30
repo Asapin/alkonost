@@ -1,4 +1,4 @@
-use core::{http_client::HttpClientInitError, messages};
+use shared::{http_client::HttpClientInitError, messages};
 
 use thiserror::Error;
 use tokio::{sync::mpsc::error::SendError, task::JoinError};
@@ -26,7 +26,7 @@ pub enum AlkonostError {
     #[error("Couldn't send message to the Detector: {0}")]
     DetectorChannel(#[source] SendError<messages::detector::IncMessage>),
     #[error("Couldn't join child task: {0}")]
-    JoinTask(#[source] JoinError)
+    JoinTask(#[source] JoinError),
 }
 
 impl From<SendError<messages::stream_finder::IncMessage>> for AlkonostError {

@@ -1,17 +1,31 @@
 #![allow(proc_macro_derive_resolution_fallback, unused_attributes)]
 
-use core::{ActorWrapper, http_client::{HttpClient, RequestSettings}, messages::{self, chat_manager::IncMessage}};
-use std::{collections::{HashMap, HashSet}, sync::Arc, time::Duration};
+use shared::{
+    http_client::{HttpClient, RequestSettings},
+    messages::{self, chat_manager::IncMessage},
+    ActorWrapper,
+};
+use std::{
+    collections::{HashMap, HashSet},
+    sync::Arc,
+    time::Duration,
+};
 
 use chat_poller::{ChatPoller, InitResult};
 use error::ChatManagerError;
-use tokio::{sync::{mpsc::{self, Receiver, Sender}, oneshot}, time::timeout};
+use tokio::{
+    sync::{
+        mpsc::{self, Receiver, Sender},
+        oneshot,
+    },
+    time::timeout,
+};
 
 mod error;
 
 struct InprogressChat {
     actor: ActorWrapper<messages::chat_poller::IncMessage>,
-    notify_close_rx: oneshot::Receiver<()>
+    notify_close_rx: oneshot::Receiver<()>,
 }
 
 pub struct ChatManager {
@@ -20,14 +34,14 @@ pub struct ChatManager {
     http_client: Arc<HttpClient>,
     request_settings: RequestSettings,
     inprogress_chats: HashMap<String, InprogressChat>,
-    result_tx: Sender<messages::chat_poller::OutMessage>
+    result_tx: Sender<messages::chat_poller::OutMessage>,
 }
 
 impl ChatManager {
     pub fn init(
         http_client: Arc<HttpClient>,
         request_settings: RequestSettings,
-        result_tx: Sender<messages::chat_poller::OutMessage>
+        result_tx: Sender<messages::chat_poller::OutMessage>,
     ) -> ActorWrapper<IncMessage> {
         let (tx, rx) = mpsc::channel(32);
         let check_children_period = Duration::from_secs(60);
@@ -38,17 +52,14 @@ impl ChatManager {
             http_client,
             request_settings,
             inprogress_chats: HashMap::with_capacity(20),
-            result_tx
+            result_tx,
         };
 
         let join_handle = tokio::spawn(async move {
             let _result = manager.run().await;
         });
 
-        ActorWrapper {
-            join_handle,
-            tx,
-        }
+        ActorWrapper { join_handle, tx }
     }
 
     async fn run(mut self) {
@@ -71,10 +82,7 @@ impl ChatManager {
                 match recv_result {
                     Some(message) => match message {
                         IncMessage::Close => return Ok(()),
-                        IncMessage::FoundStreams { 
-                            channel, 
-                            streams 
-                        } => {
+                        IncMessage::FoundStreams { channel, streams } => {
                             let new_streams = streams
                                 .into_iter()
                                 .filter(|video_id| !self.inprogress_chats.contains_key(video_id))
@@ -94,9 +102,12 @@ impl ChatManager {
                                         InitResult::ChatDisabled => {}
                                         InitResult::Started {
                                             actor,
-                                            notify_close_rx
+                                            notify_close_rx,
                                         } => {
-                                            let inprogress_chat = InprogressChat { actor, notify_close_rx };
+                                            let inprogress_chat = InprogressChat {
+                                                actor,
+                                                notify_close_rx,
+                                            };
                                             self.inprogress_chats.insert(video_id, inprogress_chat);
                                         }
                                     },
@@ -109,23 +120,29 @@ impl ChatManager {
                                     }
                                 }
                             }
-                        },
+                        }
                         IncMessage::UpdateUserAgent(user_agent) => {
                             self.request_settings.user_agent = user_agent.clone();
-                            let poller_message = messages::chat_poller::IncMessage::UpdateUserAgent(user_agent);
+                            let poller_message =
+                                messages::chat_poller::IncMessage::UpdateUserAgent(user_agent);
                             self.send_message_to_pollers(poller_message).await;
-                        },
+                        }
                         IncMessage::UpdateBrowserVersion(version) => {
                             self.request_settings.browser_version = version.clone();
-                            let poller_message = messages::chat_poller::IncMessage::UpdateBrowserVersion(version);
+                            let poller_message =
+                                messages::chat_poller::IncMessage::UpdateBrowserVersion(version);
                             self.send_message_to_pollers(poller_message).await;
-                        },
+                        }
                         IncMessage::UpdateBrowserNameAndVersion { name, version } => {
                             self.request_settings.browser_name = name.clone();
                             self.request_settings.browser_version = name.clone();
-                            let poller_message = messages::chat_poller::IncMessage::UpdateBrowserNameAndVersion { name, version };
+                            let poller_message =
+                                messages::chat_poller::IncMessage::UpdateBrowserNameAndVersion {
+                                    name,
+                                    version,
+                                };
                             self.send_message_to_pollers(poller_message).await;
-                        },
+                        }
                     },
                     None => {
                         // Incoming channel was closed. That should never happen,
@@ -146,42 +163,49 @@ impl ChatManager {
             match inprogress_chat.notify_close_rx.try_recv() {
                 Ok(_r) => {
                     closed_chats.insert(video_id.clone(), true);
-                },
-                Err(e) => {
-                    match e {
-                        oneshot::error::TryRecvError::Empty => { },
-                        oneshot::error::TryRecvError::Closed => {
-                            closed_chats.insert(video_id.clone(), false);
-                        }
-                    }
                 }
+                Err(e) => match e {
+                    oneshot::error::TryRecvError::Empty => {}
+                    oneshot::error::TryRecvError::Closed => {
+                        closed_chats.insert(video_id.clone(), false);
+                    }
+                },
             }
         }
 
         for (video_id, closed_safely) in closed_chats {
             if let Some(chat) = self.inprogress_chats.remove(&video_id) {
                 if closed_safely {
-                    println!("ChatManager: waiting for {} chat poller to finish its work", &video_id);
+                    println!(
+                        "ChatManager: waiting for {} chat poller to finish its work",
+                        &video_id
+                    );
                     match chat.actor.join_handle.await {
                         Ok(_r) => {
-                            println!("ChatManager: chat poller {} has finished its work", &video_id);
-                        },
+                            println!(
+                                "ChatManager: chat poller {} has finished its work",
+                                &video_id
+                            );
+                        }
                         Err(e) => {
-                            println!("ChatManager: chat poller for {} has panicked: {}", &video_id, e);
-                        },
+                            println!(
+                                "ChatManager: chat poller for {} has panicked: {}",
+                                &video_id, e
+                            );
+                        }
                     };
                 } else {
-                    println!("ChatManager: chat poller for {} closed before sending the notification", &video_id);
+                    println!(
+                        "ChatManager: chat poller for {} closed before sending the notification",
+                        &video_id
+                    );
                     chat.actor.join_handle.abort()
                 }
             }
         }
     }
 
-    async fn send_message_to_pollers(
-        &mut self,
-        message: messages::chat_poller::IncMessage,
-    ) {
+    async fn send_message_to_pollers(&mut self, message: messages::chat_poller::IncMessage) {
         let mut already_closed_pollers = HashSet::new();
 
         for (video_id, inprogress_chat) in self.inprogress_chats.iter_mut() {
@@ -214,14 +238,20 @@ impl ChatManager {
     async fn close_chat_poller(video_id: String, mut chat: InprogressChat) {
         match chat.notify_close_rx.try_recv() {
             Ok(_r) => {
-                println!("ChatManager: waiting for {} chat poller to finish its work", &video_id);
+                println!(
+                    "ChatManager: waiting for {} chat poller to finish its work",
+                    &video_id
+                );
                 match chat.actor.join_handle.await {
-                    Ok(_r) => { },
+                    Ok(_r) => {}
                     Err(e) => {
-                        println!("ChatManager: chat poller for {} has panicked: {}", &video_id, e);
-                    },
+                        println!(
+                            "ChatManager: chat poller for {} has panicked: {}",
+                            &video_id, e
+                        );
+                    }
                 };
-            },
+            }
             Err(e) => {
                 match e {
                     oneshot::error::TryRecvError::Empty => {
@@ -229,16 +259,16 @@ impl ChatManager {
                             "ChatManager: chat poller for {} closed it's rx without closing itself which shouldn't be possible", 
                             &video_id
                         );
-                    },
+                    }
                     oneshot::error::TryRecvError::Closed => {
                         println!(
                             "ChatManager: chat poller for {} closed before sending the notification", 
                             &video_id
                         );
-                    },
+                    }
                 };
                 chat.actor.join_handle.abort();
-            },
+            }
         }
     }
 }

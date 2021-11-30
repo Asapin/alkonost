@@ -7,7 +7,7 @@ edition = "2018"
 readme = "README.md"
 
 [dependencies]
-core = { path = "../core", version = "^0" }
+shared = { path = "../shared", version = "^0" }
 chat_manager = { path = "../chat_manager", version = "^0" }
 stream_finder = { path = "../stream_finder", version = "^0" }
 detector = { path = "../detector", version = "^0" }

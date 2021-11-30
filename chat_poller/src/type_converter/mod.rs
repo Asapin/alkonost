@@ -4,7 +4,7 @@ use thiserror::Error;
 
 use crate::youtube_types::actions::Action;
 
-type CoreAction = core::types::Action;
+type CoreAction = shared::types::Action;
 
 mod extractors;
 

@@ -1,6 +1,6 @@
 [workspace]
 members = [
-    "core",
+    "shared",
     "stream_finder",
     "chat_poller",
     "chat_manager",

@@ -1,4 +1,4 @@
-use core::{messages::DetectorDecision, types::Action, SuspicionReason};
+use shared::{messages::DetectorDecision, types::Action, SuspicionReason};
 use std::collections::{HashMap, HashSet};
 
 use crate::{user_data::UserData, DetectorParams};
@@ -35,7 +35,7 @@ impl SpamDetector {
                     ..
                 } => {
                     match message {
-                        core::types::MessageContent::SimpleMessage { author, message } => {
+                        shared::types::MessageContent::SimpleMessage { author, message } => {
                             if self.should_skip_analyzing(&author.channel_id) {
                                 continue;
                             }
@@ -55,20 +55,20 @@ impl SpamDetector {
                                 self.mark_as_suspicious(author.channel_id, reason, &mut decisions);
                             }
                         }
-                        core::types::MessageContent::Membership { author, .. }
-                        | core::types::MessageContent::Superchat { author, .. }
-                        | core::types::MessageContent::Sticker { author, .. } => {
+                        shared::types::MessageContent::Membership { author, .. }
+                        | shared::types::MessageContent::Superchat { author, .. }
+                        | shared::types::MessageContent::Sticker { author, .. } => {
                             self.mark_as_supporter(author.channel_id, &mut decisions);
                         }
-                        core::types::MessageContent::Fundraiser { author, .. } => {
+                        shared::types::MessageContent::Fundraiser { author, .. } => {
                             author.into_iter().for_each(|author| {
                                 self.mark_as_supporter(author.channel_id, &mut decisions)
                             });
                         }
-                        core::types::MessageContent::ChatMode { .. } => {
+                        shared::types::MessageContent::ChatMode { .. } => {
                             // Only streamer can generate this type of messages
                         }
-                        core::types::MessageContent::PollResult { .. } => {
+                        shared::types::MessageContent::PollResult { .. } => {
                             // Poll results are generated after the poll has ended
                         }
                     }

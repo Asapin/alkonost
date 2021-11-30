@@ -1,4 +1,4 @@
-use core::{SuspicionReason, detector_params::DetectorParams};
+use shared::{detector_params::DetectorParams, SuspicionReason};
 
 use crate::message_data::MessageData;
 

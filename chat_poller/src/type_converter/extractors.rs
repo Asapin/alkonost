@@ -1,4 +1,4 @@
-use core::types::{MembershipType, UserBadges};
+use shared::types::{MembershipType, UserBadges};
 use std::convert::{TryFrom, TryInto};
 
 use vec1::Vec1;
@@ -17,7 +17,7 @@ use crate::youtube_types::{
 use super::ConverterError;
 
 type YouTubeAction = crate::youtube_types::actions::Action;
-type CoreAction = core::types::Action;
+type CoreAction = shared::types::Action;
 
 impl From<LinkUrl> for String {
     fn from(value: LinkUrl) -> Self {
@@ -30,7 +30,7 @@ impl From<LinkUrl> for String {
     }
 }
 
-impl From<Message> for core::types::RichText {
+impl From<Message> for shared::types::RichText {
     fn from(value: Message) -> Self {
         match value {
             Message::SimpleText(text) => html_escape::encode_text(&text).into_owned(),
@@ -67,10 +67,10 @@ impl From<Message> for core::types::RichText {
     }
 }
 
-impl From<PollType> for core::types::PollType {
+impl From<PollType> for shared::types::PollType {
     fn from(value: PollType) -> Self {
         match value {
-            PollType::LiveChatPollTypeCreator => core::types::PollType::PollTypeCreator,
+            PollType::LiveChatPollTypeCreator => shared::types::PollType::PollTypeCreator,
         }
     }
 }
@@ -119,7 +119,7 @@ impl From<PollToUpdateItem> for CoreAction {
                 .poll_renderer
                 .choices
                 .into_iter()
-                .map(|choise| core::types::PollResult {
+                .map(|choise| shared::types::PollResult {
                     choise: choise.text.into(),
                     ratio: choise.vote_ratio,
                 })
@@ -132,16 +132,16 @@ impl From<AuthorBadge> for UserBadges {
     fn from(value: AuthorBadge) -> Self {
         match value.live_chat_author_badge_renderer.icon {
             AuthorBadgeIcon::Icon { icon_type } => match icon_type {
-                AuthorBadgeIconType::Verified => core::types::UserBadges::Verified,
-                AuthorBadgeIconType::Owner => core::types::UserBadges::Owner,
-                AuthorBadgeIconType::Moderator => core::types::UserBadges::Moderator,
+                AuthorBadgeIconType::Verified => shared::types::UserBadges::Verified,
+                AuthorBadgeIconType::Owner => shared::types::UserBadges::Owner,
+                AuthorBadgeIconType::Moderator => shared::types::UserBadges::Moderator,
             },
-            AuthorBadgeIcon::CustomThumbnail {} => core::types::UserBadges::Member,
+            AuthorBadgeIcon::CustomThumbnail {} => shared::types::UserBadges::Member,
         }
     }
 }
 
-impl TryFrom<AuthorInfo> for core::types::User {
+impl TryFrom<AuthorInfo> for shared::types::User {
     type Error = ConverterError;
 
     fn try_from(value: AuthorInfo) -> Result<Self, Self::Error> {
@@ -159,7 +159,7 @@ impl TryFrom<AuthorInfo> for core::types::User {
             })
             .transpose()?;
 
-        Ok(core::types::User {
+        Ok(shared::types::User {
             name,
             channel_id,
             badges,
@@ -178,7 +178,7 @@ impl TryFrom<BannerItem> for CoreAction {
                 timestamp_usec,
                 id,
             } => CoreAction::ChannelNotice {
-                id: core::types::IdEntry {
+                id: shared::types::IdEntry {
                     id,
                     timepstamp: timestamp_usec,
                 },
@@ -218,7 +218,7 @@ impl TryFrom<BannerItem> for CoreAction {
     }
 }
 
-impl TryFrom<MessageItem> for Option<(core::types::IdEntry, core::types::MessageContent)> {
+impl TryFrom<MessageItem> for Option<(shared::types::IdEntry, shared::types::MessageContent)> {
     type Error = ConverterError;
 
     fn try_from(value: MessageItem) -> Result<Self, Self::Error> {
@@ -229,11 +229,11 @@ impl TryFrom<MessageItem> for Option<(core::types::IdEntry, core::types::Message
                 message,
                 author_info,
             } => {
-                let id_entry = core::types::IdEntry {
+                let id_entry = shared::types::IdEntry {
                     id,
                     timepstamp: timestamp_usec,
                 };
-                let content = core::types::MessageContent::SimpleMessage {
+                let content = shared::types::MessageContent::SimpleMessage {
                     author: author_info.try_into()?,
                     message: message.into(),
                 };
@@ -247,7 +247,7 @@ impl TryFrom<MessageItem> for Option<(core::types::IdEntry, core::types::Message
                 header_subtext,
                 message,
             } => {
-                let id_entry = core::types::IdEntry {
+                let id_entry = shared::types::IdEntry {
                     id,
                     timepstamp: timestamp_usec,
                 };
@@ -265,7 +265,7 @@ impl TryFrom<MessageItem> for Option<(core::types::IdEntry, core::types::Message
                     _ => return Err(ConverterError::MembershipType),
                 };
 
-                let content = core::types::MessageContent::Membership {
+                let content = shared::types::MessageContent::Membership {
                     author,
                     membership_type,
                 };
@@ -278,11 +278,11 @@ impl TryFrom<MessageItem> for Option<(core::types::IdEntry, core::types::Message
                 author_info,
                 purchase_amount_text,
             } => {
-                let id_entry = core::types::IdEntry {
+                let id_entry = shared::types::IdEntry {
                     id,
                     timepstamp: timestamp_usec,
                 };
-                let content = core::types::MessageContent::Superchat {
+                let content = shared::types::MessageContent::Superchat {
                     author: author_info.try_into()?,
                     message: message.map(|m| m.into()),
                     amount: purchase_amount_text.into(),
@@ -296,11 +296,11 @@ impl TryFrom<MessageItem> for Option<(core::types::IdEntry, core::types::Message
                 sticker,
                 purchase_amount_text,
             } => {
-                let id_entry = core::types::IdEntry {
+                let id_entry = shared::types::IdEntry {
                     id,
                     timepstamp: timestamp_usec,
                 };
-                let content = core::types::MessageContent::Sticker {
+                let content = shared::types::MessageContent::Sticker {
                     author: author_info.try_into()?,
                     sticker_name: sticker.accessibility.accessibility_data.label,
                     purchase_amount: purchase_amount_text.into(),
@@ -315,12 +315,12 @@ impl TryFrom<MessageItem> for Option<(core::types::IdEntry, core::types::Message
             } => match icon.icon_type {
                 EngagementMessageIconType::YoutubeRound => None,
                 EngagementMessageIconType::Poll => {
-                    let id_entry = core::types::IdEntry {
+                    let id_entry = shared::types::IdEntry {
                         id,
                         timepstamp: timestamp_usec.map(|wrapper| wrapper.0).unwrap_or_default(),
                     };
 
-                    let content = core::types::MessageContent::PollResult {
+                    let content = shared::types::MessageContent::PollResult {
                         message: message.into(),
                     };
                     Some((id_entry, content))
@@ -337,20 +337,20 @@ impl TryFrom<MessageItem> for Option<(core::types::IdEntry, core::types::Message
                 subtext,
                 icon,
             } => {
-                let id_entry = core::types::IdEntry {
+                let id_entry = shared::types::IdEntry {
                     id,
                     timepstamp: timestamp_usec,
                 };
-                let content = core::types::MessageContent::ChatMode {
+                let content = shared::types::MessageContent::ChatMode {
                     text: text.into(),
                     subtext: subtext.into(),
                     mode: match icon.icon_type {
                         ChatModeIconType::TabSubscriptions => {
-                            core::types::ChatMode::SubscribersOnly
+                            shared::types::ChatMode::SubscribersOnly
                         }
-                        ChatModeIconType::SlowMode => core::types::ChatMode::SlowMode,
-                        ChatModeIconType::QuestionAnswer => core::types::ChatMode::QuestionAnswer,
-                        ChatModeIconType::Memberships => core::types::ChatMode::MembersOnly,
+                        ChatModeIconType::SlowMode => shared::types::ChatMode::SlowMode,
+                        ChatModeIconType::QuestionAnswer => shared::types::ChatMode::QuestionAnswer,
+                        ChatModeIconType::Memberships => shared::types::ChatMode::MembersOnly,
                     },
                 };
                 Some((id_entry, content))
@@ -362,12 +362,12 @@ impl TryFrom<MessageItem> for Option<(core::types::IdEntry, core::types::Message
                 subtext,
                 author_info,
             } => {
-                let id_entry = core::types::IdEntry {
+                let id_entry = shared::types::IdEntry {
                     id,
                     timepstamp: timestamp_usec,
                 };
                 let author = author_info.map(|info| info.try_into()).transpose()?;
-                let content = core::types::MessageContent::Fundraiser {
+                let content = shared::types::MessageContent::Fundraiser {
                     author,
                     text: text.into(),
                     subtext: subtext.into(),
@@ -386,7 +386,7 @@ impl TryFrom<YouTubeAction> for Option<CoreAction> {
     fn try_from(value: YouTubeAction) -> Result<Self, Self::Error> {
         let action = match value {
             Action::AddChatItemAction { item } => {
-                let new_item: Option<(core::types::IdEntry, core::types::MessageContent)> =
+                let new_item: Option<(shared::types::IdEntry, shared::types::MessageContent)> =
                     item.try_into()?;
 
                 new_item.map(|(id, content)| CoreAction::NewMessage {
@@ -408,7 +408,7 @@ impl TryFrom<YouTubeAction> for Option<CoreAction> {
                 target_item_id,
                 replacement_item,
             } => {
-                let replacement: Option<(core::types::IdEntry, core::types::MessageContent)> =
+                let replacement: Option<(shared::types::IdEntry, shared::types::MessageContent)> =
                     replacement_item.try_into()?;
 
                 replacement.map(|(id, content)| CoreAction::ReplaceMessage {

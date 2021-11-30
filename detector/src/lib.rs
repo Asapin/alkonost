@@ -1,14 +1,18 @@
-use core::{ActorWrapper, detector_params::DetectorParams, messages::detector::{IncMessage, OutMessage}};
+use shared::{
+    detector_params::DetectorParams,
+    messages::detector::{IncMessage, OutMessage},
+    ActorWrapper,
+};
 use std::collections::HashMap;
 
 use error::DetectorError;
 use spam_detector::SpamDetector;
 use tokio::sync::mpsc::{self, Receiver, Sender};
 
+mod error;
 mod message_data;
 mod spam_detector;
 mod user_data;
-mod error;
 
 pub struct DetectorManager {
     streams: HashMap<String, SpamDetector>,
@@ -63,53 +67,50 @@ impl DetectorManager {
                 IncMessage::Close => return Ok(()),
                 IncMessage::ChatPoller(poller_message) => {
                     match poller_message {
-                        core::messages::chat_poller::OutMessage::ChatInit { 
-                            channel, 
-                            video_id 
+                        shared::messages::chat_poller::OutMessage::ChatInit {
+                            channel,
+                            video_id,
                         } => {
                             // TODO: load channel specific detector params
                             self.streams.insert(video_id.clone(), SpamDetector::init());
 
-                            let message = OutMessage::NewChat {
-                                channel,
-                                video_id
-                            };
+                            let message = OutMessage::NewChat { channel, video_id };
                             self.result_tx.send(message).await?;
-                        },
-                        core::messages::chat_poller::OutMessage::NewBatch { 
-                            video_id, 
-                            actions 
+                        }
+                        shared::messages::chat_poller::OutMessage::NewBatch {
+                            video_id,
+                            actions,
                         } => {
-                            let detector_instance = self
-                                .streams
-                                .get_mut(&video_id);
-                            
+                            let detector_instance = self.streams.get_mut(&video_id);
+
                             let detector_instance = match detector_instance {
                                 Some(instance) => instance,
                                 None => {
-                                    println!("DetectorManager: {} has sent `NewBatch` before `ChatInit`", &video_id);
+                                    println!(
+                                        "DetectorManager: {} has sent `NewBatch` before `ChatInit`",
+                                        &video_id
+                                    );
                                     continue;
                                 }
                             };
 
-                            let decisions = detector_instance.process_new_messages(actions, &self.params);
+                            let decisions =
+                                detector_instance.process_new_messages(actions, &self.params);
                             if !decisions.is_empty() {
                                 let result = OutMessage::DetectorResult {
                                     video_id,
                                     decisions,
                                 };
-        
+
                                 self.result_tx.send(result).await?;
                             }
-                        },
-                        core::messages::chat_poller::OutMessage::StreamEnded { 
-                            video_id 
-                        } => {
+                        }
+                        shared::messages::chat_poller::OutMessage::StreamEnded { video_id } => {
                             self.streams.remove(&video_id);
                             self.result_tx
                                 .send(OutMessage::ChatClosed(video_id))
                                 .await?;
-                        },
+                        }
                     }
                 }
             }

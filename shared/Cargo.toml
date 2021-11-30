@@ -1,5 +1,5 @@
 [package]
-name = "core"
+name = "shared"
 version = "0.1.0"
 authors = ["Asapin <1559761+Asapin@users.noreply.github.com>"]
 description = "Core types and functionality that are used throughout Alkonost"

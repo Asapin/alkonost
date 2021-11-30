@@ -1,4 +1,4 @@
-use core::{http_client::HttpClientLoadError, messages::chat_poller::OutMessage};
+use shared::{http_client::HttpClientLoadError, messages::chat_poller::OutMessage};
 
 use thiserror::Error;
 use tokio::sync::mpsc::error::SendError;
@@ -21,8 +21,8 @@ pub enum InitError {
     ClientVersion(String),
     #[error("Couldn't find <INNERTUBE_API_KEY> param: {0}")]
     ChatKey(String),
-    #[error("Couldn't chat poller init: {0}")]
-    NotifyingAboutInit(SendError<OutMessage>)
+    #[error("Couldn't notify about chat poller init: {0}")]
+    NotifyingAboutInit(SendError<OutMessage>),
 }
 
 impl From<HttpClientLoadError> for InitError {
@@ -81,7 +81,7 @@ impl From<HttpClientLoadError> for PollerError {
 pub enum ActionExtractorError {
     #[error("Couldn't deserialize chat json: {0}")]
     DeserializeChat(#[source] serde_json::Error),
-    #[error("Couldn't convert actions to core types: {0}")]
+    #[error("Couldn't convert actions to shared types: {0}")]
     Converter(#[source] ConverterError),
 }
 
