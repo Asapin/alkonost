@@ -1,15 +1,15 @@
 #![allow(proc_macro_derive_resolution_fallback, unused_attributes)]
 
+use std::{sync::Arc, time::Duration};
+
+use chat_manager::ChatManager;
+use detector::DetectorManager;
+use error::{AlkonostError, AlkonostInitError};
 use shared::{
     http_client::HttpClient,
     messages::{self, alkonost::IncMessage},
     ActorWrapper,
 };
-use std::{sync::Arc, time::Duration};
-
-use ::chat_manager::ChatManager;
-use ::detector::DetectorManager;
-use error::{AlkonostError, AlkonostInitError};
 use stream_finder::StreamFinder;
 use tokio::{
     sync::mpsc::{self, Receiver, Sender},

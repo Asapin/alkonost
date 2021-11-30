@@ -1,16 +1,15 @@
 #![allow(proc_macro_derive_resolution_fallback, unused_attributes)]
 
+use std::{collections::HashMap, fs::File, io::Write, sync::Arc, time::Duration};
+
+use error::StreamFinderError;
+use futures::{stream::FuturesUnordered, StreamExt};
 use shared::{
     http_client::{HttpClient, RequestSettings},
     messages::stream_finder::{IncMessage, OutMessage},
     youtube_regexes::YoutubeRegexes,
     ActorWrapper,
 };
-use std::io::Write;
-use std::{collections::HashMap, fs::File, sync::Arc, time::Duration};
-
-use error::StreamFinderError;
-use futures::stream::{FuturesUnordered, StreamExt};
 use tokio::{
     sync::mpsc::{self, Receiver, Sender},
     time::{timeout_at, Instant},

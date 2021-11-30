@@ -1,25 +1,25 @@
 #![allow(proc_macro_derive_resolution_fallback, unused_attributes)]
 
-use shared::http_client::{HttpClient, RequestSettings};
-use shared::messages::chat_poller::{IncMessage, OutMessage};
-use shared::types::Action;
-use shared::ActorWrapper;
-use std::io::Write;
-use std::time::Duration;
-use std::{fs::File, sync::Arc};
+use std::{fs::File, io::Write, sync::Arc, time::Duration};
 
 use chat_params::ChatParams;
-use tokio::sync::mpsc::{self, Sender};
-use tokio::sync::oneshot;
+use error::{ActionExtractorError, InitError, PollerError};
+use params_extractor::{ExtractingResult, ParamsExtractor};
+use shared::{
+    http_client::{HttpClient, RequestSettings},
+    messages::chat_poller::{IncMessage, OutMessage},
+    types::Action,
+    ActorWrapper,
+};
 use tokio::{
-    sync::mpsc::Receiver,
+    sync::{
+        mpsc::{self, Receiver, Sender},
+        oneshot,
+    },
     time::{timeout_at, Instant},
 };
 use type_converter::Converter;
 use youtube_types::root::{ChatJson, Continuation};
-
-use crate::error::{ActionExtractorError, InitError, PollerError};
-use crate::params_extractor::{ExtractingResult, ParamsExtractor};
 
 mod chat_params;
 pub mod error;

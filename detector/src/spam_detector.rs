@@ -1,7 +1,10 @@
-use shared::{messages::DetectorDecision, types::Action, SuspicionReason};
 use std::collections::{HashMap, HashSet};
 
-use crate::{user_data::UserData, DetectorParams};
+use shared::{
+    detector_params::DetectorParams, messages::DetectorDecision, types::Action, SuspicionReason,
+};
+
+use crate::user_data::UserData;
 
 pub struct SpamDetector {
     history: HashMap<String, UserData>,

@@ -1,8 +1,7 @@
 use std::convert::TryFrom;
 
-use thiserror::Error;
-
 use crate::youtube_types::actions::Action;
+use thiserror::Error;
 
 type CoreAction = shared::types::Action;
 

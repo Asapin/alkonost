@@ -1,5 +1,4 @@
 use shared::{http_client::HttpClientLoadError, messages::chat_poller::OutMessage};
-
 use thiserror::Error;
 use tokio::sync::mpsc::error::SendError;
 

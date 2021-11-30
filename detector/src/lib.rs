@@ -1,11 +1,13 @@
+#![allow(proc_macro_derive_resolution_fallback, unused_attributes)]
+
+use std::collections::HashMap;
+
+use error::DetectorError;
 use shared::{
     detector_params::DetectorParams,
     messages::detector::{IncMessage, OutMessage},
     ActorWrapper,
 };
-use std::collections::HashMap;
-
-use error::DetectorError;
 use spam_detector::SpamDetector;
 use tokio::sync::mpsc::{self, Receiver, Sender};
 

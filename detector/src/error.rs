@@ -1,5 +1,4 @@
 use shared::messages::detector::OutMessage;
-
 use thiserror::Error;
 use tokio::sync::mpsc::error::SendError;
 

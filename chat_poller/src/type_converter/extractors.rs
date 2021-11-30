@@ -1,6 +1,6 @@
-use shared::types::{MembershipType, UserBadges};
 use std::convert::{TryFrom, TryInto};
 
+use shared::types::{MembershipType, UserBadges};
 use vec1::Vec1;
 
 use crate::youtube_types::{

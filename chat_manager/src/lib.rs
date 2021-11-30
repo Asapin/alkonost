@@ -1,10 +1,5 @@
 #![allow(proc_macro_derive_resolution_fallback, unused_attributes)]
 
-use shared::{
-    http_client::{HttpClient, RequestSettings},
-    messages::{self, chat_manager::IncMessage},
-    ActorWrapper,
-};
 use std::{
     collections::{HashMap, HashSet},
     sync::Arc,
@@ -13,6 +8,11 @@ use std::{
 
 use chat_poller::{ChatPoller, InitResult};
 use error::ChatManagerError;
+use shared::{
+    http_client::{HttpClient, RequestSettings},
+    messages::{self, chat_manager::IncMessage},
+    ActorWrapper,
+};
 use tokio::{
     sync::{
         mpsc::{self, Receiver, Sender},

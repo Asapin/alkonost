@@ -1,5 +1,4 @@
 use shared::{http_client::HttpClientInitError, messages};
-
 use thiserror::Error;
 use tokio::{sync::mpsc::error::SendError, task::JoinError};
 
