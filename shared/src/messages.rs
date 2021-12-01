@@ -27,6 +27,7 @@ pub mod chat_poller {
     #[derive(Debug, Clone)]
     pub enum IncMessage {
         Close,
+        Ping,
         UpdateUserAgent(String),
         UpdateBrowserVersion(String),
         UpdateBrowserNameAndVersion { name: String, version: String },

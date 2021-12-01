@@ -1,9 +1,9 @@
 #![allow(proc_macro_derive_resolution_fallback, unused_attributes)]
 
 use std::{
-    collections::{HashMap, HashSet},
+    collections::HashMap,
     sync::Arc,
-    time::Duration,
+    time::Duration, mem::replace,
 };
 
 use chat_poller::{ChatPoller, InitResult};
@@ -14,26 +14,18 @@ use shared::{
     ActorWrapper,
 };
 use tokio::{
-    sync::{
-        mpsc::{self, Receiver, Sender},
-        oneshot,
-    },
+    sync::mpsc::{self, Receiver, Sender},
     time::timeout,
 };
 
 mod error;
-
-struct InprogressChat {
-    actor: ActorWrapper<messages::chat_poller::IncMessage>,
-    notify_close_rx: oneshot::Receiver<()>,
-}
 
 pub struct ChatManager {
     rx: Receiver<IncMessage>,
     check_children_period: Duration,
     http_client: Arc<HttpClient>,
     request_settings: RequestSettings,
-    inprogress_chats: HashMap<String, InprogressChat>,
+    inprogress_chats: HashMap<String, ActorWrapper<messages::chat_poller::IncMessage>>,
     result_tx: Sender<messages::chat_poller::OutMessage>,
 }
 
@@ -100,14 +92,7 @@ impl ChatManager {
                                 {
                                     Ok(r) => match r {
                                         InitResult::ChatDisabled => {}
-                                        InitResult::Started {
-                                            actor,
-                                            notify_close_rx,
-                                        } => {
-                                            let inprogress_chat = InprogressChat {
-                                                actor,
-                                                notify_close_rx,
-                                            };
+                                        InitResult::Started(inprogress_chat) => {
                                             self.inprogress_chats.insert(video_id, inprogress_chat);
                                         }
                                     },
@@ -152,76 +137,30 @@ impl ChatManager {
                 }
             }
 
-            self.remove_closed_chat_pollers().await;
-        }
-    }
-
-    async fn remove_closed_chat_pollers(&mut self) {
-        // Check closed chat pollers
-        let mut closed_chats = HashMap::new();
-        for (video_id, inprogress_chat) in self.inprogress_chats.iter_mut() {
-            match inprogress_chat.notify_close_rx.try_recv() {
-                Ok(_r) => {
-                    closed_chats.insert(video_id.clone(), true);
-                }
-                Err(e) => match e {
-                    oneshot::error::TryRecvError::Empty => {}
-                    oneshot::error::TryRecvError::Closed => {
-                        closed_chats.insert(video_id.clone(), false);
-                    }
-                },
-            }
-        }
-
-        for (video_id, closed_safely) in closed_chats {
-            if let Some(chat) = self.inprogress_chats.remove(&video_id) {
-                if closed_safely {
-                    shared::tracing_info!(
-                        "Waiting for chat poller {} to finish its work",
-                        &video_id
-                    );
-                    match chat.actor.join_handle.await {
-                        Ok(_r) => {
-                            shared::tracing_info!(
-                                "Chat poller {} has finished its work",
-                                &video_id
-                            );
-                        }
-                        Err(e) => {
-                            shared::tracing_warn!(
-                                "Chat poller {} has panicked: {}",
-                                &video_id, e
-                            );
-                        }
-                    };
-                } else {
-                    shared::tracing_warn!(
-                        "Chat poller {} closed before sending the notification. Aborting the task...",
-                        &video_id
-                    );
-                    chat.actor.join_handle.abort()
-                }
-            }
+            self.send_message_to_pollers(messages::chat_poller::IncMessage::Ping).await;
         }
     }
 
     async fn send_message_to_pollers(&mut self, message: messages::chat_poller::IncMessage) {
-        let mut already_closed_pollers = HashSet::new();
+        let buffer = HashMap::with_capacity(self.inprogress_chats.len());
+        let old = replace(&mut self.inprogress_chats, buffer);
 
-        for (video_id, inprogress_chat) in self.inprogress_chats.iter_mut() {
-            match inprogress_chat.actor.tx.send(message.clone()).await {
-                Ok(_r) => {}
-                Err(_e) => {
-                    // It's possible for a poller to be closed but still present in the hashmap,
-                    // because the chat manager is yet to check associated notify_close_rx channel
-                    already_closed_pollers.insert(video_id.clone());
-                }
-            }
-        }
-
-        for video_id in already_closed_pollers {
-            if let Some(chat) = self.inprogress_chats.remove(&video_id) {
-                ChatManager::close_chat_poller(video_id, chat).await;
+        for (video_id, inprogress_chat) in old.into_iter() {
+            match inprogress_chat.tx.send(message.clone()).await {
+                Ok(_r) => {
+                    self.inprogress_chats.insert(video_id, inprogress_chat);
+                },
+                Err(_) => {
+                    shared::tracing_info!("Chat poller {} has closed its channel, waiting for the task to finish...", &video_id);
+                    match inprogress_chat.join_handle.await {
+                        Ok(_r) => {
+                            shared::tracing_info!("Chat poller {} finished successfully", &video_id);
+                        },
+                        Err(e) => {
+                            shared::tracing_info!("Chat poller {} panicked: {}", &video_id, &e);
+                        },
+                    }
+                },
             }
         }
     }
@@ -230,44 +169,15 @@ impl ChatManager {
         shared::tracing_info!("Sending `Close` message to currently active chat pollers...");
         let close_message = messages::chat_poller::IncMessage::Close;
         self.send_message_to_pollers(close_message).await;
-        for (video_id, chat) in self.inprogress_chats.drain() {
-            ChatManager::close_chat_poller(video_id, chat).await;
-        }
-    }
-
-    async fn close_chat_poller(video_id: String, mut chat: InprogressChat) {
-        match chat.notify_close_rx.try_recv() {
-            Ok(_r) => {
-                shared::tracing_info!(
-                    "Waiting for chat poller {} to finish its work",
-                    &video_id
-                );
-                match chat.actor.join_handle.await {
-                    Ok(_r) => {}
-                    Err(e) => {
-                        shared::tracing_warn!(
-                            "Chat poller {} has panicked: {}",
-                            &video_id, e
-                        );
-                    }
-                };
-            }
-            Err(e) => {
-                match e {
-                    oneshot::error::TryRecvError::Empty => {
-                        shared::tracing_warn!(
-                            "Chat poller {} closed it's rx without closing itself which shouldn't be possible. Aborting the task...", 
-                            &video_id
-                        );
-                    }
-                    oneshot::error::TryRecvError::Closed => {
-                        shared::tracing_warn!(
-                            "Chat poller {} closed before sending the notification. Aborting the task...", 
-                            &video_id
-                        );
-                    }
-                };
-                chat.actor.join_handle.abort();
+        for (video_id, inprogress_chat) in self.inprogress_chats.drain() {
+            shared::tracing_info!("Waiting for the chat poller {} to finish...", &video_id);
+            match inprogress_chat.join_handle.await {
+                Ok(_r) => {
+                    shared::tracing_info!("Chat poller {} finished successfully", &video_id);
+                },
+                Err(e) => {
+                    shared::tracing_info!("Chat poller {} panicked: {}", &video_id, &e);
+                },
             }
         }
     }

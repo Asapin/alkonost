@@ -12,10 +12,7 @@ use shared::{
     ActorWrapper,
 };
 use tokio::{
-    sync::{
-        mpsc::{self, Receiver, Sender},
-        oneshot,
-    },
+    sync::mpsc::{self, Receiver, Sender},
     time::{timeout_at, Instant},
 };
 use type_converter::Converter;
@@ -28,10 +25,7 @@ mod type_converter;
 mod youtube_types;
 
 pub enum InitResult {
-    Started {
-        actor: ActorWrapper<IncMessage>,
-        notify_close_rx: oneshot::Receiver<()>,
-    },
+    Started(ActorWrapper<IncMessage>),
     ChatDisabled,
 }
 
@@ -46,8 +40,7 @@ pub struct ChatPoller {
     chat_params: ChatParams,
     rx: Receiver<IncMessage>,
     result_tx: Sender<OutMessage>,
-    poll_errors_count: u8,
-    notify_close_tx: oneshot::Sender<()>,
+    poll_errors_count: u8
 }
 
 impl ChatPoller {
@@ -81,7 +74,6 @@ impl ChatPoller {
         };
 
         let (tx, rx) = mpsc::channel(32);
-        let (notify_close_tx, notify_close_rx) = oneshot::channel();
         let endpoint_url = format!(
             "https://www.youtube.com/youtubei/v1/live_chat/get_live_chat?key={}",
             &chat_key
@@ -98,8 +90,7 @@ impl ChatPoller {
             chat_params,
             rx,
             result_tx,
-            poll_errors_count: 0,
-            notify_close_tx,
+            poll_errors_count: 0
         };
 
         poller
@@ -115,10 +106,7 @@ impl ChatPoller {
         });
 
         let wraper = ActorWrapper { join_handle, tx };
-        Ok(InitResult::Started {
-            actor: wraper,
-            notify_close_rx,
-        })
+        Ok(InitResult::Started(wraper))
     }
 
     async fn run(mut self) {
@@ -153,19 +141,6 @@ impl ChatPoller {
             }
         }
 
-        shared::tracing_info!(
-            "{}: Notifying that the module has stopped...",
-            self.video_id
-        );
-        match self.notify_close_tx.send(()) {
-            Ok(_r) => {
-                // Nothing else to do
-            }
-            Err(_e) => {
-                shared::tracing_error!("{}: Couldn't notify that module has stopped", self.video_id);
-            }
-        }
-
         shared::tracing_info!("{}: Chat poller has been closed", self.video_id);
     }
 
@@ -177,6 +152,9 @@ impl ChatPoller {
                         IncMessage::Close => {
                             return Ok(());
                         }
+                        IncMessage::Ping => {
+                            // Do nothing
+                        },
                         IncMessage::UpdateUserAgent(user_agent) => {
                             self.request_settings.user_agent = user_agent;
                         }
