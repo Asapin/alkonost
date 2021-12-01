@@ -22,6 +22,8 @@ pub type DetectorParams = shared::detector_params::DetectorParams;
 pub type RequestSettings = shared::http_client::RequestSettings;
 pub type AlkonostInMessage = shared::messages::alkonost::IncMessage;
 pub type AlkonostOutMessage = shared::messages::detector::OutMessage;
+pub type DetectorDecision = shared::messages::DetectorDecision;
+pub type DecisionAction = shared::messages::DecisionAction;
 
 pub struct Alkonost {
     rx: Receiver<IncMessage>,
@@ -162,19 +164,22 @@ impl Alkonost {
 
             match message {
                 messages::alkonost::IncMessage::Close => {
+                    // Wait until one module closes, before closing the next module
                     self.stream_finder_tx
                         .send(messages::stream_finder::IncMessage::Close)
                         .await?;
+                    self.stream_finder.await?;
+                    self.finder_to_chat_handle.await?;
+
                     self.chat_manager_tx
                         .send(messages::chat_manager::IncMessage::Close)
                         .await?;
+                    self.chat_manager.await?;
+                    self.chat_to_detector_handle.await?;
+
                     self.detector_tx
                         .send(messages::detector::IncMessage::Close)
                         .await?;
-                    self.stream_finder.await?;
-                    self.finder_to_chat_handle.await?;
-                    self.chat_manager.await?;
-                    self.chat_to_detector_handle.await?;
                     self.detector.await?;
                     return Ok(());
                 }

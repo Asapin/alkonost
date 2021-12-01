@@ -1,8 +1,14 @@
 use std::{collections::HashSet, time::Duration};
 
-use alkonost::{Alkonost, AlkonostInMessage, AlkonostOutMessage, DetectorParams, RequestSettings};
-use rillrate::prime::{LiveTail, LiveTailOpts, Pulse, PulseOpts};
+use alkonost::{Alkonost, AlkonostInMessage, AlkonostOutMessage, DetectorParams, RequestSettings, DecisionAction};
+use rillrate::prime::{LiveTail, LiveTailOpts, Pulse, PulseOpts, Table, TableOpts, table::{Row, Col}, Click, ClickOpts};
 use tracing::Level;
+
+struct ProcessingStats {
+    video_id: String,
+    processed_messages: usize,
+    suspicios_users_count: usize
+}
 
 #[tokio::main]
 pub async fn main() {
@@ -40,10 +46,14 @@ pub async fn main() {
         }
     };
 
-    let decision_log_tail = LiveTail::new(
-        "app.dashboard.stats.Decision Log",
+    let stats_table = Table::new(
+        "app.dashboard.stats.Live chats",
         Default::default(),
-        LiveTailOpts::default(),
+        TableOpts::default().columns([
+            (0, "Chat".into()), 
+            (1, "Processed messages".into()),
+            (2, "Suspicious users".into())
+        ]),
     );
 
     let active_chat_pulse = Pulse::new(
@@ -53,37 +63,106 @@ pub async fn main() {
     );
     active_chat_pulse.push(0);
 
+    let decision_log_tail = LiveTail::new(
+        "app.dashboard.stats.Decision Log",
+        Default::default(),
+        LiveTailOpts::default(),
+    );
+
+    let click = Click::new(
+        "app.dashboard.controls.Close",
+        ClickOpts::default().label("Close"),
+    );
+
+    let tx_copy = actor.tx.clone();
+    click.async_callback(move |envelope| {
+        let local_tx = tx_copy.clone();
+        async move {
+            if envelope.action == None {
+                return Ok(());
+            }
+
+            tracing::info!("Clicked `Close` button");
+            match local_tx.send(AlkonostInMessage::Close).await {
+                Ok(_r) => { },
+                Err(e) => {
+                    tracing::error!("Couldn't send `Close` message: {}", e);
+                },
+            }
+            Ok(())
+        }
+    });
+
     let rx_reader = tokio::spawn(async move {
-        let mut active_chats = HashSet::new();
+        let mut stats_data = Vec::new();
         while let Some(message) = result_rx.recv().await {
             match message {
                 AlkonostOutMessage::NewChat {
                     channel: _,
                     video_id,
                 } => {
-                    active_chats.insert(video_id);
+                    let stats = ProcessingStats {
+                        video_id,
+                        processed_messages: 0,
+                        suspicios_users_count: 0
+                    };
+                    stats_data.push(stats);
+                    stats_table.add_row(Row(stats_data.len() as u64));
                 }
                 AlkonostOutMessage::ChatClosed {
                     channel: _,
                     video_id,
                 } => {
-                    active_chats.remove(&video_id);
+                    let index = stats_data
+                        .iter()
+                        .position(|stats| &stats.video_id == &video_id);
+                    match index {
+                        Some(index) => {
+                            stats_table.del_row(Row(index as u64));
+                            stats_data.remove(index);
+                        },
+                        None => {
+                            tracing::warn!("Chat {} has closed, but it was never opened in the first place", &video_id);
+                        },
+                    }
                 }
                 AlkonostOutMessage::DetectorResult {
                     video_id,
                     decisions,
-                    processed_messages: _
+                    processed_messages
                 } => {
-                    for decision in decisions {
-                        decision_log_tail.log_now(
-                            video_id.clone(),
-                            decision.user,
-                            format!("{:?}", decision.action),
-                        );
+                    let chat_stats = stats_data
+                        .iter_mut()
+                        .find(|stats| &stats.video_id == &video_id);
+                    match chat_stats {
+                        Some(stats) => {
+                            stats.processed_messages += processed_messages;
+
+                            for decision in decisions {
+                                match decision.action {
+                                    DecisionAction::Add(_) => {
+                                        stats.suspicios_users_count += 1;
+                                    },
+                                    DecisionAction::Remove => {
+                                        stats.suspicios_users_count -= 1;
+                                    }
+                                }
+
+                                decision_log_tail.log_now(
+                                    &video_id, 
+                                    &decision.user,
+                                    format!("{:?}", &decision.action)
+                                );
+                            }
+                        },
+                        None => {
+                            tracing::warn!("Received detector results for {} before `NewChat` message", &video_id);
+                        },
                     }
                 }
             }
-            active_chat_pulse.push(active_chats.len() as f64);
+            active_chat_pulse.push(stats_data.len() as f64);
+            render_stats_table(&stats_table, &stats_data);
         }
 
         tracing::info!("rx_reader has been closed");
@@ -124,4 +203,12 @@ pub async fn main() {
     }
 
     tracing::info!("Closed");
+}
+
+fn render_stats_table(table: &Table, active_chats: &Vec<ProcessingStats>) {
+    for (index, stats) in active_chats.iter().enumerate() {
+        table.set_cell(Row(index as u64), Col(0), &stats.video_id);
+        table.set_cell(Row(index as u64), Col(1), &stats.processed_messages);
+        table.set_cell(Row(index as u64), Col(2), &stats.suspicios_users_count);
+    }
 }
