@@ -36,6 +36,7 @@ pub enum InitResult {
 }
 
 pub struct ChatPoller {
+    channel: String,
     video_id: String,
     http_client: Arc<HttpClient>,
     request_settings: RequestSettings,
@@ -52,7 +53,7 @@ pub struct ChatPoller {
 impl ChatPoller {
     pub async fn init(
         video_id: String,
-        channel_id: String,
+        channel: String,
         http_client: Arc<HttpClient>,
         request_settings: RequestSettings,
         result_tx: Sender<OutMessage>,
@@ -87,6 +88,7 @@ impl ChatPoller {
         );
 
         let poller = Self {
+            channel: channel.clone(),
             video_id: video_id.clone(),
             http_client,
             request_settings,
@@ -103,7 +105,7 @@ impl ChatPoller {
         poller
             .result_tx
             .send(OutMessage::ChatInit {
-                channel: channel_id,
+                channel,
                 video_id,
             })
             .await?;
@@ -136,6 +138,7 @@ impl ChatPoller {
 
         shared::tracing_info!("{}: Sending `StreamEnded` message...", &self.video_id);
         let closing_message = OutMessage::StreamEnded {
+            channel: self.channel.clone(),
             video_id: self.video_id.clone(),
         };
         match self.result_tx.send(closing_message).await {

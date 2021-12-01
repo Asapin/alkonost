@@ -6,6 +6,11 @@ use shared::{
 
 use crate::user_data::UserData;
 
+pub struct ProcessingResult {
+    pub decisions: Vec<DetectorDecision>,
+    pub processed_messages: usize
+}
+
 pub struct SpamDetector {
     history: HashMap<String, UserData>,
     suspicious: HashMap<String, SuspicionReason>,
@@ -27,8 +32,12 @@ impl SpamDetector {
         &mut self,
         actions: Vec<Action>,
         detector_params: &DetectorParams,
-    ) -> Vec<DetectorDecision> {
-        let mut decisions = Vec::new();
+    ) -> ProcessingResult {
+        let mut result = ProcessingResult {
+            decisions: Vec::new(),
+            processed_messages: 0
+        };
+
         for action in actions {
             match action {
                 Action::NewMessage { id, message }
@@ -37,6 +46,8 @@ impl SpamDetector {
                     message,
                     ..
                 } => {
+                    result.processed_messages += 1;
+
                     match message {
                         shared::types::MessageContent::SimpleMessage { author, message } => {
                             if self.should_skip_analyzing(&author.channel_id) {
@@ -55,17 +66,17 @@ impl SpamDetector {
                             if let Some(reason) =
                                 user_data.new_message(&message, id.timepstamp, detector_params)
                             {
-                                self.mark_as_suspicious(author.channel_id, reason, &mut decisions);
+                                self.mark_as_suspicious(author.channel_id, reason, &mut result.decisions);
                             }
                         }
                         shared::types::MessageContent::Membership { author, .. }
                         | shared::types::MessageContent::Superchat { author, .. }
                         | shared::types::MessageContent::Sticker { author, .. } => {
-                            self.mark_as_supporter(author.channel_id, &mut decisions);
+                            self.mark_as_supporter(author.channel_id, &mut result.decisions);
                         }
                         shared::types::MessageContent::Fundraiser { author, .. } => {
                             author.into_iter().for_each(|author| {
-                                self.mark_as_supporter(author.channel_id, &mut decisions)
+                                self.mark_as_supporter(author.channel_id, &mut result.decisions)
                             });
                         }
                         shared::types::MessageContent::ChatMode { .. } => {
@@ -77,6 +88,8 @@ impl SpamDetector {
                     }
                 }
                 Action::DeleteMessage { target_id } => {
+                    result.processed_messages += 1;
+
                     let message_author = self.message_to_user.get(&target_id);
                     let author = match message_author {
                         Some(author) => author.clone(),
@@ -96,11 +109,13 @@ impl SpamDetector {
                         self.mark_as_suspicious(
                             author,
                             SuspicionReason::TooManyDeletedMessages,
-                            &mut decisions,
+                            &mut result.decisions,
                         );
                     }
                 }
                 Action::BlockUser { channel_id } => {
+                    result.processed_messages += 1;
+
                     // There's a possibility of a human error,
                     // but most of the times users get blocked either for spamming
                     // or inapropriate behaviour, which this app tries to detect.
@@ -112,7 +127,7 @@ impl SpamDetector {
                         self.mark_as_suspicious(
                             channel_id,
                             SuspicionReason::Blocked,
-                            &mut decisions,
+                            &mut result.decisions,
                         );
                     }
                 }
@@ -127,7 +142,7 @@ impl SpamDetector {
             }
         }
 
-        decisions
+        result
     }
 
     /// No need to check if the user is already marked as a potential spammer

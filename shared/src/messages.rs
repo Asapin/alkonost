@@ -43,6 +43,7 @@ pub mod chat_poller {
             actions: Vec<Action>,
         },
         StreamEnded {
+            channel: String,
             video_id: String,
         },
     }
@@ -82,9 +83,13 @@ pub mod detector {
             channel: String,
             video_id: String,
         },
-        ChatClosed(String),
+        ChatClosed {
+            channel: String,
+            video_id: String
+        },
         DetectorResult {
             video_id: String,
+            processed_messages: usize,
             decisions: Vec<DetectorDecision>,
         },
     }

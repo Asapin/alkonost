@@ -38,12 +38,13 @@ pub async fn main() {
                 AlkonostOutMessage::NewChat { channel, video_id } => {
                     tracing::info!("New stream <{}> on channel <{}>", video_id, channel);
                 }
-                AlkonostOutMessage::ChatClosed(video_id) => {
-                    tracing::info!("Stream <{}> has ended", video_id);
+                AlkonostOutMessage::ChatClosed{ channel, video_id } => {
+                    tracing::info!("Stream <{}> from channel <{}> has ended", video_id, channel);
                 }
                 AlkonostOutMessage::DetectorResult {
                     video_id,
                     decisions,
+                    processed_messages: _
                 } => {
                     tracing::info!("<{}>: {:?}", video_id, decisions);
                 }

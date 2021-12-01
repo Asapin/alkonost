@@ -63,12 +63,16 @@ pub async fn main() {
                 } => {
                     active_chats.insert(video_id);
                 }
-                AlkonostOutMessage::ChatClosed(video_id) => {
+                AlkonostOutMessage::ChatClosed {
+                    channel: _,
+                    video_id,
+                } => {
                     active_chats.remove(&video_id);
                 }
                 AlkonostOutMessage::DetectorResult {
                     video_id,
                     decisions,
+                    processed_messages: _
                 } => {
                     for decision in decisions {
                         decision_log_tail.log_now(
