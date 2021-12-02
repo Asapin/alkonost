@@ -5,6 +5,7 @@ use rillrate::prime::{LiveTail, LiveTailOpts, Pulse, PulseOpts, Table, TableOpts
 use tracing::Level;
 
 struct ProcessingStats {
+    channel: String,
     video_id: String,
     processed_messages: usize,
     suspicios_users_count: usize
@@ -50,9 +51,10 @@ pub async fn main() {
         "app.dashboard.stats.Live chats",
         Default::default(),
         TableOpts::default().columns([
-            (0, "Chat".into()), 
-            (1, "Processed messages".into()),
-            (2, "Suspicious users".into())
+            (0, "Chat".into()),
+            (1, "Channel".into()),
+            (2, "Processed messages".into()),
+            (3, "Suspicious users".into())
         ]),
     );
 
@@ -98,10 +100,11 @@ pub async fn main() {
         while let Some(message) = result_rx.recv().await {
             match message {
                 AlkonostOutMessage::NewChat {
-                    channel: _,
+                    channel,
                     video_id,
                 } => {
                     let stats = ProcessingStats {
+                        channel,
                         video_id,
                         processed_messages: 0,
                         suspicios_users_count: 0
@@ -208,7 +211,8 @@ pub async fn main() {
 fn render_stats_table(table: &Table, active_chats: &Vec<ProcessingStats>) {
     for (index, stats) in active_chats.iter().enumerate() {
         table.set_cell(Row(index as u64), Col(0), &stats.video_id);
-        table.set_cell(Row(index as u64), Col(1), &stats.processed_messages);
-        table.set_cell(Row(index as u64), Col(2), &stats.suspicios_users_count);
+        table.set_cell(Row(index as u64), Col(1), &stats.channel);
+        table.set_cell(Row(index as u64), Col(2), &stats.processed_messages);
+        table.set_cell(Row(index as u64), Col(3), &stats.suspicios_users_count);
     }
 }
