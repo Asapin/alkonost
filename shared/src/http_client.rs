@@ -2,7 +2,7 @@ use std::time::Duration;
 
 use reqwest::{
     header::{self, ACCEPT, ACCEPT_LANGUAGE, DNT, REFERER, UPGRADE_INSECURE_REQUESTS, USER_AGENT},
-    Client,
+    Client, Response,
 };
 use thiserror::Error;
 
@@ -26,6 +26,10 @@ pub enum HttpClientLoadError {
     PostRequest(#[source] reqwest::Error),
     #[error("Couldn't load response body: {0}")]
     ResponseBody(#[source] reqwest::Error),
+    #[error("Request had an error: {0}")]
+    ClientError(String),
+    #[error("Server has encountered an error: {0}")]
+    ServerError(String),
 }
 
 #[derive(Clone)]
@@ -76,15 +80,14 @@ impl HttpClient {
         url: &str,
         user_agent: &str,
     ) -> Result<String, HttpClientLoadError> {
-        self.client
+        let response = self.client
             .get(url)
             .header(USER_AGENT, user_agent)
             .send()
             .await
-            .map_err(HttpClientLoadError::GetRequest)?
-            .text()
-            .await
-            .map_err(HttpClientLoadError::ResponseBody)
+            .map_err(HttpClientLoadError::GetRequest)?;
+        
+        HttpClient::extract_response(response).await
     }
 
     pub async fn post_request(
@@ -94,16 +97,30 @@ impl HttpClient {
         referer: &str,
         body: String,
     ) -> Result<String, HttpClientLoadError> {
-        self.client
+        let response = self.client
             .post(url)
             .header(USER_AGENT, user_agent)
             .header(REFERER, referer)
             .body(body)
             .send()
             .await
-            .map_err(HttpClientLoadError::PostRequest)?
-            .text()
+            .map_err(HttpClientLoadError::PostRequest)?;
+        
+        HttpClient::extract_response(response).await
+    }
+
+    async fn extract_response(response: Response) -> Result<String, HttpClientLoadError> {
+        let status_code = response.status();
+        let body = response.text()
             .await
-            .map_err(HttpClientLoadError::ResponseBody)
+            .map_err(HttpClientLoadError::ResponseBody)?;
+        
+        if status_code.is_client_error() {
+            Err(HttpClientLoadError::ClientError(body))
+        } else if status_code.is_server_error() {
+            Err(HttpClientLoadError::ServerError(body))
+        } else {
+            Ok(body)
+        }
     }
 }
