@@ -1,5 +1,3 @@
-use crate::SuspicionReason;
-
 pub mod stream_finder {
     use std::collections::HashSet;
 
@@ -70,7 +68,7 @@ pub mod chat_manager {
 }
 
 pub mod detector {
-    use super::{chat_poller, DetectorDecision};
+    use super::chat_poller;
 
     #[derive(Debug, Clone)]
     pub enum IncMessage {
@@ -94,6 +92,34 @@ pub mod detector {
             decisions: Vec<DetectorDecision>,
         },
     }
+
+    #[derive(Debug)]
+    pub struct DetectorDecision {
+        pub channel: String,
+        pub timestamp: i64,
+        pub decision: Decision,
+    }
+
+    impl DetectorDecision {
+        pub fn new(channel: String, decision: Decision) -> Self {
+            Self {
+                channel,
+                timestamp: chrono::Utc::now().timestamp(),
+                decision
+            }
+        }
+    }
+
+    #[derive(Debug)]
+    pub enum Decision {
+        TooFast(f32),
+        TooLong(f32),
+        TooManyDeleted,
+        Similar,
+        Blocked,
+        Clear,
+    }
+
 }
 
 pub mod alkonost {
@@ -106,35 +132,4 @@ pub mod alkonost {
         UpdateBrowserVersion(String),
         UpdateBrowserNameAndVersion { name: String, version: String },
     }
-}
-
-#[derive(Debug)]
-pub struct DetectorDecision {
-    pub user: String,
-    pub timestamp: u64,
-    pub action: DecisionAction,
-}
-
-impl DetectorDecision {
-    pub fn remove_user(user: String) -> Self {
-        DetectorDecision {
-            user,
-            timestamp: chrono::Utc::now().timestamp() as u64,
-            action: DecisionAction::Remove,
-        }
-    }
-
-    pub fn add_user(user: String, reason: SuspicionReason) -> Self {
-        DetectorDecision {
-            user,
-            timestamp: chrono::Utc::now().timestamp() as u64,
-            action: DecisionAction::Add(reason),
-        }
-    }
-}
-
-#[derive(Debug)]
-pub enum DecisionAction {
-    Add(SuspicionReason),
-    Remove,
 }

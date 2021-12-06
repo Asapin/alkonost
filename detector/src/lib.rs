@@ -12,7 +12,6 @@ use spam_detector::SpamDetector;
 use tokio::sync::mpsc::{self, Receiver, Sender};
 
 mod error;
-mod message_data;
 mod spam_detector;
 mod user_data;
 

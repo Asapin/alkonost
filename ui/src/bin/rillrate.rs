@@ -142,19 +142,19 @@ pub async fn main() {
                             stats.processed_messages += processed_messages;
 
                             for decision in decisions {
-                                match decision.action {
-                                    DecisionAction::Add(_) => {
-                                        stats.suspicios_users_count += 1;
-                                    },
-                                    DecisionAction::Remove => {
+                                match decision.decision {
+                                    DecisionAction::Clear => {
                                         stats.suspicios_users_count -= 1;
+                                    },
+                                    _ => {
+                                        stats.suspicios_users_count += 1;
                                     }
                                 }
 
                                 decision_log_tail.log_now(
                                     &video_id, 
-                                    &decision.user,
-                                    format!("{:?}", &decision.action)
+                                    &decision.channel,
+                                    format!("{:?}", &decision.decision)
                                 );
                             }
                         },

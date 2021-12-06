@@ -22,8 +22,8 @@ pub type DetectorParams = shared::detector_params::DetectorParams;
 pub type RequestSettings = shared::http_client::RequestSettings;
 pub type AlkonostInMessage = shared::messages::alkonost::IncMessage;
 pub type AlkonostOutMessage = shared::messages::detector::OutMessage;
-pub type DetectorDecision = shared::messages::DetectorDecision;
-pub type DecisionAction = shared::messages::DecisionAction;
+pub type DetectorDecision = shared::messages::detector::DetectorDecision;
+pub type DecisionAction = shared::messages::detector::Decision;
 
 pub struct Alkonost {
     rx: Receiver<IncMessage>,

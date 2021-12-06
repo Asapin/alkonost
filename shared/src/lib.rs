@@ -5,6 +5,7 @@ use tokio::{sync::mpsc::Sender, task::JoinHandle};
 pub use tracing::info as tracing_info;
 pub use tracing::warn as tracing_warn;
 pub use tracing::error as tracing_error;
+pub use vec1::Vec1 as Vec1;
 
 pub mod detector_params;
 pub mod http_client;
@@ -15,13 +16,4 @@ pub mod youtube_regexes;
 pub struct ActorWrapper<T> {
     pub join_handle: JoinHandle<()>,
     pub tx: Sender<T>,
-}
-
-#[derive(Debug, Clone)]
-pub enum SuspicionReason {
-    TooFast(f32),
-    TooLong(f32),
-    Similar,
-    Blocked,
-    TooManyDeletedMessages,
 }
