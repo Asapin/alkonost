@@ -105,6 +105,7 @@ impl ChatPoller {
             poller.run().await;
         });
 
+        let tx = shared::AlkSender::new(tx, "ChatPoller_tx".to_string());
         let wraper = ActorWrapper { join_handle, tx };
         Ok(InitResult::Started(wraper))
     }

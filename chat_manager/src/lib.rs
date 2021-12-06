@@ -51,6 +51,7 @@ impl ChatManager {
             let _result = manager.run().await;
         });
 
+        let tx = shared::AlkSender::new(tx, "ChatManager_tx".to_string());
         ActorWrapper { join_handle, tx }
     }
 
@@ -145,7 +146,7 @@ impl ChatManager {
         let buffer = HashMap::with_capacity(self.inprogress_chats.len());
         let old = replace(&mut self.inprogress_chats, buffer);
 
-        for (video_id, inprogress_chat) in old.into_iter() {
+        for (video_id, mut inprogress_chat) in old.into_iter() {
             match inprogress_chat.tx.send(message.clone()).await {
                 Ok(_r) => {
                     self.inprogress_chats.insert(video_id, inprogress_chat);

@@ -8,11 +8,11 @@ use error::{AlkonostError, AlkonostInitError};
 use shared::{
     http_client::HttpClient,
     messages::{self, alkonost::IncMessage},
-    ActorWrapper,
+    ActorWrapper, AlkSender,
 };
 use stream_finder::StreamFinder;
 use tokio::{
-    sync::mpsc::{self, Receiver, Sender},
+    sync::mpsc::{self, Receiver},
     task::JoinHandle,
 };
 
@@ -32,9 +32,9 @@ pub struct Alkonost {
     detector: JoinHandle<()>,
     finder_to_chat_handle: JoinHandle<()>,
     chat_to_detector_handle: JoinHandle<()>,
-    stream_finder_tx: Sender<messages::stream_finder::IncMessage>,
-    chat_manager_tx: Sender<messages::chat_manager::IncMessage>,
-    detector_tx: Sender<messages::detector::IncMessage>,
+    stream_finder_tx: AlkSender<messages::stream_finder::IncMessage>,
+    chat_manager_tx: AlkSender<messages::chat_manager::IncMessage>,
+    detector_tx: AlkSender<messages::detector::IncMessage>,
 }
 
 impl Alkonost {
@@ -54,7 +54,7 @@ impl Alkonost {
             join_handle: detector,
             tx: detector_tx,
         } = DetectorManager::init(detector_params, detector_result_tx);
-        let detector_tx_clone = detector_tx.clone();
+        let mut detector_tx_clone = detector_tx.clone();
 
         let http_client = HttpClient::init()?;
         let http_client = Arc::new(http_client);
@@ -68,7 +68,7 @@ impl Alkonost {
             request_settings.clone(),
             chat_manager_result_tx,
         );
-        let chat_manager_tx_clone = chat_manager_tx.clone();
+        let mut chat_manager_tx_clone = chat_manager_tx.clone();
 
         let (stream_finder_result_tx, mut stream_finder_result_rx) = mpsc::channel(32);
         let ActorWrapper {
@@ -134,6 +134,7 @@ impl Alkonost {
             alkonost.run().await;
         });
 
+        let tx = AlkSender::new(tx, "Alkonost_tx".to_string());
         let actor = ActorWrapper { join_handle, tx };
 
         Ok((actor, detector_result_rx))

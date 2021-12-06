@@ -123,6 +123,7 @@ pub mod detector {
 }
 
 pub mod alkonost {
+    #[derive(Debug)]
     pub enum IncMessage {
         Close,
         AddChannel(String),

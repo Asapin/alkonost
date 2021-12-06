@@ -31,6 +31,9 @@ pub async fn main() {
                 return;
             }
         };
+    
+    let mut actor_tx = actor.tx;
+    let actor_handle = actor.join_handle;
 
     let rx_reader = tokio::spawn(async move {
         while let Some(message) = result_rx.recv().await {
@@ -69,7 +72,7 @@ pub async fn main() {
 
     for channel_id in channels {
         let message = AlkonostInMessage::AddChannel(channel_id.to_string());
-        match actor.tx.send(message).await {
+        match actor_tx.send(message).await {
             Ok(_r) => {}
             Err(e) => {
                 tracing::error!("Couldn't send message to a stream finder: {}", &e);
@@ -80,7 +83,7 @@ pub async fn main() {
 
     sleep(Duration::from_secs(130)).await;
     tracing::info!("Closing...");
-    match actor.tx.send(AlkonostInMessage::Close).await {
+    match actor_tx.send(AlkonostInMessage::Close).await {
         Ok(_r) => {}
         Err(e) => {
             tracing::error!("Couldn't send message to a stream finder: {}", &e);
@@ -88,7 +91,7 @@ pub async fn main() {
         }
     }
 
-    let _ = actor.join_handle.await;
+    let _ = actor_handle.await;
     let _ = rx_reader.await;
 
     tracing::info!("Closed");

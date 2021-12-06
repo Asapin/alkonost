@@ -39,6 +39,7 @@ impl DetectorManager {
             manager.run().await;
         });
 
+        let tx = shared::AlkSender::new(tx, "DetectorManager_tx".to_string());
         ActorWrapper { join_handle, tx }
     }
 

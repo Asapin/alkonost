@@ -52,6 +52,7 @@ impl StreamFinder {
             stream_finder.run().await;
         });
 
+        let tx = shared::AlkSender::new(tx, "StreamFinder_tx".to_string());
         ActorWrapper { join_handle, tx }
     }
 
@@ -198,6 +199,10 @@ impl StreamFinder {
                 return;
             }
         };
+
+        if video_list.streams.is_empty() {
+            return;
+        }
 
         match result_tx
             .send(OutMessage {

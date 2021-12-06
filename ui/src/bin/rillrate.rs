@@ -38,6 +38,9 @@ pub async fn main() {
                 return;
             }
         };
+    
+    let actor_handle = actor.join_handle;
+    let mut actor_tx = actor.tx;
 
     match rillrate::install("demo") {
         Ok(_r) => {}
@@ -76,9 +79,9 @@ pub async fn main() {
         ClickOpts::default().label("Close"),
     );
 
-    let tx_copy = actor.tx.clone();
+    let tx_copy = actor_tx.clone();
     click.async_callback(move |envelope| {
-        let local_tx = tx_copy.clone();
+        let mut local_tx = tx_copy.clone();
         async move {
             if envelope.action == None {
                 return Ok(());
@@ -186,7 +189,7 @@ pub async fn main() {
 
     for channel_id in channels {
         let message = AlkonostInMessage::AddChannel(channel_id.to_string());
-        match actor.tx.send(message).await {
+        match actor_tx.send(message).await {
             Ok(_r) => {}
             Err(e) => {
                 tracing::error!("Couldn't send message to a stream finder: {}", &e);
@@ -195,7 +198,7 @@ pub async fn main() {
         }
     }
 
-    let _ = actor.join_handle.await;
+    let _ = actor_handle.await;
     let _ = rx_reader.await;
 
     match rillrate::uninstall() {
