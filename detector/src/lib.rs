@@ -97,7 +97,7 @@ impl DetectorManager {
                             };
 
                             let result =
-                                detector_instance.process_new_messages(actions, &self.params);
+                                detector_instance.process_new_messages(&video_id, actions, &self.params);
                             self.result_tx
                                 .send(OutMessage::DetectorResult {
                                     video_id,

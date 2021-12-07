@@ -26,6 +26,7 @@ impl SpamDetector {
 
     pub fn process_new_messages(
         &mut self,
+        video_id: &str,
         actions: Vec<Action>,
         detector_params: &DetectorParams,
     ) -> ProcessingResult {
@@ -70,8 +71,8 @@ impl SpamDetector {
                     Some(author) => Some((author.clone(), UserMessage::Delete)),
                     None => {
                         shared::tracing_warn!(
-                            "Couldn't find author of the deleted message {}",
-                            &target_id
+                            "{}: Couldn't find author of the deleted message",
+                            &video_id
                         );
                         None
                     }
