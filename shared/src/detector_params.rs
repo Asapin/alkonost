@@ -62,3 +62,18 @@ impl DetectorParams {
         similar_messages_count >= self.similarity_count_threshold
     }
 }
+
+impl Default for DetectorParams {
+    fn default() -> Self {
+        Self {
+            deleted_messages_threshold: 4,
+            avg_delay_threshold: 5000.0,
+            avg_delay_min_message_count: 5,
+            avg_length_threshold: 30.0,
+            avg_length_min_message_count: 5,
+            similarity_threshold: 0.85,
+            similarity_count_threshold: 3,
+            similarity_min_message_length: 10,
+        }
+    }
+}

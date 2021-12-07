@@ -1,6 +1,6 @@
 use std::{collections::HashSet, time::Duration};
 
-use alkonost::{Alkonost, AlkonostInMessage, AlkonostOutMessage, DetectorParams, RequestSettings};
+use alkonost::{Alkonost, AlkonostInMessage, AlkonostOutMessage, RequestSettings};
 use tokio::time::sleep;
 use tracing::Level;
 
@@ -12,7 +12,6 @@ pub async fn main() {
 
     tracing::subscriber::set_global_default(subscriber).expect("setting default subscriber failed");
 
-    let detector_params = DetectorParams::new(4, 5000.0, 5, 30.0, 5, 0.85, 3, 10);
     let request_settings = RequestSettings {
         browser_name: "Firefox".to_string(),
         browser_version: "90.0".to_string(),
@@ -23,7 +22,7 @@ pub async fn main() {
     let poll_interval = Duration::from_secs(90);
 
     let (actor, mut result_rx) =
-        match Alkonost::init(detector_params, request_settings, poll_interval) {
+        match Alkonost::init(request_settings, poll_interval) {
             Ok(r) => r,
             Err(e) => {
                 tracing::error!("Error initializing alkonost: {}", &e);

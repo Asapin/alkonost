@@ -39,7 +39,6 @@ pub struct Alkonost {
 
 impl Alkonost {
     pub fn init(
-        detector_params: DetectorParams,
         request_settings: RequestSettings,
         chat_poll_interval: Duration,
     ) -> Result<
@@ -53,7 +52,7 @@ impl Alkonost {
         let ActorWrapper {
             join_handle: detector,
             tx: detector_tx,
-        } = DetectorManager::init(detector_params, detector_result_tx);
+        } = DetectorManager::init(detector_result_tx);
         let mut detector_tx_clone = detector_tx.clone();
 
         let http_client = HttpClient::init()?;

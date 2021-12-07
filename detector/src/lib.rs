@@ -16,23 +16,20 @@ mod spam_detector;
 mod user_data;
 
 pub struct DetectorManager {
-    streams: HashMap<String, SpamDetector>,
+    streams: HashMap<String, (String, SpamDetector)>,
     rx: Receiver<IncMessage>,
     result_tx: Sender<OutMessage>,
-    params: DetectorParams,
+    params: HashMap<String, DetectorParams>,
 }
 
 impl DetectorManager {
-    pub fn init(
-        detector_params: DetectorParams,
-        result_tx: Sender<OutMessage>,
-    ) -> ActorWrapper<IncMessage> {
+    pub fn init(result_tx: Sender<OutMessage>) -> ActorWrapper<IncMessage> {
         let (tx, rx) = mpsc::channel(32);
         let manager = Self {
             streams: HashMap::new(),
             rx,
             result_tx,
-            params: detector_params,
+            params: HashMap::new()
         };
 
         let join_handle = tokio::spawn(async move {
@@ -73,8 +70,8 @@ impl DetectorManager {
                             channel,
                             video_id,
                         } => {
-                            // TODO: load channel specific detector params
-                            self.streams.insert(video_id.clone(), SpamDetector::init());
+                            self.streams.insert(video_id.clone(), (channel.clone(), SpamDetector::init()));
+                            self.load_detector_params_for_channel(channel.clone());
 
                             let message = OutMessage::NewChat { channel, video_id };
                             self.result_tx.send(message).await?;
@@ -83,21 +80,24 @@ impl DetectorManager {
                             video_id,
                             actions,
                         } => {
-                            let detector_instance = self.streams.get_mut(&video_id);
-
-                            let detector_instance = match detector_instance {
-                                Some(instance) => instance,
+                            let detector_with_params = self.get_detector_and_params(&video_id);
+                            let (channel, mut detector, params) = match detector_with_params {
+                                Some((channel, detector, params)) => (channel, detector, params),
                                 None => {
                                     shared::tracing_warn!(
                                         "{} has sent `NewBatch` before `ChatInit`",
                                         &video_id
                                     );
                                     continue;
-                                }
+                                },
                             };
 
-                            let result =
-                                detector_instance.process_new_messages(&video_id, actions, &self.params);
+                            let result = detector.process_new_messages(&video_id, actions, &params);
+
+                            // Put detector and params back
+                            self.params.insert(channel.clone(), params);
+                            self.streams.insert(video_id.clone(), (channel, detector));
+
                             self.result_tx
                                 .send(OutMessage::DetectorResult {
                                     video_id,
@@ -118,6 +118,26 @@ impl DetectorManager {
                     }
                 }
             }
+        }
+    }
+
+    fn load_detector_params_for_channel(&mut self, channel: String) {
+        self
+            .params
+            .entry(channel)
+            .or_insert(DetectorParams::default());
+    }
+
+    fn get_detector_and_params(&mut self, video_id: &str) -> Option<(String, SpamDetector, DetectorParams)> {
+        let (channel, detector) = self.streams.remove(video_id)?;
+        let params = self.params.remove(&channel);
+
+        match params {
+            Some(params) => Some((channel, detector, params)),
+            None => {
+                self.streams.insert(video_id.to_string(), (channel, detector));
+                None
+            },
         }
     }
 }
