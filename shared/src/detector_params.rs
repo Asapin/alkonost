@@ -41,7 +41,11 @@ impl DetectorParams {
             && current_avg_delay < self.avg_delay_threshold
     }
 
-    pub fn are_messages_too_long(&self, current_avg_length: f32, sent_messages_count: usize) -> bool {
+    pub fn are_messages_too_long(
+        &self,
+        current_avg_length: f32,
+        sent_messages_count: usize,
+    ) -> bool {
         sent_messages_count >= self.avg_length_min_message_count
             && current_avg_length >= self.avg_length_threshold
     }

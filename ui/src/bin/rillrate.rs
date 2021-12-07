@@ -1,14 +1,20 @@
 use std::{collections::HashSet, time::Duration};
 
-use alkonost::{Alkonost, AlkonostInMessage, AlkonostOutMessage, DetectorParams, RequestSettings, DecisionAction};
-use rillrate::prime::{LiveTail, LiveTailOpts, Pulse, PulseOpts, Table, TableOpts, table::{Row, Col}, Click, ClickOpts};
+use alkonost::{
+    Alkonost, AlkonostInMessage, AlkonostOutMessage, DecisionAction, DetectorParams,
+    RequestSettings,
+};
+use rillrate::prime::{
+    table::{Col, Row},
+    Click, ClickOpts, LiveTail, LiveTailOpts, Pulse, PulseOpts, Table, TableOpts,
+};
 use tracing::Level;
 
 struct ProcessingStats {
     channel: String,
     video_id: String,
     processed_messages: usize,
-    suspicios_users_count: usize
+    suspicios_users_count: usize,
 }
 
 #[tokio::main]
@@ -17,8 +23,7 @@ pub async fn main() {
         .with_max_level(Level::INFO)
         .finish();
 
-    tracing::subscriber::set_global_default(subscriber)
-        .expect("setting default subscriber failed");
+    tracing::subscriber::set_global_default(subscriber).expect("setting default subscriber failed");
 
     let detector_params = DetectorParams::new(4, 5000.0, 5, 30.0, 5, 0.85, 3, 10);
     let request_settings = RequestSettings {
@@ -38,7 +43,7 @@ pub async fn main() {
                 return;
             }
         };
-    
+
     let actor_handle = actor.join_handle;
     let mut actor_tx = actor.tx;
 
@@ -57,7 +62,7 @@ pub async fn main() {
             (0, "Chat".into()),
             (1, "Channel".into()),
             (2, "Processed messages".into()),
-            (3, "Suspicious users".into())
+            (3, "Suspicious users".into()),
         ]),
     );
 
@@ -89,10 +94,10 @@ pub async fn main() {
 
             tracing::info!("Clicked `Close` button");
             match local_tx.send(AlkonostInMessage::Close).await {
-                Ok(_r) => { },
+                Ok(_r) => {}
                 Err(e) => {
                     tracing::error!("Couldn't send `Close` message: {}", e);
-                },
+                }
             }
             Ok(())
         }
@@ -102,15 +107,12 @@ pub async fn main() {
         let mut stats_data = Vec::new();
         while let Some(message) = result_rx.recv().await {
             match message {
-                AlkonostOutMessage::NewChat {
-                    channel,
-                    video_id,
-                } => {
+                AlkonostOutMessage::NewChat { channel, video_id } => {
                     let stats = ProcessingStats {
                         channel,
                         video_id,
                         processed_messages: 0,
-                        suspicios_users_count: 0
+                        suspicios_users_count: 0,
                     };
                     stats_data.push(stats);
                     stats_table.add_row(Row(stats_data.len() as u64));
@@ -126,16 +128,19 @@ pub async fn main() {
                         Some(index) => {
                             stats_table.del_row(Row(index as u64));
                             stats_data.remove(index);
-                        },
+                        }
                         None => {
-                            tracing::warn!("Chat {} has closed, but it was never opened in the first place", &video_id);
-                        },
+                            tracing::warn!(
+                                "Chat {} has closed, but it was never opened in the first place",
+                                &video_id
+                            );
+                        }
                     }
                 }
                 AlkonostOutMessage::DetectorResult {
                     video_id,
                     decisions,
-                    processed_messages
+                    processed_messages,
                 } => {
                     let chat_stats = stats_data
                         .iter_mut()
@@ -148,22 +153,25 @@ pub async fn main() {
                                 match decision.decision {
                                     DecisionAction::Clear => {
                                         stats.suspicios_users_count -= 1;
-                                    },
+                                    }
                                     _ => {
                                         stats.suspicios_users_count += 1;
                                     }
                                 }
 
                                 decision_log_tail.log_now(
-                                    &video_id, 
+                                    &video_id,
                                     &decision.channel,
-                                    format!("{:?}", &decision.decision)
+                                    format!("{:?}", &decision.decision),
                                 );
                             }
-                        },
+                        }
                         None => {
-                            tracing::warn!("Received detector results for {} before `NewChat` message", &video_id);
-                        },
+                            tracing::warn!(
+                                "Received detector results for {} before `NewChat` message",
+                                &video_id
+                            );
+                        }
                     }
                 }
             }

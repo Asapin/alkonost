@@ -62,7 +62,10 @@ impl StreamFinder {
                 // StreamFinder finished it's work due to incoming `Close` message
             }
             Err(e) => {
-                shared::tracing_error!("Error, while looking for new and airing streams and premiers: {}", &e);
+                shared::tracing_error!(
+                    "Error, while looking for new and airing streams and premiers: {}",
+                    &e
+                );
             }
         }
 
@@ -152,7 +155,8 @@ impl StreamFinder {
             Err(e) => {
                 shared::tracing_error!(
                     "Couldn't load content from {} channel, reason: {}",
-                    channel_id, e
+                    channel_id,
+                    e
                 );
                 return;
             }
@@ -175,7 +179,9 @@ impl StreamFinder {
                     Err(io_e) => {
                         shared::tracing_error!(
                             "Couldn't dump an error {} from the channel {}, reason: {}",
-                            e, channel_id, io_e
+                            e,
+                            channel_id,
+                            io_e
                         );
                         return;
                     }
@@ -186,7 +192,9 @@ impl StreamFinder {
                     Err(io_e) => {
                         shared::tracing_error!(
                             "Couldn't dump an error {} from the channel {}, reason: {}",
-                            e, channel_id, io_e
+                            e,
+                            channel_id,
+                            io_e
                         );
                         return;
                     }
@@ -194,7 +202,8 @@ impl StreamFinder {
 
                 shared::tracing_error!(
                     "Couldn't extract video list from the channel {}, reason: {}",
-                    channel_id, e
+                    channel_id,
+                    e
                 );
                 return;
             }
@@ -215,7 +224,8 @@ impl StreamFinder {
             Err(e) => {
                 shared::tracing_error!(
                     "Couldn't send polling results from channel {}, reason: {}",
-                    channel_id, e
+                    channel_id,
+                    e
                 );
             }
         }

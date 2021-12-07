@@ -96,16 +96,19 @@ impl DetectorManager {
                                 }
                             };
 
-                            let result = detector_instance.process_new_messages(actions, &self.params);
-                            self.result_tx.send(OutMessage::DetectorResult {
-                                video_id,
-                                decisions: result.decisions,
-                                processed_messages: result.processed_messages
-                            }).await?;
+                            let result =
+                                detector_instance.process_new_messages(actions, &self.params);
+                            self.result_tx
+                                .send(OutMessage::DetectorResult {
+                                    video_id,
+                                    decisions: result.decisions,
+                                    processed_messages: result.processed_messages,
+                                })
+                                .await?;
                         }
-                        shared::messages::chat_poller::OutMessage::StreamEnded { 
+                        shared::messages::chat_poller::OutMessage::StreamEnded {
                             channel,
-                            video_id 
+                            video_id,
                         } => {
                             self.streams.remove(&video_id);
                             self.result_tx

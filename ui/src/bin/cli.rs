@@ -10,8 +10,7 @@ pub async fn main() {
         .with_max_level(Level::INFO)
         .finish();
 
-    tracing::subscriber::set_global_default(subscriber)
-        .expect("setting default subscriber failed");
+    tracing::subscriber::set_global_default(subscriber).expect("setting default subscriber failed");
 
     let detector_params = DetectorParams::new(4, 5000.0, 5, 30.0, 5, 0.85, 3, 10);
     let request_settings = RequestSettings {
@@ -31,7 +30,7 @@ pub async fn main() {
                 return;
             }
         };
-    
+
     let mut actor_tx = actor.tx;
     let actor_handle = actor.join_handle;
 
@@ -41,13 +40,13 @@ pub async fn main() {
                 AlkonostOutMessage::NewChat { channel, video_id } => {
                     tracing::info!("New stream <{}> on channel <{}>", video_id, channel);
                 }
-                AlkonostOutMessage::ChatClosed{ channel, video_id } => {
+                AlkonostOutMessage::ChatClosed { channel, video_id } => {
                     tracing::info!("Stream <{}> from channel <{}> has ended", video_id, channel);
                 }
                 AlkonostOutMessage::DetectorResult {
                     video_id,
                     decisions,
-                    processed_messages: _
+                    processed_messages: _,
                 } => {
                     tracing::info!("<{}>: {:?}", video_id, decisions);
                 }

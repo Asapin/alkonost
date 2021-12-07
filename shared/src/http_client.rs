@@ -80,13 +80,14 @@ impl HttpClient {
         url: &str,
         user_agent: &str,
     ) -> Result<String, HttpClientLoadError> {
-        let response = self.client
+        let response = self
+            .client
             .get(url)
             .header(USER_AGENT, user_agent)
             .send()
             .await
             .map_err(HttpClientLoadError::GetRequest)?;
-        
+
         HttpClient::extract_response(response).await
     }
 
@@ -97,7 +98,8 @@ impl HttpClient {
         referer: &str,
         body: String,
     ) -> Result<String, HttpClientLoadError> {
-        let response = self.client
+        let response = self
+            .client
             .post(url)
             .header(USER_AGENT, user_agent)
             .header(REFERER, referer)
@@ -105,16 +107,17 @@ impl HttpClient {
             .send()
             .await
             .map_err(HttpClientLoadError::PostRequest)?;
-        
+
         HttpClient::extract_response(response).await
     }
 
     async fn extract_response(response: Response) -> Result<String, HttpClientLoadError> {
         let status_code = response.status();
-        let body = response.text()
+        let body = response
+            .text()
             .await
             .map_err(HttpClientLoadError::ResponseBody)?;
-        
+
         if status_code.is_client_error() {
             Err(HttpClientLoadError::ClientError(body))
         } else if status_code.is_server_error() {

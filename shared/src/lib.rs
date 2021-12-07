@@ -2,13 +2,13 @@
 
 use std::fmt::Debug;
 
+use thiserror::Error;
 use tokio::sync::mpsc::error::{SendError, TrySendError};
 use tokio::{sync::mpsc::Sender, task::JoinHandle};
-use thiserror::Error;
 
+pub use tracing::error as tracing_error;
 pub use tracing::info as tracing_info;
 pub use tracing::warn as tracing_warn;
-pub use tracing::error as tracing_error;
 
 pub mod detector_params;
 pub mod http_client;
@@ -31,9 +31,7 @@ impl<T> From<SendError<T>> for ChannelSendError<T> {
 #[derive(Debug)]
 enum Backpressure {
     Off,
-    On {
-        until_switching_off: u8
-    }
+    On { until_switching_off: u8 },
 }
 
 pub struct AlkSender<T: Debug> {
@@ -47,61 +45,62 @@ impl<T: Debug> AlkSender<T> {
         Self {
             tx,
             name,
-            state: Backpressure::Off
+            state: Backpressure::Off,
         }
     }
 
     pub async fn send(&mut self, message: T) -> Result<(), ChannelSendError<T>> {
         let old_state = std::mem::replace(&mut self.state, Backpressure::Off);
 
-        let (new_state, result) = AlkSender::do_send(
-            &self.tx, 
-            message, 
-            old_state, 
-            &self.name
-        ).await;
+        let (new_state, result) =
+            AlkSender::do_send(&self.tx, message, old_state, &self.name).await;
         self.state = new_state;
         result
     }
 
     #[tracing::instrument(skip(tx))]
-    async fn do_send(tx: &Sender<T>, message: T, state: Backpressure, name: &str) -> (Backpressure, Result<(), ChannelSendError<T>>) {
+    async fn do_send(
+        tx: &Sender<T>,
+        message: T,
+        state: Backpressure,
+        name: &str,
+    ) -> (Backpressure, Result<(), ChannelSendError<T>>) {
         match state {
-            Backpressure::Off => {
-                match tx.try_send(message) {
-                    Ok(r) => (Backpressure::Off, Ok(r)),
-                    Err(e) => {
-                        match e {
-                            TrySendError::Full(m) => {
-                                tracing_warn!("The channel is full, enabling backpressure...");
-                                let result = tx
-                                    .send(m)
-                                    .await
-                                    .map_err(|e| ChannelSendError::Closed(e.0));
+            Backpressure::Off => match tx.try_send(message) {
+                Ok(r) => (Backpressure::Off, Ok(r)),
+                Err(e) => match e {
+                    TrySendError::Full(m) => {
+                        tracing_warn!("The channel is full, enabling backpressure...");
+                        let result = tx.send(m).await.map_err(|e| ChannelSendError::Closed(e.0));
 
-                                (Backpressure::On { until_switching_off: 9 }, result)
+                        (
+                            Backpressure::On {
+                                until_switching_off: 9,
                             },
-                            TrySendError::Closed(m) => {
-                                (Backpressure::Off, Err(ChannelSendError::Closed(m)))
-                            },
-                        }
-                    },
-                }
+                            result,
+                        )
+                    }
+                    TrySendError::Closed(m) => {
+                        (Backpressure::Off, Err(ChannelSendError::Closed(m)))
+                    }
+                },
             },
-            Backpressure::On { 
-                mut until_switching_off 
+            Backpressure::On {
+                mut until_switching_off,
             } => {
                 until_switching_off -= 1;
-                let result = tx
-                    .send(message)
-                    .await
-                    .map_err(ChannelSendError::from);
+                let result = tx.send(message).await.map_err(ChannelSendError::from);
 
                 if until_switching_off == 0 {
                     tracing_info!("Disabling backpressure...");
                     return (Backpressure::Off, result);
                 }
-                (Backpressure::On { until_switching_off }, result)
+                (
+                    Backpressure::On {
+                        until_switching_off,
+                    },
+                    result,
+                )
             }
         }
     }
@@ -109,10 +108,10 @@ impl<T: Debug> AlkSender<T> {
 
 impl<T: Debug> Clone for AlkSender<T> {
     fn clone(&self) -> Self {
-        Self { 
-            tx: self.tx.clone(), 
+        Self {
+            tx: self.tx.clone(),
             state: Backpressure::Off,
-            name: self.name.clone()
+            name: self.name.clone(),
         }
     }
 }

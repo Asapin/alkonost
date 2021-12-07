@@ -1,10 +1,6 @@
 #![allow(proc_macro_derive_resolution_fallback, unused_attributes)]
 
-use std::{
-    collections::HashMap,
-    sync::Arc,
-    time::Duration, mem::replace,
-};
+use std::{collections::HashMap, mem::replace, sync::Arc, time::Duration};
 
 use chat_poller::{ChatPoller, InitResult};
 use error::ChatManagerError;
@@ -101,7 +97,8 @@ impl ChatManager {
                                         // Not a hard error
                                         shared::tracing_warn!(
                                             "Couldn't initialize chat poller {}: {}",
-                                            &video_id, &e
+                                            &video_id,
+                                            &e
                                         );
                                     }
                                 }
@@ -138,7 +135,8 @@ impl ChatManager {
                 }
             }
 
-            self.send_message_to_pollers(messages::chat_poller::IncMessage::Ping).await;
+            self.send_message_to_pollers(messages::chat_poller::IncMessage::Ping)
+                .await;
         }
     }
 
@@ -150,18 +148,24 @@ impl ChatManager {
             match inprogress_chat.tx.send(message.clone()).await {
                 Ok(_r) => {
                     self.inprogress_chats.insert(video_id, inprogress_chat);
-                },
+                }
                 Err(_) => {
-                    shared::tracing_info!("Chat poller {} has closed its channel, waiting for the task to finish...", &video_id);
+                    shared::tracing_info!(
+                        "Chat poller {} has closed its channel, waiting for the task to finish...",
+                        &video_id
+                    );
                     match inprogress_chat.join_handle.await {
                         Ok(_r) => {
-                            shared::tracing_info!("Chat poller {} finished successfully", &video_id);
-                        },
+                            shared::tracing_info!(
+                                "Chat poller {} finished successfully",
+                                &video_id
+                            );
+                        }
                         Err(e) => {
                             shared::tracing_info!("Chat poller {} panicked: {}", &video_id, &e);
-                        },
+                        }
                     }
-                },
+                }
             }
         }
     }
@@ -175,10 +179,10 @@ impl ChatManager {
             match inprogress_chat.join_handle.await {
                 Ok(_r) => {
                     shared::tracing_info!("Chat poller {} finished successfully", &video_id);
-                },
+                }
                 Err(e) => {
                     shared::tracing_info!("Chat poller {} panicked: {}", &video_id, &e);
-                },
+                }
             }
         }
     }

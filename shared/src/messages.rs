@@ -84,7 +84,7 @@ pub mod detector {
         },
         ChatClosed {
             channel: String,
-            video_id: String
+            video_id: String,
         },
         DetectorResult {
             video_id: String,
@@ -105,7 +105,7 @@ pub mod detector {
             Self {
                 channel,
                 timestamp: chrono::Utc::now().timestamp(),
-                decision
+                decision,
             }
         }
     }
@@ -119,7 +119,6 @@ pub mod detector {
         Blocked,
         Clear,
     }
-
 }
 
 pub mod alkonost {

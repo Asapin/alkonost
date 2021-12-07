@@ -40,7 +40,7 @@ pub struct ChatPoller {
     chat_params: ChatParams,
     rx: Receiver<IncMessage>,
     result_tx: Sender<OutMessage>,
-    poll_errors_count: u8
+    poll_errors_count: u8,
 }
 
 impl ChatPoller {
@@ -90,15 +90,12 @@ impl ChatPoller {
             chat_params,
             rx,
             result_tx,
-            poll_errors_count: 0
+            poll_errors_count: 0,
         };
 
         poller
             .result_tx
-            .send(OutMessage::ChatInit {
-                channel,
-                video_id,
-            })
+            .send(OutMessage::ChatInit { channel, video_id })
             .await?;
 
         let join_handle = tokio::spawn(async move {
@@ -120,7 +117,8 @@ impl ChatPoller {
             Err(e) => {
                 shared::tracing_error!(
                     "{}: Error, while processing messages: {}",
-                    &self.video_id, &e
+                    &self.video_id,
+                    &e
                 );
             }
         }
@@ -137,7 +135,8 @@ impl ChatPoller {
             Err(e) => {
                 shared::tracing_error!(
                     "{}: Couldn't send `StreamEnded` message: {}",
-                    &self.video_id, &e
+                    &self.video_id,
+                    &e
                 );
             }
         }
@@ -155,7 +154,7 @@ impl ChatPoller {
                         }
                         IncMessage::Ping => {
                             // Do nothing
-                        },
+                        }
                         IncMessage::UpdateUserAgent(user_agent) => {
                             self.request_settings.user_agent = user_agent;
                         }

@@ -87,10 +87,7 @@ impl Alkonost {
                 match detector_tx_clone.send(inc_message).await {
                     Ok(_r) => {}
                     Err(e) => {
-                        shared::tracing_error!(
-                            "Detector's end of the channel has closed: {}",
-                            &e
-                        );
+                        shared::tracing_error!("Detector's end of the channel has closed: {}", &e);
                         return;
                     }
                 }
