@@ -1,6 +1,6 @@
 #![allow(proc_macro_derive_resolution_fallback, unused_attributes)]
 
-use std::{sync::Arc, time::Duration};
+use std::{sync::Arc, time::Duration, fmt::Debug};
 
 use chat_manager::ChatManager;
 use detector::DetectorManager;
@@ -136,7 +136,7 @@ impl Alkonost {
         Ok((actor, detector_result_rx))
     }
 
-    async fn run(self) {
+    async fn run(mut self) {
         match self.do_run().await {
             Ok(_r) => {
                 // Alkonost finished it's work due to incoming `Close` message
@@ -146,11 +146,36 @@ impl Alkonost {
             }
         }
 
+        Alkonost::close_task(
+            self.stream_finder, 
+            &mut self.stream_finder_tx, 
+            messages::stream_finder::IncMessage::Close, 
+            "stream_finder"
+        ).await;
+
+        Alkonost::await_task(self.finder_to_chat_handle, "finder_to_chat").await;
+
+        Alkonost::close_task(
+            self.chat_manager, 
+            &mut self.chat_manager_tx, 
+            messages::chat_manager::IncMessage::Close, 
+            "chat_manager"
+        ).await;
+
+        Alkonost::await_task(self.chat_to_detector_handle, "chat_to_detector").await;
+
+        Alkonost::close_task(
+            self.detector, 
+            &mut self.detector_tx, 
+            messages::detector::IncMessage::Close, 
+            "detector"
+        ).await;
+
         // We can do some cleaup work here before closing Alkonost
         shared::tracing_info!("Closed");
     }
 
-    async fn do_run(mut self) -> Result<(), AlkonostError> {
+    async fn do_run(&mut self) -> Result<(), AlkonostError> {
         loop {
             let message = match self.rx.recv().await {
                 Some(message) => message,
@@ -160,26 +185,7 @@ impl Alkonost {
             };
 
             match message {
-                messages::alkonost::IncMessage::Close => {
-                    // Wait until one module closes, before closing the next module
-                    self.stream_finder_tx
-                        .send(messages::stream_finder::IncMessage::Close)
-                        .await?;
-                    self.stream_finder.await?;
-                    self.finder_to_chat_handle.await?;
-
-                    self.chat_manager_tx
-                        .send(messages::chat_manager::IncMessage::Close)
-                        .await?;
-                    self.chat_manager.await?;
-                    self.chat_to_detector_handle.await?;
-
-                    self.detector_tx
-                        .send(messages::detector::IncMessage::Close)
-                        .await?;
-                    self.detector.await?;
-                    return Ok(());
-                }
+                messages::alkonost::IncMessage::Close => return Ok(()),
                 messages::alkonost::IncMessage::AddChannel(channel) => {
                     let module_message = messages::stream_finder::IncMessage::AddChannel(channel);
                     self.stream_finder_tx.send(module_message).await?;
@@ -239,6 +245,24 @@ impl Alkonost {
                         .await?;
                 }
             }
+        }
+    }
+
+    async fn close_task<T: Debug>(task: JoinHandle<()>, tx: &mut AlkSender<T>, close_message: T, task_name: &str) {
+        match tx.send(close_message).await {
+            Ok(_r) => Alkonost::await_task(task, task_name).await,
+            Err(e) => {
+                shared::tracing_error!("Aborting {} because couldn't send `Close` message {}", task_name, &e);
+                task.abort();
+                Alkonost::await_task(task, task_name).await;
+            },
+        }
+    }
+
+    async fn await_task(task: JoinHandle<()>, task_name: &str) {
+        match task.await {
+            Ok(_r) => shared::tracing_info!("Task {} closed", &task_name),
+            Err(e) => shared::tracing_error!("Task {} panicked: {}", &task_name, &e),
         }
     }
 }

@@ -149,9 +149,7 @@ impl ChatPoller {
             while let Ok(recv_result) = timeout_at(self.next_poll_time, self.rx.recv()).await {
                 match recv_result {
                     Some(message) => match message {
-                        IncMessage::Close => {
-                            return Ok(());
-                        }
+                        IncMessage::Close => return Ok(()),
                         IncMessage::Ping => {
                             // Do nothing
                         }
