@@ -14,7 +14,7 @@ Consists of several modules:
 * [Alkonost](alkonost/) - main library, responsible for creating all other modules and re-exporting only functionality, that should be used by UI implementation
 * [UI](ui/) - a collection of UI implementations for `Alkonost`
 
-All modules, except `shared` are implemented as independend actors, which should allow for an easy horizontal scallability in the future, if such a need ever arises.
+All modules, except `shared` are implemented as independend actors, which should make it easy to scale horizontally in the future, if such a need ever arises.
 
 ## YouTube API
 
