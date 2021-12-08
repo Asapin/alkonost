@@ -28,7 +28,7 @@ impl SpamDetector {
         &mut self,
         video_id: &str,
         actions: Vec<Action>,
-        detector_params: &DetectorParams,
+        params: &DetectorParams,
     ) -> ProcessingResult {
         let mut result = ProcessingResult {
             decisions: Vec::new(),
@@ -91,13 +91,35 @@ impl SpamDetector {
             result.processed_messages += 1;
 
             let user_data = self.get_user_data(channel_id.clone());
-            if let Some(decision) = user_data.analyze_new_message(message, detector_params) {
+            if let Some(decision) = user_data.analyze_new_message(message, params) {
                 let detector_decision = DetectorDecision::new(channel_id, decision);
                 result.decisions.push(detector_decision);
             }
         }
 
         result
+    }
+
+    pub fn reanalyze(&mut self, params: &DetectorParams) -> Option<ProcessingResult> {
+        let new_decisions = self
+            .history
+            .iter_mut()
+            .filter_map(|(channel, user_data)| {
+                let decision = user_data.reanalyze(&params)?;
+                Some(DetectorDecision::new(channel.clone(), decision))
+            })
+            .collect::<Vec<_>>();
+
+        if new_decisions.is_empty() {
+            None
+        } else {
+            let result = ProcessingResult {
+                decisions: new_decisions,
+                processed_messages: 0,
+            };
+
+            Some(result)
+        }
     }
 
     fn get_user_data(&mut self, channel_id: String) -> &mut UserData {

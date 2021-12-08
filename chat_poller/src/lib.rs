@@ -205,8 +205,9 @@ impl ChatPoller {
 
             if let Some(actions) = actions {
                 let polling_results = OutMessage::NewBatch {
-                    actions,
+                    channel: self.channel.clone(),
                     video_id: self.video_id.clone(),
+                    actions,
                 };
                 self.result_tx.send(polling_results).await?;
             }

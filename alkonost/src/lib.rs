@@ -227,6 +227,16 @@ impl Alkonost {
 
                     self.stream_finder_tx.send(module_message_1).await?;
                     self.chat_manager_tx.send(module_message_2).await?;
+                },
+                messages::alkonost::IncMessage::UpdateDetectorParams { channel, new_params } => {
+                    let module_message = messages::detector::IncMessage::UpdateParams {
+                        channel,
+                        params: new_params
+                    };
+
+                    self.detector_tx
+                        .send(module_message)
+                        .await?;
                 }
             }
         }

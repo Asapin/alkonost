@@ -38,6 +38,7 @@ pub mod chat_poller {
             video_id: String,
         },
         NewBatch {
+            channel: String,
             video_id: String,
             actions: Vec<Action>,
         },
@@ -68,12 +69,18 @@ pub mod chat_manager {
 }
 
 pub mod detector {
+    use crate::detector_params::DetectorParams;
+
     use super::chat_poller;
 
     #[derive(Debug, Clone)]
     pub enum IncMessage {
         Close,
         ChatPoller(chat_poller::OutMessage),
+        UpdateParams {
+            channel: String,
+            params: DetectorParams
+        }
     }
 
     #[derive(Debug)]
@@ -122,6 +129,8 @@ pub mod detector {
 }
 
 pub mod alkonost {
+    use crate::detector_params::DetectorParams;
+
     #[derive(Debug)]
     pub enum IncMessage {
         Close,
@@ -131,5 +140,6 @@ pub mod alkonost {
         UpdateUserAgent(String),
         UpdateBrowserVersion(String),
         UpdateBrowserNameAndVersion { name: String, version: String },
+        UpdateDetectorParams { channel: String, new_params: DetectorParams }
     }
 }
