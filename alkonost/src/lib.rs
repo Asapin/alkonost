@@ -1,6 +1,6 @@
 #![allow(proc_macro_derive_resolution_fallback, unused_attributes)]
 
-use std::{sync::Arc, time::Duration, fmt::Debug};
+use std::{fmt::Debug, sync::Arc, time::Duration};
 
 use chat_manager::ChatManager;
 use detector::DetectorManager;
@@ -147,29 +147,32 @@ impl Alkonost {
         }
 
         Alkonost::close_task(
-            self.stream_finder, 
-            &mut self.stream_finder_tx, 
-            messages::stream_finder::IncMessage::Close, 
-            "stream_finder"
-        ).await;
+            self.stream_finder,
+            &mut self.stream_finder_tx,
+            messages::stream_finder::IncMessage::Close,
+            "stream_finder",
+        )
+        .await;
 
         Alkonost::await_task(self.finder_to_chat_handle, "finder_to_chat").await;
 
         Alkonost::close_task(
-            self.chat_manager, 
-            &mut self.chat_manager_tx, 
-            messages::chat_manager::IncMessage::Close, 
-            "chat_manager"
-        ).await;
+            self.chat_manager,
+            &mut self.chat_manager_tx,
+            messages::chat_manager::IncMessage::Close,
+            "chat_manager",
+        )
+        .await;
 
         Alkonost::await_task(self.chat_to_detector_handle, "chat_to_detector").await;
 
         Alkonost::close_task(
-            self.detector, 
-            &mut self.detector_tx, 
-            messages::detector::IncMessage::Close, 
-            "detector"
-        ).await;
+            self.detector,
+            &mut self.detector_tx,
+            messages::detector::IncMessage::Close,
+            "detector",
+        )
+        .await;
 
         // We can do some cleaup work here before closing Alkonost
         shared::tracing_info!("Closed");
@@ -233,29 +236,39 @@ impl Alkonost {
 
                     self.stream_finder_tx.send(module_message_1).await?;
                     self.chat_manager_tx.send(module_message_2).await?;
-                },
-                messages::alkonost::IncMessage::UpdateDetectorParams { channel, new_params } => {
+                }
+                messages::alkonost::IncMessage::UpdateDetectorParams {
+                    channel,
+                    new_params,
+                } => {
                     let module_message = messages::detector::IncMessage::UpdateParams {
                         channel,
-                        params: new_params
+                        params: new_params,
                     };
 
-                    self.detector_tx
-                        .send(module_message)
-                        .await?;
+                    self.detector_tx.send(module_message).await?;
                 }
             }
         }
     }
 
-    async fn close_task<T: Debug>(task: JoinHandle<()>, tx: &mut AlkSender<T>, close_message: T, task_name: &str) {
+    async fn close_task<T: Debug>(
+        task: JoinHandle<()>,
+        tx: &mut AlkSender<T>,
+        close_message: T,
+        task_name: &str,
+    ) {
         match tx.send(close_message).await {
             Ok(_r) => Alkonost::await_task(task, task_name).await,
             Err(e) => {
-                shared::tracing_error!("Aborting {} because couldn't send `Close` message {}", task_name, &e);
+                shared::tracing_error!(
+                    "Aborting {} because couldn't send `Close` message {}",
+                    task_name,
+                    &e
+                );
                 task.abort();
                 Alkonost::await_task(task, task_name).await;
-            },
+            }
         }
     }
 

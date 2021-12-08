@@ -105,7 +105,7 @@ impl SpamDetector {
             .history
             .iter_mut()
             .filter_map(|(channel, user_data)| {
-                let decision = user_data.reanalyze(&params)?;
+                let decision = user_data.reanalyze(params)?;
                 Some(DetectorDecision::new(channel.clone(), decision))
             })
             .collect::<Vec<_>>();

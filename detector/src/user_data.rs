@@ -50,48 +50,43 @@ impl UserData {
     pub fn reanalyze(&mut self, params: &DetectorParams) -> Option<Decision> {
         let old_status = mem::replace(&mut self.status, UserStatus::Immune);
         let (new_status, decision) = match old_status {
-            UserStatus::Immune
-            | UserStatus::Blocked { .. } => (old_status, None),
-            UserStatus::Suspicious { 
-                history, 
-                delete_messages_count 
-            } => {
-                match UserData::make_decision(&history, &delete_messages_count, &params) {
-                    Some(decision) => {
-                        let new_status = UserStatus::Suspicious {
-                            history,
-                            delete_messages_count
-                        };
-                        (new_status, Some(decision))
-                    },
-                    None => {
-                        let new_status = UserStatus::Regular {
-                            history,
-                            delete_messages_count
-                        };
-                        (new_status, Some(Decision::Clear))
-                    },
+            UserStatus::Immune | UserStatus::Blocked { .. } => (old_status, None),
+            UserStatus::Suspicious {
+                history,
+                delete_messages_count,
+            } => match UserData::make_decision(&history, &delete_messages_count, params) {
+                Some(decision) => {
+                    let new_status = UserStatus::Suspicious {
+                        history,
+                        delete_messages_count,
+                    };
+                    (new_status, Some(decision))
+                }
+                None => {
+                    let new_status = UserStatus::Regular {
+                        history,
+                        delete_messages_count,
+                    };
+                    (new_status, Some(Decision::Clear))
                 }
             },
-            UserStatus::Regular { 
-                history, 
-                delete_messages_count 
-            } => {
-                match UserData::make_decision(&history, &delete_messages_count, &params) {
-                    Some(decision) => {
-                        let new_status = UserStatus::Suspicious {
-                            history,
-                            delete_messages_count
-                        };
-                        (new_status, Some(decision))
-                    },
-                    None => {
-                        let new_status = UserStatus::Regular {
-                            history,
-                            delete_messages_count
-                        };
-                        (new_status, None)
-                    },
+            UserStatus::Regular {
+                history,
+                delete_messages_count,
+            } => match UserData::make_decision(&history, &delete_messages_count, params) {
+                Some(decision) => {
+                    let new_status = UserStatus::Suspicious {
+                        history,
+                        delete_messages_count,
+                    };
+                    (new_status, Some(decision))
+                }
+                None => {
+                    let new_status = UserStatus::Regular {
+                        history,
+                        delete_messages_count,
+                    };
+                    (new_status, None)
                 }
             },
         };
@@ -115,7 +110,7 @@ impl UserData {
     fn do_analysis(
         status: UserStatus,
         message: UserMessage,
-        detector_params: &DetectorParams,
+        params: &DetectorParams,
     ) -> (UserStatus, Option<Decision>) {
         match status {
             UserStatus::Immune => (UserStatus::Immune, None),
@@ -129,7 +124,7 @@ impl UserData {
                 };
 
                 let (new_status, decision) =
-                    UserData::do_analysis(temp_status, message, detector_params);
+                    UserData::do_analysis(temp_status, message, params);
                 (new_status, decision.or(Some(Decision::Clear)))
             }
             UserStatus::Suspicious {
@@ -182,7 +177,7 @@ impl UserData {
                 ),
                 UserMessage::Delete => {
                     delete_messages_count += 1;
-                    if detector_params.is_too_many_deleted_messages(&delete_messages_count) {
+                    if params.is_too_many_deleted_messages(&delete_messages_count) {
                         let new_status = UserStatus::Suspicious {
                             history,
                             delete_messages_count,
@@ -207,21 +202,25 @@ impl UserData {
 
                     history.push((timestamp, message));
 
-                    match UserData::make_decision(&history, &delete_messages_count, &detector_params) {
+                    match UserData::make_decision(
+                        &history,
+                        &delete_messages_count,
+                        params,
+                    ) {
                         Some(decision) => {
                             let new_status = UserStatus::Suspicious {
                                 history,
                                 delete_messages_count,
                             };
                             (new_status, Some(decision))
-                        },
+                        }
                         None => {
                             let new_status = UserStatus::Regular {
                                 history,
                                 delete_messages_count,
                             };
                             (new_status, None)
-                        },
+                        }
                     }
                 }
             },
@@ -229,9 +228,9 @@ impl UserData {
     }
 
     fn make_decision(
-        history: &Vec<(u64, String)>, 
-        delete_messages_count: &usize, 
-        params: &DetectorParams
+        history: &[(u64, String)],
+        delete_messages_count: &usize,
+        params: &DetectorParams,
     ) -> Option<Decision> {
         if params.is_too_many_deleted_messages(delete_messages_count) {
             let decision = Decision::TooManyDeleted;

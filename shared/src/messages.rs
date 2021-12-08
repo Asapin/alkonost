@@ -79,8 +79,8 @@ pub mod detector {
         ChatPoller(chat_poller::OutMessage),
         UpdateParams {
             channel: String,
-            params: DetectorParams
-        }
+            params: DetectorParams,
+        },
     }
 
     #[derive(Debug)]
@@ -139,7 +139,13 @@ pub mod alkonost {
         UpdateStreamPollInterval(u64),
         UpdateUserAgent(String),
         UpdateBrowserVersion(String),
-        UpdateBrowserNameAndVersion { name: String, version: String },
-        UpdateDetectorParams { channel: String, new_params: DetectorParams }
+        UpdateBrowserNameAndVersion {
+            name: String,
+            version: String,
+        },
+        UpdateDetectorParams {
+            channel: String,
+            new_params: DetectorParams,
+        },
     }
 }

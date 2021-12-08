@@ -17,7 +17,7 @@ mod user_data;
 
 struct ChannelData {
     streams: HashMap<String, SpamDetector>,
-    params: DetectorParams
+    params: DetectorParams,
 }
 
 pub struct DetectorManager {
@@ -73,7 +73,8 @@ impl DetectorManager {
                             channel,
                             video_id,
                         } => {
-                            self.load_detector_and_params(channel.clone(), video_id.clone()).await;
+                            self.load_detector_and_params(channel.clone(), video_id.clone())
+                                .await;
                             let message = OutMessage::NewChat { channel, video_id };
                             self.result_tx.send(message).await?;
                         }
@@ -85,20 +86,31 @@ impl DetectorManager {
                             let channel_data = match self.active_channels.get_mut(&channel) {
                                 Some(data) => data,
                                 None => {
-                                    shared::tracing_warn!("Channel data {} wasn't initialized", &channel);
+                                    shared::tracing_warn!(
+                                        "Channel data {} wasn't initialized",
+                                        &channel
+                                    );
                                     continue;
-                                },
+                                }
                             };
 
                             let detector = match channel_data.streams.get_mut(&video_id) {
                                 Some(detector) => detector,
                                 None => {
-                                    shared::tracing_warn!("Stream data {} for channel {} wasn't initialized", &video_id, &channel);
+                                    shared::tracing_warn!(
+                                        "Stream data {} for channel {} wasn't initialized",
+                                        &video_id,
+                                        &channel
+                                    );
                                     continue;
-                                },
+                                }
                             };
 
-                            let result = detector.process_new_messages(&video_id, actions, &channel_data.params);
+                            let result = detector.process_new_messages(
+                                &video_id,
+                                actions,
+                                &channel_data.params,
+                            );
 
                             let message = OutMessage::DetectorResult {
                                 video_id,
@@ -114,9 +126,12 @@ impl DetectorManager {
                             let channel_data = match self.active_channels.get_mut(&channel) {
                                 Some(data) => data,
                                 None => {
-                                    shared::tracing_warn!("Can't remove uninitialized channel {}", &channel);
+                                    shared::tracing_warn!(
+                                        "Can't remove uninitialized channel {}",
+                                        &channel
+                                    );
                                     continue;
-                                },
+                                }
                             };
 
                             let _ = channel_data.streams.remove(&video_id);
@@ -132,31 +147,32 @@ impl DetectorManager {
                         }
                     }
                 }
-                IncMessage::UpdateParams { 
-                    channel, 
-                    params 
-                } => {
+                IncMessage::UpdateParams { channel, params } => {
                     let channel_data = match self.active_channels.get_mut(&channel) {
                         Some(data) => data,
                         None => {
-                            shared::tracing_warn!("Can't remove uninitialized channel {}", &channel);
+                            shared::tracing_warn!(
+                                "Can't remove uninitialized channel {}",
+                                &channel
+                            );
                             continue;
-                        },
+                        }
                     };
 
-                    let messages = channel_data
-                        .streams
-                        .iter_mut()
-                        .filter_map(|(video_id, detector)| {
-                            let result = detector.reanalyze(&params)?;
-                            let message = OutMessage::DetectorResult {
-                                video_id: video_id.clone(),
-                                decisions: result.decisions,
-                                processed_messages: result.processed_messages,
-                            };
-                            Some(message)
-                        });
-                    
+                    let messages =
+                        channel_data
+                            .streams
+                            .iter_mut()
+                            .filter_map(|(video_id, detector)| {
+                                let result = detector.reanalyze(&params)?;
+                                let message = OutMessage::DetectorResult {
+                                    video_id: video_id.clone(),
+                                    decisions: result.decisions,
+                                    processed_messages: result.processed_messages,
+                                };
+                                Some(message)
+                            });
+
                     for message in messages {
                         self.result_tx.send(message).await?;
                     }
@@ -166,19 +182,14 @@ impl DetectorManager {
     }
 
     async fn load_detector_and_params(&mut self, channel: String, video_id: String) {
-        let channel_data = self
-            .active_channels
-            .entry(channel)
-            .or_insert_with(|| {
-                // Loading detector params for the channel
-                ChannelData { 
-                    streams: HashMap::new(),
-                    params: DetectorParams::default()
-                }
-            });
-        
-        channel_data
-            .streams
-            .insert(video_id, SpamDetector::init());
+        let channel_data = self.active_channels.entry(channel).or_insert_with(|| {
+            // Loading detector params for the channel
+            ChannelData {
+                streams: HashMap::new(),
+                params: DetectorParams::default(),
+            }
+        });
+
+        channel_data.streams.insert(video_id, SpamDetector::init());
     }
 }

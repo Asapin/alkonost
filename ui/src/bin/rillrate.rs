@@ -1,9 +1,6 @@
 use std::{collections::HashSet, time::Duration};
 
-use alkonost::{
-    Alkonost, AlkonostInMessage, AlkonostOutMessage, DecisionAction,
-    RequestSettings,
-};
+use alkonost::{Alkonost, AlkonostInMessage, AlkonostOutMessage, DecisionAction, RequestSettings};
 use rillrate::prime::{
     table::{Col, Row},
     Click, ClickOpts, LiveTail, LiveTailOpts, Pulse, PulseOpts, Table, TableOpts,
@@ -34,14 +31,13 @@ pub async fn main() {
     };
     let poll_interval = Duration::from_secs(90);
 
-    let (actor, mut result_rx) =
-        match Alkonost::init(request_settings, poll_interval) {
-            Ok(r) => r,
-            Err(e) => {
-                tracing::error!("Error initializing alkonost: {}", &e);
-                return;
-            }
-        };
+    let (actor, mut result_rx) = match Alkonost::init(request_settings, poll_interval) {
+        Ok(r) => r,
+        Err(e) => {
+            tracing::error!("Error initializing alkonost: {}", &e);
+            return;
+        }
+    };
 
     let actor_handle = actor.join_handle;
     let mut actor_tx = actor.tx;
